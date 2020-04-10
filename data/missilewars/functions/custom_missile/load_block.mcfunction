@@ -1,0 +1,27 @@
+execute at @e[tag=mover] if block ~ ~ ~ white_wool at @e[tag=iterator] run scoreboard players set temp3 Constants 1
+execute at @e[tag=mover] if block ~ ~ ~ glass at @e[tag=iterator] run scoreboard players set temp3 Constants 2
+execute at @e[tag=mover] if block ~ ~ ~ redstone_block at @e[tag=iterator] run scoreboard players set temp3 Constants 3
+execute at @e[tag=mover] if block ~ ~ ~ observer[facing=down] at @e[tag=iterator] run scoreboard players set temp3 Constants 4
+execute at @e[tag=mover] if block ~ ~ ~ observer[facing=up] at @e[tag=iterator] run scoreboard players set temp3 Constants 5
+execute at @e[tag=mover] if block ~ ~ ~ observer[facing=east] at @e[tag=iterator] run scoreboard players set temp3 Constants 6
+execute at @e[tag=mover] if block ~ ~ ~ observer[facing=west] at @e[tag=iterator] run scoreboard players set temp3 Constants 7
+execute at @e[tag=mover] if block ~ ~ ~ observer[facing=north] at @e[tag=iterator] run scoreboard players set temp3 Constants 8
+execute at @e[tag=mover] if block ~ ~ ~ observer[facing=south] at @e[tag=iterator] run scoreboard players set temp3 Constants 9
+execute at @e[tag=mover] if block ~ ~ ~ piston[facing=down] at @e[tag=iterator] run scoreboard players set temp3 Constants 10
+execute at @e[tag=mover] if block ~ ~ ~ piston[facing=up] at @e[tag=iterator] run scoreboard players set temp3 Constants 11
+execute at @e[tag=mover] if block ~ ~ ~ piston[facing=east] at @e[tag=iterator] run scoreboard players set temp3 Constants 12
+execute at @e[tag=mover] if block ~ ~ ~ piston[facing=west] at @e[tag=iterator] run scoreboard players set temp3 Constants 13
+execute at @e[tag=mover] if block ~ ~ ~ piston[facing=north] at @e[tag=iterator] run scoreboard players set temp3 Constants 14
+execute at @e[tag=mover] if block ~ ~ ~ piston[facing=south] at @e[tag=iterator] run scoreboard players set temp3 Constants 15
+execute at @e[tag=mover] if block ~ ~ ~ sticky_piston[facing=down] at @e[tag=iterator] run scoreboard players set temp3 Constants 16
+execute at @e[tag=mover] if block ~ ~ ~ sticky_piston[facing=up] at @e[tag=iterator] run scoreboard players set temp3 Constants 17
+execute at @e[tag=mover] if block ~ ~ ~ sticky_piston[facing=east] at @e[tag=iterator] run scoreboard players set temp3 Constants 18
+execute at @e[tag=mover] if block ~ ~ ~ sticky_piston[facing=west] at @e[tag=iterator] run scoreboard players set temp3 Constants 19
+execute at @e[tag=mover] if block ~ ~ ~ sticky_piston[facing=north] at @e[tag=iterator] run scoreboard players set temp3 Constants 20
+execute at @e[tag=mover] if block ~ ~ ~ sticky_piston[facing=south] at @e[tag=iterator] run scoreboard players set temp3 Constants 21
+execute at @e[tag=mover] if block ~ ~ ~ slime_block at @e[tag=iterator] run scoreboard players set temp3 Constants 22
+execute at @e[tag=mover] if block ~ ~ ~ honey_block at @e[tag=iterator] run scoreboard players set temp3 Constants 23
+execute at @e[tag=mover] if block ~ ~ ~ tnt at @e[tag=iterator] run scoreboard players set temp3 Constants 24
+execute at @e[tag=mover] if block ~ ~ ~ air at @e[tag=iterator] run scoreboard players set temp3 Constants 25
+execute at @e[tag=iterator] run function missilewars:custom_missile/loot_loop
+execute at @e[tag=iterator] store result block ~ ~-1 ~ Items[-1].tag.RepairCost int 1 run scoreboard players get temp2 Constants

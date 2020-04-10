@@ -1,15 +1,23 @@
-function missilewars:maps/map
-
-execute if score Map Constants matches 0 run function missilewars:maps/basic_map
-execute if score Map Constants matches 2 run function missilewars:maps/small_map
+function missilewars:maps/load_map
 scoreboard players set Running Constants 1
 scoreboard players set GreenWin Constants 0
 scoreboard players set BlueWin Constants 0
 execute as @a run function missilewars:start/join
-tp @a[team=Blue] 0 31 96
-spawnpoint @a[team=Blue] 0 31 96
-tp @a[team=Green] 0 31 -96
-spawnpoint @a[team=Green] 0 31 -96
+execute at @e[tag=BlueBase] run tp @a[team=Blue] 0 31 ~-1 180 0
+execute at @e[tag=BlueBase] run spawnpoint @a[team=Blue] 0 31 ~-1
+execute at @e[tag=GreenBase] run tp @a[team=Green] 0 31 ~1 0 0
+execute at @e[tag=GreenBase] run spawnpoint @a[team=Green] 0 31 ~1
 gamemode survival @a
+gamemode spectator @a[team=Spectator]
 
+replaceitem entity @a[team=Blue] armor.chest leather_chestplate{display:{color:3949738}} 1
+replaceitem entity @a[team=Blue] armor.legs leather_leggings{display:{color:3949738}} 1
+replaceitem entity @a[team=Blue] armor.feet leather_boots{display:{color:3949738}} 1
+replaceitem entity @a[team=Green] armor.chest leather_chestplate{display:{color:6192150}} 1
+replaceitem entity @a[team=Green] armor.legs leather_leggings{display:{color:6192150}} 1
+replaceitem entity @a[team=Green] armor.feet leather_boots{display:{color:6192150}} 1
+
+scoreboard objectives setdisplay sidebar missiles
+
+scoreboard players set missile_time Constants 0
 function missilewars:new_missile/missile_loop

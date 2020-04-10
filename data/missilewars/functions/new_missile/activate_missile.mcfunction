@@ -6,9 +6,12 @@ execute if score Lightning missiles matches 0 run give @a[team=Blue] minecraft:o
 execute if score Lightning missiles matches 0 run give @a[team=Green] minecraft:ocelot_spawn_egg{display:{Name:'{"text":"Green Lightning"}'}}
 execute if score Shieldbuster missiles matches 0 run give @a[team=Blue] minecraft:witch_spawn_egg{display:{Name:'{"text":"Blue Shieldbuster"}'}}
 execute if score Shieldbuster missiles matches 0 run give @a[team=Green] minecraft:witch_spawn_egg{display:{Name:'{"text":"Green Shieldbuster"}'}}
-execute if score Shield missiles matches 0 run give @a minecraft:snowball
-execute if score Arrows missiles matches 0 run give @a minecraft:arrow 3
-execute if score Fireball missiles matches 0 run give @a minecraft:firework_rocket
+execute if score Custom missiles matches 0 run give @a[team=Blue] minecraft:cave_spider_spawn_egg{display:{Name:'{"text":"Blue Custom"}'}}
+execute if score Custom missiles matches 0 run give @a[team=Green] minecraft:cave_spider_spawn_egg{display:{Name:'{"text":"Green Custom"}'}}
+execute if score Shield missiles matches 0 run give @a[team=Blue] minecraft:snowball{display:{Name:'{"text":"Blue Shield"}'}}
+execute if score Shield missiles matches 0 run give @a[team=Green] minecraft:snowball{display:{Name:'{"text":"Green Shield"}'}}
+execute if score Arrows missiles matches 0 run give @a[team=!Spectator] minecraft:arrow 2
+execute if score Fireball missiles matches 0 run give @a[team=!Spectator] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
 
 execute if score Tomohawk missiles matches -1..0 run scoreboard players reset Tomohawk missiles 
 execute if score Juggurnaut missiles matches -1..0 run scoreboard players reset Juggurnaut missiles 

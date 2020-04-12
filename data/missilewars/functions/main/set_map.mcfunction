@@ -2,6 +2,10 @@
 fill 34 97 13 30 100 17 air
 fill 30 96 17 34 96 13 minecraft:obsidian
 fill 35 94 17 35 95 13 minecraft:obsidian
+fill 34 94 13 30 94 17 minecraft:obsidian
+fill 34 95 13 30 95 13 minecraft:obsidian
+fill 34 95 17 30 95 17 minecraft:obsidian
+fill 30 95 16 30 95 14 minecraft:obsidian
 
 execute if score Running Constants matches 0 run setblock 35 96 17 minecraft:ender_chest[facing=east]
 execute if score Running Constants matches 1 run setblock 35 96 17 air
@@ -63,6 +67,7 @@ setblock 5 101 0 minecraft:quartz_stairs[facing=east]
 
 fill -5 101 1 -5 103 -1 minecraft:quartz_pillar[axis=x]
 fill -4 101 1 -4 101 -1 stone_button[facing=east,powered=false]
+fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
 setblock -4 102 1 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"--------------"}',Text2:'{"text":"Basic"}',Text3:'{"text":""}',Text4:'{"text":"--------------"}'}
 setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"--------------"}',Text2:'{"text":"Nothing"}',Text3:'{"text":""}',Text4:'{"text":"--------------"}'}
 setblock -4 102 -1 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"--------------"}',Text2:'{"text":"Small"}',Text3:'{"text":""}',Text4:'{"text":"--------------"}'}

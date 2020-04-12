@@ -22,5 +22,4 @@ execute positioned 34 95 15 run loot give @s mine 34 95 15
 gamemode adventure @s
 function missilewars:main/clear_inv
 
-
 tag @s remove Editor

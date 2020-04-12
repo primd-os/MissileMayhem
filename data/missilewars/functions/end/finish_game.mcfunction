@@ -16,3 +16,4 @@ gamemode adventure @a
 schedule clear missilewars:new_missile/missile_loop
 execute as @a run function missilewars:main/clear_inv
 xp set @a 0 points
+kill @e[type=item]

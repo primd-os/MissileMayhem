@@ -19,6 +19,7 @@ scoreboard objectives add StopAdverts trigger
 
 scoreboard players set NumMissiles Constants 8
 scoreboard players set Map Constants 0
+scoreboard players set PrevMap Constants 0
 scoreboard players set Running Constants 0
 scoreboard players set GreenWin Constants 0
 scoreboard players set Blue Constants 0
@@ -31,6 +32,8 @@ scoreboard players set Chests Constants 3
 scoreboard players set Iterations Constants 162
 
 scoreboard objectives add deathCheck deathCount
+
+scoreboard objectives add shulkerCount dummy
 
 team add Blue
 team add Green

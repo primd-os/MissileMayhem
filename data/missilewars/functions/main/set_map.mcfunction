@@ -7,8 +7,7 @@ fill 34 95 13 30 95 13 minecraft:obsidian
 fill 34 95 17 30 95 17 minecraft:obsidian
 fill 30 95 16 30 95 14 minecraft:obsidian
 
-execute if score Running Constants matches 0 run setblock 35 96 17 minecraft:ender_chest[facing=east]
-execute if score Running Constants matches 1 run setblock 35 96 17 air
+setblock 35 96 17 minecraft:ender_chest[facing=east]
 setblock 35 96 13 minecraft:anvil
 
 setblock 31 97 13 stone_button[facing=south]
@@ -16,6 +15,8 @@ setblock 31 98 13 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Save"}'}
 
 setblock 31 97 17 stone_button[facing=north]
 setblock 31 98 17 minecraft:oak_wall_sign[facing=north]{Text1:'{"text":"Load"}'}
+
+fill 31 95 14 32 95 16 minecraft:shulker_box
 
 # custom missile area
 fill 36 95 24 36 94 5 minecraft:obsidian

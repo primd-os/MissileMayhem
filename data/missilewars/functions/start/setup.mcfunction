@@ -35,6 +35,10 @@ scoreboard objectives add deathCheck deathCount
 
 scoreboard objectives add shulkerCount dummy
 
+scoreboard objectives add clearX dummy
+scoreboard objectives add clearY dummy
+scoreboard objectives add clearZ dummy
+
 team add Blue
 team add Green
 team add Spectator

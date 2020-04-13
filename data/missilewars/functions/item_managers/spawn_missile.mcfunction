@@ -22,8 +22,8 @@ execute as @e[type=witch] at @s run setblock ~ ~1 ~ minecraft:redstone_block
 execute as @e[type=witch] at @s run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 kill @e[type=witch]
 
-execute as @e[type=cave_spider, name="Blue Custom"] at @s as @a[sort=nearest,limit=1] run function missilewars:custom_missile/load_from_inv
+execute as @e[type=cave_spider, name="Blue Custom"] at @s as @a[sort=nearest,limit=1] run function missilewars:custom_missile/blue_shoot_missile
 execute as @e[type=cave_spider, name="Blue Custom"] at @s run function missilewars:custom_missile/blue_shoot_missile
-execute as @e[type=cave_spider, name="Green Custom"] at @s as @a[sort=nearest,limit=1] run function missilewars:custom_missile/load_from_inv
+execute as @e[type=cave_spider, name="Green Custom"] at @s as @a[sort=nearest,limit=1] run function missilewars:custom_missile/green_shoot_missile
 execute as @e[type=cave_spider, name="Green Custom"] at @s run function missilewars:custom_missile/green_shoot_missile
 kill @e[type=cave_spider]

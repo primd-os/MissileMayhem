@@ -1,0 +1,4 @@
+function missilewars:item_managers/arrow
+function missilewars:item_managers/fireball
+function missilewars:item_managers/shield
+function missilewars:item_managers/spawn_missile

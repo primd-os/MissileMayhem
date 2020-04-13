@@ -7,6 +7,9 @@ gamerule keepInventory true
 difficulty easy
 setworldspawn 0 100 0
 
+forceload add -100 -200 0 200
+forceload add 0 -200 100 200
+
 scoreboard objectives add snowballTime dummy
 
 scoreboard objectives add missiles dummy

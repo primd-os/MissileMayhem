@@ -7,8 +7,8 @@ execute at @e[tag=BlueBase] run tp @a[team=Blue] 0 31 ~-1 180 0
 execute at @e[tag=BlueBase] run spawnpoint @a[team=Blue] 0 31 ~-1
 execute at @e[tag=GreenBase] run tp @a[team=Green] 0 31 ~1 0 0
 execute at @e[tag=GreenBase] run spawnpoint @a[team=Green] 0 31 ~1
-gamemode survival @a
-gamemode spectator @a[team=Spectator]
+gamemode survival @a[gamemode=!creative]
+gamemode spectator @a[team=Spectator,gamemode=!creative]
 
 replaceitem entity @a[team=Blue] armor.chest leather_chestplate{display:{color:3949738}} 1
 replaceitem entity @a[team=Blue] armor.legs leather_leggings{display:{color:3949738}} 1

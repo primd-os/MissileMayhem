@@ -2,8 +2,8 @@ xp set @a 0 levels
 effect give @a minecraft:haste 2 2 true
 scoreboard players reset @a Start
 
-execute unless score Ending Constants matches 1 run gamemode survival @a[team=!Spectator]
-execute unless score Ending Constants matches 1 run gamemode spectator @a[team=Spectator]
+execute unless score Ending Constants matches 1 run gamemode survival @a[team=!Spectator,gamemode=!creative]
+execute unless score Ending Constants matches 1 run gamemode spectator @a[team=Spectator,gamemode=!creative]
 
 setblock -4 100 0 air
 

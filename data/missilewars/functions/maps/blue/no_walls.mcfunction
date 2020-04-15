@@ -1,0 +1,1 @@
+fill -25 30 ~-12 25 30 ~-1 minecraft:obsidian

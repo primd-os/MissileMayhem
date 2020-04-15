@@ -30,6 +30,8 @@ scoreboard objectives add Constants dummy
 scoreboard objectives add Start trigger
 scoreboard objectives add StartVote dummy
 scoreboard objectives add StopAdverts trigger
+scoreboard objectives add AutoTeam trigger
+scoreboard objectives add JoinSpectators trigger
 
 scoreboard players set NumMissiles Constants 8
 scoreboard players set Map Constants 0
@@ -40,6 +42,9 @@ scoreboard players set Blue Constants 0
 scoreboard players set Ending Constants 0
 scoreboard players set StartVotes Constants 0
 scoreboard players set NumPlayers Constants 0
+scoreboard players set @a StartVote 0
+scoreboard players set BlueMembers Constants 0
+scoreboard players set GreenMembers Constants 0
 
 scoreboard players set Two Constants 2
 
@@ -70,5 +75,7 @@ team modify Blue friendlyFire false
 team modify Green friendlyFire false
 
 function missilewars:start/advert
+
+setblock -4 100 0 air
 
 function missilewars:end/finish_game

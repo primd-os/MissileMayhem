@@ -1,9 +1,11 @@
+scoreboard objectives setdisplay sidebar wins
+execute if score BlueWin Constants matches 1 run scoreboard players add @a[team=Blue] wins 1 
+execute if score GreenWin Constants matches 1 run scoreboard players add @a[team=Green] wins 1 
+
 scoreboard players set Running Constants 0
 scoreboard players set BlueWin Constants 0
 scoreboard players set GreenWin Constants 0
 scoreboard players set Ending Constants 0
-
-scoreboard objectives setdisplay sidebar
 
 tp @a 0 100 0
 spawnpoint @a 0 100 0

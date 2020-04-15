@@ -1,4 +1,3 @@
-gamemode survival @s
 tag @s add Editor
 function missilewars:main/clear_inv
 

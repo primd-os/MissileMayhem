@@ -23,6 +23,9 @@ scoreboard objectives add missiles dummy
 scoreboard objectives setdisplay sidebar missiles
 scoreboard objectives modify missiles displayname "Upcoming Missiles"
 
+scoreboard objectives add wins dummy
+scoreboard objectives modify wins displayname "Wins"
+
 scoreboard objectives add Constants dummy
 scoreboard objectives add Start trigger
 scoreboard objectives add StopAdverts trigger

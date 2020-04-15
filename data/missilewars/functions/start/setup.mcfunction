@@ -1,10 +1,17 @@
 gamerule fallDamage false
 gamerule doImmediateRespawn true
-gamerule doMobSpawning false
-gamerule doDaylightCycle false
-time set noon
 gamerule keepInventory true
+gamerule announceAdvancements false
+
+time set noon
+gamerule doDaylightCycle false
+weather clear
+gamerule doWeatherCycle false
+
 difficulty easy
+gamerule doMobSpawning false
+gamerule doEntityDrops false
+
 setworldspawn 0 100 0
 
 forceload add -100 -200 0 200
@@ -37,6 +44,7 @@ scoreboard players set Iterations Constants 162
 scoreboard objectives add deathCheck deathCount
 
 scoreboard objectives add shulkerCount dummy
+scoreboard objectives add bowCount dummy
 
 scoreboard objectives add clearX dummy
 scoreboard objectives add clearY dummy

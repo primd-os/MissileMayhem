@@ -65,11 +65,9 @@ setblock 3 101 1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"^"}',Text2
 setblock 3 101 -1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"To Start use:"}',Text2:'{"text":"/trigger Start"}',Text3:'{"text":"or"}',Text4:'{"text":"Center Button"}'}
 setblock 4 100 0 minecraft:quartz_stairs[facing=east]
 setblock 5 101 0 minecraft:quartz_stairs[facing=east]
+setblock 5 100 0 minecraft:ender_chest[facing=east]
 
-fill -5 101 1 -5 103 -1 minecraft:quartz_pillar[axis=x]
-fill -4 101 1 -4 101 -1 stone_button[facing=east,powered=false]
+fill -5 101 1 -5 102 -1 minecraft:quartz_pillar[axis=x]
+setblock -4 101 0 stone_button[facing=east,powered=false]
 fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
-setblock -4 102 1 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"--------------"}',Text2:'{"text":"Basic"}',Text3:'{"text":""}',Text4:'{"text":"--------------"}'}
-setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"--------------"}',Text2:'{"text":"Nothing"}',Text3:'{"text":""}',Text4:'{"text":"--------------"}'}
-setblock -4 102 -1 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"--------------"}',Text2:'{"text":"Small"}',Text3:'{"text":""}',Text4:'{"text":"--------------"}'}
-setblock -4 103 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Maps"}',Text3:'{"text":""}',Text4:'{"text":""}'}
+setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Maps"}',Text3:'{"text":""}',Text4:'{"text":""}'}

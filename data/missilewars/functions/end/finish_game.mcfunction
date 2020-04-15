@@ -11,7 +11,6 @@ team empty Blue
 team empty Green
 effect give @a instant_health 1 100
 team join Spectator @a
-gamemode adventure @a
 
 schedule clear missilewars:new_missile/missile_loop
 execute as @a run function missilewars:main/clear_inv

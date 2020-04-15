@@ -1,5 +1,3 @@
-execute if block -4 101 1 minecraft:stone_button[powered=true] run scoreboard players set Map Constants 0
-execute if block -4 101 0 minecraft:stone_button[powered=true] run scoreboard players set Map Constants 1
-execute if block -4 101 -1 minecraft:stone_button[powered=true] run scoreboard players set Map Constants 2
-execute unless score PrevMap Constants = Map Constants run function missilewars:maps/load_map
-scoreboard players operation PrevMap Constants = Map Constants
+execute store result score Map Constants run data get block -4 100 0 Page
+execute if block -4 101 0 minecraft:stone_button[powered=true] unless score PrevMap Constants = Map Constants run function missilewars:maps/load_map
+execute if block -4 101 0 minecraft:stone_button[powered=true] run scoreboard players operation PrevMap Constants = Map Constants

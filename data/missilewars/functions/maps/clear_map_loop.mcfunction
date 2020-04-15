@@ -1,4 +1,4 @@
-execute as @e[tag=clearMap] at @s run fill ~ ~ ~ ~31 ~31 ~31 minecraft:air
+execute as @e[tag=clearMap] at @s run fill ~ ~ ~ ~31 ~31 ~31 minecraft:air replace #missilewars:not_lecturn
 execute as @e[tag=clearMap] at @s run tp ~32 ~ ~
 execute as @e[tag=clearMap] at @s run scoreboard players add @s clearX 32
 execute as @e[tag=clearMap,scores={clearX=100..2000}] at @s run tp -100 ~ ~32

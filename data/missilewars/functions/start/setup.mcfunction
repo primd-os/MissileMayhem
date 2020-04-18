@@ -2,6 +2,7 @@ gamerule fallDamage false
 gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule announceAdvancements false
+gamerule sendCommandFeedback false
 
 time set noon
 gamerule doDaylightCycle false
@@ -32,6 +33,7 @@ scoreboard objectives add StartVote dummy
 scoreboard objectives add StopAdverts trigger
 scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
+scoreboard objectives add ChooseMap trigger
 
 scoreboard players set NumMissiles Constants 8
 scoreboard players set Map Constants 0

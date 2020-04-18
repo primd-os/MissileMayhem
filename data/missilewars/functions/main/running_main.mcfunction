@@ -3,6 +3,7 @@ effect give @a minecraft:haste 2 2 true
 scoreboard players reset @a Start
 scoreboard players reset @a AutoTeam
 scoreboard players reset @a JoinSpectators
+scoreboard players reset @a ChooseMap
 
 execute unless score Ending Constants matches 1 run gamemode survival @a[team=!Spectator,gamemode=!creative]
 execute unless score Ending Constants matches 1 run gamemode spectator @a[team=Spectator,gamemode=!creative]

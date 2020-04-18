@@ -3,6 +3,7 @@ effect give @a minecraft:haste 2 255 true
 scoreboard players enable @a Start
 scoreboard players enable @a AutoTeam
 scoreboard players enable @a JoinSpectators
+scoreboard players enable @a ChooseMap
 
 gamemode adventure @a[tag=!Editor]
 gamemode survival @a[tag=Editor]
@@ -12,6 +13,9 @@ execute as @a[scores={AutoTeam=1}] run scoreboard players set @s AutoTeam 0
 
 execute as @a[scores={JoinSpectators=1}] run function missilewars:start/join_spectators
 execute as @a[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpectators 0
+
+execute as @a[scores={ChooseMap=1}] run function missilewars:start/choose_map
+execute as @a[scores={ChooseMap=1}] run scoreboard players set @s ChooseMap 0
 
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run particle explosion ~ ~ ~

@@ -17,7 +17,11 @@ execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run pl
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run particle explosion ~ ~ ~
 kill @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23]
 
-execute unless block -4 100 0 lectern run setblock -4 100 0 lectern[facing=east,has_book=true]{Book:{id:written_book,Count:1b,tag:{author:"Summoner",title:"Summoned Book",pages:['{"text":"Normal\\n\\nThe simplest map with 6 thick walls."}','{"text":"No Walls\\n\\nFor people "}','{"text":"Small"}','{"text":"Center Wall"}','{"text":"Platforms"}','{"text":"Weak Center"}','{"text":"Bridge"}']}}}
+give @a[tag=!PlayedBefore] written_book{author:"kcor_noved",title:"How To Play",pages:['{"text":"Your goal is to destroy the gems on the other side of the map."}','{"text":"To aid with this you are given missiles."}']} 1
+tag @a[tag=!PlayedBefore] add PlayedBefore
+
+
+execute unless block -4 100 0 lectern run setblock -4 100 0 lectern[facing=east,has_book=true]{Book:{id:written_book,Count:1b,tag:{author:"Summoner",title:"Summoned Book",pages:['{"text":"Normal\\n\\nThe simplest map with 6 thick walls."}','{"text":"No Walls\\n\\nFor people who play it risky, no defence."}','{"text":"Small\\n\\nNo Walls but with small walls. Defends against single missiles."}','{"text":"Center Wall\\n\\nGiant wall in center. Focuses missile fire to small lanes."}','{"text":"Platforms\\n\\nPlatforms make navigating bases and launching missiles easier."}','{"text":"Weak Center\\n\\nLess glass in the center focuses missile fire off of sides."}','{"text":"Bridge\\n\\n5 wide bridge across gap encourages pvp combat and makes play more hectic."}']}}}
 
 scoreboard players set @a deathCheck 0
 

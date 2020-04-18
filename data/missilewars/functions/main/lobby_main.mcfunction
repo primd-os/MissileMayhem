@@ -6,8 +6,8 @@ scoreboard players enable @a JoinSpectators
 scoreboard players enable @a ChooseMap
 scoreboard players enable @a GiveBook
 
-gamemode adventure @a[tag=!Editor]
-gamemode survival @a[tag=Editor]
+gamemode adventure @a[tag=!Editor,gamemode=!creative]
+gamemode survival @a[tag=Editor,gamemode=!creative]
 
 execute as @a[scores={AutoTeam=1}] run function missilewars:start/join_auto
 execute as @a[scores={AutoTeam=1}] run scoreboard players set @s AutoTeam 0

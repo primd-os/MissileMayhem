@@ -17,8 +17,7 @@ execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run pl
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run particle explosion ~ ~ ~
 kill @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23]
 
-execute unless block -4 100 0 lectern run setblock -4 100 0 lectern[facing=east,has_book=true]{Book:{id:written_book,Count:1b,tag:{author:"Summoner",title:"Summoned Book",pages:['{"text":"Normal"}','{"text":"No Walls"}','{"text":"Small"}','{"text":"Center Wall"}','{"text":"Platforms"}','{"text":"Weak Center"}']}}}
-clear @a written_book
+execute unless block -4 100 0 lectern run setblock -4 100 0 lectern[facing=east,has_book=true]{Book:{id:written_book,Count:1b,tag:{author:"Summoner",title:"Summoned Book",pages:['{"text":"Normal\\n\\nThe simplest map with 6 thick walls."}','{"text":"No Walls\\n\\nFor people "}','{"text":"Small"}','{"text":"Center Wall"}','{"text":"Platforms"}','{"text":"Weak Center"}','{"text":"Bridge"}']}}}
 
 scoreboard players set @a deathCheck 0
 

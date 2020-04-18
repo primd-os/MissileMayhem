@@ -70,4 +70,4 @@ setblock 5 100 0 minecraft:ender_chest[facing=east]
 fill -5 101 1 -5 102 -1 minecraft:quartz_pillar[axis=x]
 setblock -4 101 0 stone_button[facing=east,powered=false]
 fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
-setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Maps"}',Text3:'{"text":""}',Text4:'{"text":""}'}
+setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Maps","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":""}',Text4:'{"text":""}'}

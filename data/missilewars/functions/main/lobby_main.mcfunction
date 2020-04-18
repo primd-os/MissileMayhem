@@ -4,6 +4,7 @@ scoreboard players enable @a Start
 scoreboard players enable @a AutoTeam
 scoreboard players enable @a JoinSpectators
 scoreboard players enable @a ChooseMap
+scoreboard players enable @a GiveBook
 
 gamemode adventure @a[tag=!Editor]
 gamemode survival @a[tag=Editor]
@@ -21,8 +22,10 @@ execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run pl
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run particle explosion ~ ~ ~
 kill @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23]
 
-give @a[tag=!PlayedBefore] written_book{author:"kcor_noved",title:"How To Play",pages:['{"text":"Your goal is to destroy the gems on the other side of the map."}','{"text":"To aid with this you are given missiles."}']} 1
+execute as @a[tag=!PlayedBefore] run function missilewars:start/give_book
 tag @a[tag=!PlayedBefore] add PlayedBefore
+execute as @a[scores={GiveBook=1}] run tag @s remove PlayedBefore
+execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
 
 
 execute unless block -4 100 0 lectern run setblock -4 100 0 lectern[facing=east,has_book=true]{Book:{id:written_book,Count:1b,tag:{author:"Summoner",title:"Summoned Book",pages:['{"text":"Normal\\n\\nThe simplest map with 6 thick walls."}','{"text":"No Walls\\n\\nFor people who play it risky, no defence."}','{"text":"Small\\n\\nNo Walls but with small walls. Defends against single missiles."}','{"text":"Center Wall\\n\\nGiant wall in center. Focuses missile fire to small lanes."}','{"text":"Platforms\\n\\nPlatforms make navigating bases and launching missiles easier."}','{"text":"Weak Center\\n\\nLess glass in the center focuses missile fire off of sides."}','{"text":"Bridge\\n\\n5 wide bridge across gap encourages pvp combat and makes play more hectic."}']}}}

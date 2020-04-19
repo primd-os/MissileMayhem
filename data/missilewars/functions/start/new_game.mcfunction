@@ -1,3 +1,5 @@
+scoreboard players set @a StartVote 0
+
 function missilewars:maps/load_map
 scoreboard players set Running Constants 1
 scoreboard players set GreenWin Constants 0

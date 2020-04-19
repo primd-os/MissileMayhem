@@ -11,7 +11,7 @@ execute as @e[type=wolf] at @s run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 kill @e[type=wolf]
 
 execute as @e[type=ocelot, name="Blue Lightning"] at @s run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/lightning",posX:-1,posY:-7,posZ:-9}
-execute as @e[type=ocelot, name="Green Lightning"] at @s run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/lightning",posX:-1,posY:-7,posZ:9, rotation:CLOCKWISE_180}
+execute as @e[type=ocelot, name="Green Lightning"] at @s run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/lightning",posX:1,posY:-7,posZ:9, rotation:CLOCKWISE_180}
 execute as @e[type=ocelot] at @s run setblock ~ ~1 ~ minecraft:redstone_block
 execute as @e[type=ocelot] at @s run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 kill @e[type=ocelot]

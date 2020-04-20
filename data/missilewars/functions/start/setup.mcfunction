@@ -35,6 +35,8 @@ scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
 scoreboard objectives add ChooseMap trigger
 scoreboard objectives add GiveBook trigger
+scoreboard objectives add MissileSet dummy
+scoreboard objectives add MissileSetSelect trigger
 
 scoreboard players set NumMissiles Constants 8
 scoreboard players set Map Constants 0

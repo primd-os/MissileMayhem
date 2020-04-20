@@ -5,6 +5,9 @@ scoreboard players enable @a AutoTeam
 scoreboard players enable @a JoinSpectators
 scoreboard players enable @a ChooseMap
 scoreboard players enable @a GiveBook
+scoreboard players enable @a MissileSetSelect
+
+execute as @a run scoreboard players operation @s MissileSet = @s MissileSetSelect
 
 gamemode adventure @a[tag=!Editor,gamemode=!creative]
 gamemode survival @a[tag=Editor,gamemode=!creative]

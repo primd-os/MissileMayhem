@@ -12,6 +12,8 @@ execute as @a run scoreboard players operation @s MissileSet = @s MissileSetSele
 gamemode adventure @a[tag=!Editor,gamemode=!creative]
 gamemode survival @a[tag=Editor,gamemode=!creative]
 
+bossbar set missile_time visible false
+
 execute as @a[scores={AutoTeam=1}] run function missilewars:start/join_auto
 execute as @a[scores={AutoTeam=1}] run scoreboard players set @s AutoTeam 0
 
@@ -31,7 +33,7 @@ execute as @a[scores={GiveBook=1}] run tag @s remove PlayedBefore
 execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
 
 
-execute unless block -4 100 0 lectern run setblock -4 100 0 lectern[facing=east,has_book=true]{Book:{id:written_book,Count:1b,tag:{author:"Summoner",title:"Summoned Book",pages:['{"text":"Normal\\n\\nThe simplest map with 6 thick walls."}','{"text":"No Walls\\n\\nFor people who play it risky, no defence."}','{"text":"Small\\n\\nNo Walls but with small walls. Defends against single missiles."}','{"text":"Center Wall\\n\\nGiant wall in center. Focuses missile fire to small lanes."}','{"text":"Platforms\\n\\nPlatforms make navigating bases and launching missiles easier."}','{"text":"Weak Center\\n\\nLess glass in the center focuses missile fire off of sides."}','{"text":"Bridge\\n\\n5 wide bridge across gap encourages pvp combat and makes play more hectic."}']}}}
+execute unless block -4 100 0 lectern run function missilewars:main/set_lecturn
 
 scoreboard players set @a deathCheck 0
 

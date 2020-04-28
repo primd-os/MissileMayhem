@@ -22,4 +22,6 @@ replaceitem entity @a[team=Green] armor.feet leather_boots{display:{color:619215
 scoreboard objectives setdisplay sidebar missiles
 
 scoreboard players set missile_time Constants 0
+function missilewars:new_missile/new_missile
+function missilewars:new_missile/new_missile
 function missilewars:new_missile/missile_loop

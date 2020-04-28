@@ -6,6 +6,7 @@ scoreboard players set Running Constants 0
 scoreboard players set BlueWin Constants 0
 scoreboard players set GreenWin Constants 0
 scoreboard players set Ending Constants 0
+execute as @a run scoreboard players operation @s MissileSetSelect = @s MissileSet
 
 tp @a 0 101 0
 spawnpoint @a 0 100 0
@@ -16,5 +17,4 @@ team join Spectator @a
 
 schedule clear missilewars:new_missile/missile_loop
 execute as @a run function missilewars:main/clear_inv
-xp set @a 0 points
 kill @e[type=item]

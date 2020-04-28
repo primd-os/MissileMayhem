@@ -10,6 +10,9 @@ scoreboard players reset @a MissileSetSelect
 execute unless score Ending Constants matches 1 run gamemode survival @a[team=!Spectator,gamemode=!creative]
 execute unless score Ending Constants matches 1 run gamemode spectator @a[team=Spectator,gamemode=!creative]
 
+bossbar set missile_time visible true
+bossbar set missile_time players @a[team=!Spectator]
+
 setblock -4 100 0 air
 
 execute as @a store result score @s bowCount run clear @s crossbow 0

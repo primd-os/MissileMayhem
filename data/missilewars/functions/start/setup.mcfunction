@@ -69,6 +69,9 @@ scoreboard objectives add clearX dummy
 scoreboard objectives add clearY dummy
 scoreboard objectives add clearZ dummy
 
+scoreboard objectives add player_health health {"text":"♥","color":"red"}
+scoreboard objectives setdisplay belowName player_health
+
 team add Blue
 team add Green
 team add Spectator
@@ -83,5 +86,9 @@ team modify Green friendlyFire false
 function missilewars:start/advert
 
 setblock -4 100 0 air
+
+bossbar add missile_time {"text": "Time to Next Missile"}
+bossbar set missile_time max 280
+bossbar set missile_time style progress
 
 function missilewars:end/finish_game

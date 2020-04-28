@@ -1,6 +1,5 @@
 execute if score missile_time Constants matches 0 run function missilewars:new_missile/new_missile
-execute if score missile_time Constants matches 0 run scoreboard players set missile_time Constants 6
-schedule function missilewars:new_missile/missile_loop 2.3s
+execute if score missile_time Constants matches 0 store result score missile_time Constants run bossbar get missile_time max
 scoreboard players remove missile_time Constants 1
-xp add @a -1 points
-execute if score missile_time Constants matches 5 run xp set @a 6 points
+execute store result bossbar missile_time value run scoreboard players get missile_time Constants
+schedule function missilewars:new_missile/missile_loop 1t

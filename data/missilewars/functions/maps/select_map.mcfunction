@@ -6,5 +6,5 @@ execute unless score DirectPrevMap Constants = Map Constants if score Map Consta
 execute unless score DirectPrevMap Constants = Map Constants if score Map Constants matches 4 run tellraw @a ["",{"text":"Set Map to: Platforms"}]
 execute unless score DirectPrevMap Constants = Map Constants if score Map Constants matches 5 run tellraw @a ["",{"text":"Set Map to: Weak Center"}]
 execute unless score DirectPrevMap Constants = Map Constants if score Map Constants matches 6 run tellraw @a ["",{"text":"Set Map to: Bridge"}]
+execute unless score DirectPrevMap Constants = Map Constants unless score PrevMap Constants = Map Constants run schedule function missilewars:maps/load_map 3s replace
 scoreboard players operation DirectPrevMap Constants = Map Constants
-execute if block -4 101 0 minecraft:stone_button[powered=true] unless score PrevMap Constants = Map Constants run function missilewars:maps/load_map

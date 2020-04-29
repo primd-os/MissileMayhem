@@ -65,10 +65,17 @@ setblock 4 100 0 minecraft:quartz_stairs[facing=east]
 setblock 5 101 0 minecraft:quartz_stairs[facing=east]
 setblock 5 100 0 minecraft:ender_chest[facing=east]
 
+setblock -5 103 0 minecraft:quartz_pillar[axis=x]
 fill -5 101 1 -5 102 -1 minecraft:quartz_pillar[axis=x]
-setblock -4 101 0 stone_button[facing=east,powered=false]
 fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
-setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Maps","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":""}',Text4:'{"text":""}'}
+setblock -4 103 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Commands","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
+setblock -4 101 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":"Choose Map"}',Text4:'{"text":""}'}
+setblock -3 100 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Current"}',Text3:'{"text":"Map"}',Text4:'{"text":""}'}
+setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger StopAdverts"}}',Text3:'{"text":"Stop Discord"}',Text4:'{"text":"Adverts"}'}
+setblock -4 101 1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Auto Team","clickEvent":{"action":"run_command","value":"trigger AutoTeam"}}'}
+setblock -4 102 1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Spectate","clickEvent":{"action":"run_command","value":"trigger JoinSpectators"}}'}
+setblock -4 101 -1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Choose Missile Set","clickEvent":{"action":"run_command","value":"trigger MissileSetSelect"}}'}
+setblock -4 102 -1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Get Instructions","clickEvent":{"action":"run_command","value":"trigger GiveBook"}}'}
 
 execute unless entity @a[x=-5,dx=2,y=104,dy=2,z=-1,dz=2] run setblock -5 101 2 minecraft:barrier
 execute if entity @a[x=-5,dx=2,y=104,dy=2,z=-1,dz=2] run setblock -5 101 2 minecraft:air

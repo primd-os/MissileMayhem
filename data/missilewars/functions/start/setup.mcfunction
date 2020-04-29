@@ -41,6 +41,12 @@ scoreboard objectives add MissileSet dummy
 scoreboard objectives add MissileSetSelect trigger
 scoreboard objectives add Items dummy
 
+scoreboard objectives add PlacedTomohawk minecraft.used:minecraft.creeper_spawn_egg
+scoreboard objectives add PlacedJuggurnaut minecraft.used:minecraft.wolf_spawn_egg
+scoreboard objectives add PlacedLightning minecraft.used:minecraft.ocelot_spawn_egg
+scoreboard objectives add PlacedBuster minecraft.used:minecraft.witch_spawn_egg
+scoreboard objectives add PlacedCustom minecraft.used:minecraft.cave_spider_spawn_egg
+
 scoreboard players set NumMissiles Constants 8
 scoreboard players set Map Constants 0
 scoreboard players set PrevMap Constants 0

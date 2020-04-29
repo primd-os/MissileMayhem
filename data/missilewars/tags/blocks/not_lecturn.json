@@ -33,6 +33,7 @@
         "minecraft:emerald_block",
         "minecraft:diamond_block",
         "minecraft:yellow_stained_glass",
-        "minecraft:structure_void"
+        "minecraft:structure_void",
+        "minecraft:stone_pressure_plate"
     ]
 }

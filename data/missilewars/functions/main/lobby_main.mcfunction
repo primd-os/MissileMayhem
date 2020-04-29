@@ -33,7 +33,7 @@ execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run pa
 kill @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23]
 
 execute as @a[tag=Editor] store result score @s Items run clear @s iron_pickaxe 0
-execute as @a[tag=Editor] if score @s Items matches -2147483648..0 run give @s iron_pickaxe 1
+execute as @a[tag=Editor] if score @s Items matches -2147483648..0 run give @s iron_pickaxe{Unbreakable:1b} 1
 execute as @a[tag=Editor] store result score @s Items run clear @s white_wool 0
 execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s white_wool 1
 execute as @a[tag=Editor] store result score @s Items run clear @s glass 0

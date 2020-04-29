@@ -30,11 +30,13 @@ scoreboard objectives modify wins displayname "Wins"
 scoreboard objectives add Constants dummy
 scoreboard objectives add Start trigger
 scoreboard objectives add StartVote dummy
+scoreboard objectives setdisplay list StartVote
 scoreboard objectives add StopAdverts trigger
 scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
 scoreboard objectives add ChooseMap trigger
 scoreboard objectives add GiveBook trigger
+scoreboard objectives add PrevMissileSet dummy
 scoreboard objectives add MissileSet dummy
 scoreboard objectives add MissileSetSelect trigger
 

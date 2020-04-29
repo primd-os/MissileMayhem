@@ -13,6 +13,8 @@ execute unless score Ending Constants matches 1 run gamemode spectator @a[team=S
 bossbar set missile_time visible true
 bossbar set missile_time players @a[team=!Spectator]
 
+schedule clear missilewars:start/missile_set_loop
+
 setblock -4 100 0 air
 
 execute as @a store result score @s bowCount run clear @s crossbow 0

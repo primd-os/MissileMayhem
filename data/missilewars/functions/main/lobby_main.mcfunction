@@ -7,12 +7,12 @@ scoreboard players enable @a ChooseMap
 scoreboard players enable @a GiveBook
 scoreboard players enable @a MissileSetSelect
 
-execute as @a run scoreboard players operation @s MissileSet = @s MissileSetSelect
-
 gamemode adventure @a[tag=!Editor,gamemode=!creative]
 gamemode survival @a[tag=Editor,gamemode=!creative]
 
 bossbar set missile_time visible false
+
+function missilewars:start/missile_set_display
 
 execute as @a[scores={AutoTeam=1}] run function missilewars:start/join_auto
 execute as @a[scores={AutoTeam=1}] run scoreboard players set @s AutoTeam 0
@@ -22,6 +22,9 @@ execute as @a[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpect
 
 execute as @a[scores={ChooseMap=1}] run function missilewars:start/choose_map
 execute as @a[scores={ChooseMap=1}] run scoreboard players set @s ChooseMap 0
+
+execute as @a[scores={MissileSetSelect=1}] run function missilewars:start/choose_missile_set
+execute as @a[scores={MissileSetSelect=1}] run scoreboard players set @s MissileSetSelect 0
 
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run particle explosion ~ ~ ~

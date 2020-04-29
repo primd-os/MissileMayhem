@@ -32,6 +32,7 @@
         "minecraft:barrier",
         "minecraft:emerald_block",
         "minecraft:diamond_block",
-        "minecraft:yellow_stained_glass"
+        "minecraft:yellow_stained_glass",
+        "minecraft:structure_void"
     ]
 }

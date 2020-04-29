@@ -35,7 +35,7 @@ fill 35 94 12 35 99 4 air
 fill 35 94 12 29 99 12 air
 fill 35 94 18 29 99 18 air
 fill 27 94 12 29 99 18 air replace #missilewars:not_sign_quartz
-setblock 28 95 15 minecraft:oak_wall_sign[facing=east]{"Text1":'{"text":"Back To Hub","clickEvent":{"action":"run_command","value":"tp @s 0 100 0"}}'}
+setblock 28 95 15 minecraft:oak_wall_sign[facing=east]{"Text1":'{"text":"Back To Hub","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_hub"}}'}
 
 # parkour
 setblock 27 95 15 minecraft:quartz_pillar
@@ -60,10 +60,9 @@ fill 0 99 -3 0 99 -1 minecraft:green_stained_glass
 
 fill -4 99 0 3 99 0 minecraft:gray_stained_glass
 setblock 0 99 0 minecraft:white_stained_glass
-setblock 0 100 0 minecraft:stone_button[face=floor]
 
 setblock 3 101 1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"^"}',Text2:'{"text":"To Custom Missile"}',Text3:'{"text":"Maker and"}',Text4:'{"text":"Parkour"}'}
-setblock 3 101 -1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"To Start use:"}',Text2:'{"text":"/trigger Start"}',Text3:'{"text":"or"}',Text4:'{"text":"Center Button"}'}
+setblock 3 101 -1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"To Start use:"}',Text2:'{"text":"/trigger Start","clickEvent":{"action":"run_command","value":"/trigger Start"}}',Text3:'{"text":"or"}',Text4:'{"text":"Click Sign"}'}
 setblock 4 100 0 minecraft:quartz_stairs[facing=east]
 setblock 5 101 0 minecraft:quartz_stairs[facing=east]
 setblock 5 100 0 minecraft:ender_chest[facing=east]
@@ -75,4 +74,4 @@ setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2
 
 setblock -5 101 2 minecraft:barrier
 setblock -6 99 0 minecraft:barrier
-setblock -6 101 0 minecraft:oak_wall_sign[facing=west]{"Text1":'{"text":"Secret Sign","clickEvent":{"action":"run_command","value":"tp @s 31.5 97.00 15.5"}}'}
+setblock -6 101 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"Secret Sign!","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_maker"}}'}

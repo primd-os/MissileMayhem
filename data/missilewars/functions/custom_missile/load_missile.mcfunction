@@ -13,6 +13,7 @@ give @s sticky_piston 64
 give @s slime_block 64
 give @s honey_block 64
 give @s tnt 64
+give @s stone_pressure_plate 64
 
 function missilewars:custom_missile/load_from_inv
 

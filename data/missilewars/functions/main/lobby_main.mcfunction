@@ -14,6 +14,8 @@ bossbar set missile_time visible false
 
 function missilewars:start/missile_set_display
 
+kill @e[type=item]
+
 execute as @a[scores={AutoTeam=1}] run function missilewars:start/join_auto
 execute as @a[scores={AutoTeam=1}] run scoreboard players set @s AutoTeam 0
 
@@ -29,6 +31,29 @@ execute as @a[scores={MissileSetSelect=1}] run scoreboard players set @s Missile
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run particle explosion ~ ~ ~
 kill @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23]
+
+execute as @a[tag=Editor] store result score @s Items run clear @s iron_pickaxe 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..0 run give @s iron_pickaxe 1
+execute as @a[tag=Editor] store result score @s Items run clear @s white_wool 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s white_wool 1
+execute as @a[tag=Editor] store result score @s Items run clear @s glass 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s glass 1
+execute as @a[tag=Editor] store result score @s Items run clear @s redstone_block 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s redstone_block 1
+execute as @a[tag=Editor] store result score @s Items run clear @s observer 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s observer 1
+execute as @a[tag=Editor] store result score @s Items run clear @s piston 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s piston 1
+execute as @a[tag=Editor] store result score @s Items run clear @s sticky_piston 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s sticky_piston 1
+execute as @a[tag=Editor] store result score @s Items run clear @s slime_block 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s slime_block 1
+execute as @a[tag=Editor] store result score @s Items run clear @s honey_block 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s honey_block 1
+execute as @a[tag=Editor] store result score @s Items run clear @s tnt 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s tnt 1
+execute as @a[tag=Editor] store result score @s Items run clear @s stone_pressure_plate 0
+execute as @a[tag=Editor] if score @s Items matches -2147483648..63 run give @s stone_pressure_plate 1
 
 execute as @a[tag=!PlayedBefore] run function missilewars:start/give_book
 tag @a[tag=!PlayedBefore] add PlayedBefore

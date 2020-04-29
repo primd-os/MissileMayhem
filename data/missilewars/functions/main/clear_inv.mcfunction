@@ -20,3 +20,4 @@ clear @s redstone_block
 clear @s honey_block
 clear @s slime_block
 clear @s iron_pickaxe
+clear @s stone_pressure_plate

@@ -39,6 +39,7 @@ scoreboard objectives add GiveBook trigger
 scoreboard objectives add PrevMissileSet dummy
 scoreboard objectives add MissileSet dummy
 scoreboard objectives add MissileSetSelect trigger
+scoreboard objectives add Items dummy
 
 scoreboard players set NumMissiles Constants 8
 scoreboard players set Map Constants 0

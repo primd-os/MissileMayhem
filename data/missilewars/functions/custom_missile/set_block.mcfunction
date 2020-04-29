@@ -47,3 +47,4 @@ execute as @e[tag=mover] at @s if score temp Constants matches 46 run setblock ~
 execute as @e[tag=mover] at @s if score temp Constants matches 47 run setblock ~ ~ ~ sticky_piston[extended=true,facing=west]
 execute as @e[tag=mover] at @s if score temp Constants matches 48 run setblock ~ ~ ~ sticky_piston[extended=true,facing=north]
 execute as @e[tag=mover] at @s if score temp Constants matches 49 run setblock ~ ~ ~ sticky_piston[extended=true,facing=south]
+execute as @e[tag=mover] at @s if score temp Constants matches 50 run setblock ~ ~ ~ stone_pressure_plate

@@ -17,6 +17,8 @@ schedule clear missilewars:start/missile_set_loop
 
 setblock -4 100 0 air
 
+function missilewars:main/manage_items
+
 execute as @a store result score @s bowCount run clear @s crossbow 0
 execute as @a[team=!Spectator,scores={bowCount=0}] run function missilewars:main/givebow
 execute as @a[team=!Spectator,scores={bowCount=2..2000}] run clear @s crossbow 1

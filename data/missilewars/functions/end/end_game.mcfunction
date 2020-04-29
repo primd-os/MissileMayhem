@@ -1,6 +1,6 @@
 scoreboard players set Ending Constants 1
-execute if score BlueWin Constants matches 1 run title @a title {"text":"Blue Wins","color":"blue"}
-execute if score GreenWin Constants matches 1 run title @a title {"text":"Green Wins","color":"green"}
+execute if score BlueWin Constants matches 1 run title @a title {"text":"Blue Wins!","color":"blue"}
+execute if score GreenWin Constants matches 1 run title @a title {"text":"Green Wins!","color":"green"}
 execute if score Ending Constants matches 1 run schedule function missilewars:end/finish_game 5s
 execute if score BlueWin Constants matches 1 at @e[tag=GreenBase] run fill -25 0 ~ 25 26 ~ minecraft:air
 execute if score GreenWin Constants matches 1 at @e[tag=BlueBase] run fill -25 0 ~ 25 26 ~ minecraft:air

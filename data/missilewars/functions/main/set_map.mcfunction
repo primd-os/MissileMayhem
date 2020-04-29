@@ -10,11 +10,9 @@ fill 30 95 16 30 95 14 minecraft:obsidian
 setblock 35 96 17 minecraft:ender_chest[facing=east]
 setblock 35 96 13 minecraft:anvil
 
-setblock 31 97 13 stone_button[facing=south]
-setblock 31 98 13 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Save"}'}
+setblock 31 98 13 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/save_missile"}}',Text2:'{"text":"Save"}'}
 
-setblock 31 97 17 stone_button[facing=north]
-setblock 31 98 17 minecraft:oak_wall_sign[facing=north]{Text1:'{"text":"Load"}'}
+setblock 31 98 17 minecraft:oak_wall_sign[facing=north]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/load_missile"}}',Text2:'{"text":"Load"}'}
 
 fill 31 95 14 32 95 16 minecraft:shulker_box
 
@@ -72,6 +70,8 @@ setblock -4 101 0 stone_button[facing=east,powered=false]
 fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
 setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Maps","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":""}',Text4:'{"text":""}'}
 
-setblock -5 101 2 minecraft:barrier
-setblock -6 99 0 minecraft:barrier
+execute unless entity @a[x=-5,dx=2,y=104,dy=2,z=-1,dz=2] run setblock -5 101 2 minecraft:barrier
+execute if entity @a[x=-5,dx=2,y=104,dy=2,z=-1,dz=2] run setblock -5 101 2 minecraft:air
+setblock -6 100 0 minecraft:barrier
+setblock -6 101 -1 minecraft:barrier
 setblock -6 101 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"Secret Sign!","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_maker"}}'}

@@ -1,3 +1,5 @@
+playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~ 1 0
+
 tag @s add Editor
 function missilewars:main/clear_inv
 

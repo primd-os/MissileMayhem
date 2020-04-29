@@ -1,3 +1,5 @@
+playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~ 1 1
+
 summon minecraft:area_effect_cloud 37.5 96 23.5 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["mover"]}
 summon minecraft:area_effect_cloud 31.5 96 14.5 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["iterator"]}
 

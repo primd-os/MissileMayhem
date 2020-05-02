@@ -12,7 +12,7 @@ setblock 35 96 13 minecraft:anvil
 
 setblock 31 98 13 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/save_missile"}}',Text2:'{"text":"Save"}'}
 
-setblock 31 98 17 minecraft:oak_wall_sign[facing=north]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/load_missile"}}',Text2:'{"text":"Load"}'}
+setblock 31 98 17 minecraft:oak_wall_sign[facing=north]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/load_missile"}}',Text2:'{"text":"Load/Build"}'}
 
 fill 31 95 14 32 95 16 minecraft:shulker_box
 
@@ -46,6 +46,15 @@ setblock 12 101 0 minecraft:quartz_pillar
 setblock 15 102 0 minecraft:quartz_pillar
 setblock 19 102 1 minecraft:quartz_pillar
 
+setblock 27 94 15 minecraft:white_stained_glass
+setblock 23 94 15 minecraft:white_stained_glass
+setblock 23 93 11 minecraft:white_stained_glass
+setblock 23 94 7 minecraft:white_stained_glass
+setblock 8 100 0 minecraft:white_stained_glass
+setblock 12 100 0 minecraft:white_stained_glass
+setblock 15 101 0 minecraft:white_stained_glass
+setblock 19 101 1 minecraft:white_stained_glass
+
 # starting area
 fill 3 99 -6 -3 99 6 minecraft:barrier
 
@@ -75,7 +84,7 @@ setblock -3 100 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2
 setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger StopAdverts"}}',Text3:'{"text":"Stop Discord"}',Text4:'{"text":"Adverts"}'}
 setblock -4 101 1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Auto Team","clickEvent":{"action":"run_command","value":"trigger AutoTeam"}}'}
 setblock -4 102 1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Spectate","clickEvent":{"action":"run_command","value":"trigger JoinSpectators"}}'}
-setblock -4 101 -1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Choose Missile Set","clickEvent":{"action":"run_command","value":"trigger MissileSetSelect"}}'}
+setblock -4 101 -1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Choose Missile","clickEvent":{"action":"run_command","value":"trigger MissileSetSelect"}}',Text4:'{"text": "Set"}'}
 setblock -4 102 -1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Get Instructions","clickEvent":{"action":"run_command","value":"trigger GiveBook"}}'}
 
 execute unless entity @a[x=-5,dx=2,y=104,dy=2,z=-1,dz=2] run setblock -5 101 2 minecraft:barrier

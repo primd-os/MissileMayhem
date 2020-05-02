@@ -1,2 +1,2 @@
 tellraw @a[scores={StopAdverts=0}] ["",{"text":"Consider joining the official discord server: "},{"text":"https://discord.gg/SGkR9kj","underlined":true,"color":"green","clickEvent":{"action":"open_url","value":"https://discord.gg/SGkR9kj"}}]
-schedule function missilewars:start/advert 300s
+schedule function missilewars:start/advert 600s

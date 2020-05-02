@@ -17,3 +17,4 @@ team join Spectator @a
 schedule clear missilewars:new_missile/missile_loop
 execute as @a run function missilewars:main/clear_inv
 kill @e[type=item]
+kill @e[type=fireball]

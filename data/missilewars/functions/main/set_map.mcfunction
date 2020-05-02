@@ -27,6 +27,7 @@ fill 34 94 26 42 99 26 air
 fill 42 94 3 42 99 26 air
 fill 42 94 3 34 99 3 air
 fill 42 99 3 34 99 26 air
+fill 42 97 23 42 97 6 minecraft:magenta_glazed_terracotta[facing=west]
 
 fill 34 94 25 34 99 18 air
 fill 34 94 12 34 99 4 air

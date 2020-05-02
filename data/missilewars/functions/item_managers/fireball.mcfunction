@@ -14,3 +14,5 @@ execute as @e[type=firework_rocket,nbt={ShotAtAngle:1b}] at @s store result enti
 execute as @e[type=firework_rocket,nbt={ShotAtAngle:1b}] at @s store result entity @e[type=fireball,limit=1,sort=nearest] Rotation[1] double 0.000000001 run data get entity @s Rotation[1] 1000000000
 
 execute as @e[type=firework_rocket] at @s run kill @s
+
+execute as @e[type=minecraft:fireball] at @s run particle minecraft:flame ~ ~.5 ~ .2 .2 .2 0 1

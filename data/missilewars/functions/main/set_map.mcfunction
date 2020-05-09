@@ -33,7 +33,11 @@ fill 34 94 25 34 99 18 air
 fill 34 94 12 34 99 4 air
 fill 34 94 12 29 99 12 air
 fill 34 94 18 29 99 18 air
-fill 27 94 12 29 99 18 air replace #missilewars:not_sign_quartz
+fill 29 94 12 29 99 18 air
+fill 27 94 12 28 99 14 air
+fill 27 94 16 28 99 18 air
+fill 28 96 15 27 96 15 air
+setblock 28 94 15 air
 setblock 28 95 15 minecraft:oak_wall_sign[facing=east]{"Text1":'{"text":"Back To Hub","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_hub"}}'}
 
 # parkour

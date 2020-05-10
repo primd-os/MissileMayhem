@@ -14,10 +14,13 @@ gamemode spectator @a[team=Spectator,gamemode=!creative]
 
 replaceitem entity @a[team=Blue] armor.chest leather_chestplate{display:{color:3949738}} 1
 replaceitem entity @a[team=Blue] armor.legs leather_leggings{display:{color:3949738}} 1
-replaceitem entity @a[team=Blue] armor.feet leather_boots{display:{color:3949738}} 1
 replaceitem entity @a[team=Green] armor.chest leather_chestplate{display:{color:6192150}} 1
 replaceitem entity @a[team=Green] armor.legs leather_leggings{display:{color:6192150}} 1
 replaceitem entity @a[team=Green] armor.feet leather_boots{display:{color:6192150}} 1
+
+scoreboard players set @a[team=Blue] DirecToPlace 2
+scoreboard players set @a[team=Green] DirecToPlace 0
+scoreboard players set @a DirectionPlace 0
 
 scoreboard objectives setdisplay sidebar missiles
 

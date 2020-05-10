@@ -57,12 +57,6 @@ execute as @a[tag=Editor] if score @s Items matches 0..63 run give @s tnt 1
 execute as @a[tag=Editor] store result score @s Items run clear @s stone_pressure_plate 0
 execute as @a[tag=Editor] if score @s Items matches 0..63 run give @s stone_pressure_plate 1
 
-execute as @a[tag=!PlayedBefore] run function missilewars:start/give_book
-execute as @a[tag=!PlayedBefore] run function missilewars:start/give_default_missile
-tag @a[tag=!PlayedBefore] add PlayedBefore
-execute as @a[scores={GiveBook=1}] run function missilewars:start/give_book
-execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
-
 scoreboard players set @a deathCheck 0
 
 function missilewars:start/check_start

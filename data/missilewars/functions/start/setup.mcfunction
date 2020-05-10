@@ -49,6 +49,11 @@ scoreboard objectives add PlacedJuggurnaut minecraft.used:minecraft.wolf_spawn_e
 scoreboard objectives add PlacedLightning minecraft.used:minecraft.ocelot_spawn_egg
 scoreboard objectives add PlacedBuster minecraft.used:minecraft.witch_spawn_egg
 scoreboard objectives add PlacedCustom minecraft.used:minecraft.cave_spider_spawn_egg
+scoreboard objectives add PlacedMissile minecraft.used:minecraft.cave_spider_spawn_egg
+
+scoreboard objectives add SlimeKills minecraft.killed:minecraft.slime
+scoreboard objectives add DirectionPlace dummy
+scoreboard objectives add DirecToPlace dummy
 
 scoreboard players set NumMissiles Constants 8
 scoreboard players set Running Constants 0

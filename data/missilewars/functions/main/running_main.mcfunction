@@ -24,9 +24,13 @@ execute as @a store result score @s bowCount run clear @s crossbow 0
 execute as @a[team=!Spectator,scores={bowCount=0}] run function missilewars:main/givebow
 execute as @a[team=!Spectator,scores={bowCount=2..2000}] run clear @s crossbow 1
 
-execute as @a[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run schedule function missilewars:main/turn_around 2t
+execute as @a[scores={deathCheck=1..1000},team=Blue] at @s run scoreboard players set @s DirecToPlace 2
+execute as @a[scores={deathCheck=1..1000},team=Green] at @s run scoreboard players set @s DirecToPlace 0
 execute as @a[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run tag @s add dead
+execute as @a[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run schedule function missilewars:main/turn_around 2t
+scoreboard players set @a deathCheck 0
 
 execute unless score Ending Constants matches 1 run function missilewars:end/check_end_game
 
 function missilewars:item_managers/run_items
+function missilewars:item_managers/left_click_test

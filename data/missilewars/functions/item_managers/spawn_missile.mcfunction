@@ -1,22 +1,26 @@
-execute as @e[tag=missile, name="Blue Tomohawk"] at @s as @a[team=Blue,scores={PlacedTomohawk=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/tomohawk",posX:0,posY:-7,posZ:-10}
-execute as @e[tag=missile, name="Green Tomohawk"] at @s as @a[team=Green,scores={PlacedTomohawk=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/tomohawk",posX:0,posY:-7,posZ:10, rotation:CLOCKWISE_180}
-execute as @e[tag=missile, name="Blue Tomohawk"] at @s as @a[team=Blue,scores={PlacedTomohawk=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/tomohawk",posX:0,posY:-7,posZ:-17}
-execute as @e[tag=missile, name="Green Tomohawk"] at @s as @a[team=Green,scores={PlacedTomohawk=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/tomohawk",posX:0,posY:-7,posZ:17, rotation:CLOCKWISE_180}
+scoreboard players set @a PlacedMissile 0
+execute as @a run scoreboard players operation @s PlacedMissile += @s PlacedTomohawk
+execute as @a run scoreboard players operation @s PlacedMissile += @s PlacedJuggurnaut
+execute as @a run scoreboard players operation @s PlacedMissile += @s PlacedLightning
+execute as @a run scoreboard players operation @s PlacedMissile += @s PlacedBuster
+execute as @a run scoreboard players operation @s PlacedMissile += @s PlacedCustom
+execute as @a[scores={PlacedMissile=1,DirectionPlace=1},y_rotation=-45..45] run scoreboard players set @s DirecToPlace 0
+execute as @a[scores={PlacedMissile=1,DirectionPlace=1},y_rotation=45..135] run scoreboard players set @s DirecToPlace 1
+execute as @a[scores={PlacedMissile=1,DirectionPlace=1},y_rotation=135..180] run scoreboard players set @s DirecToPlace 2
+execute as @a[scores={PlacedMissile=1,DirectionPlace=1},y_rotation=-180..-135] run scoreboard players set @s DirecToPlace 2
+execute as @a[scores={PlacedMissile=1,DirectionPlace=1},y_rotation=-135..-45] run scoreboard players set @s DirecToPlace 3
 
-execute as @e[tag=missile, name="Blue Juggurnaut"] at @s as @a[team=Blue,scores={PlacedJuggurnaut=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/juggurnaut",posX:0,posY:-7,posZ:-18}
-execute as @e[tag=missile, name="Green Juggurnaut"] at @s as @a[team=Green,scores={PlacedJuggurnaut=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/juggurnaut",posX:0,posY:-7,posZ:18, rotation:CLOCKWISE_180}
-execute as @e[tag=missile, name="Blue Juggurnaut"] at @s as @a[team=Blue,scores={PlacedJuggurnaut=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/juggurnaut",posX:-1,posY:-7,posZ:-15}
-execute as @e[tag=missile, name="Green Juggurnaut"] at @s as @a[team=Green,scores={PlacedJuggurnaut=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/juggurnaut",posX:1,posY:-7,posZ:15, rotation:CLOCKWISE_180}
+execute as @e[tag=missile, name="Blue Tomohawk"] at @s as @a[team=Blue,scores={PlacedTomohawk=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_tomohawk
+execute as @e[tag=missile, name="Green Tomohawk"] at @s as @a[team=Green,scores={PlacedTomohawk=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_tomohawk
 
-execute as @e[tag=missile, name="Blue Lightning"] at @s as @a[team=Blue,scores={PlacedLightning=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/lightning",posX:-1,posY:-7,posZ:-9}
-execute as @e[tag=missile, name="Green Lightning"] at @s as @a[team=Green,scores={PlacedLightning=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/lightning",posX:1,posY:-7,posZ:9, rotation:CLOCKWISE_180}
-execute as @e[tag=missile, name="Blue Lightning"] at @s as @a[team=Blue,scores={PlacedLightning=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/lightning",posX:-1,posY:-7,posZ:-13}
-execute as @e[tag=missile, name="Green Lightning"] at @s as @a[team=Green,scores={PlacedLightning=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/lightning",posX:1,posY:-7,posZ:13, rotation:CLOCKWISE_180}
+execute as @e[tag=missile, name="Blue Juggurnaut"] at @s as @a[team=Blue,scores={PlacedJuggurnaut=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_juggurnaut
+execute as @e[tag=missile, name="Green Juggurnaut"] at @s as @a[team=Green,scores={PlacedJuggurnaut=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_juggurnaut
 
-execute as @e[tag=missile, name="Blue Shieldbuster"] at @s as @a[team=Blue,scores={PlacedBuster=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/shieldbuster",posX:0,posY:-7,posZ:-14}
-execute as @e[tag=missile, name="Green Shieldbuster"] at @s as @a[team=Green,scores={PlacedBuster=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/shieldbuster",posX:0,posY:-7,posZ:14, rotation:CLOCKWISE_180}
-execute as @e[tag=missile, name="Blue Shieldbuster"] at @s as @a[team=Blue,scores={PlacedBuster=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/shieldbuster",posX:-1,posY:-7,posZ:-19}
-execute as @e[tag=missile, name="Green Shieldbuster"] at @s as @a[team=Green,scores={PlacedBuster=1},sort=nearest,limit=1] if entity @s[scores={MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/shieldbuster",posX:1,posY:-7,posZ:19, rotation:CLOCKWISE_180}
+execute as @e[tag=missile, name="Blue Lightning"] at @s as @a[team=Blue,scores={PlacedLightning=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_lightning
+execute as @e[tag=missile, name="Green Lightning"] at @s as @a[team=Green,scores={PlacedLightning=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_lightning
+
+execute as @e[tag=missile, name="Blue Shieldbuster"] at @s as @a[team=Blue,scores={PlacedBuster=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_shieldbuster
+execute as @e[tag=missile, name="Green Shieldbuster"] at @s as @a[team=Green,scores={PlacedBuster=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_shieldbuster
 
 execute as @e[tag=missile, name="Blue Custom"] at @s as @a[team=Blue,scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:custom_missile/blue_shoot_missile
 execute as @e[tag=missile, name="Green Custom"] at @s as @a[team=Green,scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:custom_missile/green_shoot_missile

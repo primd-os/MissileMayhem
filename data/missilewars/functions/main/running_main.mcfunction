@@ -5,6 +5,7 @@ scoreboard players reset @a AutoTeam
 scoreboard players reset @a JoinSpectators
 scoreboard players reset @a ChooseMap
 scoreboard players reset @a GiveBook
+scoreboard players reset @a ChooseMissileSet
 scoreboard players reset @a MissileSetSelect
 
 execute unless score Ending Constants matches 1 run gamemode survival @a[team=!Spectator,gamemode=!creative]

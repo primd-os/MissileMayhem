@@ -84,7 +84,6 @@ fill -5 101 1 -5 102 -1 minecraft:quartz_pillar[axis=x]
 fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
 setblock -4 103 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Commands","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
 setblock -4 101 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":"Choose Map"}',Text4:'{"text":""}'}
-setblock -3 100 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Current"}',Text3:'{"text":"Map"}',Text4:'{"text":""}'}
 setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger StopAdverts"}}',Text3:'{"text":"Stop Discord"}',Text4:'{"text":"Adverts"}'}
 setblock -4 101 1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Auto Team","clickEvent":{"action":"run_command","value":"trigger AutoTeam"}}'}
 setblock -4 102 1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Spectate","clickEvent":{"action":"run_command","value":"trigger JoinSpectators"}}'}

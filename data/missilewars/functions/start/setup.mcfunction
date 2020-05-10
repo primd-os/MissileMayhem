@@ -35,9 +35,11 @@ scoreboard objectives add StopAdverts trigger
 scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
 scoreboard objectives add ChooseMap trigger
+scoreboard objectives add MapVote trigger
 scoreboard objectives add GiveBook trigger
 scoreboard objectives add PrevMissileSet dummy
 scoreboard objectives add MissileSet dummy
+scoreboard objectives add ChooseMissileSet trigger
 scoreboard objectives add MissileSetSelect trigger
 scoreboard objectives add Items dummy
 
@@ -48,9 +50,6 @@ scoreboard objectives add PlacedBuster minecraft.used:minecraft.witch_spawn_egg
 scoreboard objectives add PlacedCustom minecraft.used:minecraft.cave_spider_spawn_egg
 
 scoreboard players set NumMissiles Constants 8
-scoreboard players set Map Constants 0
-scoreboard players set PrevMap Constants 0
-scoreboard players set DirectPrevMap Constants 0
 scoreboard players set Running Constants 0
 scoreboard players set GreenWin Constants 0
 scoreboard players set Blue Constants 0

@@ -4,3 +4,4 @@ execute if score Running Constants matches 0 run function missilewars:main/lobby
 execute if score Running Constants matches 1 run function missilewars:main/running_main
 
 scoreboard players enable @a StopAdverts
+scoreboard players enable @a MapVote

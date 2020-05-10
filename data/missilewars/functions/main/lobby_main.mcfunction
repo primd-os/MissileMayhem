@@ -5,6 +5,7 @@ scoreboard players enable @a AutoTeam
 scoreboard players enable @a JoinSpectators
 scoreboard players enable @a ChooseMap
 scoreboard players enable @a GiveBook
+scoreboard players enable @a ChooseMissileSet
 scoreboard players enable @a MissileSetSelect
 
 gamemode adventure @a[tag=!Editor,gamemode=!creative]
@@ -27,6 +28,7 @@ execute as @a[scores={ChooseMap=1}] run scoreboard players set @s ChooseMap 0
 
 execute as @a[scores={MissileSetSelect=1}] run function missilewars:start/choose_missile_set
 execute as @a[scores={MissileSetSelect=1}] run scoreboard players set @s MissileSetSelect 0
+execute as @a run scoreboard players operation @s MissileSet = @s ChooseMissileSet
 
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
 execute as @e[type=tnt,nbt={Fuse:1s},x=34,y=94,z=3,dx=8,dy=7,dz=23] at @s run particle explosion ~ ~ ~
@@ -61,17 +63,12 @@ tag @a[tag=!PlayedBefore] add PlayedBefore
 execute as @a[scores={GiveBook=1}] run function missilewars:start/give_book
 execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
 
-
-execute unless block -4 100 0 lectern run function missilewars:main/set_lecturn
-
 scoreboard players set @a deathCheck 0
 
 function missilewars:start/check_start
 
 execute as @e[x=0, y=100,z=5,distance=0..2,team=!Blue] run function missilewars:start/join_blue
 execute as @e[x=0, y=100,z=-5,distance=0..2,team=!Green] run function missilewars:start/join_green
-
-function missilewars:maps/select_map
 
 function missilewars:custom_missile/save_and_load
 

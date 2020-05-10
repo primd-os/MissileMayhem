@@ -5,3 +5,5 @@ execute if score Running Constants matches 1 run function missilewars:main/runni
 
 scoreboard players enable @a StopAdverts
 scoreboard players enable @a MapVote
+
+execute as @a unless score @s MapVote = @s PrevMapVote run function missilewars:main/switch_vote

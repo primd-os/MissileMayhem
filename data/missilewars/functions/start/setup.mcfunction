@@ -35,6 +35,7 @@ scoreboard objectives add StopAdverts trigger
 scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
 scoreboard objectives add ChooseMap trigger
+scoreboard objectives add PrevMapVote trigger
 scoreboard objectives add MapVote trigger
 scoreboard objectives add GiveBook trigger
 scoreboard objectives add PrevMissileSet dummy

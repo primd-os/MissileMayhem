@@ -16,6 +16,7 @@ Note: to access the world's datapack folder type %appdata% in windows search the
 - Added progress bar to show when players will get the next missile
 - Multiple Missile sets to allow playing with different play styles
     - Currently supported are new and original
+- Allow placing missiles in any orientation
 
 ### Gunblade ###
 - Swapped the Gunblade from a bow to a cross bow
@@ -25,7 +26,7 @@ Note: to access the world's datapack folder type %appdata% in windows search the
 
 ### Maps ###
 - Added options to choose different maps
-- These are Normal, No Walls, Small Walls, Center Wall, Platforms, Weak Center & Bridge
+- These are Normal, No Walls, Small Walls, Center Wall, Platforms, Weak Center, Bridge, and Diagonal
 
 ### General ###
 - Removed limits on the amount of missiles you can have in your inventory

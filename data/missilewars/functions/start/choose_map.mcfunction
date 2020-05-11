@@ -6,3 +6,4 @@ tellraw @s {"text":"    4. Center Wall","clickEvent":{"action":"run_command","va
 tellraw @s {"text":"    5. Platforms","clickEvent":{"action":"run_command","value":"/trigger MapVote set 4"}}
 tellraw @s {"text":"    6. Weak Center","clickEvent":{"action":"run_command","value":"/trigger MapVote set 5"}}
 tellraw @s {"text":"    7. Bridge","clickEvent":{"action":"run_command","value":"/trigger MapVote set 6"}}
+tellraw @s {"text":"    8. Diagonal","clickEvent":{"action":"run_command","value":"/trigger MapVote set 7"}}

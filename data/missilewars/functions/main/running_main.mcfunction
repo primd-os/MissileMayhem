@@ -45,3 +45,6 @@ fill -105 128 -105 105 128 -105 gray_stained_glass
 fill 105 128 -105 105 128 105 gray_stained_glass
 fill 105 128 105 -105 128 105 gray_stained_glass
 fill -105 128 105 -105 128 -105 gray_stained_glass
+
+execute at @e[tag=BlueBase] if score Ending Constants matches 0 run function missilewars:maps/blue/map
+execute at @e[tag=GreenBase] if score Ending Constants matches 0 run function missilewars:maps/green/map

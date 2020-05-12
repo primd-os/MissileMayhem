@@ -22,4 +22,4 @@ execute as @e[tag=iterator] at @s if score temp3 Constants matches 0 if score ro
 
 scoreboard players add temp2 Constants 1
 
-execute if score temp2 Constants <= Iterations Constants run function missilewars:custom_missile/green_iterate_shoot
+execute if score temp2 Constants <= Iterations Constants run function missilewars:custom_missile/shoot_missile/green_iterate_shoot

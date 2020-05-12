@@ -34,13 +34,6 @@ execute unless score Ending Constants matches 1 run function missilewars:end/che
 
 function missilewars:item_managers/run_items
 function missilewars:item_managers/left_click_test
-fill -104 0 -104 104 128 -104 air
-fill 104 0 -104 104 128 104 air
-fill 104 0 104 -104 128 104 air
-fill -104 0 104 -104 128 -104 air
-
-fill -104 128 -104 104 128 0 air
-fill -104 128 0 104 128 104 air
 fill -105 0 -105 105 0 -105 gray_stained_glass
 fill 105 0 -105 105 0 105 gray_stained_glass
 fill 105 0 105 -105 0 105 gray_stained_glass

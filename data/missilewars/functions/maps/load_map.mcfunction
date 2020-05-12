@@ -29,3 +29,11 @@ execute at @e[tag=BlueBase] if score Map Constants matches 6 run fill -2 30 ~-9 
 execute at @e[tag=GreenBase] if score Map Constants matches 6 run fill -2 30 ~9 2 30 0 white_stained_glass
 execute at @e[tag=BlueBase] if score Map Constants matches 7 run function missilewars:maps/blue/basic_map
 execute at @e[tag=GreenBase] if score Map Constants matches 7 run function missilewars:maps/green/basic_map
+
+fill -104 0 -104 104 128 -104 barrier
+fill 104 0 -104 104 128 104 barrier
+fill 104 0 104 -104 128 104 barrier
+fill -104 0 104 -104 128 -104 barrier
+
+fill -104 128 -104 104 128 0 barrier
+fill -104 128 0 104 128 104 barrier

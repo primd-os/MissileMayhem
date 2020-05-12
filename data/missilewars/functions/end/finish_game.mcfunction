@@ -1,6 +1,5 @@
-scoreboard objectives setdisplay sidebar wins
-execute if score BlueWin Constants matches 1 if entity @a[team=Green] run scoreboard players add @a[team=Blue] wins 1 
-execute if score GreenWin Constants matches 1 if entity @a[team=Blue] run scoreboard players add @a[team=Green] wins 1 
+scoreboard objectives setdisplay sidebar points
+execute if entity @a[team=Green] if entity @a[team=Blue] run function missilewars:end/add_points
 
 scoreboard players set Running Constants 0
 scoreboard players set BlueWin Constants 0

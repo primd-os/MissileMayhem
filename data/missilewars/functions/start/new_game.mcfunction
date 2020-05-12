@@ -5,10 +5,10 @@ scoreboard players set Running Constants 1
 scoreboard players set GreenWin Constants 0
 scoreboard players set BlueWin Constants 0
 execute as @a run function missilewars:start/join
-execute at @e[tag=BlueBase] run tp @a[team=Blue] 0 31 ~-1 180 0
-execute at @e[tag=BlueBase] run spawnpoint @a[team=Blue] 0 31 ~-1
-execute at @e[tag=GreenBase] run tp @a[team=Green] 0 31 ~1 0 0
-execute at @e[tag=GreenBase] run spawnpoint @a[team=Green] 0 31 ~1
+execute at @e[tag=BlueBase] run tp @a[team=Blue] ~0 31 ~-1 180 0
+execute at @e[tag=BlueBase] run spawnpoint @a[team=Blue] ~0 31 ~-1
+execute at @e[tag=GreenBase] run tp @a[team=Green] ~0 31 ~1 0 0
+execute at @e[tag=GreenBase] run spawnpoint @a[team=Green] ~0 31 ~1
 gamemode survival @a[gamemode=!creative]
 gamemode spectator @a[team=Spectator,gamemode=!creative]
 

@@ -22,8 +22,8 @@ execute as @e[tag=missile, name="Green Lightning"] at @s as @a[team=Green,scores
 execute as @e[tag=missile, name="Blue Shieldbuster"] at @s as @a[team=Blue,scores={PlacedBuster=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_shieldbuster
 execute as @e[tag=missile, name="Green Shieldbuster"] at @s as @a[team=Green,scores={PlacedBuster=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_shieldbuster
 
-execute as @e[tag=missile, name="Blue Custom"] at @s as @a[team=Blue,scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:custom_missile/shoot_missile/blue_shoot_missile
-execute as @e[tag=missile, name="Green Custom"] at @s as @a[team=Green,scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:custom_missile/shoot_missile/green_shoot_missile
+execute as @e[tag=missile, name="Blue Custom"] at @s as @a[team=Blue,scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:custom_missile/shoot_missile/shoot_missile
+execute as @e[tag=missile, name="Green Custom"] at @s as @a[team=Green,scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:custom_missile/shoot_missile/shoot_missile
 
 scoreboard players set @a PlacedTomohawk 0
 scoreboard players set @a PlacedJuggurnaut 0

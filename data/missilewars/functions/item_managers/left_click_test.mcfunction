@@ -19,7 +19,7 @@ scoreboard players reset NumberSlimes Constants
 
 tag @e remove processed
 execute as @a[tag=MissileSelected] run function missilewars:item_managers/slime_tp
-# effect give @e[type=slime] invisibility 1 1 true
+effect give @e[type=slime] invisibility 1 1 true
 execute as @a[scores={SlimeKills=1..}] run function missilewars:main/toggle_place
 kill @e[type=experience_orb]
 scoreboard players set @a SlimeKills 0

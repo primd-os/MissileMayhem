@@ -25,6 +25,8 @@ execute as @e[tag=missile, name="Green Shieldbuster"] at @s as @a[team=Green,sco
 execute as @e[tag=missile, name="Blue Custom"] at @s as @a[team=Blue,scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:custom_missile/shoot_missile/shoot_missile
 execute as @e[tag=missile, name="Green Custom"] at @s as @a[team=Green,scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:custom_missile/shoot_missile/shoot_missile
 
+execute as @e[tag=missile] run schedule function missilewars:item_managers/color_missile 1t append
+
 scoreboard players set @a PlacedTomohawk 0
 scoreboard players set @a PlacedJuggurnaut 0
 scoreboard players set @a PlacedLightning 0
@@ -34,4 +36,3 @@ scoreboard players set @a PlacedCustom 0
 execute as @e[tag=missile] at @s run setblock ~ ~1 ~ minecraft:redstone_block
 execute as @e[tag=missile] at @s run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 execute as @e[tag=missile] at @s run playsound minecraft:entity.shulker.shoot block @a ~ ~ ~
-kill @e[tag=missile]

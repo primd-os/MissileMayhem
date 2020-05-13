@@ -11,7 +11,7 @@ clear @s snowball
 clear @s firework_rocket
 clear @s arrow
 clear @s tnt
-clear @s glass
+clear @s white_stained_glass
 clear @s white_wool
 clear @s observer
 clear @s piston

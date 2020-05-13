@@ -1,5 +1,5 @@
 execute at @e[tag=mover] if block ~ ~ ~ white_wool at @e[tag=iterator] run scoreboard players set temp3 Constants 1
-execute at @e[tag=mover] if block ~ ~ ~ glass at @e[tag=iterator] run scoreboard players set temp3 Constants 2
+execute at @e[tag=mover] if block ~ ~ ~ white_stained_glass at @e[tag=iterator] run scoreboard players set temp3 Constants 2
 execute at @e[tag=mover] if block ~ ~ ~ redstone_block at @e[tag=iterator] run scoreboard players set temp3 Constants 3
 execute at @e[tag=mover] if block ~ ~ ~ observer[facing=down] at @e[tag=iterator] run scoreboard players set temp3 Constants 4
 execute at @e[tag=mover] if block ~ ~ ~ observer[facing=up] at @e[tag=iterator] run scoreboard players set temp3 Constants 5

@@ -1,7 +1,7 @@
-kill @e[type=area_effect_cloud,tag=BlueBase]
-kill @e[type=area_effect_cloud,tag=GreenBase]
-summon minecraft:area_effect_cloud 0 0 75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["BlueBase"]}
-summon minecraft:area_effect_cloud 0 0 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["GreenBase"]}
+summon minecraft:area_effect_cloud 0 0 75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["BlueBase","NewBase"]}
+summon minecraft:area_effect_cloud 0 0 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["GreenBase","NewBase"]}
+scoreboard players set @e[tag=NewBase] Game 1
+tag @e remove NewBase
 execute as @e[tag=BlueBase] at @s if score Map Constants matches 7 run tp ~50 ~ ~
 execute as @e[tag=GreenBase] at @s if score Map Constants matches 7 run tp ~-50 ~ ~
 function missilewars:maps/clear_map

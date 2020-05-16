@@ -1,6 +1,6 @@
 playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~ 1 1
 
-summon minecraft:area_effect_cloud 37.5 96 23.5 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["mover"]}
+execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run summon minecraft:area_effect_cloud ~9 ~6 ~8 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["mover"]}
 summon minecraft:area_effect_cloud 31.5 96 14.5 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["iterator"]}
 
 scoreboard players set temp2 Constants 0

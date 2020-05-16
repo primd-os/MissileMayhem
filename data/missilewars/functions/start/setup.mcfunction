@@ -21,7 +21,6 @@ forceload add 0 -200 100 200
 scoreboard objectives add snowballTime dummy
 
 scoreboard objectives add missiles dummy
-scoreboard objectives setdisplay sidebar missiles
 scoreboard objectives modify missiles displayname "Upcoming Missiles"
 
 scoreboard objectives add points dummy
@@ -43,6 +42,7 @@ scoreboard objectives add MissileSet dummy
 scoreboard objectives add ChooseMissileSet trigger
 scoreboard objectives add MissileSetSelect trigger
 scoreboard objectives add Items dummy
+scoreboard objectives add Game dummy
 
 scoreboard objectives add PlacedTomohawk minecraft.used:minecraft.creeper_spawn_egg
 scoreboard objectives add PlacedJuggurnaut minecraft.used:minecraft.wolf_spawn_egg
@@ -76,6 +76,7 @@ scoreboard players set Chests Constants 3
 scoreboard players set Iterations Constants 162
 
 scoreboard objectives add deathCheck deathCount
+scoreboard objectives add quits custom:leave_game
 
 scoreboard objectives add shulkerCount dummy
 scoreboard objectives add bowCount dummy
@@ -90,20 +91,31 @@ scoreboard objectives setdisplay belowName player_health
 team add Blue
 team add Green
 team add Spectator
+team add Lobby
 team modify Blue color blue
 team modify Green color green
 team modify Spectator color dark_gray
+team modify Lobby color gray
 team modify Blue collisionRule pushOtherTeams
 team modify Green collisionRule pushOtherTeams
+team modify Lobby collisionRule never
 team modify Blue friendlyFire false
 team modify Green friendlyFire false
+team modify Lobby friendlyFire false
+
+scoreboard objectives setdisplay sidebar.team.blue missiles
+scoreboard objectives setdisplay sidebar.team.green missiles
+scoreboard objectives setdisplay sidebar.team.dark_gray missiles
+scoreboard objectives setdisplay sidebar.team.gray points
 
 function missilewars:start/advert
-
-setblock -4 100 0 air
+function missilewars:new_missile/missile_loop
 
 bossbar add missile_time {"text": "Time to Next Missile"}
 bossbar set missile_time max 280
 bossbar set missile_time style progress
 
 function missilewars:end/finish_game
+
+execute in the_nether run function missilewars:main/set_map
+execute in the_nether as @a run tp 0 100 0

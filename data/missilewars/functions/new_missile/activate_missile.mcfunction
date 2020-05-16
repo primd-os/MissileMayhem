@@ -10,8 +10,8 @@ execute if score Custom missiles matches 0 run give @a[team=Blue] minecraft:cave
 execute if score Custom missiles matches 0 run give @a[team=Green] minecraft:cave_spider_spawn_egg{display:{Name:'{"text":"Green Custom"}'},EntityTag:{CustomName:"\"Green Custom\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
 execute if score Shield missiles matches 0 run give @a[team=Blue] minecraft:snowball{display:{Name:'{"text":"Blue Shield"}'}}
 execute if score Shield missiles matches 0 run give @a[team=Green] minecraft:snowball{display:{Name:'{"text":"Green Shield"}'}}
-execute if score Arrows missiles matches 0 run give @a[team=!Spectator] minecraft:arrow 2
-execute if score Fireball missiles matches 0 run give @a[team=!Spectator] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
+execute if score Arrows missiles matches 0 run give @a[scores={Game=1..}] minecraft:arrow 2
+execute if score Fireball missiles matches 0 run give @a[scores={Game=1..}] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
 
 execute if score Tomohawk missiles matches -1..0 run scoreboard players reset Tomohawk missiles 
 execute if score Juggurnaut missiles matches -1..0 run scoreboard players reset Juggurnaut missiles 

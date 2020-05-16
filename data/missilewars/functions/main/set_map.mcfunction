@@ -1,97 +1,139 @@
-# platform
-fill 34 97 13 30 100 17 air
-fill 30 96 17 34 96 13 minecraft:obsidian
-fill 34 94 13 30 94 17 minecraft:obsidian
-fill 34 95 13 30 95 13 minecraft:obsidian
-fill 34 95 17 30 95 17 minecraft:obsidian
-fill 30 95 16 30 95 14 minecraft:obsidian
-
-setblock 35 96 17 minecraft:ender_chest[facing=east]
-setblock 35 96 15 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"Clear Missile","clickEvent":{"action":"run_command","value":"fill 35 96 25 41 99 4 air"}}'}
-setblock 35 96 13 minecraft:anvil
-
-setblock 31 98 13 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/save_missile"}}',Text2:'{"text":"Save"}'}
-
-setblock 31 98 17 minecraft:oak_wall_sign[facing=north]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/load_missile"}}',Text2:'{"text":"Load/Build"}'}
-
-fill 31 95 14 32 95 16 minecraft:shulker_box
-
-# custom missile area
-fill 35 95 25 36 94 4 minecraft:obsidian
-fill 40 95 25 41 94 4 minecraft:obsidian
-fill 35 95 5 41 94 4 minecraft:obsidian
-fill 35 95 25 41 94 24 minecraft:obsidian
-fill 37 95 23 39 95 6 minecraft:barrier
-
-fill 34 94 26 42 99 26 air
-fill 42 94 3 42 99 26 air
-fill 42 94 3 34 99 3 air
-fill 42 99 3 34 99 26 air
-fill 42 97 23 42 97 6 minecraft:magenta_glazed_terracotta[facing=west]
-
-fill 34 94 25 34 99 18 air
-fill 34 94 12 34 99 4 air
-fill 34 94 12 29 99 12 air
-fill 34 94 18 29 99 18 air
-fill 29 94 12 29 99 18 air
-fill 27 94 12 28 99 14 air
-fill 27 94 16 28 99 18 air
-fill 28 96 15 27 96 15 air
-setblock 28 94 15 air
-setblock 28 95 15 minecraft:oak_wall_sign[facing=east]{"Text1":'{"text":"Back To Hub","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_hub"}}'}
-
-# parkour
-setblock 27 95 15 minecraft:quartz_pillar
-setblock 23 95 15 minecraft:quartz_pillar
-setblock 23 94 11 minecraft:quartz_pillar
-setblock 23 95 7 minecraft:quartz_pillar
-setblock 8 101 0 minecraft:quartz_pillar
-setblock 12 101 0 minecraft:quartz_pillar
-setblock 15 102 0 minecraft:quartz_pillar
-setblock 19 102 1 minecraft:quartz_pillar
-
-setblock 27 94 15 minecraft:white_stained_glass
-setblock 23 94 15 minecraft:white_stained_glass
-setblock 23 93 11 minecraft:white_stained_glass
-setblock 23 94 7 minecraft:white_stained_glass
-setblock 8 100 0 minecraft:white_stained_glass
-setblock 12 100 0 minecraft:white_stained_glass
-setblock 15 101 0 minecraft:white_stained_glass
-setblock 19 101 1 minecraft:white_stained_glass
+fill -10 90 -20 10 110 20 air
+fill 10 70 -60 30 90 0 air
+fill 10 70 0 30 90 60 air
+fill 10 90 -60 30 110 0 air
+fill 10 90 0 30 110 60 air
 
 # starting area
-fill 3 99 -6 -3 99 6 minecraft:barrier
+fill 6 99 -20 -6 99 20 minecraft:black_concrete
+fill 6 98 -20 -6 98 20 minecraft:sea_lantern
 
-fill -1 99 6 1 99 4 minecraft:blue_stained_glass
-setblock 0 99 5 minecraft:diamond_block
-fill 0 99 3 0 99 1 minecraft:blue_stained_glass
+fill -7 110 20 -7 99 -20 minecraft:black_concrete
 
-fill -1 99 -6 1 99 -4 minecraft:green_stained_glass
-setblock 0 99 -5 minecraft:emerald_block
-fill 0 99 -3 0 99 -1 minecraft:green_stained_glass
+fill 0 99 -20 0 99 20 minecraft:gray_stained_glass
 
-fill -4 99 0 3 99 0 minecraft:gray_stained_glass
+fill -3 99 0 3 99 0 minecraft:gray_stained_glass
 setblock 0 99 0 minecraft:white_stained_glass
 
-setblock 3 101 1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"^"}',Text2:'{"text":"To Custom Missile"}',Text3:'{"text":"Maker and"}',Text4:'{"text":"Parkour"}'}
-setblock 3 101 -1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"To Start use:"}',Text2:'{"text":"/trigger Start","clickEvent":{"action":"run_command","value":"/trigger Start"}}',Text3:'{"text":"or"}',Text4:'{"text":"Click Sign"}'}
-setblock 4 100 0 minecraft:quartz_stairs[facing=east]
-setblock 5 101 0 minecraft:quartz_stairs[facing=east]
-setblock 5 100 0 minecraft:ender_chest[facing=east]
 
 setblock -5 103 0 minecraft:quartz_pillar[axis=x]
 fill -5 101 1 -5 102 -1 minecraft:quartz_pillar[axis=x]
 fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
-setblock -4 103 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Commands","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
-setblock -4 101 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":"Choose Map"}',Text4:'{"text":""}'}
-setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger StopAdverts"}}',Text3:'{"text":"Stop Discord"}',Text4:'{"text":"Adverts"}'}
-setblock -4 101 1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Auto Team","clickEvent":{"action":"run_command","value":"trigger AutoTeam"}}'}
-setblock -4 102 1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Spectate","clickEvent":{"action":"run_command","value":"trigger JoinSpectators"}}'}
-setblock -4 101 -1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Choose Missile","clickEvent":{"action":"run_command","value":"trigger MissileSetSelect"}}',Text4:'{"text": "Set"}'}
-setblock -4 102 -1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Click To"}',Text3:'{"text":"Get Instructions","clickEvent":{"action":"run_command","value":"trigger GiveBook"}}'}
 
-execute unless entity @a[x=-5,dx=2,y=104,dy=2,z=-1,dz=2] run setblock -5 101 2 minecraft:barrier
-execute if entity @a[x=-5,dx=2,y=104,dy=2,z=-1,dz=2] run setblock -5 101 2 minecraft:air
-setblock -6 100 0 minecraft:barrier
-setblock -6 101 -1 minecraft:barrier
-setblock -6 101 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"Secret Sign!","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_maker"}}'}
+setblock 5 103 0 minecraft:quartz_pillar[axis=x]
+fill 4 99 1 4 99 -1 minecraft:gray_stained_glass
+fill 5 101 1 5 102 -1 minecraft:quartz_pillar[axis=x]
+setblock -4 103 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Games","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
+setblock -4 102 1 minecraft:oak_wall_sign[facing=east]{Text2:'{"text":"Game 1","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 1"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"function missilewars:start/join_auto"}}'}
+
+setblock 4 103 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Commands","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
+setblock 4 101 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":"Choose Map"}',Text4:'{"text":""}'}
+setblock 4 102 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger StopAdverts"}}',Text3:'{"text":"Stop Discord"}',Text4:'{"text":"Adverts"}'}
+setblock 4 101 1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Make Custom","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_custom"}}'}
+setblock 4 102 1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Spectate","clickEvent":{"action":"run_command","value":"trigger JoinSpectators"}}'}
+setblock 4 101 -1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Choose Missile","clickEvent":{"action":"run_command","value":"trigger MissileSetSelect"}}',Text4:'{"text": "Set"}'}
+setblock 4 102 -1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Get Instructions","clickEvent":{"action":"run_command","value":"trigger GiveBook"}}'}
+
+setblock -6 101 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"Secret Sign!","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_secret"}}'}
+
+fill 7 98 -20 7 110 20 minecraft:air
+fill 8 97 -21 8 110 21 minecraft:air
+fill 9 96 -22 9 110 22 minecraft:air
+fill 10 95 -23 10 110 23 minecraft:air
+fill 11 94 -24 11 110 24 minecraft:air
+fill 12 93 -25 12 110 25 minecraft:air
+fill 13 92 -26 13 110 26 minecraft:air
+# roof
+fill 38 111 37 -7 111 -38 minecraft:black_concrete
+
+# floor
+fill 1 99 5 6 99 5 minecraft:gray_stained_glass
+fill 1 99 -5 6 99 -5 minecraft:gray_stained_glass
+fill 7 98 -20 7 98 20 minecraft:black_concrete
+fill 8 97 -21 8 97 21 minecraft:black_concrete
+fill 9 96 -22 9 96 22 minecraft:black_concrete
+fill 10 95 -23 10 95 23 minecraft:black_concrete
+fill 11 94 -24 11 94 24 minecraft:black_concrete
+fill 12 93 -25 12 93 25 minecraft:black_concrete
+fill 13 92 -26 13 92 26 minecraft:black_concrete
+
+fill 14 91 -27 14 91 27 minecraft:black_concrete
+fill 15 91 -28 15 91 28 minecraft:black_concrete
+fill 16 91 -29 16 91 29 minecraft:black_concrete
+fill 17 91 -30 17 91 30 minecraft:black_concrete
+fill 18 91 -31 18 91 31 minecraft:black_concrete
+fill 19 91 -32 19 91 32 minecraft:black_concrete
+fill 20 91 -33 20 91 33 minecraft:black_concrete
+fill 21 91 -34 21 91 34 minecraft:black_concrete
+fill 22 91 -35 22 91 35 minecraft:black_concrete
+fill 23 91 -36 23 91 36 minecraft:black_concrete
+fill 24 91 -37 24 91 37 minecraft:black_concrete
+
+fill 7 97 -20 7 97 20 minecraft:sea_lantern
+fill 8 96 -21 8 96 21 minecraft:sea_lantern
+fill 9 95 -22 9 95 22 minecraft:sea_lantern
+fill 10 94 -23 10 94 23 minecraft:sea_lantern
+fill 11 93 -24 11 93 24 minecraft:sea_lantern
+fill 12 92 -25 12 92 25 minecraft:sea_lantern
+fill 13 91 -26 13 91 26 minecraft:sea_lantern
+fill 14 90 -27 14 90 27 minecraft:sea_lantern
+
+# walls
+fill 7 98 -21 7 110 -21 minecraft:black_concrete
+fill 7 98 21 7 110 21 minecraft:black_concrete
+fill 8 97 -22 8 110 -22 minecraft:black_concrete
+fill 8 97 22 8 110 22 minecraft:black_concrete
+fill 9 96 -23 9 110 -23 minecraft:black_concrete
+fill 9 96 23 9 110 23 minecraft:black_concrete
+fill 10 95 -24 10 110 -24 minecraft:black_concrete
+fill 10 95 24 10 110 24 minecraft:black_concrete
+fill 11 94 -25 11 110 -25 minecraft:black_concrete
+fill 11 94 25 11 110 25 minecraft:black_concrete
+fill 12 93 -26 12 110 -26 minecraft:black_concrete
+fill 12 93 26 12 110 26 minecraft:black_concrete
+fill 13 92 -27 13 110 -27 minecraft:black_concrete
+fill 13 92 27 13 110 27 minecraft:black_concrete
+
+fill 14 91 -28 14 110 -28 minecraft:black_concrete
+fill 14 91 28 14 110 28 minecraft:black_concrete
+fill 15 91 -29 15 110 -29 minecraft:black_concrete
+fill 15 91 29 15 110 29 minecraft:black_concrete
+fill 16 91 -30 16 110 -30 minecraft:black_concrete
+fill 16 91 30 16 110 30 minecraft:black_concrete
+fill 17 91 -31 17 110 -31 minecraft:black_concrete
+fill 17 91 31 17 110 31 minecraft:black_concrete
+fill 18 91 -32 18 110 -32 minecraft:black_concrete
+fill 18 91 32 18 110 32 minecraft:black_concrete
+fill 19 91 -33 19 110 -33 minecraft:black_concrete
+fill 19 91 33 19 110 33 minecraft:black_concrete
+fill 20 91 -34 20 110 -34 minecraft:black_concrete
+fill 20 91 34 20 110 34 minecraft:black_concrete
+fill 21 91 -35 21 110 -35 minecraft:black_concrete
+fill 21 91 35 21 110 35 minecraft:black_concrete
+fill 22 91 -36 22 110 -36 minecraft:black_concrete
+fill 22 91 36 22 110 36 minecraft:black_concrete
+fill 23 91 -37 23 110 -37 minecraft:black_concrete
+fill 23 91 37 23 110 37 minecraft:black_concrete
+fill 24 91 -38 24 110 -38 minecraft:black_concrete
+fill 24 92 -38 24 110 -38 minecraft:black_concrete
+
+fill -6 100 21 6 110 21 minecraft:black_concrete
+fill -6 100 -21 6 110 -21 minecraft:black_concrete
+
+fill 7 98 5 18 91 5 minecraft:gray_stained_glass replace minecraft:black_concrete
+fill 7 98 -5 18 91 -5 minecraft:gray_stained_glass replace minecraft:black_concrete
+fill 19 91 -27 19 91 27 minecraft:gray_stained_glass replace minecraft:black_concrete
+
+kill @e[tag=CustomMissileArea]
+summon minecraft:area_effect_cloud 25 85 -27 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"]}
+summon minecraft:area_effect_cloud 25 85 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"]}
+summon minecraft:area_effect_cloud 25 85 27 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"]}
+
+execute as @e[tag=CustomMissileArea] at @s run function missilewars:main/set_custom
+
+fill 22 91 -38 26 91 38 minecraft:black_concrete keep
+fill 14 90 -27 26 90 27 minecraft:sea_lantern
+fill 39 91 -38 39 110 37 minecraft:black_concrete keep
+
+fill 24 91 38 38 110 38 minecraft:black_concrete keep
+fill 38 91 -39 24 110 -39 minecraft:black_concrete keep

@@ -43,6 +43,10 @@ scoreboard objectives add ChooseMissileSet trigger
 scoreboard objectives add MissileSetSelect trigger
 scoreboard objectives add Items dummy
 scoreboard objectives add Game dummy
+scoreboard objectives add GameState dummy
+scoreboard objectives add Timer dummy
+scoreboard objectives add TimerSecs dummy
+scoreboard objectives add TimerTick dummy
 
 scoreboard objectives add PlacedTomohawk minecraft.used:minecraft.creeper_spawn_egg
 scoreboard objectives add PlacedJuggurnaut minecraft.used:minecraft.wolf_spawn_egg
@@ -56,10 +60,8 @@ scoreboard objectives add DirectionPlace dummy
 scoreboard objectives add DirecToPlace dummy
 
 scoreboard players set NumMissiles Constants 8
-scoreboard players set Running Constants 0
 scoreboard players set GreenWin Constants 0
-scoreboard players set Blue Constants 0
-scoreboard players set Ending Constants 0
+scoreboard players set BlueWin Constants 0
 scoreboard players set StartVotes Constants 0
 scoreboard players set NumPlayers Constants 0
 scoreboard players set @a StartVote 0
@@ -68,6 +70,7 @@ scoreboard players set GreenMembers Constants 0
 
 scoreboard players set Two Constants 2
 scoreboard players set Ten Constants 10
+scoreboard players set Twenty Constants 20
 
 scoreboard players set Length Constants 18
 scoreboard players set ChestSize Constants 27

@@ -1,9 +1,7 @@
 execute if entity @a[team=Green] if entity @a[team=Blue] run function missilewars:end/add_points
 
-scoreboard players set Running Constants 0
 scoreboard players set BlueWin Constants 0
 scoreboard players set GreenWin Constants 0
-scoreboard players set Ending Constants 0
 
 team empty Blue
 team empty Green

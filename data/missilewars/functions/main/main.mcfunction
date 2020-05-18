@@ -1,7 +1,28 @@
 execute as @e[type=!slime] at @s run kill @s[dy=-10,y=0]
 
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
-function missilewars:start/check_start
+execute as @e[tag=BlueBase] run scoreboard players remove @s Timer 1
+execute as @e[tag=BlueBase] run scoreboard players operation @s TimerSecs = @s Timer
+execute as @e[tag=BlueBase] run scoreboard players operation @s TimerTick = @s Timer
+execute as @e[tag=BlueBase] run scoreboard players operation @s TimerSecs /= Twenty Constants
+execute as @e[tag=BlueBase] run scoreboard players operation @s TimerTick %= Twenty Constants
+execute as @e[tag=BlueBase,scores={TimerTick=0}] if score @s Timer matches 1..2147483647 run tellraw @a ["",{"text":"Game Starting in "},{"score":{"name":"@e[tag=BlueBase]","objective":"TimerSecs"}}]
+execute as @e[tag=BlueBase,scores={Timer=0}] run tellraw @a {"text": "Game Started"}
+execute as @e[tag=BlueBase,scores={Timer=0}] run function missilewars:maps/load_map
+execute as @e[tag=BlueBase,scores={Timer=0}] run kill @a
+execute as @e[tag=BlueBase,scores={Timer=0}] run scoreboard players set @s GameState 1
+
+execute as @e[tag=BlueBase] if score @s GameState matches 1 run function missilewars:end/check_end_game
+
+function missilewars:item_managers/run_items
+function missilewars:item_managers/left_click_test
+fill -105 0 -105 105 0 -105 gray_stained_glass
+fill 105 0 -105 105 0 105 gray_stained_glass
+fill 105 0 105 -105 0 105 gray_stained_glass
+fill -105 0 105 -105 0 -105 gray_stained_glass
+
+execute as @e[tag=BlueBase] if score @s GameState matches 1 at @e[tag=BlueBase] run function missilewars:maps/blue/map
+execute as @e[tag=BlueBase] if score @s GameState matches 1 at @e[tag=GreenBase] run function missilewars:maps/green/map
 
 execute as @a[scores={Game=1..}] run function missilewars:main/running_main
 
@@ -24,6 +45,7 @@ scoreboard players set @a[scores={quits=1..}] quits 0
 execute as @a[tag=!PlayedBefore] run function missilewars:start/give_book
 execute as @a[tag=!PlayedBefore] run function missilewars:start/give_default_missile
 execute as @a[tag=!PlayedBefore] run scoreboard players set @a DirectionPlace 0
+execute as @a[tag=!PlayedBefore] run team join Lobby @s
 tag @a[tag=!PlayedBefore] add PlayedBefore
 execute as @a[scores={GiveBook=1}] run function missilewars:start/give_book
 execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0

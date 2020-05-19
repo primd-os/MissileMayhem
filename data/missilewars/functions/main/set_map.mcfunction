@@ -1,3 +1,4 @@
+# clear map
 fill -10 90 -20 10 110 20 air
 fill 10 70 -60 30 90 0 air
 fill 10 70 0 30 90 60 air
@@ -15,7 +16,7 @@ fill 0 99 -20 0 99 20 minecraft:gray_stained_glass
 fill -3 99 0 3 99 0 minecraft:gray_stained_glass
 setblock 0 99 0 minecraft:white_stained_glass
 
-
+# signs
 setblock -5 103 0 minecraft:quartz_pillar[axis=x]
 fill -5 101 1 -5 102 -1 minecraft:quartz_pillar[axis=x]
 fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
@@ -30,7 +31,7 @@ setblock 4 103 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:
 setblock 4 101 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":"Choose Map"}',Text4:'{"text":""}'}
 setblock 4 102 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger StopAdverts"}}',Text3:'{"text":"Stop Discord"}',Text4:'{"text":"Adverts"}'}
 setblock 4 101 1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Make Custom","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_custom"}}'}
-setblock 4 102 1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Spectate","clickEvent":{"action":"run_command","value":"trigger JoinSpectators"}}'}
+setblock 5 102 1 minecraft:ender_chest[facing=west]
 setblock 4 101 -1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Choose Missile","clickEvent":{"action":"run_command","value":"trigger MissileSetSelect"}}',Text4:'{"text": "Set"}'}
 setblock 4 102 -1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Get Instructions","clickEvent":{"action":"run_command","value":"trigger GiveBook"}}'}
 
@@ -135,5 +136,5 @@ fill 22 91 -38 26 91 38 minecraft:black_concrete keep
 fill 14 90 -27 26 90 27 minecraft:sea_lantern
 fill 39 91 -38 39 110 37 minecraft:black_concrete keep
 
-fill 24 91 38 38 110 38 minecraft:black_concrete keep
+fill 24 91 38 38 110 38 minecraft:black_concrete
 fill 38 91 -39 24 110 -39 minecraft:black_concrete keep

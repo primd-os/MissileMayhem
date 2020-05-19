@@ -33,6 +33,8 @@ scoreboard objectives setdisplay list StartVote
 scoreboard objectives add StopAdverts trigger
 scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
+scoreboard objectives add JoinRed trigger
+scoreboard objectives add JoinBlue trigger
 scoreboard objectives add ChooseMap trigger
 scoreboard objectives add PrevMapVote trigger
 scoreboard objectives add MapVote trigger

@@ -48,6 +48,7 @@ execute as @a unless score @s MapVote = @s PrevMapVote run function missilewars:
 
 execute as @a[scores={quits=1..}] at @s run team join Lobby @s
 execute as @a[scores={quits=1..}] at @s run scoreboard players set @s Game 0
+execute as @a[scores={quits=1..}] at @s run function missilewars:main/clear_inv
 scoreboard players set @a[scores={quits=1..}] quits 0
 
 execute as @a[tag=!PlayedBefore] run function missilewars:start/give_book

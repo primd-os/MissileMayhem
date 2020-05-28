@@ -7,7 +7,7 @@ tag @a[nbt={SelectedItem:{id:"minecraft:cave_spider_spawn_egg"}}] add MissileSel
 scoreboard players set NumberPlayers Constants 0
 scoreboard players set NumberSlimes Constants 0
 execute as @e[type=minecraft:slime] run scoreboard players add NumberSlimes Constants 1
-execute as @a[tag=MissileSelected] run scoreboard players add NumberPlayers Constants 1
+execute as @a[tag=MissileS  elected] run scoreboard players add NumberPlayers Constants 1
 execute if score NumberPlayers Constants > NumberSlimes Constants run summon slime 0 2 0 {NoAI:1b,NoGravity:1b,Silent:1b}
 execute if score NumberPlayers Constants < NumberSlimes Constants run tag @e[type=slime,limit=1] add ToDie
 tp @e[tag=ToDie] ~ 255 ~

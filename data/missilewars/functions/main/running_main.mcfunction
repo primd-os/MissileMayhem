@@ -7,7 +7,9 @@ scoreboard players enable @s JoinRed
 scoreboard players enable @s JoinBlue
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
+scoreboard players operation @s ChooseMissileSe2 = @s ChooseMissileSet
 scoreboard players reset @s ChooseMissileSet
+scoreboard players operation @s ChooseMissileSet = @s ChooseMissileSe2
 scoreboard players reset @s MissileSetSelect
 
 tag @s add ActivePlayer
@@ -38,6 +40,6 @@ execute as @s[team=!Spectator,scores={bowCount=2..2000}] run clear @s crossbow 1
 
 execute as @s[scores={deathCheck=1..1000},team=Blue] at @s run scoreboard players set @s DirecToPlace 2
 execute as @s[scores={deathCheck=1..1000},team=Green] at @s run scoreboard players set @s DirecToPlace 0
-execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run tag @s add dead
 execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run schedule function missilewars:main/turn_around 2t
+execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run tag @s add dead
 scoreboard players set @s deathCheck 0

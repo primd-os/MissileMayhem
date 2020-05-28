@@ -48,8 +48,8 @@ execute as @s[tag=Editor] store result score @s Items run clear @s stone_pressur
 execute as @s[tag=Editor] if score @s Items matches 0 run give @s stone_pressure_plate{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
 
 execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-10 if entity @s[dx=13,dy=15,dz=20] run tag @s add InBox
-clear @a[tag=!InBox,tag=Editor]
-tag @a[tag=!InBox] remove Editor
+clear @s[tag=!InBox,tag=Editor]
+tag @s[tag=!InBox] remove Editor
 tag @s remove InBox
 
 scoreboard players set @s deathCheck 0

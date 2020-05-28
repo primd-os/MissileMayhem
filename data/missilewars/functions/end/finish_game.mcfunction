@@ -17,3 +17,5 @@ kill @e[type=arrow]
 kill @e[type=fireball]
 kill @e[type=area_effect_cloud,tag=BlueBase]
 kill @e[type=area_effect_cloud,tag=GreenBase]
+
+tag @a remove dead

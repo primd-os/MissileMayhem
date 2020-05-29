@@ -123,5 +123,5 @@ bossbar set missile_time style progress
 
 function missilewars:end/finish_game
 
-execute in the_nether run function missilewars:main/set_map
+execute in the_nether run function missilewars:set_lobby/set_map
 execute in the_nether as @a run tp 0 100 0

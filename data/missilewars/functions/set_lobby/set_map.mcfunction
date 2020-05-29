@@ -1,9 +1,54 @@
 # clear map
+fill -10 90 -80 10 110 -20 air
 fill -10 90 -20 10 110 20 air
+fill -10 90 20 10 110 80 air
 fill 10 70 -60 30 90 0 air
 fill 10 70 0 30 90 60 air
 fill 10 90 -60 30 110 0 air
 fill 10 90 0 30 110 60 air
+
+# map area
+# floor
+fill 6 99 20 -6 99 76 minecraft:black_concrete
+fill 6 98 20 -6 98 76 minecraft:sea_lantern
+fill -1 99 20 0 99 76 minecraft:gray_stained_glass
+
+# ceiling
+fill 6 111 20 -6 111 76 minecraft:black_concrete
+
+# walls
+fill 6 99 76 -7 111 76 minecraft:black_concrete
+fill -7 99 20 -7 111 76 minecraft:black_concrete
+fill 6 99 20 6 111 76 minecraft:black_concrete
+
+# mini maps
+execute positioned 4.5 100.00 26.5 run function missilewars:set_lobby/minimaps/basic
+execute positioned 4.5 100.00 26.5 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"Normal","color":"white"}'}
+execute positioned 4.5 100.00 40.5 run function missilewars:set_lobby/minimaps/no_walls
+execute positioned 4.5 100.00 40.5 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"No Walls","color":"white"}'}
+execute positioned 4.5 100.00 54.5 run function missilewars:set_lobby/minimaps/small
+execute positioned 4.5 100.00 54.5 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"Small","color":"white"}'}
+execute positioned 4.5 100.00 68.5 run function missilewars:set_lobby/minimaps/center_wall
+execute positioned 4.5 100.00 68.5 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"Center Wall","color":"white"}'}
+execute positioned -4.5 100.00 26.5 run function missilewars:set_lobby/minimaps/platforms
+execute positioned -4.5 100.00 26.5 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Platforms","color":"white"}'}
+execute positioned -4.5 100.00 40.5 run function missilewars:set_lobby/minimaps/weak_center
+execute positioned -4.5 100.00 40.5 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Weak Center","color":"white"}'}
+execute positioned -4.5 100.00 54.5 run function missilewars:set_lobby/minimaps/bridge
+execute positioned -4.5 100.00 54.5 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Bridge","color":"white"}'}
+execute positioned -4.5 100.00 68.5 run function missilewars:set_lobby/minimaps/diagonal
+execute positioned -4.5 100.00 68.5 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Diagonal","color":"white"}'}
+
+# secrets
+setblock -6 101 26 minecraft:barrier
+setblock 5 103 54 minecraft:barrier
+setblock 5 103 40 minecraft:barrier
+
+# letters
+setblock 1 110 20 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:tt,Color:0},{Pattern:tts,Color:15},{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:bo,Color:15}]}
+setblock 0 110 20 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:rs,Color:0},{Pattern:ls,Color:0},{Pattern:ms,Color:0},{Pattern:ts,Color:0},{Pattern:bo,Color:15}]}
+setblock -1 110 20 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:rs,Color:0},{Pattern:hhb,Color:15},{Pattern:ms,Color:0},{Pattern:ts,Color:0},{Pattern:ls,Color:0},{Pattern:bo,Color:15}]}
+setblock -2 110 20 minecraft:white_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:mr,Color:15},{Pattern:ms,Color:15},{Pattern:drs,Color:0},{Pattern:bo,Color:15}]}
 
 # starting area
 fill 6 99 -20 -6 99 20 minecraft:black_concrete
@@ -11,10 +56,9 @@ fill 6 98 -20 -6 98 20 minecraft:sea_lantern
 
 fill -7 110 20 -7 99 -20 minecraft:black_concrete
 
-fill 0 99 -20 0 99 20 minecraft:gray_stained_glass
+fill -1 99 -20 0 99 20 minecraft:gray_stained_glass
 
 fill -3 99 0 3 99 0 minecraft:gray_stained_glass
-setblock 0 99 0 minecraft:white_stained_glass
 
 # signs
 setblock -5 103 0 minecraft:quartz_pillar[axis=x]
@@ -118,7 +162,6 @@ fill 23 91 37 23 110 37 minecraft:black_concrete
 fill 24 91 -38 24 110 -38 minecraft:black_concrete
 fill 24 92 -38 24 110 -38 minecraft:black_concrete
 
-fill -6 100 21 6 110 21 minecraft:black_concrete
 fill -6 100 -21 6 110 -21 minecraft:black_concrete
 
 fill 7 98 5 18 91 5 minecraft:gray_stained_glass replace minecraft:black_concrete
@@ -130,7 +173,7 @@ summon minecraft:area_effect_cloud 25 85 -27 {Age: -2147483648, Duration: -1, Wa
 summon minecraft:area_effect_cloud 25 85 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"]}
 summon minecraft:area_effect_cloud 25 85 27 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"]}
 
-execute as @e[tag=CustomMissileArea] at @s run function missilewars:main/set_custom
+execute as @e[tag=CustomMissileArea] at @s run function missilewars:set_lobby/set_custom
 
 fill 22 91 -38 26 91 38 minecraft:black_concrete keep
 fill 14 90 -27 26 90 27 minecraft:sea_lantern
@@ -138,3 +181,13 @@ fill 39 91 -38 39 110 37 minecraft:black_concrete keep
 
 fill 24 91 38 38 110 38 minecraft:black_concrete
 fill 38 91 -39 24 110 -39 minecraft:black_concrete keep
+
+# junctions
+fill -1 99 0 0 99 0 minecraft:white_stained_glass
+fill -1 99 5 0 99 5 minecraft:white_stained_glass
+fill -1 99 -5 0 99 -5 minecraft:white_stained_glass
+setblock 19 91 27 minecraft:white_stained_glass
+setblock 19 91 5 minecraft:white_stained_glass
+setblock 19 91 0 minecraft:white_stained_glass
+setblock 19 91 -5 minecraft:white_stained_glass
+setblock 19 91 -27 minecraft:white_stained_glass

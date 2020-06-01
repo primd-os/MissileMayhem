@@ -1,4 +1,4 @@
-execute as @e[type=!slime] at @s run kill @s[dy=-10,y=0]
+execute as @e[type=!slime,type=!tnt] at @s run kill @s[dy=-10,y=0]
 
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
 execute as @e[tag=BlueBase] run scoreboard players remove @s Timer 1

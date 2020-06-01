@@ -1,3 +1,3 @@
-fill ~-25 30 ~-3 ~25 30 ~-1 minecraft:obsidian
-fill ~-25 30 ~ ~25 31 ~ minecraft:obsidian
-fill ~-25 0 ~ ~25 26 ~ minecraft:diamond_block
+fill ~-25 50 ~-3 ~25 50 ~-1 minecraft:obsidian
+fill ~-25 50 ~ ~25 51 ~ minecraft:obsidian
+fill ~-25 0 ~ ~25 46 ~ minecraft:diamond_block

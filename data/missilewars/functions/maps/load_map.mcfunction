@@ -15,15 +15,15 @@ execute at @e[tag=BlueBase] if score Map Constants matches 2 run function missil
 execute at @e[tag=GreenBase] if score Map Constants matches 2 run function missilewars:maps/green/small_map
 execute at @e[tag=BlueBase] if score Map Constants matches 3 run function missilewars:maps/blue/basic_map
 execute at @e[tag=GreenBase] if score Map Constants matches 3 run function missilewars:maps/green/basic_map
-execute if score Map Constants matches 3 run fill -25 0 ~-2 25 30 ~2 white_stained_glass
+execute if score Map Constants matches 3 run fill -25 0 ~-2 25 50 ~2 white_stained_glass
 execute at @e[tag=BlueBase] if score Map Constants matches 4 run function missilewars:maps/blue/platforms
 execute at @e[tag=GreenBase] if score Map Constants matches 4 run function missilewars:maps/green/platforms
 execute at @e[tag=BlueBase] if score Map Constants matches 5 run function missilewars:maps/blue/weak_center
 execute at @e[tag=GreenBase] if score Map Constants matches 5 run function missilewars:maps/green/weak_center
 execute at @e[tag=BlueBase] if score Map Constants matches 6 run function missilewars:maps/blue/basic_map
 execute at @e[tag=GreenBase] if score Map Constants matches 6 run function missilewars:maps/green/basic_map
-execute at @e[tag=BlueBase] if score Map Constants matches 6 run fill -2 30 ~-9 2 30 0 white_stained_glass
-execute at @e[tag=GreenBase] if score Map Constants matches 6 run fill -2 30 ~9 2 30 0 white_stained_glass
+execute at @e[tag=BlueBase] if score Map Constants matches 6 run fill -2 50 ~-9 2 50 0 white_stained_glass
+execute at @e[tag=GreenBase] if score Map Constants matches 6 run fill -2 50 ~9 2 50 0 white_stained_glass
 execute at @e[tag=BlueBase] if score Map Constants matches 7 run function missilewars:maps/blue/basic_map
 execute at @e[tag=GreenBase] if score Map Constants matches 7 run function missilewars:maps/green/basic_map
 

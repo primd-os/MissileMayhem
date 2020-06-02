@@ -50,6 +50,9 @@ setblock 0 110 20 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pa
 setblock -1 110 20 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:rs,Color:0},{Pattern:hhb,Color:15},{Pattern:ms,Color:0},{Pattern:ts,Color:0},{Pattern:ls,Color:0},{Pattern:bo,Color:15}]}
 setblock -2 110 20 minecraft:white_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:mr,Color:15},{Pattern:ms,Color:15},{Pattern:drs,Color:0},{Pattern:bo,Color:15}]}
 
+fill 5 100 19 2 110 19 minecraft:black_concrete
+fill -3 100 19 -6 110 19 minecraft:black_concrete
+
 # starting area
 fill 6 99 -20 -6 99 20 minecraft:black_concrete
 fill 6 98 -20 -6 98 20 minecraft:sea_lantern

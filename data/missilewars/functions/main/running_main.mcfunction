@@ -3,7 +3,7 @@ effect give @s minecraft:haste 2 2 true
 scoreboard players enable @s Start
 scoreboard players reset @s AutoTeam
 scoreboard players enable @s JoinSpectators
-scoreboard players enable @s JoinRed
+scoreboard players enable @s JoinGreen
 scoreboard players enable @s JoinBlue
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
@@ -19,7 +19,8 @@ execute as @e[tag=BlueBase,sort=nearest] if entity @s[scores={GameState=2}] run 
 gamemode spectator @a[tag=ActivePlayer,team=Spectator,gamemode=!creative]
 tag @s remove ActivePlayer
 
-execute as @s[scores={Start=1,StartVote=0}] as @e[tag=BlueBase] run scoreboard players remove @s Timer 60
+execute as @s[scores={Start=1,StartVote=0}] as @e[tag=BlueBase,scores={Timer=60..,GameState=0}] run scoreboard players remove @s Timer 60
+execute as @s[scores={Start=1,StartVote=0}] as @e[tag=BlueBase,scores={Timer=..60,GameState=0}] run scoreboard players set @s Timer 1
 execute as @s[scores={Start=1}] run scoreboard players set @s StartVote 1
 execute as @s[scores={Start=1}] run scoreboard players set @s Start 0
 
@@ -29,8 +30,8 @@ execute as @s[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpect
 execute as @s[scores={JoinBlue=1}] run function missilewars:start/join_blue
 execute as @s[scores={JoinBlue=1}] run scoreboard players set @s JoinBlue 0
 
-execute as @s[scores={JoinRed=1}] run function missilewars:start/join_red
-execute as @s[scores={JoinRed=1}] run scoreboard players set @s JoinRed 0
+execute as @s[scores={JoinGreen=1}] run function missilewars:start/join_green
+execute as @s[scores={JoinGreen=1}] run scoreboard players set @s JoinGreen 0
 
 function missilewars:main/manage_items
 

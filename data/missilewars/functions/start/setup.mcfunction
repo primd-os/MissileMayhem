@@ -33,7 +33,7 @@ scoreboard objectives setdisplay list StartVote
 scoreboard objectives add StopAdverts trigger
 scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
-scoreboard objectives add JoinRed trigger
+scoreboard objectives add JoinGreen trigger
 scoreboard objectives add JoinBlue trigger
 scoreboard objectives add ChooseMap trigger
 scoreboard objectives add PrevMapVote trigger
@@ -58,7 +58,7 @@ scoreboard objectives add PlacedBuster minecraft.used:minecraft.witch_spawn_egg
 scoreboard objectives add PlacedCustom minecraft.used:minecraft.cave_spider_spawn_egg
 scoreboard objectives add PlacedMissile minecraft.used:minecraft.cave_spider_spawn_egg
 
-scoreboard objectives add SlimeKills minecraft.killed:minecraft.slime
+scoreboard objectives add DamageDealt minecraft.custom:damage_dealt
 scoreboard objectives add DirectionPlace dummy
 scoreboard objectives add DirecToPlace dummy
 

@@ -7,11 +7,11 @@ execute as @e[tag=BlueBase] run scoreboard players operation @s TimerTick = @s T
 execute as @e[tag=BlueBase] run scoreboard players operation @s TimerSecs /= Twenty Constants
 execute as @e[tag=BlueBase] run scoreboard players operation @s TimerTick %= Twenty Constants
 execute as @e[tag=BlueBase,scores={TimerTick=0}] if score @s Timer matches 1..2147483647 run tellraw @a ["",{"text":"Game Starting in "},{"score":{"name":"@e[tag=BlueBase]","objective":"TimerSecs"}}]
-execute as @e[tag=BlueBase,scores={Timer=0}] run tellraw @a {"text": "Game Started"}
-execute as @e[tag=BlueBase,scores={Timer=0}] run function missilewars:maps/load_map
-execute as @e[tag=BlueBase,scores={Timer=0}] run scoreboard players set @s GameState 1
-execute as @e[tag=BlueBase,scores={Timer=0}] as @a[team=Blue] run function missilewars:start/tp_blue
-execute as @e[tag=BlueBase,scores={Timer=0}] as @a[team=Green] run function missilewars:start/tp_green
+execute as @e[tag=BlueBase,scores={Timer=0},limit=1] run tellraw @a {"text": "Game Started"}
+execute as @e[tag=BlueBase,scores={Timer=0},limit=1] at @s run scoreboard players set @s GameState 1
+execute if entity @e[tag=BlueBase,scores={Timer=0}] run function missilewars:maps/load_map
+execute if entity @e[tag=BlueBase,scores={Timer=0}] as @a[team=Blue] run function missilewars:start/tp_blue
+execute if entity @e[tag=BlueBase,scores={Timer=0}] as @a[team=Green] run function missilewars:start/tp_green
 
 execute as @e[tag=BlueBase] if score @s GameState matches 1 run function missilewars:end/check_end_game
 

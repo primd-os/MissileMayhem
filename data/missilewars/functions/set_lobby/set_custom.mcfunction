@@ -10,7 +10,7 @@ fill ~6 ~5 ~2 ~2 ~5 ~2 minecraft:obsidian
 fill ~2 ~5 ~1 ~2 ~5 ~-1 minecraft:obsidian
 
 setblock ~7 ~6 ~2 minecraft:ender_chest[facing=east]
-setblock ~7 ~6 ~ minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"Clear Missile","clickEvent":{"action":"run_command","value":"fill 35 ~6 25 41 ~9 4 air"}}'}
+setblock ~7 ~6 ~ minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"Clear Missile","clickEvent":{"action":"run_command","value":"execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-10 ~12 ~10 ~8 minecraft:air"}}'}
 setblock ~7 ~6 ~-2 minecraft:anvil
 
 setblock ~3 ~8 ~-2 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/save_missile"}}',Text2:'{"text":"Save"}'}

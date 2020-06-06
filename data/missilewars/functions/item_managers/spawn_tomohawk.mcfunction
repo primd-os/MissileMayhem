@@ -1,8 +1,3 @@
-execute if entity @s[scores={MissileSet=0,DirecToPlace=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/tomohawk",posX:0,posY:-7,posZ:10, rotation:CLOCKWISE_180}
-execute if entity @s[scores={MissileSet=0,DirecToPlace=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/tomohawk",posX:-10,posY:-7,posZ:0, rotation:COUNTERCLOCKWISE_90}
-execute if entity @s[scores={MissileSet=0,DirecToPlace=2}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/tomohawk",posX:0,posY:-7,posZ:-10}
-execute if entity @s[scores={MissileSet=0,DirecToPlace=3}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/tomohawk",posX:10,posY:-7,posZ:0, rotation:CLOCKWISE_90}
-execute if entity @s[scores={MissileSet=1,DirecToPlace=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/tomohawk",posX:1,posY:-7,posZ:16, rotation:CLOCKWISE_180}
-execute if entity @s[scores={MissileSet=1,DirecToPlace=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/tomohawk",posX:-16,posY:-7,posZ:1, rotation:COUNTERCLOCKWISE_90}
-execute if entity @s[scores={MissileSet=1,DirecToPlace=2}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/tomohawk",posX:-1,posY:-7,posZ:-16}
-execute if entity @s[scores={MissileSet=1,DirecToPlace=3}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/tomohawk",posX:16,posY:-7,posZ:-1, rotation:CLOCKWISE_90}
+execute if entity @s[scores={MissileSet=0}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/new/tomohawk",posX:0,posY:-7,posZ:-15}
+execute if entity @s[scores={MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/tomohawk",posX:-1,posY:-7,posZ:-16}
+execute if entity @s[scores={MissileSet=2}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/thin/tomohawk",posX:0,posY:-8,posZ:-13}

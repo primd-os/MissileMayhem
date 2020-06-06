@@ -61,6 +61,7 @@ scoreboard objectives add PlacedMissile minecraft.used:minecraft.cave_spider_spa
 scoreboard objectives add DamageDealt minecraft.custom:damage_dealt
 scoreboard objectives add DirectionPlace dummy
 scoreboard objectives add DirecToPlace dummy
+scoreboard objectives add Temp dummy
 
 scoreboard players set NumMissiles Constants 8
 scoreboard players set GreenWin Constants 0
@@ -123,13 +124,13 @@ bossbar set missile_time style progress
 
 function missilewars:end/finish_game
 
-fill -104 0 -104 104 128 -104 barrier
-fill 104 0 -104 104 128 104 barrier
-fill 104 0 104 -104 128 104 barrier
-fill -104 0 104 -104 128 -104 barrier
+execute in overworld as @e[limit=1] run fill -105 0 -105 105 128 -105 barrier
+execute in overworld as @e[limit=1] run fill 105 0 -105 105 128 105 barrier
+execute in overworld as @e[limit=1] run fill 105 0 105 -105 128 105 barrier
+execute in overworld as @e[limit=1] run fill -105 0 105 -105 128 -105 barrier
 
-fill -104 128 -104 104 128 0 barrier
-fill -104 128 0 104 128 104 barrier
+execute in overworld as @e[limit=1] run fill -105 128 -105 105 128 0 barrier
+execute in overworld as @e[limit=1] run fill -105 128 0 105 128 105 barrier
 
 execute in the_nether run function missilewars:set_lobby/set_map
 execute in the_nether as @a run tp 0 100 0

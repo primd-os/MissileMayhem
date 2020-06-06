@@ -10,9 +10,9 @@ scoreboard players set temp2 Constants 0
 scoreboard players set rows_completed Constants 0
 scoreboard players set chests_completed Constants 0
 
-execute if entity @s[scores={DirecToPlace=2}] run function missilewars:custom_missile/shoot_missile/0_shoot
-execute if entity @s[scores={DirecToPlace=1}] run function missilewars:custom_missile/shoot_missile/90_shoot
 execute if entity @s[scores={DirecToPlace=0}] run function missilewars:custom_missile/shoot_missile/180_shoot
+execute if entity @s[scores={DirecToPlace=1}] run function missilewars:custom_missile/shoot_missile/90_shoot
+execute if entity @s[scores={DirecToPlace=2}] run function missilewars:custom_missile/shoot_missile/0_shoot
 execute if entity @s[scores={DirecToPlace=3}] run function missilewars:custom_missile/shoot_missile/270_shoot
 
 function missilewars:custom_missile/clean_up

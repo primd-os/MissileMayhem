@@ -22,6 +22,13 @@ fill 105 0 -105 105 0 105 gray_stained_glass
 fill 105 0 105 -105 0 105 gray_stained_glass
 fill -105 0 105 -105 0 -105 gray_stained_glass
 
+execute as @a[nbt={SelectedItem:{id:"minecraft:shulker_box"}}] at @s run summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:"minecraft:barrier"},NoGravity:1}
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shulker_box"}]}] at @s run summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:"minecraft:barrier"},NoGravity:1}
+execute as @a[nbt=!{Inventory:[{id:"minecraft:shulker_box"}]}] run function missilewars:start/give_default_missile
+
+execute as @a store result score @s shulkerCount run clear @s shulker_box 0
+execute as @a[scores={shulkerCount=2..}] run clear @s shulker_box 1
+
 execute as @e[tag=BlueBase] if score @s GameState matches 1 at @e[tag=BlueBase] run function missilewars:maps/blue/map
 execute as @e[tag=BlueBase] if score @s GameState matches 1 at @e[tag=GreenBase] run function missilewars:maps/green/map
 
@@ -52,8 +59,8 @@ execute as @a[scores={quits=1..}] at @s run function missilewars:main/clear_inv
 scoreboard players set @a[scores={quits=1..}] quits 0
 
 execute as @a[tag=!PlayedBefore] run function missilewars:start/give_book
-execute as @a[tag=!PlayedBefore] run function missilewars:start/give_default_missile
 execute as @a[tag=!PlayedBefore] run scoreboard players set @a DirectionPlace 0
+execute as @a[tag=!PlayedBefore] run scoreboard players set @a StopAdverts 0
 execute as @a[tag=!PlayedBefore] run team join Lobby @s
 execute as @a[tag=!PlayedBefore] at @s run scoreboard players set @s Game 0
 tag @a[tag=!PlayedBefore] add PlayedBefore

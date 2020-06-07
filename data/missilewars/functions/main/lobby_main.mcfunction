@@ -24,6 +24,8 @@ execute as @s[scores={MissileSetSelect=1}] run function missilewars:start/choose
 execute as @s[scores={MissileSetSelect=1}] run scoreboard players set @s MissileSetSelect 0
 execute as @s run scoreboard players operation @s MissileSet = @s ChooseMissileSet
 
+execute at @s if block ~ ~-2 ~ sea_lantern if block ~ ~-1 ~ #minecraft:impermeable run effect give @s speed 2 2 true
+
 execute as @s[tag=Editor] store result score @s Items run clear @s iron_pickaxe 0
 execute as @s[tag=Editor] if score @s Items matches 0 run give @s iron_pickaxe{Unbreakable:1b,CanDestroy:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate"]} 1
 execute as @s[tag=Editor] store result score @s Items run clear @s white_wool 0
@@ -46,6 +48,8 @@ execute as @s[tag=Editor] store result score @s Items run clear @s tnt 0
 execute as @s[tag=Editor] if score @s Items matches 0 run give @s tnt{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s stone_pressure_plate 0
 execute as @s[tag=Editor] if score @s Items matches 0 run give @s stone_pressure_plate{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+
+execute as @s[nbt=!{Inventory:[{id:"minecraft:shulker_box"}]}] run function missilewars:start/give_default_missile
 
 execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-10 if entity @s[dx=13,dy=15,dz=20] run tag @s add InBox
 clear @s[tag=!InBox,tag=Editor]

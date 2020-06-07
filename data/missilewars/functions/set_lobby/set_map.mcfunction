@@ -45,10 +45,10 @@ setblock 5 103 54 minecraft:barrier
 setblock 5 103 40 minecraft:barrier
 
 # letters
-setblock 1 110 20 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:tt,Color:0},{Pattern:tts,Color:15},{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:bo,Color:15}]}
-setblock 0 110 20 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:rs,Color:0},{Pattern:ls,Color:0},{Pattern:ms,Color:0},{Pattern:ts,Color:0},{Pattern:bo,Color:15}]}
-setblock -1 110 20 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:rs,Color:0},{Pattern:hhb,Color:15},{Pattern:ms,Color:0},{Pattern:ts,Color:0},{Pattern:ls,Color:0},{Pattern:bo,Color:15}]}
-setblock -2 110 20 minecraft:white_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:mr,Color:15},{Pattern:ms,Color:15},{Pattern:drs,Color:0},{Pattern:bo,Color:15}]}
+setblock 1 110 18 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:tt,Color:0},{Pattern:tts,Color:15},{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:bo,Color:15}]}
+setblock 0 110 18 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:rs,Color:0},{Pattern:ls,Color:0},{Pattern:ms,Color:0},{Pattern:ts,Color:0},{Pattern:bo,Color:15}]}
+setblock -1 110 18 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:rs,Color:0},{Pattern:hhb,Color:15},{Pattern:ms,Color:0},{Pattern:ts,Color:0},{Pattern:ls,Color:0},{Pattern:bo,Color:15}]}
+setblock -2 110 18 minecraft:white_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:mr,Color:15},{Pattern:ms,Color:15},{Pattern:drs,Color:0},{Pattern:bo,Color:15}]}
 
 fill 5 100 19 2 110 19 minecraft:black_concrete
 fill -3 100 19 -6 110 19 minecraft:black_concrete
@@ -62,6 +62,20 @@ fill -7 110 20 -7 99 -20 minecraft:black_concrete
 fill -1 99 -20 0 99 20 minecraft:gray_stained_glass
 
 fill -3 99 0 3 99 0 minecraft:gray_stained_glass
+
+# chandelier
+fill 1 105 -1 -2 106 1 minecraft:black_concrete
+fill -1 107 0 0 110 0 minecraft:white_stained_glass_pane
+fill 0 106 0 -1 106 0 minecraft:sea_lantern
+fill 0 105 0 -1 105 0 minecraft:white_stained_glass
+
+# secrets
+setblock 3 104 -2 minecraft:barrier
+setblock 3 104 2 minecraft:barrier
+fill 0 105 -4 -1 105 -4 minecraft:barrier
+fill 0 105 4 -1 105 4 minecraft:barrier
+setblock -4 104 -2 minecraft:barrier
+setblock -4 104 2 minecraft:barrier
 
 # signs
 setblock -5 103 0 minecraft:quartz_pillar[axis=x]
@@ -165,8 +179,6 @@ fill 23 91 37 23 110 37 minecraft:black_concrete
 fill 24 91 -38 24 110 -38 minecraft:black_concrete
 fill 24 92 -38 24 110 -38 minecraft:black_concrete
 
-fill -6 100 -21 6 110 -21 minecraft:black_concrete
-
 fill 7 98 5 18 91 5 minecraft:gray_stained_glass replace minecraft:black_concrete
 fill 7 98 -5 18 91 -5 minecraft:gray_stained_glass replace minecraft:black_concrete
 fill 19 91 -27 19 91 27 minecraft:gray_stained_glass replace minecraft:black_concrete
@@ -184,6 +196,114 @@ fill 39 91 -38 39 110 37 minecraft:black_concrete keep
 
 fill 24 91 38 38 110 38 minecraft:black_concrete
 fill 38 91 -39 24 110 -39 minecraft:black_concrete keep
+
+# missile area
+# floor
+fill 6 99 -20 -7 99 -76 minecraft:black_concrete
+fill 6 98 -20 -6 98 -76 minecraft:sea_lantern
+fill -1 99 -20 0 99 -76 minecraft:gray_stained_glass
+
+fill 6 106 -20 2 106 -76 minecraft:black_concrete
+fill -3 106 -20 -7 106 -76 minecraft:black_concrete
+fill -2 106 -21 1 106 -76 minecraft:barrier
+# ceiling
+fill 6 111 -20 -7 111 -76 minecraft:air
+fill 6 113 -20 -7 113 -76 minecraft:black_concrete
+# walls
+fill -7 112 -19 6 112 -19 minecraft:black_concrete
+
+fill 7 99 -20 7 113 -76 minecraft:black_concrete
+fill -8 99 -20 -8 113 -76 minecraft:black_concrete
+
+fill 6 100 -20 3 105 -76 minecraft:black_stained_glass
+fill -4 100 -20 -7 105 -76 minecraft:black_stained_glass
+
+fill 6 107 -20 3 112 -76 minecraft:black_stained_glass
+fill -4 107 -20 -7 112 -76 minecraft:black_stained_glass
+
+fill -7 99 -77 6 112 -77 minecraft:black_concrete
+# missiles
+setblock -2 101 -20 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":"---------------"}',Text3:'{"text":"New"}',Text2:'{"text":"Missile Set"}',Text1:'{"text":"---------------"}'}
+
+setblock -3 100 -22 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:-4,mode:"LOAD",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,name:"missilewars:missiles/new/juggurnaut",sizeY:3,sizeZ:9}
+setblock -3 101 -22 minecraft:redstone_block
+fill -3 101 -22 -3 100 -22 minecraft:air
+setblock -3 101 -25 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Juggurnaut"}',Text1:'{"text":""}'}
+
+setblock -3 100 -42 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:-4,mode:"LOAD",posY:1,sizeX:3,posZ:-7,integrity:1.0f,showair:0b,name:"missilewars:missiles/new/shieldbuster",sizeY:3,sizeZ:15}
+setblock -3 101 -42 minecraft:redstone_block
+fill -3 101 -42 -3 100 -42 minecraft:air
+setblock -3 101 -47 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Shieldbuster"}',Text1:'{"text":""}'}
+
+setblock -3 100 -52 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:-3,mode:"LOAD",posY:1,sizeX:2,posZ:-10,integrity:1.0f,showair:0b,name:"missilewars:missiles/new/tomohawk",sizeY:2,sizeZ:11}
+setblock -3 101 -52 minecraft:redstone_block
+fill -3 101 -52 -3 100 -52 minecraft:air
+setblock -3 101 -57 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Tomohawk"}',Text1:'{"text":""}'}
+
+setblock -3 100 -69 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:-4,mode:"LOAD",posY:1,sizeX:3,posZ:-6,integrity:1.0f,showair:0b,name:"missilewars:missiles/new/lightning",sizeY:3,sizeZ:6}
+setblock -3 101 -69 minecraft:redstone_block
+fill -3 101 -69 3 100 -69 minecraft:air
+setblock -3 101 -73 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Lightning"}',Text1:'{"text":""}'}
+
+setblock 1 101 -20 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":"---------------"}',Text3:'{"text":"Old"}',Text2:'{"text":"Missile Set"}',Text1:'{"text":"---------------"}'}
+
+setblock 2 100 -24 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,name:"missilewars:missiles/old/juggurnaut",sizeY:3,sizeZ:9}
+setblock 2 101 -24 minecraft:redstone_block
+fill 2 101 -24 2 100 -24 minecraft:air
+setblock 2 101 -27 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Juggurnaut"}',Text1:'{"text":""}'}
+
+setblock 2 100 -38 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:3,posZ:-11,integrity:1.0f,showair:0b,name:"missilewars:missiles/old/shieldbuster",sizeY:3,sizeZ:15}
+setblock 2 101 -38 minecraft:redstone_block
+fill 2 101 -38 2 100 -38 minecraft:air
+setblock 2 101 -42 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Shieldbuster"}',Text1:'{"text":""}'}
+
+setblock 2 100 -52 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:2,posZ:-12,integrity:1.0f,showair:0b,name:"missilewars:missiles/old/tomohawk",sizeY:2,sizeZ:13}
+setblock 2 101 -52 minecraft:redstone_block
+fill 2 101 -52 2 100 -52 minecraft:air
+setblock 2 101 -59 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Tomohawk"}',Text1:'{"text":""}'}
+
+setblock 2 100 -67 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,name:"missilewars:missiles/old/lightning",sizeY:2,sizeZ:9}
+setblock 2 101 -67 minecraft:redstone_block
+fill 2 101 -67 2 100 -67 minecraft:air
+setblock 2 101 -70 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Lightning"}',Text1:'{"text":""}'}
+
+setblock 1 108 -20 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":"---------------"}',Text3:'{"text":"Thin"}',Text2:'{"text":"Missile Set"}',Text1:'{"text":"---------------"}'}
+
+setblock 2 107 -22 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:1,posZ:-14,integrity:1.0f,showair:0b,name:"missilewars:missiles/thin/juggurnaut",sizeY:3,sizeZ:15}
+setblock 2 108 -22 minecraft:redstone_block
+fill 2 108 -22 2 107 -22 minecraft:air
+setblock 2 108 -29 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Juggurnaut"}',Text1:'{"text":""}'}
+
+setblock 2 107 -38 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:1,posZ:-11,integrity:1.0f,showair:0b,name:"missilewars:missiles/thin/shieldbuster",sizeY:4,sizeZ:11}
+setblock 2 108 -38 minecraft:redstone_block
+fill 2 108 -38 2 107 -38 minecraft:air
+setblock 2 108 -44 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Shieldbuster"}',Text1:'{"text":""}'}
+
+setblock 2 107 -52 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:1,posZ:-10,integrity:1.0f,showair:0b,name:"missilewars:missiles/thin/tomohawk",sizeY:5,sizeZ:11}
+setblock 2 108 -52 minecraft:redstone_block
+fill 2 108 -52 2 107 -52 minecraft:air
+setblock 2 108 -57 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Tomohawk"}',Text1:'{"text":""}'}
+
+setblock 2 107 -69 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:1,posZ:-6,integrity:1.0f,showair:0b,name:"missilewars:missiles/thin/lightning",sizeY:5,sizeZ:7}
+setblock 2 108 -69 minecraft:redstone_block
+fill 2 108 -69 2 107 -69 minecraft:air
+setblock 2 108 -72 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Lightning"}',Text1:'{"text":""}'}
+# ladder
+fill 2 100 -21 2 107 -21 minecraft:ladder[facing=north]
+fill -3 100 -21 -3 107 -21 minecraft:ladder[facing=north]
+# banners
+fill 6 100 -20 2 110 -20 minecraft:black_concrete
+fill -3 100 -20 -6 110 -20 minecraft:black_concrete
+
+setblock -4 110 -19 minecraft:black_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:tt,Color:0},{Pattern:tts,Color:15},{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:bo,Color:15}]}
+setblock -3 110 -19 minecraft:black_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:cs,Color:0},{Pattern:ts,Color:0},{Pattern:bs,Color:0},{Pattern:bo,Color:15}]}
+setblock -2 110 -19 minecraft:white_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:mr,Color:15},{Pattern:ms,Color:15},{Pattern:drs,Color:0},{Pattern:bo,Color:15}]}
+setblock -1 110 -19 minecraft:white_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:mr,Color:15},{Pattern:ms,Color:15},{Pattern:drs,Color:0},{Pattern:bo,Color:15}]}
+setblock 0 110 -19 minecraft:black_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:cs,Color:0},{Pattern:ts,Color:0},{Pattern:bs,Color:0},{Pattern:bo,Color:15}]}
+setblock 1 110 -19 minecraft:black_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:bs,Color:0},{Pattern:ls,Color:0},{Pattern:bo,Color:15}]}
+setblock 2 110 -19 minecraft:black_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:ls,Color:0},{Pattern:ts,Color:0},{Pattern:ms,Color:0},{Pattern:bs,Color:0},{Pattern:bo,Color:15}]}
+setblock 3 110 -19 minecraft:white_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:mr,Color:15},{Pattern:ms,Color:15},{Pattern:drs,Color:0},{Pattern:bo,Color:15}]}
+
 
 # junctions
 fill -1 99 0 0 99 0 minecraft:white_stained_glass

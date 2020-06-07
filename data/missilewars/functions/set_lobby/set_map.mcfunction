@@ -1,11 +1,16 @@
 # clear map
 fill -10 90 -80 10 110 -20 air
+fill -10 110 -80 10 130 -20 air
 fill -10 90 -20 10 110 20 air
+fill -10 110 -20 10 130 20 air
 fill -10 90 20 10 110 80 air
+fill -10 110 20 10 130 80 air
 fill 10 70 -60 30 90 0 air
 fill 10 70 0 30 90 60 air
 fill 10 90 -60 30 110 0 air
+fill 10 110 -60 30 130 0 air
 fill 10 90 0 30 110 60 air
+fill 10 110 0 30 130 60 air
 
 # map area
 # floor
@@ -292,8 +297,8 @@ setblock 2 108 -72 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{C
 fill 2 100 -21 2 107 -21 minecraft:ladder[facing=north]
 fill -3 100 -21 -3 107 -21 minecraft:ladder[facing=north]
 # banners
-fill 6 100 -20 2 110 -20 minecraft:black_concrete
-fill -3 100 -20 -6 110 -20 minecraft:black_concrete
+fill 6 100 -20 2 113 -20 minecraft:black_concrete
+fill -3 100 -20 -6 113 -20 minecraft:black_concrete
 
 setblock -4 110 -19 minecraft:black_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:tt,Color:0},{Pattern:tts,Color:15},{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:bo,Color:15}]}
 setblock -3 110 -19 minecraft:black_wall_banner[facing=south]{Base:0,Patterns:[{Pattern:cs,Color:0},{Pattern:ts,Color:0},{Pattern:bs,Color:0},{Pattern:bo,Color:15}]}

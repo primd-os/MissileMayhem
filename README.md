@@ -1,10 +1,15 @@
 # MissileWars-2
 The datapack used for the missilewars 2 map.
 
-# Installation
+# Download
+1. Go to https://github.com/importnetminecraft/MissileWars-2/releases and download the latest release
+2. Move the map in the zip folder to your .minecraft/saves folder 
+
+# Build
 1. Create a world of the superflat world type
 2. Download this project
 3. Extract the downloaded zip to the datapack folder of the world you created
+4. Run /reload twice
 Note: to access the world's datapack folder type %appdata% in windows search then go to Roaming/.minecraft/saves to find your world
 
 # Improvements

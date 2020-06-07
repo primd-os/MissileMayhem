@@ -13,9 +13,10 @@ Note: to access the world's datapack folder type %appdata% in windows search the
 - Honey blocks make the missiles much more rideable
 - Added the ability to have per-player custom missiles up to 3x3x18 in size
 - Added scoreboard to indicate upcoming missiles
+- Added system to prevent repitition
 - Added progress bar to show when players will get the next missile
 - Multiple Missile sets to allow playing with different play styles
-    - Currently supported are new and original
+    - Currently supported are new, original, and thin. Each has its own play style. 
 - Allow placing missiles in any orientation
 
 ### Gunblade ###
@@ -31,7 +32,7 @@ Note: to access the world's datapack folder type %appdata% in windows search the
 ### General ###
 - Removed limits on the amount of missiles you can have in your inventory
 - Expanded size of starting obsidian platform to decrease falling off when wall is destroyed
-- Automatically kill players below y=0 to reduce fall time
+- Automatically kill players below y=0 to reduce fall time and improve experience
 - Give haste to players to reduce time to break blocks
 - TNT is collectable and placable
 

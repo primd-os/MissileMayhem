@@ -16,3 +16,4 @@ scoreboard players set chests_completed Constants 0
 function missilewars:custom_missile/iterate_load
 
 function missilewars:custom_missile/clean_up
+fill 34 95 16 31 95 14 air

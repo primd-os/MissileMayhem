@@ -115,12 +115,13 @@ scoreboard objectives setdisplay sidebar.team.green missiles
 scoreboard objectives setdisplay sidebar.team.dark_gray missiles
 scoreboard objectives setdisplay sidebar.team.gray points
 
-function missilewars:start/advert
-function missilewars:new_missile/missile_loop
-
+scoreboard players set missile_time Constants 0
 bossbar add missile_time {"text": "Time to Next Missile"}
 bossbar set missile_time max 280
 bossbar set missile_time style progress
+
+function missilewars:start/advert
+function missilewars:new_missile/missile_loop
 
 function missilewars:end/finish_game
 

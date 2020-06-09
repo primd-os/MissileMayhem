@@ -54,11 +54,11 @@ execute as @s[nbt=!{Inventory:[{id:"minecraft:shulker_box"}]}] run function miss
 execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-10 if entity @s[dx=13,dy=15,dz=20] run tag @s add InBox
 clear @s[tag=!InBox,tag=Editor]
 tag @s[tag=!InBox] remove Editor
-execute if entity @s[tag=InBox] as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air
-execute if entity @s[tag=InBox] as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~12 ~6 ~-9 ~12 ~9 ~8 minecraft:air
-execute if entity @s[tag=InBox] as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-10 ~12 ~9 ~-10 minecraft:air
-execute if entity @s[tag=InBox] as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~9 ~12 ~9 ~9 minecraft:air
-execute if entity @s[tag=InBox] as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~10 ~-10 ~12 ~10 ~8 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~12 ~6 ~-9 ~12 ~9 ~8 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-10 ~12 ~9 ~-10 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~9 ~12 ~9 ~9 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~9 ~-10 ~12 ~9 ~8 minecraft:air
 tag @s remove InBox
 
 scoreboard players set @s deathCheck 0

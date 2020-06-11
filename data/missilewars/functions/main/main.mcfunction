@@ -22,9 +22,6 @@ fill 105 0 -105 105 0 105 gray_stained_glass
 fill 105 0 105 -105 0 105 gray_stained_glass
 fill -105 0 105 -105 0 -105 gray_stained_glass
 
-execute as @a[nbt={SelectedItem:{id:"minecraft:shulker_box"}}] at @s run summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:"minecraft:barrier"},NoGravity:1}
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:shulker_box"}]}] at @s run summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:"minecraft:barrier"},NoGravity:1}
-
 execute as @e[tag=BlueBase] if score @s GameState matches 1 at @e[tag=BlueBase] run function missilewars:maps/blue/map
 execute as @e[tag=BlueBase] if score @s GameState matches 1 at @e[tag=GreenBase] run function missilewars:maps/green/map
 

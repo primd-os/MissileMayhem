@@ -49,7 +49,9 @@ execute as @s[tag=Editor] if score @s Items matches 0 run give @s tnt{CanPlaceOn
 execute as @s[tag=Editor] store result score @s Items run clear @s stone_pressure_plate 0
 execute as @s[tag=Editor] if score @s Items matches 0 run give @s stone_pressure_plate{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
 
-execute as @s[nbt=!{Inventory:[{id:"minecraft:shulker_box"}]}] run function missilewars:start/give_default_missile
+
+execute store result score @s shulkerCount run clear @s shulker_box 0
+execute as @s[scores={shulkerCount=0}] run function missilewars:start/give_default_missile
 
 execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-10 if entity @s[dx=13,dy=15,dz=20] run tag @s add InBox
 clear @s[tag=!InBox,tag=Editor]

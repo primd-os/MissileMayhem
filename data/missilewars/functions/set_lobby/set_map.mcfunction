@@ -15,8 +15,8 @@ fill 10 110 0 30 130 60 air
 # map area
 # floor
 fill 6 99 20 -6 99 76 minecraft:black_concrete
-fill 6 98 20 -6 98 76 minecraft:sea_lantern
-fill -1 99 20 0 99 76 minecraft:gray_stained_glass
+fill 6 98 20 -6 98 73 minecraft:sea_lantern
+fill -1 99 20 0 99 73 minecraft:gray_stained_glass
 
 # ceiling
 fill 6 111 20 -6 111 76 minecraft:black_concrete
@@ -205,8 +205,8 @@ fill 38 91 -39 24 110 -39 minecraft:black_concrete keep
 # missile area
 # floor
 fill 6 99 -20 -7 99 -76 minecraft:black_concrete
-fill 6 98 -20 -6 98 -76 minecraft:sea_lantern
-fill -1 99 -20 0 99 -76 minecraft:gray_stained_glass
+fill 6 98 -20 -6 98 -74 minecraft:sea_lantern
+fill -1 99 -20 0 99 -74 minecraft:gray_stained_glass
 
 fill 6 106 -20 2 106 -76 minecraft:black_concrete
 fill -3 106 -20 -7 106 -76 minecraft:black_concrete

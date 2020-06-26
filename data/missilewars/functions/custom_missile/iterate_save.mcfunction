@@ -12,10 +12,7 @@ execute as @e[tag=mover] at @s if score temp3 Constants matches 0 if score rows_
 scoreboard players operation temp3 Constants = temp2 Constants
 scoreboard players add temp3 Constants 1
 scoreboard players operation temp3 Constants %= ChestSize Constants
-execute as @e[tag=iterator] at @s if score temp3 Constants matches 0 run tp ~1 ~ ~
-execute as @e[tag=iterator] at @s if score temp3 Constants matches 0 run scoreboard players add chests_completed Constants 1
-scoreboard players operation chests_completed Constants %= Chests Constants
-execute as @e[tag=iterator] at @s if score temp3 Constants matches 0 if score rows_completed Constants matches 0 run tp 31.5 ~ ~1
+execute as @e[tag=iterator] at @s if score temp3 Constants matches 0 run tp ~ ~ ~1
 
 scoreboard players add temp2 Constants 1
 

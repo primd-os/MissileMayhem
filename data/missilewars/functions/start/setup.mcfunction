@@ -15,8 +15,8 @@ gamerule doEntityDrops false
 
 setworldspawn 0 100 0
 
-forceload add -100 -200 0 200
-forceload add 0 -200 100 200
+execute in missilewars:game1 run forceload add -100 -200 0 200
+execute in missilewars:game1 run forceload add 0 -200 100 200
 
 scoreboard objectives add snowballTime dummy
 
@@ -125,13 +125,10 @@ function missilewars:new_missile/missile_loop
 
 function missilewars:end/finish_game
 
-execute in overworld as @e[limit=1] run fill -105 0 -105 105 128 -105 barrier
-execute in overworld as @e[limit=1] run fill 105 0 -105 105 128 105 barrier
-execute in overworld as @e[limit=1] run fill 105 0 105 -105 128 105 barrier
-execute in overworld as @e[limit=1] run fill -105 0 105 -105 128 -105 barrier
+execute in missilewars:game1 run function missilewars:start/setup
 
-execute in overworld as @e[limit=1] run fill -105 128 -105 105 128 0 barrier
-execute in overworld as @e[limit=1] run fill -105 128 0 105 128 105 barrier
+execute in missilewars:lobby run function missilewars:set_lobby/set_map
+execute in missilewars:lobby as @a run tp 0 100 0
 
-execute in the_nether run function missilewars:set_lobby/set_map
-execute in the_nether as @a run tp 0 100 0
+execute in missilewars:store run forceload add 0 0 0 -1
+kill @e[type=item]

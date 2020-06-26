@@ -1,3 +1,5 @@
+forceload add 1000 0
+execute as @e[tag=missile] at @s run clone ~ ~ ~ ~ ~1 ~ 1000 0 0
 scoreboard players set @a PlacedMissile 0
 execute as @a run scoreboard players operation @s PlacedMissile += @s PlacedTomohawk
 execute as @a run scoreboard players operation @s PlacedMissile += @s PlacedJuggurnaut
@@ -35,5 +37,6 @@ scoreboard players set @a PlacedBuster 0
 scoreboard players set @a PlacedCustom 0
 
 execute as @e[tag=missile] at @s run setblock ~ ~1 ~ minecraft:redstone_block
-execute as @e[tag=missile] at @s run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 execute as @e[tag=missile] at @s run playsound minecraft:entity.shulker.shoot block @a ~ ~ ~
+execute as @e[tag=missile] at @s run clone 1000 0 0 1000 1 0 ~ ~ ~
+forceload remove 1000 0

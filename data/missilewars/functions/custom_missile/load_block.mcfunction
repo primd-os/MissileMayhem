@@ -49,4 +49,4 @@ execute at @e[tag=mover] if block ~ ~ ~ sticky_piston[extended=true, facing=nort
 execute at @e[tag=mover] if block ~ ~ ~ sticky_piston[extended=true, facing=south] at @e[tag=iterator] run scoreboard players set temp3 Constants 49
 execute at @e[tag=mover] if block ~ ~ ~ stone_pressure_plate at @e[tag=iterator] run scoreboard players set temp3 Constants 50
 execute at @e[tag=iterator] run function missilewars:custom_missile/loot_loop
-execute at @e[tag=iterator] store result block ~ ~-1 ~ Items[-1].tag.RepairCost int 1 run scoreboard players get temp2 Constants
+execute at @e[tag=iterator] store result block ~ ~ ~ Items[-1].tag.RepairCost int 1 run scoreboard players get temp2 Constants

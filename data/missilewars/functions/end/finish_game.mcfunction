@@ -19,3 +19,4 @@ kill @e[type=area_effect_cloud,tag=BlueBase]
 kill @e[type=area_effect_cloud,tag=GreenBase]
 
 tag @a remove dead
+execute in missilewars:lobby as @a run tp 0 100 0

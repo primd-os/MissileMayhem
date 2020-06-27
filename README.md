@@ -16,7 +16,7 @@ Note: to access the world's datapack folder type %appdata% in windows search the
 ### Missiles ###
 - Redesigned the old missiles to use observers and honey blocks
 - Honey blocks make the missiles much more rideable
-- Added the ability to have per-player custom missiles up to 3x3x18 in size
+- Added the ability to have per-player custom missiles up to 3x3x17 in size
 - Added scoreboard to indicate upcoming missiles
 - Added system to prevent repitition
 - Added progress bar to show when players will get the next missile

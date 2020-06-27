@@ -76,7 +76,7 @@ scoreboard players set Two Constants 2
 scoreboard players set Ten Constants 10
 scoreboard players set Twenty Constants 20
 
-scoreboard players set Length Constants 18
+scoreboard players set Length Constants 17
 scoreboard players set ChestSize Constants 27
 scoreboard players set Rows Constants 3
 scoreboard players set Chests Constants 3
@@ -125,7 +125,7 @@ function missilewars:new_missile/missile_loop
 
 function missilewars:end/finish_game
 
-execute in missilewars:game1 run function missilewars:start/setup
+execute in missilewars:game1 run function missilewars:start/barriers
 
 execute in missilewars:lobby run function missilewars:set_lobby/set_map
 execute in missilewars:lobby as @a run tp 0 100 0

@@ -20,9 +20,6 @@ execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=GreenB
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:main/running_main
 
-bossbar set missile_time visible true
-bossbar set missile_time players @a[scores={Game=1..},x=0]
-
 execute as @e[tag=CustomMissileArea] at @s positioned ~ ~6 ~-10 unless entity @a[dx=13,dy=10,dz=20] run fill ~8 ~ ~ ~13 ~4 ~20 air
 
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1

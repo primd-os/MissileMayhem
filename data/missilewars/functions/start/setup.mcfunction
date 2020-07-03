@@ -120,7 +120,7 @@ bossbar set missile_time style progress
 
 function missilewars:start/advert
 
-function missilewars:end/finish_game
+execute as @a at @s run function missilewars:end/finish_game
 
 execute in missilewars:lobby run function missilewars:set_lobby/set_map
 execute in missilewars:lobby as @a run tp 0 100 0

@@ -14,3 +14,6 @@ execute as @a[tag=!PlayedBefore] at @s run scoreboard players set @s Game 0
 tag @a[tag=!PlayedBefore] add PlayedBefore
 execute as @a[scores={GiveBook=1}] run function missilewars:start/give_book
 execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
+
+bossbar set missile_time visible true
+bossbar set missile_time players @a[scores={Game=1..}]

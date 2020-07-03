@@ -1,8 +1,10 @@
 tag @s add ActivePlayer
-execute unless entity @e[tag=BlueBase] run function missilewars:maps/lobby_map
-execute as @e[tag=BlueBase] unless score @s Game = @a[tag=ActivePlayer,limit=1] Game run function missilewars:maps/lobby_map
+execute unless entity @e[tag=BlueBase,x=0] run function missilewars:maps/lobby_map
+execute if entity @e[tag=BlueBase,x=0] unless score @e[tag=BlueBase,x=0,limit=1] Game = @a[tag=ActivePlayer,x=0,limit=1] Game run function missilewars:maps/lobby_map
 tag @s remove ActivePlayer
-execute store result score BlueMembers Constants run team list Blue
-execute store result score GreenMembers Constants run team list Green
-execute if score BlueMembers Constants < GreenMembers Constants run function missilewars:start/join_blue
-execute if score BlueMembers Constants >= GreenMembers Constants run function missilewars:start/join_green
+scoreboard players set @e[tag=BlueBase,x=0,limit=1] BlueMembers 0
+scoreboard players set @e[tag=BlueBase,x=0,limit=1] GreenMembers 0
+execute as @a[team=Blue,x=0] run scoreboard players add @e[tag=BlueBase,x=0,limit=1] BlueMembers 1
+execute as @a[team=Green,x=0] run scoreboard players add @e[tag=BlueBase,x=0,limit=1] GreenMembers 1
+execute if score @e[tag=BlueBase,x=0,limit=1] BlueMembers < @e[tag=BlueBase,x=0,limit=1] GreenMembers run function missilewars:start/join_blue
+execute if score @e[tag=BlueBase,x=0,limit=1] BlueMembers >= @e[tag=BlueBase,x=0,limit=1] GreenMembers run function missilewars:start/join_green

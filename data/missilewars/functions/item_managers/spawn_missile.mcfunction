@@ -1,4 +1,3 @@
-forceload add 1000 0
 execute as @e[tag=missile] at @s run clone ~ ~ ~ ~ ~1 ~ 1000 0 0
 scoreboard players set @a PlacedMissile 0
 execute as @a run scoreboard players operation @s PlacedMissile += @s PlacedTomohawk

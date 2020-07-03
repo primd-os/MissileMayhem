@@ -15,8 +15,8 @@ gamerule doEntityDrops false
 
 setworldspawn 0 100 0
 
-execute in missilewars:game1 run forceload add -100 -200 0 200
-execute in missilewars:game1 run forceload add 0 -200 100 200
+execute in missilewars:game1 run function missilewars:start/barriers
+execute in missilewars:game2 run function missilewars:start/barriers
 
 scoreboard objectives add snowballTime dummy
 
@@ -63,19 +63,17 @@ scoreboard objectives add DirectionPlace dummy
 scoreboard objectives add DirecToPlace dummy
 scoreboard objectives add Temp dummy
 
-scoreboard players set NumMissiles Constants 8
-scoreboard players set GreenWin Constants 0
-scoreboard players set BlueWin Constants 0
-scoreboard players set StartVotes Constants 0
-scoreboard players set NumPlayers Constants 0
+scoreboard objectives add GreenWin dummy
+scoreboard objectives add BlueWin dummy
 scoreboard players set @a StartVote 0
-scoreboard players set BlueMembers Constants 0
-scoreboard players set GreenMembers Constants 0
+scoreboard objectives add BlueMembers dummy
+scoreboard objectives add GreenMembers dummy
 
 scoreboard players set Two Constants 2
 scoreboard players set Ten Constants 10
 scoreboard players set Twenty Constants 20
 
+scoreboard players set NumMissiles Constants 8
 scoreboard players set Length Constants 17
 scoreboard players set ChestSize Constants 27
 scoreboard players set Rows Constants 3
@@ -121,11 +119,8 @@ bossbar set missile_time max 280
 bossbar set missile_time style progress
 
 function missilewars:start/advert
-function missilewars:new_missile/missile_loop
 
 function missilewars:end/finish_game
-
-execute in missilewars:game1 run function missilewars:start/barriers
 
 execute in missilewars:lobby run function missilewars:set_lobby/set_map
 execute in missilewars:lobby as @a run tp 0 100 0

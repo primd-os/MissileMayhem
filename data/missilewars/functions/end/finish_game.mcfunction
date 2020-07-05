@@ -1,8 +1,6 @@
 execute if entity @a[team=Green,x=0] if entity @a[team=Blue,x=0] run function missilewars:end/add_points
 
-team empty Blue
-team empty Green
-team empty Spectators
+team leave @a[x=0]
 effect give @a[x=0] instant_health 1 100
 team join Lobby @a[x=0]
 

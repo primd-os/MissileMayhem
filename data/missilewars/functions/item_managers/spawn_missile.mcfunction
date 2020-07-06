@@ -36,6 +36,6 @@ scoreboard players set @a PlacedBuster 0
 scoreboard players set @a PlacedCustom 0
 
 execute as @e[tag=missile] at @s run setblock ~ ~1 ~ minecraft:redstone_block
-execute as @e[tag=missile] at @s run playsound minecraft:entity.shulker.shoot block @a ~ ~ ~
+execute as @e[tag=missile] at @s run playsound minecraft:entity.shulker.shoot block @a[x=0] ~ ~ ~
 execute as @e[tag=missile] at @s run clone 1000 0 0 1000 1 0 ~ ~ ~
 forceload remove 1000 0

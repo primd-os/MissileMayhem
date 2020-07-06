@@ -1,4 +1,4 @@
-playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~ 1 1
+playsound minecraft:entity.experience_orb.pickup block @a[x=0] ~ ~ ~ 1 1
 
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run summon minecraft:area_effect_cloud ~9 ~6 ~8 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["mover"]}
 execute in missilewars:store run summon minecraft:area_effect_cloud 0 0 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["iterator"]}

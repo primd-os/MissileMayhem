@@ -1,17 +1,19 @@
-execute if score Tomohawk missiles matches 0 run give @a[team=Blue] minecraft:creeper_spawn_egg{display:{Name:'{"text":"Blue Tomohawk"}'},EntityTag:{CustomName:"\"Blue Tomohawk\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Tomohawk missiles matches 0 run give @a[team=Green] minecraft:creeper_spawn_egg{display:{Name:'{"text":"Green Tomohawk"}'},EntityTag:{CustomName:"\"Green Tomohawk\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Juggurnaut missiles matches 0 run give @a[team=Blue] minecraft:wolf_spawn_egg{display:{Name:'{"text":"Blue Juggurnaut"}'},EntityTag:{CustomName:"\"Blue Juggurnaut\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Juggurnaut missiles matches 0 run give @a[team=Green] minecraft:wolf_spawn_egg{display:{Name:'{"text":"Green Juggurnaut"}'},EntityTag:{CustomName:"\"Green Juggurnaut\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Lightning missiles matches 0 run give @a[team=Blue] minecraft:ocelot_spawn_egg{display:{Name:'{"text":"Blue Lightning"}'},EntityTag:{CustomName:"\"Blue Lightning\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Lightning missiles matches 0 run give @a[team=Green] minecraft:ocelot_spawn_egg{display:{Name:'{"text":"Green Lightning"}'},EntityTag:{CustomName:"\"Green Lightning\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Shieldbuster missiles matches 0 run give @a[team=Blue] minecraft:witch_spawn_egg{display:{Name:'{"text":"Blue Shieldbuster"}'},EntityTag:{CustomName:"\"Blue Shieldbuster\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Shieldbuster missiles matches 0 run give @a[team=Green] minecraft:witch_spawn_egg{display:{Name:'{"text":"Green Shieldbuster"}'},EntityTag:{CustomName:"\"Green Shieldbuster\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Custom missiles matches 0 run give @a[team=Blue] minecraft:cave_spider_spawn_egg{display:{Name:'{"text":"Blue Custom"}'},EntityTag:{CustomName:"\"Blue Custom\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Custom missiles matches 0 run give @a[team=Green] minecraft:cave_spider_spawn_egg{display:{Name:'{"text":"Green Custom"}'},EntityTag:{CustomName:"\"Green Custom\"",Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
-execute if score Shield missiles matches 0 run give @a[team=Blue] minecraft:snowball{display:{Name:'{"text":"Blue Shield"}'}}
-execute if score Shield missiles matches 0 run give @a[team=Green] minecraft:snowball{display:{Name:'{"text":"Green Shield"}'}}
+execute as @a store result score @s Items run clear @s minecraft:creeper_spawn_egg 0
+execute if score Tomohawk missiles matches 0 run give @a[scores={Game=1..,Items=0}] minecraft:creeper_spawn_egg{display:{Name:'{"text":"Tomohawk"}'},EntityTag:{CustomName:'"Tomohawk"',Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
+execute as @a store result score @s Items run clear @s minecraft:wolf_spawn_egg 0
+execute if score Juggurnaut missiles matches 0 run give @a[scores={Game=1..,Items=0}] minecraft:wolf_spawn_egg{display:{Name:'{"text":"Juggurnaut"}'},EntityTag:{CustomName:'"Juggurnaut"',Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
+execute as @a store result score @s Items run clear @s minecraft:ocelot_spawn_egg 0
+execute if score Lightning missiles matches 0 run give @a[scores={Game=1..,Items=0}] minecraft:ocelot_spawn_egg{display:{Name:'{"text":"Lightning"}'},EntityTag:{CustomName:'"Lightning"',Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
+execute as @a store result score @s Items run clear @s minecraft:witch_spawn_egg 0
+execute if score Shieldbuster missiles matches 0 run give @a[scores={Game=1..,Items=0}] minecraft:witch_spawn_egg{display:{Name:'{"text":"Shieldbuster"}'},EntityTag:{CustomName:'"Shieldbuster"',Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
+execute as @a store result score @s Items run clear @s minecraft:cave_spider_spawn_egg 0
+execute if score Custom missiles matches 0 run give @a[scores={Game=1..,Items=0}] minecraft:cave_spider_spawn_egg{display:{Name:'{"text":"Custom"}'},EntityTag:{CustomName:'"Custom"',Particle:"block air",id:"minecraft:area_effect_cloud",Tags:["missile"]}}
+execute as @a store result score @s Items run clear @s minecraft:snowball 0
+execute if score Shield missiles matches 0 run give @a[scores={Game=1..,Items=0}] minecraft:snowball{display:{Name:'{"text":"Shield"}'}}
+execute as @a store result score @s Items run clear @s minecraft:arrow 0
 execute if score Arrows missiles matches 0 run give @a[scores={Game=1..}] minecraft:arrow 2
-execute if score Fireball missiles matches 0 run give @a[scores={Game=1..}] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
+execute as @a store result score @s Items run clear @s minecraft:firework_rocket 0
+execute if score Fireball missiles matches 0 run give @a[scores={Game=1..,Items=0}] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
 
 execute if score Tomohawk missiles matches -1..0 run scoreboard players reset Tomohawk missiles 
 execute if score Juggurnaut missiles matches -1..0 run scoreboard players reset Juggurnaut missiles 

@@ -10,6 +10,7 @@ execute as @e[tag=BlueBase,x=0,scores={Timer=0},limit=1] at @s run scoreboard pl
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] run function missilewars:maps/load_map
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] as @a[team=Blue,x=0] run function missilewars:start/tp_blue
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] as @a[team=Green,x=0] run function missilewars:start/tp_green
+execute as @e[tag=BlueBase,x=0,scores={Timer=0}] run scoreboard players reset @s Timer
 
 execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 run function missilewars:end/check_end_game
 

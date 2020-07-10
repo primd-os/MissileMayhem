@@ -1,5 +1,6 @@
 xp set @s 0 levels
 effect give @s minecraft:haste 2 2 true
+effect give @s minecraft:saturation 2 0 true
 scoreboard players enable @s Start
 scoreboard players reset @s AutoTeam
 scoreboard players enable @s JoinSpectators
@@ -12,14 +13,13 @@ scoreboard players reset @s ChooseMissileSet
 scoreboard players operation @s ChooseMissileSet = @s ChooseMissileSe2
 scoreboard players reset @s MissileSetSelect
 
-tag @s add ActivePlayer
-execute as @e[tag=BlueBase,sort=nearest] if entity @s[scores={GameState=0}] run gamemode adventure @a[tag=ActivePlayer,team=!Spectator,gamemode=!creative]
-execute as @e[tag=BlueBase,sort=nearest] if entity @s[scores={GameState=1}] run gamemode survival @a[tag=ActivePlayer,team=!Spectator,gamemode=!creative]
-execute as @e[tag=BlueBase,sort=nearest] if entity @s[scores={GameState=2}] run gamemode spectator @a[tag=ActivePlayer,team=!Spectator,gamemode=!creative]
-gamemode spectator @a[tag=ActivePlayer,team=Spectator,gamemode=!creative]
-tag @s remove ActivePlayer
+execute if entity @e[tag=BlueBase,sort=nearest,x=0,scores={GameState=0}] run gamemode adventure @s[team=!Spectator,gamemode=!creative]
+execute if entity @e[tag=BlueBase,sort=nearest,x=0,scores={GameState=1}] run gamemode survival @s[team=!Spectator,gamemode=!creative]
+execute if entity @e[tag=BlueBase,sort=nearest,x=0,scores={GameState=2}] run gamemode spectator @s[team=!Spectator,gamemode=!creative]
+gamemode spectator @s[team=Spectator,gamemode=!creative]
 
-execute as @s[scores={Start=1,StartVote=0}] as @e[tag=BlueBase,scores={Timer=60..,GameState=0}] run scoreboard players remove @s Timer 60
+execute as @s[scores={Start=1,StartVote=0}] as @e[tag=BlueBase,scores={Timer=60..,GameState=0},x=0] run scoreboard players remove @s Timer 60
+execute as @s[scores={Start=1,StartVote=0}] as @e[tag=BlueBase,scores={Timer=60..,GameState=0},x=0] run scoreboard players remove @s Timer 60
 execute as @s[scores={Start=1,StartVote=0}] as @e[tag=BlueBase,scores={Timer=..60,GameState=0}] run scoreboard players set @s Timer 1
 execute as @s[scores={Start=1}] run scoreboard players set @s StartVote 1
 execute as @s[scores={Start=1}] run scoreboard players set @s Start 0

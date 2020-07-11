@@ -1,7 +1,8 @@
-summon minecraft:area_effect_cloud 0 0 75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["BlueBase","NewBase"]}
-summon minecraft:area_effect_cloud 0 0 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["GreenBase","NewBase"]}
+summon minecraft:area_effect_cloud 0 0.1 75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Base","BlueBase","NewBase"]}
+summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Base","GreenBase","NewBase"]}
 scoreboard players set @e[tag=NewBase,tag=BlueBase,x=0] GameState 0
 scoreboard players set @e[tag=NewBase,tag=BlueBase,x=0] Timer 200
+execute as @e[tag=NewBase,tag=BlueBase,x=0] at @s run tp @s ~ ~ ~ ~180 ~
 scoreboard players operation @e[tag=NewBase,x=0] Game = @s Game
 tag @e remove NewBase
 function missilewars:maps/clear_map

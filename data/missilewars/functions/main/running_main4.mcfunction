@@ -9,6 +9,10 @@ execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard
 execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinGreen
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlue
 execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinBlue
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinRed
+execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinRed
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlack
+execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinBlack
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
 scoreboard players operation @s ChooseMissileSe2 = @s ChooseMissileSet
@@ -35,6 +39,12 @@ execute as @s[scores={JoinBlue=1}] run scoreboard players set @s JoinBlue 0
 
 execute as @s[scores={JoinGreen=1}] run function missilewars:start/join/green
 execute as @s[scores={JoinGreen=1}] run scoreboard players set @s JoinGreen 0
+
+execute as @s[scores={JoinRed=1}] run function missilewars:start/join/red
+execute as @s[scores={JoinRed=1}] run scoreboard players set @s JoinRed 0
+
+execute as @s[scores={JoinBlack=1}] run function missilewars:start/join/black
+execute as @s[scores={JoinBlack=1}] run scoreboard players set @s JoinBlack 0
 
 function missilewars:main/manage_items
 

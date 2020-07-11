@@ -35,6 +35,8 @@ scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
 scoreboard objectives add JoinGreen trigger
 scoreboard objectives add JoinBlue trigger
+scoreboard objectives add JoinRed trigger
+scoreboard objectives add JoinBlack trigger
 scoreboard objectives add ChooseMap trigger
 scoreboard objectives add PrevMapVote trigger
 scoreboard objectives add MapVote trigger
@@ -63,6 +65,16 @@ scoreboard objectives add DirectionPlace dummy
 scoreboard objectives add DirecToPlace dummy
 scoreboard objectives add Temp dummy
 
+scoreboard objectives add PreGreenLoss dummy
+scoreboard objectives add PreBlueLoss dummy
+scoreboard objectives add PreRedLoss dummy
+scoreboard objectives add PreBlackLoss dummy
+scoreboard objectives add GreenLoss dummy
+scoreboard objectives add BlueLoss dummy
+scoreboard objectives add RedLoss dummy
+scoreboard objectives add BlackLoss dummy
+scoreboard objectives add DeadTeams dummy
+
 scoreboard objectives add PreGreenWin dummy
 scoreboard objectives add PreBlueWin dummy
 scoreboard objectives add GreenWin dummy
@@ -70,6 +82,8 @@ scoreboard objectives add BlueWin dummy
 scoreboard players set @a StartVote 0
 scoreboard objectives add BlueMembers dummy
 scoreboard objectives add GreenMembers dummy
+scoreboard objectives add RedMembers dummy
+scoreboard objectives add BlackMembers dummy
 
 scoreboard players set Two Constants 2
 scoreboard players set Ten Constants 10
@@ -97,21 +111,31 @@ scoreboard objectives setdisplay belowName player_health
 
 team add Blue
 team add Green
+team add Red
+team add Black
 team add Spectator
 team add Lobby
 team modify Blue color blue
 team modify Green color green
+team modify Red color red
+team modify Black color black
 team modify Spectator color dark_gray
 team modify Lobby color gray
 team modify Blue collisionRule pushOtherTeams
 team modify Green collisionRule pushOtherTeams
+team modify Red collisionRule pushOtherTeams
+team modify Black collisionRule pushOtherTeams
 team modify Lobby collisionRule never
 team modify Blue friendlyFire false
 team modify Green friendlyFire false
+team modify Red friendlyFire false
+team modify Black friendlyFire false
 team modify Lobby friendlyFire false
 
 scoreboard objectives setdisplay sidebar.team.blue missiles
 scoreboard objectives setdisplay sidebar.team.green missiles
+scoreboard objectives setdisplay sidebar.team.red missiles
+scoreboard objectives setdisplay sidebar.team.black missiles
 scoreboard objectives setdisplay sidebar.team.dark_gray missiles
 scoreboard objectives setdisplay sidebar.team.gray points
 

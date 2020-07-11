@@ -1,7 +1,15 @@
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
 
 execute in missilewars:game1 run function missilewars:main/game_main
-execute in missilewars:game2 run function missilewars:main/game_main
+execute in missilewars:game2 run function missilewars:main/game_main4
+
+execute as @e[tag=CustomMissileArea] at @s positioned ~ ~6 ~-10 unless entity @a[dx=13,dy=10,dz=20] run fill ~8 ~ ~ ~13 ~4 ~20 air
+
+execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
+execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run particle explosion ~ ~ ~
+execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
+
+execute in missilewars:lobby run kill @e[type=item,x=0]
 
 function missilewars:item_managers/run_items
 function missilewars:new_missile/missile_loop

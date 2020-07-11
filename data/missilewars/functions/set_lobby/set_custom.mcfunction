@@ -9,7 +9,7 @@ fill ~6 ~5 ~-2 ~2 ~5 ~-2 minecraft:blue_terracotta
 fill ~6 ~5 ~2 ~2 ~5 ~2 minecraft:blue_terracotta
 fill ~2 ~5 ~1 ~2 ~5 ~-1 minecraft:blue_terracotta
 
-setblock ~7 ~6 ~2 minecraft:ender_chest[facing=east]
+setblock ~7 ~6 ~2 minecraft:anvil
 setblock ~7 ~6 ~ minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"Clear Missile","clickEvent":{"action":"run_command","value":"execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-10 ~12 ~10 ~8 minecraft:air"}}'}
 setblock ~7 ~6 ~-2 minecraft:anvil
 

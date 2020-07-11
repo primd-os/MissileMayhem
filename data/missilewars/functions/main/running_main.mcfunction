@@ -3,9 +3,12 @@ effect give @s minecraft:haste 2 2 true
 effect give @s minecraft:saturation 2 0 true
 scoreboard players enable @s Start
 scoreboard players reset @s AutoTeam
-scoreboard players enable @s JoinSpectators
-scoreboard players enable @s JoinGreen
-scoreboard players enable @s JoinBlue
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinSpectators
+execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinSpectators
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinGreen
+execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinGreen
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlue
+execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinBlue
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
 scoreboard players operation @s ChooseMissileSe2 = @s ChooseMissileSet

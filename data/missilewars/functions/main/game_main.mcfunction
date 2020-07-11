@@ -12,7 +12,7 @@ execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] as @a[team=Blue,x=0] run
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] as @a[team=Green,x=0] run function missilewars:start/tp_green
 execute as @e[tag=BlueBase,x=0,scores={Timer=0}] run scoreboard players reset @s Timer
 
-execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 run function missilewars:end/check_end_game
+execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1..2 run function missilewars:end/check_end_game
 
 function missilewars:item_managers/left_click_test
 

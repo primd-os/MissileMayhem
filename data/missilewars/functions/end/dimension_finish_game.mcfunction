@@ -1,1 +1,1 @@
-execute as @e[tag=BlueBase,scores={GameState=2}] at @s run function missilewars:end/finish_game
+execute as @e[tag=BlueBase,scores={GameState=2..}] at @s run function missilewars:end/finish_game

@@ -63,6 +63,8 @@ scoreboard objectives add DirectionPlace dummy
 scoreboard objectives add DirecToPlace dummy
 scoreboard objectives add Temp dummy
 
+scoreboard objectives add PreGreenWin dummy
+scoreboard objectives add PreBlueWin dummy
 scoreboard objectives add GreenWin dummy
 scoreboard objectives add BlueWin dummy
 scoreboard players set @a StartVote 0

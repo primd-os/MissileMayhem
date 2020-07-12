@@ -51,8 +51,8 @@ function missilewars:main/manage_items
 execute store result score @s shulkerCount run clear @s shulker_box 0
 execute as @s[scores={shulkerCount=2..}] run clear @s shulker_box 1
 
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:shulker_box"}}] at @s run summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:"minecraft:barrier"},NoGravity:1}
-execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:shulker_box"}]}] at @s run summon minecraft:falling_block ~ ~1 ~ {BlockState:{Name:"minecraft:barrier"},NoGravity:1}
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:shulker_box"}}] at @s run loot replace entity @s enderchest.0 mine ~ ~ ~ mainhand
+execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:shulker_box"}]}] at @s run loot replace entity @s enderchest.0 mine ~ ~ ~ offhand
 
 execute as @s store result score @s bowCount run clear @s crossbow 0
 execute as @s[team=!Spectator,scores={bowCount=0}] run function missilewars:main/givebow

@@ -1,8 +1,12 @@
 execute as @s[team=Blue] as @e[tag=mover] at @s if score temp Constants matches 1 run setblock ~ ~ ~ blue_wool
 execute as @s[team=Green] as @e[tag=mover] at @s if score temp Constants matches 1 run setblock ~ ~ ~ green_wool
+execute as @s[team=Red] as @e[tag=mover] at @s if score temp Constants matches 1 run setblock ~ ~ ~ red_wool
+execute as @s[team=Black] as @e[tag=mover] at @s if score temp Constants matches 1 run setblock ~ ~ ~ black_wool
 execute as @s[team=Lobby] as @e[tag=mover] at @s if score temp Constants matches 1 run setblock ~ ~ ~ white_wool
 execute as @s[team=Blue] as @e[tag=mover] at @s if score temp Constants matches 2 run setblock ~ ~ ~ blue_stained_glass
 execute as @s[team=Green] as @e[tag=mover] at @s if score temp Constants matches 2 run setblock ~ ~ ~ green_stained_glass
+execute as @s[team=Red] as @e[tag=mover] at @s if score temp Constants matches 2 run setblock ~ ~ ~ red_stained_glass
+execute as @s[team=Black] as @e[tag=mover] at @s if score temp Constants matches 2 run setblock ~ ~ ~ black_stained_glass
 execute as @s[team=Lobby] as @e[tag=mover] at @s if score temp Constants matches 2 run setblock ~ ~ ~ white_stained_glass
 execute as @e[tag=mover] at @s if score temp Constants matches 3 run setblock ~ ~ ~ redstone_block
 execute as @e[tag=mover] at @s if score temp Constants matches 4 run setblock ~ ~ ~ observer[facing=down]

@@ -20,7 +20,7 @@ execute in missilewars:store run loot insert 0 0 -1 mine 0 0 4
 execute in missilewars:store run loot insert 0 0 -1 mine 0 0 5
 
 clear @s shulker_box
-execute in missilewars:store run loot give @s mine 0 0 -1
+execute in missilewars:store run loot replace entity @s inventory.8 mine 0 0 -1
 
 gamemode adventure @s
 function missilewars:main/clear_inv

@@ -8,3 +8,7 @@ execute as @e[type=minecraft:item,tag=!processed,nbt={Item:{id:"minecraft:ocelot
 execute as @e[type=minecraft:item,tag=!processed,nbt={Item:{id:"minecraft:witch_spawn_egg"}}] run data merge entity @s {PickupDelay:0}
 execute as @e[type=minecraft:item,tag=!processed,nbt={Item:{id:"minecraft:cave_spider_spawn_egg"}}] run data merge entity @s {PickupDelay:0}
 tag @e[type=item] add processed
+
+
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:shulker_box"}}] at @s run function missilewars:item_managers/reset_custom
+execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:shulker_box"}]}] at @s run function missilewars:item_managers/reset_custom

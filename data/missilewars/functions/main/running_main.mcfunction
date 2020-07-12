@@ -38,9 +38,6 @@ execute as @s[scores={JoinGreen=1}] run scoreboard players set @s JoinGreen 0
 
 function missilewars:main/manage_items
 
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:shulker_box"}}] at @s run loot replace entity @s enderchest.0 mine ~ ~ ~ mainhand
-execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:shulker_box"}]}] at @s run loot replace entity @s enderchest.0 mine ~ ~ ~ offhand
-
 execute as @s store result score @s bowCount run clear @s crossbow 0
 execute as @s[team=!Spectator,scores={bowCount=0}] run function missilewars:main/givebow
 execute as @s[team=!Spectator,scores={bowCount=2..2000}] run clear @s crossbow 1

@@ -1,4 +1,4 @@
-execute unless score @s Green matches 1 at @e[tag=GreenBase,x=0] store success score @s PreBlueWin run fill ^-25 ^ ^ ^25 ^46 ^ minecraft:emerald_block replace air
+execute unless score @s BlueWin matches 1 at @e[tag=GreenBase,x=0] store success score @s PreBlueWin run fill ^-25 ^ ^ ^25 ^46 ^ minecraft:emerald_block replace air
 execute unless score @s GreenWin matches 1 at @e[tag=BlueBase,x=0] store success score @s PreGreenWin run fill ^-25 ^ ^ ^25 ^46 ^ minecraft:diamond_block replace air
 execute if score @s PreBlueWin matches 1 run scoreboard players set @s BlueWin 1
 execute if score @s PreGreenWin matches 1 run scoreboard players set @s GreenWin 1

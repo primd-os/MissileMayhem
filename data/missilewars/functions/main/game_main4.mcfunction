@@ -18,10 +18,10 @@ execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1..2 run function 
 
 function missilewars:item_managers/left_click_test
 
-execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=BlueBase,x=0] run function missilewars:maps/blue/map
-execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=GreenBase,x=0] run function missilewars:maps/green/map
-execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=RedBase,x=0] run function missilewars:maps/red/map
-execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=BlackBase,x=0] run function missilewars:maps/black/map
+execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s BlueLoss matches 1 at @e[tag=BlueBase,x=0] run function missilewars:maps/blue/map
+execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s GreenLoss matches 1 at @e[tag=GreenBase,x=0] run function missilewars:maps/green/map
+execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s RedLoss matches 1 at @e[tag=RedBase,x=0] run function missilewars:maps/red/map
+execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s BlackLoss matches 1 at @e[tag=BlackBase,x=0] run function missilewars:maps/black/map
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:main/running_main4
 

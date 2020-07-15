@@ -12,9 +12,13 @@ execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] as @a[team=Blue,x=0] run
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] as @a[team=Green,x=0] run function missilewars:start/tp/green
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] as @a[team=Red,x=0] run function missilewars:start/tp/red
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] as @a[team=Black,x=0] run function missilewars:start/tp/black
+execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Blue,x=0] run scoreboard players set @e[tag=BlueBase,x=0] BlueLoss 1
+execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Green,x=0] run scoreboard players set @e[tag=BlueBase,x=0] GreenLoss 1
+execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Red,x=0] run scoreboard players set @e[tag=BlueBase,x=0] RedLoss 1
+execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Black,x=0] run scoreboard players set @e[tag=BlueBase,x=0] BlackLoss 1
 execute as @e[tag=BlueBase,x=0,scores={Timer=0}] run scoreboard players reset @s Timer
 
-execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1..2 run function missilewars:end/check_end_game4
+execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 run function missilewars:end/check_end_game4
 
 function missilewars:item_managers/left_click_test
 

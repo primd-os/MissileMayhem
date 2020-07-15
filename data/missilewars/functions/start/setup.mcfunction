@@ -29,7 +29,6 @@ scoreboard objectives modify points displayname "Points"
 scoreboard objectives add Constants dummy
 scoreboard objectives add Start trigger
 scoreboard objectives add StartVote dummy
-scoreboard objectives setdisplay list StartVote
 scoreboard objectives add StopAdverts trigger
 scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
@@ -48,6 +47,7 @@ scoreboard objectives add ChooseMissileSe2 trigger
 scoreboard objectives add MissileSetSelect trigger
 scoreboard objectives add Items dummy
 scoreboard objectives add Game dummy
+scoreboard objectives setdisplay list Game
 scoreboard objectives add GameState dummy
 scoreboard objectives add Timer dummy
 scoreboard objectives add TimerSecs dummy

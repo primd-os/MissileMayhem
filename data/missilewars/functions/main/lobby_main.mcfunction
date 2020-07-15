@@ -30,27 +30,29 @@ execute as @s run scoreboard players operation @s MissileSet = @s ChooseMissileS
 execute at @s if block ~ ~-2 ~ sea_lantern if block ~ ~-1 ~ #minecraft:impermeable run effect give @s speed 2 1 true
 
 execute as @s[tag=Editor] store result score @s Items run clear @s iron_pickaxe 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s iron_pickaxe{Unbreakable:1b,CanDestroy:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate"]} 1
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s iron_pickaxe{Unbreakable:1b,CanDestroy:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta"]} 1
 execute as @s[tag=Editor] store result score @s Items run clear @s white_wool 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s white_wool{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s white_wool{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s white_stained_glass 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s white_stained_glass{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s white_stained_glass{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s redstone_block 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s redstone_block{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s redstone_block{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s observer 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s observer{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s observer{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s piston 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s piston{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s piston{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s sticky_piston 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s sticky_piston{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s sticky_piston{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s slime_block 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s slime_block{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s slime_block{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s honey_block 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s honey_block{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s honey_block{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s tnt 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s tnt{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s tnt{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 execute as @s[tag=Editor] store result score @s Items run clear @s stone_pressure_plate 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s stone_pressure_plate{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","minecraft:barrier"]} 64
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s stone_pressure_plate{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
+execute as @s[tag=Editor] store result score @s Items run clear @s gray_glazed_terracotta 0
+execute as @s[tag=Editor] if score @s Items matches 0 run give @s gray_glazed_terracotta{CanPlaceOn:["white_wool","white_stained_glass","redstone_block","observer","piston","sticky_piston","slime_block","honey_block","tnt","stone_pressure_plate","piston_head","gray_glazed_terracotta","minecraft:barrier"]} 64
 
 
 execute store result score @s shulkerCount run clear @s shulker_box 0
@@ -60,10 +62,10 @@ execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~
 clear @s[tag=!InBox,tag=Editor]
 tag @s[tag=!InBox] remove Editor
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~12 ~6 ~-9 ~12 ~9 ~8 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-10 ~12 ~9 ~-10 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~12 ~6 ~-9 ~12 ~9 ~9 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~12 ~9 ~-9 minecraft:air
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~9 ~12 ~9 ~9 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~9 ~-10 ~12 ~9 ~8 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~9 ~-9 ~12 ~9 ~9 minecraft:air
 tag @s remove InBox
 
 scoreboard players set @s deathCheck 0

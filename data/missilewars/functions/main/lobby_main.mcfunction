@@ -60,7 +60,7 @@ execute store result score @s shulkerCount run clear @s shulker_box 0
 execute as @s[scores={shulkerCount=0}] run function missilewars:start/give_default_missile
 
 execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-10 if entity @s[dx=13,dy=15,dz=20] run tag @s add InBox
-clear @s[tag=!InBox,tag=Editor]
+execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
 tag @s[tag=!InBox] remove Editor
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~12 ~6 ~-9 ~12 ~9 ~9 minecraft:air

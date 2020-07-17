@@ -7,6 +7,7 @@ scoreboard players reset @s JoinSpectators
 scoreboard players reset @s JoinGreen
 scoreboard players reset @s JoinBlue
 scoreboard players enable @s ChooseMap
+scoreboard players enable @s MapVote
 scoreboard players enable @s GiveBook
 scoreboard players enable @s ChooseMissileSet
 scoreboard players enable @s MissileSetSelect
@@ -23,6 +24,8 @@ execute as @s[scores={AutoTeam=1}] run scoreboard players set @s AutoTeam 0
 
 execute as @s[scores={ChooseMap=1}] run function missilewars:start/choose_map
 execute as @s[scores={ChooseMap=1}] run scoreboard players set @s ChooseMap 0
+
+execute unless score @s MapVote = @s PrevMapVote run function missilewars:main/switch_vote
 
 execute as @s[scores={MissileSetSelect=1}] run function missilewars:start/choose_missile_set
 execute as @s[scores={MissileSetSelect=1}] run scoreboard players set @s MissileSetSelect 0

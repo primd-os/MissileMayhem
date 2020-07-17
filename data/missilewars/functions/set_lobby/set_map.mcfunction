@@ -49,6 +49,7 @@ execute positioned -5 100.00 69 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rota
 setblock -6 101 27 minecraft:barrier
 setblock 5 103 55 minecraft:barrier
 setblock 5 103 41 minecraft:barrier
+setblock 6 104 21 minecraft:polished_blackstone_button[face=floor]
 
 # letters
 setblock 1 110 18 minecraft:black_wall_banner[facing=north]{Base:0,Patterns:[{Pattern:tt,Color:0},{Pattern:tts,Color:15},{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:bo,Color:15}]}

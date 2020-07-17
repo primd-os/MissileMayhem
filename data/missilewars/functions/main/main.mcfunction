@@ -1,7 +1,12 @@
+scoreboard players set @a[nbt={Dimension:"missilewars:lobby"}] Game 0
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
 
 execute in missilewars:game1 run function missilewars:main/game_main
 execute in missilewars:game2 run function missilewars:main/game_main4
+
+execute in missilewars:lobby positioned 6 104 21 if block ~ ~ ~ minecraft:polished_blackstone_button[powered=true] as @a[x=0,sort=nearest,limit=1] run function missilewars:set_lobby/overworld_tp
+
+advancement revoke @a[tag=!worldly] everything
 
 execute as @e[tag=CustomMissileArea] at @s positioned ~ ~6 ~-10 unless entity @a[dx=13,dy=10,dz=20] run fill ~8 ~ ~ ~13 ~4 ~20 air
 

@@ -36,6 +36,7 @@ scoreboard objectives add JoinGreen trigger
 scoreboard objectives add JoinBlue trigger
 scoreboard objectives add JoinRed trigger
 scoreboard objectives add JoinBlack trigger
+scoreboard objectives add Leave trigger
 scoreboard objectives add ChooseMap trigger
 scoreboard objectives add PrevMapVote trigger
 scoreboard objectives add MapVote trigger

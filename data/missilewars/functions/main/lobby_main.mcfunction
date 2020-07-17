@@ -1,6 +1,7 @@
 xp set @s 100 levels
 effect give @s minecraft:haste 2 255 true
 scoreboard players reset @s Start
+scoreboard players reset @s Leave
 scoreboard players enable @s AutoTeam
 scoreboard players reset @s JoinSpectators
 scoreboard players reset @s JoinGreen

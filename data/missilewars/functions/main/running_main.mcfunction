@@ -42,10 +42,6 @@ execute as @s[scores={JoinGreen=1}] run scoreboard players set @s JoinGreen 0
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
 
-execute as @s store result score @s bowCount run clear @s crossbow 0
-execute as @s[team=!Spectator,scores={bowCount=0}] run function missilewars:main/givebow
-execute as @s[team=!Spectator,scores={bowCount=2..2000}] run clear @s crossbow 1
-
 execute as @s[scores={deathCheck=1..1000},team=Blue] at @s run scoreboard players set @s DirecToPlace 2
 execute as @s[scores={deathCheck=1..1000},team=Green] at @s run scoreboard players set @s DirecToPlace 0
 execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run schedule function missilewars:main/turn_around 2t

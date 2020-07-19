@@ -53,7 +53,9 @@ execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
 
 execute as @s[scores={deathCheck=1..1000},team=Blue] at @s run scoreboard players set @s DirecToPlace 2
+execute as @s[scores={deathCheck=1..1000},team=Black] at @s run scoreboard players set @s DirecToPlace 1
 execute as @s[scores={deathCheck=1..1000},team=Green] at @s run scoreboard players set @s DirecToPlace 0
+execute as @s[scores={deathCheck=1..1000},team=Red] at @s run scoreboard players set @s DirecToPlace 3
 execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run schedule function missilewars:main/turn_around 2t
 execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run tag @s add dead
 scoreboard players set @s deathCheck 0

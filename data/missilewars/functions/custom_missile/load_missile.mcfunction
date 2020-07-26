@@ -3,17 +3,10 @@ playsound minecraft:entity.experience_orb.pickup block @a[x=0] ~ ~ ~ 1 0
 tag @s add Editor
 function missilewars:main/clear_inv
 
-function missilewars:custom_missile/load_from_inv
-
-execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run summon minecraft:area_effect_cloud ~9 ~6 ~8 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["mover"]}
-execute in missilewars:store run summon minecraft:area_effect_cloud 0 0 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["iterator"]}
-
-scoreboard players set @s DirecToPlace 2
-
-scoreboard players set temp2 Constants 0
-scoreboard players set rows_completed Constants 0
-scoreboard players set chests_completed Constants 0
-function missilewars:custom_missile/iterate_load
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~6 ~5 ~ air
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~6 ~5 ~ minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:3,mode:"LOAD",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,sizeY:3,sizeZ:17}
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run data modify block ~6 ~5 ~ name set from entity @s Inventory[{id:"minecraft:writable_book"}].tag.pages[0]
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~5 ~5 ~ minecraft:redstone_block
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~5 ~5 ~ air
 
 function missilewars:custom_missile/clean_up
-fill 34 95 16 31 95 14 air

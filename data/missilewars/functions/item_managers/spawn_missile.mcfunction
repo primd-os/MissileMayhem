@@ -15,9 +15,9 @@ execute as @e[tag=missile, name="Tomohawk"] at @s as @a[scores={PlacedTomohawk=1
 execute as @e[tag=missile, name="Juggurnaut"] at @s as @a[scores={PlacedJuggurnaut=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_juggurnaut
 execute as @e[tag=missile, name="Lightning"] at @s as @a[scores={PlacedLightning=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_lightning
 execute as @e[tag=missile, name="Shieldbuster"] at @s as @a[scores={PlacedBuster=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_shieldbuster
-execute as @e[tag=missile, name="Custom"] at @s as @a[scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:custom_missile/shoot_missile/shoot_missile
+execute as @e[tag=missile, name="Custom"] at @s as @a[scores={PlacedCustom=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_custom
 
-execute as @e[tag=missile] at @s as @a[scores={PlacedMissile=1,PlacedCustom=0},sort=nearest,limit=1] run function missilewars:item_managers/rot_missile
+execute as @e[tag=missile] at @s as @a[scores={PlacedMissile=1},sort=nearest,limit=1] run function missilewars:item_managers/rot_missile
 execute as @e[tag=missile] run schedule function missilewars:item_managers/color_missile 1t append
 
 scoreboard players set @a PlacedTomohawk 0

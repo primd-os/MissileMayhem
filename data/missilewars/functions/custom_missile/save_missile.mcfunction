@@ -1,27 +1,12 @@
 playsound minecraft:entity.experience_orb.pickup block @a[x=0] ~ ~ ~ 1 1
 
-execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run summon minecraft:area_effect_cloud ~9 ~6 ~8 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["mover"]}
-execute in missilewars:store run summon minecraft:area_effect_cloud 0 0 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["iterator"]}
-
-scoreboard players set temp2 Constants 0
-scoreboard players set rows_completed Constants 0
-scoreboard players set chests_completed Constants 0
-execute in missilewars:store run fill 0 0 0 0 0 5 minecraft:shulker_box
-function missilewars:custom_missile/iterate_save
-
-function missilewars:custom_missile/clean_up
-
-execute in missilewars:store run setblock 0 0 -1 minecraft:air
-execute in missilewars:store run setblock 0 0 -1 minecraft:shulker_box
-execute in missilewars:store run loot insert 0 0 -1 mine 0 0 0
-execute in missilewars:store run loot insert 0 0 -1 mine 0 0 1
-execute in missilewars:store run loot insert 0 0 -1 mine 0 0 2
-execute in missilewars:store run loot insert 0 0 -1 mine 0 0 3
-execute in missilewars:store run loot insert 0 0 -1 mine 0 0 4
-execute in missilewars:store run loot insert 0 0 -1 mine 0 0 5
-
-clear @s shulker_box
-execute in missilewars:store run loot give @s mine 0 0 -1
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~6 ~5 ~ air
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~6 ~5 ~ minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:3,mode:"SAVE",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,sizeY:3,sizeZ:17}
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run data modify block ~6 ~5 ~ name set from entity @s Inventory[{id:"minecraft:writable_book"}].tag.pages[0]
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run fill ~8 ~6 ~-10 ~12 ~10 ~8 minecraft:structure_void replace air
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~5 ~5 ~ minecraft:redstone_block
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~5 ~5 ~ air
+execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run fill ~8 ~6 ~-10 ~12 ~10 ~8 air replace minecraft:structure_void
 
 function missilewars:main/clear_inv
 

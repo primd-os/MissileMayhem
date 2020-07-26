@@ -9,27 +9,27 @@ execute if score @s PreBlackLoss matches 1 run scoreboard players set @s BlackLo
 
 execute if score @s PreGreenLoss matches 1 run title @a[x=0] title {"text": "Green Eliminated!","color":"green"}
 execute if score @s PreGreenLoss matches 1 as @a[x=0,team=Green] run function missilewars:start/join_spectators
-execute if score @s PreGreenLoss matches 1 at @e[tag=GreenBase] run fill ^-20 ^ ^ ^20 ^46 ^ air
-execute if score @s PreGreenLoss matches 1 at @e[tag=GreenBase] run playsound minecraft:entity.generic.explode master @a[x=0] ~ 25 ~ 100
-execute if score @s PreGreenLoss matches 1 at @e[tag=GreenBase] run particle minecraft:explosion ~ 20 ~ 20 25 0 2 200 force
+execute if score @s PreGreenLoss matches 1 at @e[x=0,tag=GreenBase] run fill ^-20 ^ ^ ^20 ^46 ^ air
+execute if score @s PreGreenLoss matches 1 at @e[x=0,tag=GreenBase] run playsound minecraft:entity.generic.explode master @a[x=0] ~ 25 ~ 100
+execute if score @s PreGreenLoss matches 1 at @e[x=0,tag=GreenBase] run particle minecraft:explosion ~ 20 ~ 20 25 0 2 200 force
 
 execute if score @s PreBlueLoss matches 1 run title @a[x=0] title {"text": "Blue Eliminated!","color":"blue"}
 execute if score @s PreBlueLoss matches 1 as @a[x=0,team=Blue] run function missilewars:start/join_spectators
-execute if score @s PreBlueLoss matches 1 at @e[tag=BlueBase] run fill ^-20 ^ ^ ^20 ^46 ^ air
-execute if score @s PreBlueLoss matches 1 at @e[tag=BlueBase] run playsound minecraft:entity.generic.explode master @a[x=0] ~ 25 ~ 100
-execute if score @s PreBlueLoss matches 1 at @e[tag=BlueBase] run particle minecraft:explosion ~ 20 ~ 20 25 0 2 200 force
+execute if score @s PreBlueLoss matches 1 at @e[x=0,tag=BlueBase] run fill ^-20 ^ ^ ^20 ^46 ^ air
+execute if score @s PreBlueLoss matches 1 at @e[x=0,tag=BlueBase] run playsound minecraft:entity.generic.explode master @a[x=0] ~ 25 ~ 100
+execute if score @s PreBlueLoss matches 1 at @e[x=0,tag=BlueBase] run particle minecraft:explosion ~ 20 ~ 20 25 0 2 200 force
 
 execute if score @s PreRedLoss matches 1 run title @a[x=0] title {"text": "Red Eliminated!","color":"red"}
 execute if score @s PreRedLoss matches 1 as @a[x=0,team=Red] run function missilewars:start/join_spectators
-execute if score @s PreRedLoss matches 1 at @e[tag=RedBase] run fill ^-20 ^ ^ ^20 ^46 ^ air
-execute if score @s PreRedLoss matches 1 at @e[tag=RedBase] run playsound minecraft:entity.generic.explode master @a[x=0] ~ 25 ~ 100
-execute if score @s PreRedLoss matches 1 at @e[tag=RedBase] run particle minecraft:explosion ~ 20 ~ 0 20 25 2 200 force
+execute if score @s PreRedLoss matches 1 at @e[x=0,tag=RedBase] run fill ^-20 ^ ^ ^20 ^46 ^ air
+execute if score @s PreRedLoss matches 1 at @e[x=0,tag=RedBase] run playsound minecraft:entity.generic.explode master @a[x=0] ~ 25 ~ 100
+execute if score @s PreRedLoss matches 1 at @e[x=0,tag=RedBase] run particle minecraft:explosion ~ 20 ~ 0 20 25 2 200 force
 
 execute if score @s PreBlackLoss matches 1 run title @a[x=0] title {"text": "Black Eliminated!","color":"black"}
 execute if score @s PreBlackLoss matches 1 as @a[x=0,team=Black] run function missilewars:start/join_spectators
-execute if score @s PreBlackLoss matches 1 at @e[tag=BlackBase] run fill ^-20 ^ ^ ^20 ^46 ^ air
-execute if score @s PreBlackLoss matches 1 at @e[tag=BlackBase] run playsound minecraft:entity.generic.explode master @a[x=0] ~ 25 ~ 100
-execute if score @s PreBlackLoss matches 1 at @e[tag=BlackBase] run particle minecraft:explosion ~ 20 ~ 0 20 25 2 200 force
+execute if score @s PreBlackLoss matches 1 at @e[x=0,tag=BlackBase] run fill ^-20 ^ ^ ^20 ^46 ^ air
+execute if score @s PreBlackLoss matches 1 at @e[x=0,tag=BlackBase] run playsound minecraft:entity.generic.explode master @a[x=0] ~ 25 ~ 100
+execute if score @s PreBlackLoss matches 1 at @e[x=0,tag=BlackBase] run particle minecraft:explosion ~ 20 ~ 0 20 25 2 200 force
 
 scoreboard players set @s DeadTeams 0
 execute if score @s GreenLoss matches 1 run scoreboard players add @s DeadTeams 1

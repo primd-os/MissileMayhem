@@ -58,13 +58,16 @@ execute as @s[tag=Editor] if score @s Items matches 0 run give @s stone_pressure
 execute as @s[tag=Editor] store result score @s Items run clear @s gray_glazed_terracotta 0
 execute as @s[tag=Editor] if score @s Items matches 0 run give @s gray_glazed_terracotta{CanPlaceOn:["#missilewars:custom_blocks"]} 64
 
-
-execute store result score @s shulkerCount run clear @s shulker_box 0
-execute as @s[scores={shulkerCount=0}] run function missilewars:start/give_default_missile
-
 execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-10 if entity @s[dx=13,dy=15,dz=20] run tag @s add InBox
 execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
 tag @s[tag=!InBox] remove Editor
+
+execute as @s[tag=InBox] store result score NumBook Constants run clear @s writable_book 0
+execute as @s[tag=InBox] if score NumBook Constants matches 0 run give @s writable_book{Enchantments:[{id:"minecraft:binding_curse",lvl:1}]}
+execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_off_head
+execute as @s[tag=!InBox,nbt=!{Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_to_head
+clear @s written_book
+
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~12 ~6 ~-9 ~12 ~9 ~9 minecraft:air
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~12 ~9 ~-9 minecraft:air

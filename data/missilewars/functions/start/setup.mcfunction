@@ -100,7 +100,6 @@ scoreboard players set Iterations Constants 162
 scoreboard objectives add deathCheck deathCount
 scoreboard objectives add quits custom:leave_game
 
-scoreboard objectives add shulkerCount dummy
 scoreboard objectives add bowCount dummy
 
 scoreboard objectives add clearX dummy

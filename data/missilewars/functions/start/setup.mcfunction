@@ -61,6 +61,9 @@ scoreboard objectives add PlacedBuster minecraft.used:minecraft.witch_spawn_egg
 scoreboard objectives add PlacedCustom minecraft.used:minecraft.cave_spider_spawn_egg
 scoreboard objectives add PlacedMissile minecraft.used:minecraft.cave_spider_spawn_egg
 
+scoreboard objectives add tntCount minecraft.used:tnt
+scoreboard objectives add tntBroke minecraft.mined:tnt
+
 scoreboard objectives add DamageDealt minecraft.custom:damage_dealt
 scoreboard objectives add DirectionPlace dummy
 scoreboard objectives add DirecToPlace dummy
@@ -91,11 +94,6 @@ scoreboard players set Ten Constants 10
 scoreboard players set Twenty Constants 20
 
 scoreboard players set NumMissiles Constants 8
-scoreboard players set Length Constants 17
-scoreboard players set ChestSize Constants 27
-scoreboard players set Rows Constants 3
-scoreboard players set Chests Constants 3
-scoreboard players set Iterations Constants 162
 
 scoreboard objectives add deathCheck deathCount
 scoreboard objectives add quits custom:leave_game

@@ -8,5 +8,7 @@ execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~6 ~5 ~ m
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run data modify block ~6 ~5 ~ name set from entity @s Inventory[{id:"minecraft:writable_book"}].tag.pages[0]
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~5 ~5 ~ minecraft:redstone_block
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~5 ~5 ~ air
+execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score @s tntCount run fill ~8 ~6 ~-10 ~12 ~10 ~8 target replace tnt
+execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-10 ~12 ~10 ~8 tnt replace target
 
 function missilewars:custom_missile/clean_up

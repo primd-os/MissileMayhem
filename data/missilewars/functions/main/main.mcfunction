@@ -12,6 +12,7 @@ execute as @e[tag=CustomMissileArea] at @s positioned ~ ~6 ~-10 unless entity @a
 
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run particle explosion ~ ~ ~
+execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] run scoreboard players remove @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount 1
 execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 
 execute in missilewars:lobby run kill @e[type=item,x=0]

@@ -1,5 +1,7 @@
 playsound minecraft:entity.experience_orb.pickup block @a[x=0] ~ ~ ~ 1 0
 
+execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-10 ~12 ~10 ~8 minecraft:air
+
 tag @s add Editor
 function missilewars:main/clear_inv
 
@@ -10,5 +12,9 @@ execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~5 ~5 ~ m
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ~5 ~5 ~ air
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score @s tntCount run fill ~8 ~6 ~-10 ~12 ~10 ~8 target replace tnt
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-10 ~12 ~10 ~8 tnt replace target
+clear @s tnt
+scoreboard players set tnt Constants 16
+scoreboard players operation tnt Constants -= @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount
+execute if score tnt Constants matches 1.. run function missilewars:custom_missile/give_tnt
 
 function missilewars:custom_missile/clean_up

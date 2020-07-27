@@ -22,7 +22,6 @@ execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=GreenB
 execute as @a[scores={Game=1..},x=0] run function missilewars:main/running_main
 
 scoreboard players enable @a[x=0] StopAdverts
-scoreboard players reset @a[x=0] MapVote
 
 execute as @a[scores={quits=1..},x=0] at @s run team join Lobby @s
 execute as @a[scores={quits=1..},x=0] at @s run scoreboard players set @s Game 0

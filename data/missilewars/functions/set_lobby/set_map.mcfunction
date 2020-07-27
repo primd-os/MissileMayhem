@@ -29,21 +29,21 @@ fill 6 100 20 6 110 20 minecraft:black_concrete
 
 # mini maps
 execute positioned 5 100.00 27 run function missilewars:set_lobby/minimaps/basic
-execute positioned 5 100.00 27 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"Normal","color":"white"}'}
+execute positioned 5 100.00 27 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"Normal","color":"white","clickEvent":{"action":"run_command","value":"trigger MapVote set 0"}}'}
 execute positioned 5 100.00 41 run function missilewars:set_lobby/minimaps/no_walls
-execute positioned 5 100.00 41 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"No Walls","color":"white"}'}
+execute positioned 5 100.00 41 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"No Walls","color":"white","clickEvent":{"action":"run_command","value":"trigger MapVote set 1"}}'}
 execute positioned 5 100.00 55 run function missilewars:set_lobby/minimaps/small
-execute positioned 5 100.00 55 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"Small","color":"white"}'}
+execute positioned 5 100.00 55 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"Small","color":"white","clickEvent":{"action":"run_command","value":"trigger MapVote set 2"}}'}
 execute positioned 5 100.00 69 run function missilewars:set_lobby/minimaps/center_wall
-execute positioned 5 100.00 69 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"Center Wall","color":"white"}'}
+execute positioned 5 100.00 69 run setblock ~-2 ~ ~ minecraft:dark_oak_sign[rotation=4]{Text1:"",Text2:'{"text":"Center Wall","color":"white","clickEvent":{"action":"run_command","value":"trigger MapVote set 3"}}'}
 execute positioned -5 100.00 27 run function missilewars:set_lobby/minimaps/platforms
-execute positioned -5 100.00 27 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Platforms","color":"white"}'}
+execute positioned -5 100.00 27 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Platforms","color":"white","clickEvent":{"action":"run_command","value":"trigger MapVote set 4"}}'}
 execute positioned -5 100.00 41 run function missilewars:set_lobby/minimaps/weak_center
-execute positioned -5 100.00 41 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Weak Center","color":"white"}'}
+execute positioned -5 100.00 41 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Weak Center","color":"white","clickEvent":{"action":"run_command","value":"trigger MapVote set 5"}}'}
 execute positioned -5 100.00 55 run function missilewars:set_lobby/minimaps/bridge
-execute positioned -5 100.00 55 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Bridge","color":"white"}'}
+execute positioned -5 100.00 55 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Bridge","color":"white","clickEvent":{"action":"run_command","value":"trigger MapVote set 6"}}'}
 execute positioned -5 100.00 69 run function missilewars:set_lobby/minimaps/diagonal
-execute positioned -5 100.00 69 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Diagonal","color":"white"}'}
+execute positioned -5 100.00 69 run setblock ~2 ~ ~ minecraft:dark_oak_sign[rotation=12]{Text1:"",Text2:'{"text":"Diagonal","color":"white","clickEvent":{"action":"run_command","value":"trigger MapVote set 7"}}'}
 
 # secrets
 setblock -6 101 27 minecraft:barrier
@@ -238,7 +238,7 @@ fill -7 111 -20 7 112 -20 minecraft:black_concrete
 
 fill 7 98 -21 7 112 -21 minecraft:black_concrete
 # missiles
-setblock -2 101 -20 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":"---------------"}',Text3:'{"text":"New"}',Text2:'{"text":"Missile Set"}',Text1:'{"text":"---------------"}'}
+setblock -2 101 -20 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":"---------------"}',Text3:'{"text":"New","clickEvent":{"action":"run_command","value":"/trigger ChooseMissileSet set 0"}}',Text2:'{"text":"Missile Set"}',Text1:'{"text":"---------------"}'}
 
 setblock -3 100 -22 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:-4,mode:"LOAD",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,name:"missilewars:missiles/new/juggurnaut",sizeY:3,sizeZ:9}
 setblock -3 101 -22 minecraft:redstone_block
@@ -260,7 +260,7 @@ setblock -3 101 -69 minecraft:redstone_block
 fill -3 101 -69 -3 100 -69 minecraft:air
 setblock -3 101 -73 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Lightning"}',Text1:'{"text":""}'}
 
-setblock 3 101 -20 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":"---------------"}',Text3:'{"text":"Old"}',Text2:'{"text":"Missile Set"}',Text1:'{"text":"---------------"}'}
+setblock 2 101 -20 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":"---------------"}',Text3:'{"text":"Old","clickEvent":{"action":"run_command","value":"/trigger ChooseMissileSet set 1"}}',Text2:'{"text":"Missile Set"}',Text1:'{"text":"---------------"}'}
 
 setblock 3 100 -24 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,name:"missilewars:missiles/old/juggurnaut",sizeY:3,sizeZ:9}
 setblock 3 101 -24 minecraft:redstone_block
@@ -282,7 +282,7 @@ setblock 3 101 -67 minecraft:redstone_block
 fill 3 101 -67 3 100 -67 minecraft:air
 setblock 3 101 -70 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Lightning"}',Text1:'{"text":""}'}
 
-setblock 3 108 -20 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":"---------------"}',Text3:'{"text":"Thin"}',Text2:'{"text":"Missile Set"}',Text1:'{"text":"---------------"}'}
+setblock 2 108 -20 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":"---------------"}',Text3:'{"text":"Thin","clickEvent":{"action":"run_command","value":"/trigger ChooseMissileSet set 2"}}',Text2:'{"text":"Missile Set"}',Text1:'{"text":"---------------"}'}
 
 setblock 3 107 -22 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:1,posZ:-14,integrity:1.0f,showair:0b,name:"missilewars:missiles/thin/juggurnaut",sizeY:3,sizeZ:15}
 setblock 3 108 -22 minecraft:redstone_block

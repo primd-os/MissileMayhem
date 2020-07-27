@@ -1,4 +1,4 @@
-execute as @e[type=!tnt,x=0] at @s run kill @s[dy=-10,y=0]
+execute as @e[type=!tnt,x=0] at @s run kill @s[dy=-10,y=0,gamemode=!spectator]
 execute as @e[tag=BlueBase,x=0] run scoreboard players remove @s Timer 1
 execute as @e[tag=BlueBase,x=0] run scoreboard players operation @s TimerSecs = @s Timer
 execute as @e[tag=BlueBase,x=0] run scoreboard players operation @s TimerTick = @s Timer

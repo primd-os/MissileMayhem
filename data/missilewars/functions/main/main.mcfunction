@@ -1,5 +1,6 @@
 scoreboard players set @a[nbt={Dimension:"missilewars:lobby"}] Game 0
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
+execute as @a store result score @s UUID1 run data get entity @s UUID[0] 1
 
 execute in missilewars:game1 run function missilewars:main/game_main
 execute in missilewars:game2 run function missilewars:main/game_main4

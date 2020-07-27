@@ -64,6 +64,8 @@ scoreboard objectives add PlacedMissile minecraft.used:minecraft.cave_spider_spa
 scoreboard objectives add tntCount minecraft.used:tnt
 scoreboard objectives add tntBroke minecraft.mined:tnt
 
+scoreboard objectives add UUID1 dummy
+
 scoreboard objectives add DamageDealt minecraft.custom:damage_dealt
 scoreboard objectives add DirectionPlace dummy
 scoreboard objectives add DirecToPlace dummy

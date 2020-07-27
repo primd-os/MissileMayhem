@@ -14,6 +14,7 @@ execute as @a store result score @s Items run clear @s minecraft:arrow 0
 execute if score Arrows missiles matches 0 run give @a[scores={Game=1..}] minecraft:arrow 2
 execute as @a store result score @s Items run clear @s minecraft:firework_rocket 0
 execute if score Fireball missiles matches 0 run give @a[scores={Game=1..,Items=0}] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
+tag @e[type=item] add processed
 
 execute if score Tomohawk missiles matches -1..0 run scoreboard players reset Tomohawk missiles 
 execute if score Juggurnaut missiles matches -1..0 run scoreboard players reset Juggurnaut missiles 

@@ -68,7 +68,7 @@ execute as @s[tag=Editor] if score @s Items matches 0 run give @s stone_pressure
 execute as @s[tag=Editor] store result score @s Items run clear @s gray_glazed_terracotta 0
 execute as @s[tag=Editor] if score @s Items matches 0 run give @s gray_glazed_terracotta{CanPlaceOn:["#missilewars:custom_blocks"]} 64
 
-execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-10 if entity @s[dx=13,dy=15,dz=20] run tag @s add InBox
+execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-11 if entity @s[dx=13,dy=15,dz=21] run tag @s add InBox
 execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
 tag @s[tag=!InBox] remove Editor
 

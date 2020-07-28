@@ -1,3 +1,4 @@
+scoreboard players enable @a StopAdverts
 scoreboard players set @a[nbt={Dimension:"missilewars:lobby"}] Game 0
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
 execute as @a store result score @s UUID1 run data get entity @s UUID[0] 1
@@ -24,7 +25,7 @@ function missilewars:new_missile/missile_loop
 
 execute as @a[tag=!PlayedBefore] run function missilewars:start/give_book
 execute as @a[tag=!PlayedBefore] run scoreboard players set @s DirectionPlace 0
-execute as @a[tag=!PlayedBefore] run scoreboard players set @s StopAdverts 0
+execute as @a[tag=!PlayedBefore] run scoreboard players set @s Adverts 0
 execute as @a[tag=!PlayedBefore] run team join Lobby @s
 execute as @a[tag=!PlayedBefore] at @s run scoreboard players set @s Game 0
 tag @a[tag=!PlayedBefore] add PlayedBefore

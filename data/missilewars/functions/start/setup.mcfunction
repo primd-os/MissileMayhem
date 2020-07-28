@@ -30,6 +30,7 @@ scoreboard objectives add Constants dummy
 scoreboard objectives add Start trigger
 scoreboard objectives add StartVote dummy
 scoreboard objectives add StopAdverts trigger
+scoreboard objectives add Adverts dummy
 scoreboard objectives add AutoTeam trigger
 scoreboard objectives add JoinSpectators trigger
 scoreboard objectives add JoinGreen trigger

@@ -31,6 +31,9 @@ execute as @s[scores={MissileSetSelect=1}] run function missilewars:start/choose
 execute as @s[scores={MissileSetSelect=1}] run scoreboard players set @s MissileSetSelect 0
 execute as @s run scoreboard players operation @s MissileSet = @s ChooseMissileSet
 
+execute as @s[scores={StopAdverts=1}] run function missilewars:start/toggle_adverts
+execute as @s[scores={StopAdverts=1}] run scoreboard players set @s StopAdverts 0
+
 execute at @s if block ~ ~-2 ~ sea_lantern if block ~ ~-1 ~ #minecraft:impermeable run effect give @s speed 2 1 true
 
 execute as @s[tag=Editor] run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount += @s tntCount
@@ -73,7 +76,7 @@ execute as @s[tag=InBox] store result score NumBook Constants run clear @s writa
 execute as @s[tag=InBox] if score NumBook Constants matches 0 run give @s writable_book{display:{Name:'{"text":"Custom Missile"}'},Enchantments:[{id:"minecraft:binding_curse",lvl:1}]}
 execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_off_head
 execute as @s[tag=!InBox,nbt=!{Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_to_head
-clear @s written_book
+clear @s written_book{Enchantments:[{id:"minecraft:binding_curse"}]}
 
 scoreboard players set toRem Constants 0
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air replace tnt

@@ -98,6 +98,8 @@ scoreboard players set Twenty Constants 20
 
 scoreboard players set NumMissiles Constants 8
 
+scoreboard players set Timer Constants 400
+
 scoreboard objectives add deathCheck deathCount
 scoreboard objectives add quits custom:leave_game
 

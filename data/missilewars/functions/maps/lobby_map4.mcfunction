@@ -3,7 +3,7 @@ summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, Wa
 summon minecraft:area_effect_cloud 75 0.1 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Base","RedBase","NewBase"]}
 summon minecraft:area_effect_cloud -75 0.1 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Base","BlackBase","NewBase"]}
 scoreboard players set @e[tag=NewBase,tag=BlueBase,x=0] GameState 0
-scoreboard players set @e[tag=NewBase,tag=BlueBase,x=0] Timer 200
+scoreboard players operation @e[tag=NewBase,tag=BlueBase,x=0] Timer = Timer Constants
 scoreboard players set @e[tag=NewBase,tag=BlueBase,x=0] BlueLoss 0
 scoreboard players set @e[tag=NewBase,tag=BlueBase,x=0] GreenLoss 0
 scoreboard players set @e[tag=NewBase,tag=BlueBase,x=0] RedLoss 0

@@ -1,5 +1,5 @@
 scoreboard players enable @a StopAdverts
-scoreboard players set @a[nbt={Dimension:"missilewars:lobby"}] Game 0
+execute in missilewars:lobby run scoreboard players set @a[x=0] Game 0
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
 execute as @a store result score @s UUID1 run data get entity @s UUID[0] 1
 
@@ -19,6 +19,7 @@ execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run give @a[x=0
 execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 
 execute in missilewars:lobby run kill @e[type=item,x=0]
+execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
 
 function missilewars:item_managers/run_items
 function missilewars:new_missile/missile_loop

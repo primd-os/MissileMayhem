@@ -29,7 +29,5 @@ execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s 
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:main/running_main4
 
-execute as @a[scores={quits=1..},x=0] at @s run team join Lobby @s
-execute as @a[scores={quits=1..},x=0] at @s run scoreboard players set @s Game 0
-execute as @a[scores={quits=1..},x=0] at @s run function missilewars:main/clear_inv
+execute as @a[scores={quits=1..},x=0] at @s run function missilewars:end/leave
 scoreboard players set @a[scores={quits=1..},x=0] quits 0

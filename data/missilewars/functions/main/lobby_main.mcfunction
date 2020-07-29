@@ -2,7 +2,6 @@ xp set @s 100 levels
 effect give @s minecraft:haste 2 255 true
 scoreboard players reset @s Start
 scoreboard players reset @s Leave
-scoreboard players enable @s AutoTeam
 scoreboard players reset @s JoinSpectators
 scoreboard players reset @s JoinGreen
 scoreboard players reset @s JoinBlue
@@ -18,9 +17,6 @@ execute in missilewars:lobby run tp @s[nbt=!{Dimension:"missilewars:lobby"}] 0 1
 effect give @s saturation 2 0 true
 
 execute at @s run function missilewars:start/missile_set_display
-
-execute as @s[scores={AutoTeam=1}] run function missilewars:start/join_auto
-execute as @s[scores={AutoTeam=1}] run scoreboard players set @s AutoTeam 0
 
 execute as @s[scores={ChooseMap=1}] run function missilewars:start/choose_map
 execute as @s[scores={ChooseMap=1}] run scoreboard players set @s ChooseMap 0

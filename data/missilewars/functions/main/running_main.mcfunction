@@ -3,7 +3,6 @@ effect give @s minecraft:haste 2 2 true
 effect give @s minecraft:saturation 2 0 true
 scoreboard players enable @s Start
 scoreboard players enable @s Leave
-scoreboard players reset @s AutoTeam
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinSpectators
 execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinSpectators
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinGreen

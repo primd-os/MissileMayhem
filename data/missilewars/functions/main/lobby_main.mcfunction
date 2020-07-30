@@ -69,7 +69,7 @@ execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
 tag @s[tag=!InBox] remove Editor
 
 execute as @s[tag=InBox] store result score NumBook Constants run clear @s writable_book 0
-execute as @s[tag=InBox] if score NumBook Constants matches 0 run give @s writable_book{display:{Name:'{"text":"Custom Missile"}'},Enchantments:[{id:"minecraft:binding_curse",lvl:1}]}
+execute as @s[tag=InBox] if score NumBook Constants matches 0 run give @s writable_book{display:{Name:'{"text":"Custom Missile"}'},Enchantments:[{id:"minecraft:binding_curse",lvl:1}],pages:["missilewars:default"]}
 execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_off_head
 execute as @s[tag=!InBox,nbt=!{Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_to_head
 clear @s written_book{Enchantments:[{id:"minecraft:binding_curse"}]}

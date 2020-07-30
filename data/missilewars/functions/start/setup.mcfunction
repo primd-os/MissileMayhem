@@ -117,22 +117,27 @@ team add Red
 team add Black
 team add Spectator
 team add Lobby
+team add Sumo
 team modify Blue color blue
 team modify Green color green
 team modify Red color red
 team modify Black color black
 team modify Spectator color dark_gray
 team modify Lobby color gray
+team modify Sumo color gray
 team modify Blue collisionRule pushOtherTeams
 team modify Green collisionRule pushOtherTeams
 team modify Red collisionRule pushOtherTeams
 team modify Black collisionRule pushOtherTeams
 team modify Lobby collisionRule never
+team modify Sumo collisionRule always
 team modify Blue friendlyFire false
 team modify Green friendlyFire false
 team modify Red friendlyFire false
 team modify Black friendlyFire false
 team modify Lobby friendlyFire false
+team modify Sumo friendlyFire true
+team modify Sumo prefix {"text": "[SUMO] "}
 
 scoreboard objectives setdisplay sidebar.team.blue missiles
 scoreboard objectives setdisplay sidebar.team.green missiles

@@ -113,4 +113,7 @@ execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,l
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~9 ~-9 ~12 ~9 ~9 minecraft:air
 tag @s remove InBox
 
+execute if entity @s[team=Lobby,x=-1,y=107,z=-1,dx=3,dy=3,dz=3] run team join Sumo
+execute unless entity @s[team=Sumo,x=-1,y=107,z=-1,dx=3,dy=3,dz=3] run team join Lobby
+
 scoreboard players set @s deathCheck 0

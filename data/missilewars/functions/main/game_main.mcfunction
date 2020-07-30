@@ -13,6 +13,3 @@ execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=BlueBa
 execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=GreenBase,x=0] run function missilewars:maps/green/map
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:main/running_main
-
-execute as @a[scores={quits=1..},x=0] at @s run function missilewars:end/leave
-scoreboard players set @a[scores={quits=1..},x=0] quits 0

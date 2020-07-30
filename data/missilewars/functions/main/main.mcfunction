@@ -35,3 +35,6 @@ execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
 
 bossbar set missile_time visible true
 bossbar set missile_time players @a[scores={Game=1..}]
+
+execute as @a[scores={quits=1..}] at @s run function missilewars:end/leave
+scoreboard players set @a quits 0

@@ -33,5 +33,5 @@ execute at @e[tag=Base,x=0] if score Map Constants matches 5 run fill ^-5 ^ ^17 
 
 execute at @e[tag=BlueBase,x=0] if score Map Constants matches 6 run fill -2 50 ~-9 2 50 0 white_stained_glass
 execute at @e[tag=GreenBase,x=0] if score Map Constants matches 6 run fill -2 50 ~9 2 50 0 white_stained_glass
-execute at @e[tag=RedBase,x=0] if score Map Constants matches 6 run fill ~9 50 -2 0 50 2 white_stained_glass
-execute at @e[tag=BlackBase,x=0] if score Map Constants matches 6 run fill ~-9 50 -2 0 50 2 white_stained_glass
+execute at @e[tag=RedBase,x=0] if score Map Constants matches 6 run fill ~-9 50 -2 0 50 2 white_stained_glass
+execute at @e[tag=BlackBase,x=0] if score Map Constants matches 6 run fill ~9 50 -2 0 50 2 white_stained_glass

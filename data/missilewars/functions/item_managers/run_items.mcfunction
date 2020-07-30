@@ -1,3 +1,3 @@
 function missilewars:item_managers/fireball
 function missilewars:item_managers/shield
-function missilewars:item_managers/spawn_missile
+function missilewars:item_managers/test_spawn_missile

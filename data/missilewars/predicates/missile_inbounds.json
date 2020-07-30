@@ -1,0 +1,174 @@
+{
+	"condition": "minecraft:inverted",
+	"term": {
+		"condition": "minecraft:alternative",
+		"terms": [
+			{
+				"condition": "minecraft:inverted",
+				"term": {
+					"condition": "minecraft:location_check",
+					"predicate": {
+						"position": {
+							"y": {
+								"min": 5,
+								"max": 255
+							}
+						}
+					}
+				}
+			},
+			{
+				"condition": "minecraft:inverted",
+				"term": {
+					"condition": "minecraft:alternative",
+					"terms": [
+						{
+							"condition": "minecraft:inverted",
+							"term": {
+								"condition": "minecraft:alternative",
+								"terms": [
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:entity_scores",
+											"entity": "this",
+											"scores": {
+												"DirecToPlace": 0
+											}
+										}
+									},
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:location_check",
+											"predicate": {
+												"position": {
+													"x": {
+														"min": -111,
+														"max": 111
+													},
+													"z": {
+														"min": -112,
+														"max": 92
+													}
+												}
+											}
+										}
+									}
+								]
+							}
+						},
+						{
+							"condition": "minecraft:inverted",
+							"term": {
+								"condition": "minecraft:alternative",
+								"terms": [
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:entity_scores",
+											"entity": "this",
+											"scores": {
+												"DirecToPlace": 1
+											}
+										}
+									},
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:location_check",
+											"predicate": {
+												"position": {
+													"x": {
+														"min": -92,
+														"max": 112
+													},
+													"z": {
+														"min": -111,
+														"max": 111
+													}
+												}
+											}
+										}
+									}
+								]
+							}
+						},
+						{
+							"condition": "minecraft:inverted",
+							"term": {
+								"condition": "minecraft:alternative",
+								"terms": [
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:entity_scores",
+											"entity": "this",
+											"scores": {
+												"DirecToPlace": 2
+											}
+										}
+									},
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:location_check",
+											"predicate": {
+												"position": {
+													"x": {
+														"min": -111,
+														"max": 111
+													},
+													"z": {
+														"min": -92,
+														"max": 112
+													}
+												}
+											}
+										}
+									}
+								]
+							}
+						},
+						{
+							"condition": "minecraft:inverted",
+							"term": {
+								"condition": "minecraft:alternative",
+								"terms": [
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:entity_scores",
+											"entity": "this",
+											"scores": {
+												"DirecToPlace": 3
+											}
+										}
+									},
+									{
+										"condition": "minecraft:inverted",
+										"term": {
+											"condition": "minecraft:location_check",
+											"predicate": {
+												"position": {
+													"x": {
+														"min": -112,
+														"max": 92
+													},
+													"z": {
+														"min": -111,
+														"max": 111
+													}
+												}
+											}
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}

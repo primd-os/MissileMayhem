@@ -43,6 +43,10 @@ execute if entity @s[scores={DeadTeams=3,GreenLoss=0}] run title @a[x=0] title {
 execute if entity @s[scores={DeadTeams=3,BlueLoss=0}] run title @a[x=0] title {"text": "Blue Wins!","color":"blue"}
 execute if entity @s[scores={DeadTeams=3,RedLoss=0}] run title @a[x=0] title {"text": "Red Wins!","color":"red"}
 execute if entity @s[scores={DeadTeams=3,BlackLoss=0}] run title @a[x=0] title {"text": "Black Wins!","color":"dark_gray"}
+execute if entity @s[scores={DeadTeams=3,GreenLoss=0}] run playsound minecraft:ui.toast.challenge_complete block @a[x=0,team=Green] ~ ~ ~ 1 2 1
+execute if entity @s[scores={DeadTeams=3,BlueLoss=0}] run playsound minecraft:ui.toast.challenge_complete block @a[x=0,team=Blue] ~ ~ ~ 1 2 1
+execute if entity @s[scores={DeadTeams=3,RedLoss=0}] run playsound minecraft:ui.toast.challenge_complete block @a[x=0,team=Red] ~ ~ ~ 1 2 1
+execute if entity @s[scores={DeadTeams=3,BlackLoss=0}] run playsound minecraft:ui.toast.challenge_complete block @a[x=0,team=Black] ~ ~ ~ 1 2 1
 
 scoreboard players set @s PreBlueLoss 0
 scoreboard players set @s PreGreenLoss 0

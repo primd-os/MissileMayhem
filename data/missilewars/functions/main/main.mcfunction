@@ -18,7 +18,8 @@ execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run scoreboard 
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run give @a[x=0,tag=Editor,sort=nearest,limit=1] tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
 execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 
-execute in missilewars:lobby run kill @e[type=item,x=0]
+execute in missilewars:lobby run kill @e[type=item,nbt=!{Item:{id:"minecraft:tnt"}},x=0]
+execute in missilewars:lobby as @e[type=item,nbt={Item:{id:"minecraft:tnt"}},x=0] run data modify entity @s PickupDelay set value 0
 execute in missilewars:lobby run clear @a[x=0,team=Spectator]
 execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
 

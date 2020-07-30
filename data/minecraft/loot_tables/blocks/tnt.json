@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:tnt",
+            "weight": 1,
+            "conditions": [
+              {
+                "condition": "minecraft:inverted",
+                "term": {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "Game": 0
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

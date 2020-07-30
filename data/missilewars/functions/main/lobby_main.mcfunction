@@ -32,37 +32,7 @@ execute as @s[scores={StopAdverts=1}] run scoreboard players set @s StopAdverts 
 
 execute at @s if block ~ ~-2 ~ sea_lantern if block ~ ~-1 ~ #minecraft:impermeable run effect give @s speed 2 1 true
 
-execute as @s[tag=Editor] run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount += @s tntCount
-execute as @s[tag=Editor] run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= @s tntBroke
-execute if score @s tntBroke matches 1.. run give @s[tag=Editor] tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-scoreboard players set @s tntCount 0
-scoreboard players set @s tntBroke 0
-
-execute as @s[tag=Editor] store result score @s Items run clear @s iron_pickaxe 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s iron_pickaxe{Unbreakable:1b,CanDestroy:["#missilewars:custom_blocks"]} 1
-execute as @s[tag=Editor] store result score @s Items run clear @s white_wool 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s white_wool{CanPlaceOn:["#missilewars:custom_blocks"]} 64
-execute as @s[tag=Editor] store result score @s Items run clear @s white_stained_glass 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s white_stained_glass{CanPlaceOn:["#missilewars:custom_blocks"]} 64
-execute as @s[tag=Editor] store result score @s Items run clear @s redstone_block 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s redstone_block{CanPlaceOn:["#missilewars:custom_blocks"]} 64
-execute as @s[tag=Editor] store result score @s Items run clear @s observer 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s observer{CanPlaceOn:["#missilewars:custom_blocks"]} 64
-execute as @s[tag=Editor] store result score @s Items run clear @s piston 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s piston{CanPlaceOn:["#missilewars:custom_blocks"]} 64
-execute as @s[tag=Editor] store result score @s Items run clear @s sticky_piston 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s sticky_piston{CanPlaceOn:["#missilewars:custom_blocks"]} 64
-execute as @s[tag=Editor] store result score @s Items run clear @s slime_block 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s slime_block{CanPlaceOn:["#missilewars:custom_blocks"]} 64
-execute as @s[tag=Editor] store result score @s Items run clear @s honey_block 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s honey_block{CanPlaceOn:["#missilewars:custom_blocks"]} 64
-execute as @s[tag=Editor] store result score @s Items run clear @s tnt 0
-execute as @s[tag=Editor] if score @s Items matches 0 if score @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount matches 0..15 run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 16
-execute as @s[tag=Editor] store result score @s Items if score @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount matches 16.. run clear @s tnt
-execute as @s[tag=Editor] store result score @s Items run clear @s stone_pressure_plate 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s stone_pressure_plate{CanPlaceOn:["#missilewars:custom_blocks"]} 64
-execute as @s[tag=Editor] store result score @s Items run clear @s gray_glazed_terracotta 0
-execute as @s[tag=Editor] if score @s Items matches 0 run give @s gray_glazed_terracotta{CanPlaceOn:["#missilewars:custom_blocks"]} 64
+execute as @s[tag=Editor] run function missilewars:main/lobby_editor
 
 execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-11 if entity @s[dx=13,dy=15,dz=21] run tag @s add InBox
 execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
@@ -73,38 +43,6 @@ execute as @s[tag=InBox] if score NumBook Constants matches 0 run give @s writab
 execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_off_head
 execute as @s[tag=!InBox,nbt=!{Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_to_head
 clear @s written_book{Enchantments:[{id:"minecraft:binding_curse"}]}
-
-scoreboard players set toRem Constants 0
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air replace tnt
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~12 ~6 ~-9 ~12 ~9 ~9 minecraft:air replace tnt
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~8 ~6 ~-9 ~12 ~9 ~-9 minecraft:air replace tnt
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~8 ~6 ~9 ~12 ~9 ~9 minecraft:air replace tnt
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~8 ~9 ~-9 ~12 ~9 ~9 minecraft:air replace tnt
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~12 ~6 ~-9 ~12 ~9 ~9 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~8 ~6 ~-9 ~12 ~9 ~-9 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~8 ~6 ~9 ~12 ~9 ~9 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score toRem Constants run fill ~8 ~9 ~-9 ~12 ~9 ~9 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-execute if entity @s[tag=InBox] at @s run scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= toRem Constants
-execute if score toRem Constants matches 1.. run give @s tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
 
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air
 execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~12 ~6 ~-9 ~12 ~9 ~9 minecraft:air

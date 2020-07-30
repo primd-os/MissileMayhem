@@ -1,4 +1,4 @@
-execute as @e[type=!tnt,x=0] at @s run kill @s[dy=-10,y=0]
+execute as @e[type=!tnt,x=0] at @s run kill @s[dy=-10,y=0,gamemode=!spectator]
 function missilewars:main/timer
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] run function missilewars:maps/load_map4
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] as @a[team=Blue,x=0] run function missilewars:start/tp/blue

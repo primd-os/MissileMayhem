@@ -19,6 +19,7 @@ execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run give @a[x=0
 execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 
 execute in missilewars:lobby run kill @e[type=item,x=0]
+execute in missilewars:lobby run clear @a[x=0,team=Spectator]
 execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
 
 function missilewars:item_managers/run_items

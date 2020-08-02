@@ -148,7 +148,7 @@ scoreboard objectives setdisplay sidebar.team.gray points
 
 scoreboard players set missile_time Constants 0
 bossbar add missile_time {"text": "Time to Next Missile"}
-bossbar set missile_time max 280
+bossbar set missile_time max 240
 bossbar set missile_time style progress
 
 function missilewars:start/advert

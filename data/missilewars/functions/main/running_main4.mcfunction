@@ -1,6 +1,4 @@
 xp set @s 0 levels
-effect give @s minecraft:haste 2 2 true
-effect give @s minecraft:saturation 2 0 true
 scoreboard players enable @s Start
 scoreboard players enable @s Leave
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinSpectators
@@ -55,3 +53,10 @@ execute as @s[scores={deathCheck=1..1000},team=Blue] at @s run scoreboard player
 execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run schedule function missilewars:main/turn_around 2t
 execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run tag @s add dead
 scoreboard players set @s deathCheck 0
+
+execute at @e[tag=Base,x=0] run particle minecraft:angry_villager ^85 ^75 ^-10 20 50 20 1 20 force
+execute at @e[tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 ~ ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage
+effect give @s[tag=InDamage] wither 1 4
+effect give @s[tag=!InDamage] minecraft:haste 1 2 true
+effect give @s[tag=!InDamage] minecraft:saturation 1 0 true
+tag @s remove InDamage

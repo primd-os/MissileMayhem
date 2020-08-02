@@ -1,7 +1,6 @@
 fill ~ ~ ~-14 ~15 ~25 ~14 air
 
 # platform
-fill ~6 ~7 ~-2 ~2 ~10 ~2 air
 fill ~0 ~5 ~-14 ~14 ~5 ~14 black_concrete
 fill ~2 ~6 ~2 ~6 ~6 ~-2 minecraft:blue_terracotta
 fill ~6 ~4 ~-2 ~2 ~4 ~2 minecraft:blue_terracotta
@@ -22,20 +21,6 @@ fill ~7 ~5 ~-9 ~13 ~4 ~-10 minecraft:blue_terracotta
 fill ~7 ~5 ~10 ~13 ~4 ~9 minecraft:blue_terracotta
 fill ~9 ~5 ~8 ~11 ~5 ~-8 minecraft:barrier
 
-fill ~6 ~6 ~11 ~14 ~9 ~11 air
-fill ~14 ~6 ~-12 ~14 ~9 ~11 air
-fill ~14 ~6 ~-12 ~6 ~9 ~-12 air
-fill ~14 ~9 ~-12 ~6 ~9 ~11 air
 fill ~14 ~7 ~8 ~14 ~7 ~-9 minecraft:magenta_glazed_terracotta[facing=west]
-
-fill ~6 ~6 ~10 ~6 ~9 ~3 air
-fill ~6 ~6 ~-3 ~6 ~9 ~-11 air
-fill ~6 ~6 ~-3 ~1 ~9 ~-3 air
-fill ~6 ~6 ~3 ~1 ~9 ~3 air
-fill ~1 ~6 ~-3 ~1 ~9 ~3 air
-fill ~-1 ~6 ~-3 ~ ~9 ~-1 air
-fill ~-1 ~6 ~1 ~ ~9 ~3 air
-fill ~ ~6 ~ ~-1 ~6 ~ air
-setblock ~ ~4 ~ air
 
 fill ~ ~6 ~ ~-5 ~6 ~ gray_stained_glass

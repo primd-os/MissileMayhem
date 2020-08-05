@@ -20,8 +20,15 @@ execute in missilewars:game2 run function missilewars:start/barriers
 
 scoreboard objectives add snowballTime dummy
 
-scoreboard objectives add missiles dummy
-scoreboard objectives modify missiles displayname "Upcoming Missiles"
+scoreboard objectives add Tomohawk dummy
+scoreboard objectives add Juggurnaut dummy
+scoreboard objectives add Lightning dummy
+scoreboard objectives add Shieldbuster dummy
+scoreboard objectives add Custom dummy
+scoreboard objectives add Shield dummy
+scoreboard objectives add Fireball dummy
+scoreboard objectives add Arrows dummy
+scoreboard objectives add QueuePos dummy
 
 scoreboard objectives add points dummy
 scoreboard objectives modify points displayname "Points"
@@ -138,12 +145,6 @@ team modify Black friendlyFire false
 team modify Lobby friendlyFire false
 team modify Sumo friendlyFire true
 team modify Sumo prefix {"text": "[SUMO] "}
-
-scoreboard objectives setdisplay sidebar.team.blue missiles
-scoreboard objectives setdisplay sidebar.team.green missiles
-scoreboard objectives setdisplay sidebar.team.red missiles
-scoreboard objectives setdisplay sidebar.team.black missiles
-scoreboard objectives setdisplay sidebar.team.dark_gray missiles
 scoreboard objectives setdisplay sidebar.team.gray points
 
 scoreboard players set missile_time Constants 0

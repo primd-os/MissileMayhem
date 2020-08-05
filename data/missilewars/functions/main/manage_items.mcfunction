@@ -5,6 +5,10 @@ execute as @e[x=0,type=minecraft:item,tag=!processed,nbt=!{Item:{id:"minecraft:t
 tag @s add Active
 execute as @e[x=0,type=minecraft:item,tag=!processed,nbt=!{Item:{id:"minecraft:tnt"}}] if score @s UUID1 = @a[x=0,tag=Active,limit=1] UUID1 as @a[x=0,tag=Active] run function missilewars:main/toggle_place
 execute as @e[x=0,type=minecraft:item,tag=!processed,nbt=!{Item:{id:"minecraft:tnt"}}] if score @s UUID1 = @a[x=0,tag=Active,limit=1] UUID1 run tag @s add processed
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 run title @s times 0 3 0
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 run title @s title {"text": ""}
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 if score @s DirectionPlace matches 1 run title @s subtitle {"text": "✥"}
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 if score @s DirectionPlace matches 0 run title @s subtitle {"text": "↑"}
 tag @s remove Active
 tag @e[x=0,type=minecraft:item,nbt={Item:{id:"minecraft:tnt"}}] add processed
 

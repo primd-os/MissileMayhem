@@ -1,4 +1,4 @@
 tag @s add BaseChooser
 execute as @e[tag=GreenBase,x=0] if score @s Game = @a[tag=BaseChooser,limit=1] Game at @s run tp @a[tag=BaseChooser] ~0 51 ~1 0 0
-execute as @e[tag=GreenBase,x=0] if score @s Game = @a[tag=BaseChooser,limit=1] Game at @s run spawnpoint @a[tag=BaseChooser] ~0 51 ~1
+execute as @e[tag=GreenBase,x=0] if score @s Game = @a[tag=BaseChooser,limit=1] Game at @s facing 0 52 0 run spawnpoint @a[tag=BaseChooser] ~0 51 ~1 ~
 tag @s remove BaseChooser

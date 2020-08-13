@@ -12,7 +12,7 @@ scoreboard players enable @s ChooseMissileSet
 scoreboard players enable @s MissileSetSelect
 
 gamemode adventure @s[gamemode=!creative]
-execute in missilewars:lobby run spawnpoint @s 0 101 0
+execute in missilewars:lobby run spawnpoint @s 0 101 0 270
 execute in missilewars:lobby run tp @s[nbt=!{Dimension:"missilewars:lobby"}] 0 101 0
 effect give @s saturation 2 0 true
 

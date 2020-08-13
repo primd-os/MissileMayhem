@@ -10,7 +10,7 @@ fill ~2 ~5 ~1 ~2 ~5 ~-1 minecraft:blue_terracotta
 
 setblock ~7 ~6 ~ minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"Clear Missile","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/clear_custom"}}'}
 
-setblock ~3 ~8 ~-2 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/save_missile"}}',Text2:'{"text":"Save"}'}
+setblock ~3 ~8 ~-2 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/attempt_save_missile"}}',Text2:'{"text":"Save"}'}
 
 setblock ~3 ~8 ~2 minecraft:oak_wall_sign[facing=north]{Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/load_missile"}}',Text2:'{"text":"Load/Build"}'}
 

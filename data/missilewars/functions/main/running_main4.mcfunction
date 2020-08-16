@@ -1,4 +1,3 @@
-xp set @s 0 levels
 scoreboard players enable @s Start
 scoreboard players enable @s Leave
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinSpectators

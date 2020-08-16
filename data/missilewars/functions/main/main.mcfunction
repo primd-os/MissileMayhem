@@ -4,7 +4,11 @@ execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
 execute as @a store result score @s UUID1 run data get entity @s UUID[0] 1
 
 execute in missilewars:game1 run function missilewars:main/game_main
-execute in missilewars:game2 run function missilewars:main/game_main4
+execute in missilewars:game2 run function missilewars:main/game_main
+execute in missilewars:game3 run function missilewars:main/game_main
+execute in missilewars:game41 run function missilewars:main/game_main4
+execute in missilewars:game42 run function missilewars:main/game_main4
+execute in missilewars:game43 run function missilewars:main/game_main4
 
 execute in missilewars:lobby positioned 6 104 21 if block ~ ~ ~ minecraft:polished_blackstone_button[powered=true] as @a[x=0,sort=nearest,limit=1] run function missilewars:set_lobby/overworld_tp
 

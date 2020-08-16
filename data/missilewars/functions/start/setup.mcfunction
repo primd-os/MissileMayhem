@@ -17,6 +17,10 @@ setworldspawn 0 100 0
 
 execute in missilewars:game1 run function missilewars:start/barriers
 execute in missilewars:game2 run function missilewars:start/barriers
+execute in missilewars:game3 run function missilewars:start/barriers
+execute in missilewars:game41 run function missilewars:start/barriers
+execute in missilewars:game42 run function missilewars:start/barriers
+execute in missilewars:game43 run function missilewars:start/barriers
 
 scoreboard objectives add snowballTime dummy
 

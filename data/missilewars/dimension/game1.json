@@ -14,5 +14,5 @@
     },
     "type": "minecraft:flat"
   },
-  "type": "minecraft:overworld"
+  "type": "missilewars:game"
 }

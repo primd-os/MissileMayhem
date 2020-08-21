@@ -10,6 +10,13 @@ execute in missilewars:game41 run function missilewars:game_modes/normal/4teams/
 execute in missilewars:game42 run function missilewars:game_modes/normal/4teams/game_main
 execute in missilewars:game43 run function missilewars:game_modes/normal/4teams/game_main
 
+execute in missilewars:koth/game1 run function missilewars:game_modes/koth/2teams/game_main
+execute in missilewars:koth/game2 run function missilewars:game_modes/koth/2teams/game_main
+execute in missilewars:koth/game3 run function missilewars:game_modes/koth/2teams/game_main
+execute in missilewars:koth/game41 run function missilewars:game_modes/koth/4teams/game_main
+execute in missilewars:koth/game42 run function missilewars:game_modes/koth/4teams/game_main
+execute in missilewars:koth/game43 run function missilewars:game_modes/koth/4teams/game_main
+
 execute in missilewars:lobby positioned 6 104 21 if block ~ ~ ~ minecraft:polished_blackstone_button[powered=true] as @a[x=0,sort=nearest,limit=1] run function missilewars:set_lobby/overworld_tp
 
 advancement revoke @a[tag=!worldly] everything

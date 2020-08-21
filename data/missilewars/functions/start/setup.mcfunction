@@ -22,6 +22,13 @@ execute in missilewars:game41 run function missilewars:start/barriers
 execute in missilewars:game42 run function missilewars:start/barriers
 execute in missilewars:game43 run function missilewars:start/barriers
 
+execute in missilewars:koth/game1 run function missilewars:start/barriers
+execute in missilewars:koth/game2 run function missilewars:start/barriers
+execute in missilewars:koth/game3 run function missilewars:start/barriers
+execute in missilewars:koth/game41 run function missilewars:start/barriers
+execute in missilewars:koth/game42 run function missilewars:start/barriers
+execute in missilewars:koth/game43 run function missilewars:start/barriers
+
 scoreboard objectives add snowballTime dummy
 
 scoreboard objectives add Tomohawk dummy
@@ -38,8 +45,6 @@ scoreboard objectives add points dummy
 scoreboard objectives modify points displayname "Points"
 
 scoreboard objectives add Constants dummy
-scoreboard objectives add Start trigger
-scoreboard objectives add StartVote dummy
 scoreboard objectives add StopAdverts trigger
 scoreboard objectives add Adverts dummy
 scoreboard objectives add JoinSpectators trigger
@@ -96,7 +101,6 @@ scoreboard objectives add PreGreenWin dummy
 scoreboard objectives add PreBlueWin dummy
 scoreboard objectives add GreenWin dummy
 scoreboard objectives add BlueWin dummy
-scoreboard players set @a StartVote 0
 scoreboard objectives add BlueMembers dummy
 scoreboard objectives add GreenMembers dummy
 scoreboard objectives add RedMembers dummy

@@ -85,13 +85,13 @@ setblock -4 104 -2 minecraft:barrier
 setblock -4 104 2 minecraft:barrier
 
 # signs
-setblock -5 103 0 minecraft:quartz_pillar[axis=x]
-fill -5 101 1 -5 102 -1 minecraft:quartz_pillar[axis=x]
-fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
-
 setblock 5 103 0 minecraft:quartz_pillar[axis=x]
 fill 4 99 1 4 99 -1 minecraft:gray_stained_glass
 fill 5 101 1 5 102 -1 minecraft:quartz_pillar[axis=x]
+
+setblock -5 103 0 minecraft:quartz_pillar[axis=x]
+fill -5 101 1 -5 102 -1 minecraft:quartz_pillar[axis=x]
+fill -4 99 1 -4 99 -1 minecraft:gray_stained_glass
 setblock -4 103 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Games","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
 setblock -4 102 1 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"2 Teams"}',Text2:'{"text":"Game 1","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 1"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:game1 run function missilewars:game_modes/normal/2teams/join_auto"}}'}
 setblock -4 102 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"2 Teams"}',Text2:'{"text":"Game 2","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 2"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:game2 run function missilewars:game_modes/normal/2teams/join_auto"}}'}
@@ -99,6 +99,18 @@ setblock -4 102 -1 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"2 Teams"
 setblock -4 101 1 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams"}',Text2:'{"text":"Game 1","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 41"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:game41 run function missilewars:game_modes/normal/4teams/join_auto"}}'}
 setblock -4 101 0 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams"}',Text2:'{"text":"Game 2","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 42"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:game42 run function missilewars:game_modes/normal/4teams/join_auto"}}'}
 setblock -4 101 -1 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams"}',Text2:'{"text":"Game 3","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 43"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:game43 run function missilewars:game_modes/normal/4teams/join_auto"}}'}
+
+setblock -5 103 5 minecraft:quartz_pillar[axis=x]
+fill -5 101 6 -5 102 4 minecraft:quartz_pillar[axis=x]
+fill -4 99 6 -4 99 4 minecraft:gray_stained_glass
+fill 0 99 5 -4 99 5 minecraft:gray_stained_glass
+setblock -4 103 5 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":""}',Text2:'{"text":"Games","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
+setblock -4 102 6 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"2 Teams KOTH"}',Text2:'{"text":"Game 1","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 101"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:koth/game1 run function missilewars:game_modes/koth/2teams/join_auto"}}'}
+setblock -4 102 5 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"2 Teams KOTH"}',Text2:'{"text":"Game 2","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 102"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:koth/game2 run function missilewars:game_modes/koth/2teams/join_auto"}}'}
+setblock -4 102 4 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"2 Teams KOTH"}',Text2:'{"text":"Game 3","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 103"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:koth/game3 run function missilewars:game_modes/koth/2teams/join_auto"}}'}
+setblock -4 101 6 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams KOTH"}',Text2:'{"text":"Game 1","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 141"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:koth/game41 run function missilewars:game_modes/koth/4teams/join_auto"}}'}
+setblock -4 101 5 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams KOTH"}',Text2:'{"text":"Game 2","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 142"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:koth/game42 run function missilewars:game_modes/koth/4teams/join_auto"}}'}
+setblock -4 101 4 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams KOTH"}',Text2:'{"text":"Game 3","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 143"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:koth/game43 run function missilewars:game_modes/koth/4teams/join_auto"}}'}
 
 setblock 4 103 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Commands","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
 setblock 4 102 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger StopAdverts"}}',Text3:'{"text":"Stop Discord"}',Text4:'{"text":"Adverts"}'}

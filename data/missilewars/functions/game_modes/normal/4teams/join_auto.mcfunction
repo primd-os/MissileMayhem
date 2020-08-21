@@ -1,4 +1,4 @@
-execute unless entity @e[tag=BlueBase,x=0] run function missilewars:maps/lobby_map4
+execute unless entity @e[tag=BlueBase,x=0] run function missilewars:game_modes/normal/4teams/lobby_map
 scoreboard players set @e[tag=BlueBase,x=0,limit=1] BlueMembers 0
 scoreboard players set @e[tag=BlueBase,x=0,limit=1] GreenMembers 0
 scoreboard players set @e[tag=BlueBase,x=0,limit=1] RedMembers 0

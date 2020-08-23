@@ -9,7 +9,7 @@ execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 run title @
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 run title @s title {"text": ""}
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 if score @s DirectionPlace matches 1 run title @s subtitle {"text": "✥"}
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 if score @s DirectionPlace matches 0 run title @s subtitle {"text": "↑"}
-execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 run title @s actionbar ["",{"text":"1-"},{"selector":"@e[scores={QueuePos=1}]"},{"text":" 2-"},{"selector":"@e[scores={QueuePos=2}]"},{"text":" 3-"},{"selector":"@e[scores={QueuePos=3}]"}]
+execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0..1 run title @s actionbar ["",{"text":"1-"},{"selector":"@e[scores={QueuePos=1},x=0]"},{"text":" 2-"},{"selector":"@e[scores={QueuePos=2},x=0]"},{"text":" 3-"},{"selector":"@e[scores={QueuePos=3},x=0]"}]
 tag @s remove Active
 tag @e[x=0,type=minecraft:item,nbt={Item:{id:"minecraft:tnt"}}] add processed
 

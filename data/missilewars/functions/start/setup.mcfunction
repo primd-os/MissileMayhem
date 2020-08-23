@@ -99,12 +99,25 @@ scoreboard objectives add DeadTeams dummy
 
 scoreboard objectives add PreGreenWin dummy
 scoreboard objectives add PreBlueWin dummy
+scoreboard objectives add PreBlackWin dummy
+scoreboard objectives add PreRedWin dummy
 scoreboard objectives add GreenWin dummy
 scoreboard objectives add BlueWin dummy
+scoreboard objectives add BlackWin dummy
+scoreboard objectives add RedWin dummy
 scoreboard objectives add BlueMembers dummy
 scoreboard objectives add GreenMembers dummy
 scoreboard objectives add RedMembers dummy
 scoreboard objectives add BlackMembers dummy
+
+scoreboard objectives add BlueScore dummy
+scoreboard objectives add GreenScore dummy
+scoreboard objectives add RedScore dummy
+scoreboard objectives add BlackScore dummy
+
+scoreboard objectives add GameClock dummy
+
+scoreboard players set WinningScore Constants 1200
 
 scoreboard players set Two Constants 2
 scoreboard players set Ten Constants 10

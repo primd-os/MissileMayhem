@@ -20,11 +20,6 @@ execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s 
 execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s RedLoss matches 1 at @e[tag=RedBase,x=0] run function missilewars:maps/red/map
 execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s BlackLoss matches 1 at @e[tag=BlackBase,x=0] run function missilewars:maps/black/map
 
-execute if score @e[tag=BlueBase,x=0,limit=1] BlueLoss matches 1 at @e[tag=BlueBase] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
-execute if score @e[tag=BlueBase,x=0,limit=1] GreenLoss matches 1 at @e[tag=GreenBase] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
-execute if score @e[tag=BlueBase,x=0,limit=1] RedLoss matches 1 at @e[tag=RedBase] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
-execute if score @e[tag=BlueBase,x=0,limit=1] BlackLoss matches 1 at @e[tag=BlackBase] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
-
 execute as @a[scores={Game=1..},x=0] run function missilewars:game_modes/koth/4teams/running_main
 
 execute positioned -2.5 30 -2.5 if entity @a[x=0,dx=5,dz=5,dy=20,team=Blue] run scoreboard players add @e[tag=BlueBase,x=0] BlueScore 1

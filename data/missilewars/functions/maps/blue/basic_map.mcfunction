@@ -1,3 +1,3 @@
-fill ^-25 ^ ^22 ^25 ^50 ^16 minecraft:blue_stained_glass
-fill ^-25 ^ ^16 ^25 ^50 ^10 minecraft:light_blue_stained_glass
-fill ^-25 ^ ^10 ^25 ^50 ^4 minecraft:white_stained_glass
+execute positioned ^-25 ^ ^16 run fill ~ 0 ~ ^50 ^ ^6 minecraft:blue_stained_glass
+execute positioned ^-25 ^ ^10 run fill ~ 0 ~ ^50 ^ ^6 minecraft:light_blue_stained_glass
+execute positioned ^-25 ^ ^4 run fill ~ 0 ~ ^50 ^ ^6 minecraft:white_stained_glass

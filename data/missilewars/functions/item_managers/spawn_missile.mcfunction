@@ -12,3 +12,5 @@ schedule function missilewars:item_managers/color_missile 1t append
 setblock ~ ~1 ~ minecraft:redstone_block
 playsound minecraft:entity.shulker.shoot block @a[x=0] ~ ~ ~
 clone 1000 0 0 1000 1 0 ~ ~ ~
+
+kill @e[tag=UUIDHolder]

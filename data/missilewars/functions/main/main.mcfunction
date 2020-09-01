@@ -21,7 +21,7 @@ execute in missilewars:lobby positioned 6 104 21 if block ~ ~ ~ minecraft:polish
 
 advancement revoke @a[tag=!worldly] everything
 
-execute as @e[tag=CustomMissileArea] at @s positioned ~ ~6 ~-10 unless entity @a[dx=13,dy=10,dz=20] run fill ~8 ~ ~ ~13 ~4 ~20 air
+execute as @e[tag=CustomMissileArea] at @s positioned ^-10 ^6 ^ unless entity @a[dx=13,dy=10,dz=20] run fill ^ ^ ^8 ^20 ^4 ^13 air
 
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run particle explosion ~ ~ ~

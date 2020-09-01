@@ -32,7 +32,7 @@ execute at @s if block ~ ~-2 ~ sea_lantern if block ~ ~-1 ~ #minecraft:impermeab
 
 execute as @s[tag=Editor] run function missilewars:main/lobby_editor
 
-execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ~ ~ ~-11 if entity @s[dx=13,dy=15,dz=21] run tag @s add InBox
+execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ^ ^ ^10 positioned ~-10 ~ ~-10 if entity @s[dx=21,dy=15,dz=21] run tag @s add InBox
 execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
 tag @s[tag=!InBox] remove Editor
 
@@ -42,11 +42,11 @@ execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:writable_book",Slot:103b}
 execute as @s[tag=!InBox,nbt=!{Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_to_head
 clear @s written_book{Enchantments:[{id:"minecraft:binding_curse"}]}
 
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~8 ~9 ~8 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~12 ~6 ~-9 ~12 ~9 ~9 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~-9 ~12 ~9 ~-9 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~6 ~9 ~12 ~9 ~9 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ~8 ~9 ~-9 ~12 ~9 ~9 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-9 ^6 ^8 ^8 ^9 ^8 minecraft:white_concrete
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-9 ^6 ^12 ^9 ^9 ^12 minecraft:white_concrete
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-9 ^6 ^8 ^-9 ^9 ^12 minecraft:white_concrete
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^9 ^6 ^8 ^9 ^9 ^12 minecraft:white_concrete
+execute if entity @s[tag=InBox] at @s as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-9 ^9 ^8 ^9 ^9 ^12 minecraft:white_concrete
 tag @s remove InBox
 
 execute if entity @s[team=Lobby,x=-1,y=107,z=-1,dx=3,dy=3,dz=3] run team join Sumo

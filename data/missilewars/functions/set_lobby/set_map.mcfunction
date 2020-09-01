@@ -209,7 +209,6 @@ kill @e[tag=CustomMissileArea]
 summon minecraft:area_effect_cloud 25 85 -27 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"],Rotation:[-90f,0f]}
 summon minecraft:area_effect_cloud 25 85 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"],Rotation:[-90f,0f]}
 summon minecraft:area_effect_cloud 25 85 27 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"],Rotation:[-90f,0f]}
-summon minecraft:area_effect_cloud 0 113 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"],Rotation:[0f,0f]}
 
 execute as @e[tag=CustomMissileArea] at @s run function missilewars:set_lobby/set_custom
 

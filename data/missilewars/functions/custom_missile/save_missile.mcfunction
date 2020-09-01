@@ -4,6 +4,7 @@ execute as @e[tag=toFill] store result entity @s ReapplicationDelay int 1 run sc
 tag @e[tag=toFill] remove toFill
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^5 ^6 air
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^5 ^6 minecraft:structure_block[mode=save]{metadata:"",mirror:"NONE",ignoreEntities:0b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:3,mode:"SAVE",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,sizeY:3,sizeZ:17}
+
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run data modify block ^ ^5 ^6 name set from entity @s Inventory[{id:"minecraft:writable_book"}].tag.pages[0]
 
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run fill ^-10 ^6 ^8 ^8 ^10 ^12 minecraft:structure_void replace air

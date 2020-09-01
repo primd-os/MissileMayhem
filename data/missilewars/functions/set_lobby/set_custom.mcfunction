@@ -33,6 +33,9 @@ fill ^-9 ^5 ^7 ^-10 ^4 ^13 minecraft:blue_terracotta
 fill ^10 ^5 ^7 ^9 ^4 ^13 minecraft:blue_terracotta
 fill ^8 ^5 ^9 ^-8 ^5 ^11 minecraft:barrier
 
-fill ^8 ^7 ^14 ^-9 ^7 ^14 minecraft:magenta_glazed_terracotta[facing=west]
+execute if entity @s[y_rotation=-180] run fill ^8 ^7 ^14 ^-9 ^7 ^14 minecraft:magenta_glazed_terracotta[facing=south]
+execute if entity @s[y_rotation=-90] run fill ^8 ^7 ^14 ^-9 ^7 ^14 minecraft:magenta_glazed_terracotta[facing=west]
+execute if entity @s[y_rotation=0] run fill ^8 ^7 ^14 ^-9 ^7 ^14 minecraft:magenta_glazed_terracotta[facing=north]
+execute if entity @s[y_rotation=90] run fill ^8 ^7 ^14 ^-9 ^7 ^14 minecraft:magenta_glazed_terracotta[facing=east]
 
 fill ^ ^6 ^ ^ ^6 ^-5 gray_stained_glass

@@ -1,4 +1,4 @@
-execute unless entity @e[tag=BlueBase,x=0] run function missilewars:game_modes/normal/4teams/lobby_map
+execute unless entity @e[tag=BlueBase,x=0] run function missilewars:game_modes/normal/4teams/init_arena
 scoreboard players set @e[tag=BlueBase,x=0,limit=1] BlueMembers 0
 scoreboard players set @e[tag=BlueBase,x=0,limit=1] GreenMembers 0
 scoreboard players set @e[tag=BlueBase,x=0,limit=1] RedMembers 0
@@ -22,3 +22,5 @@ execute if score minTeam Constants matches 0 run function missilewars:start/join
 execute if score minTeam Constants matches 1 run function missilewars:start/join/green
 execute if score minTeam Constants matches 2 run function missilewars:start/join/red
 execute if score minTeam Constants matches 3 run function missilewars:start/join/black
+
+function missilewars:game_modes/queue

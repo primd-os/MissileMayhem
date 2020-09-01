@@ -29,6 +29,20 @@ execute in missilewars:koth/game41 run function missilewars:start/barriers
 execute in missilewars:koth/game42 run function missilewars:start/barriers
 execute in missilewars:koth/game43 run function missilewars:start/barriers
 
+execute in missilewars:game1 run function missilewars:maps/queue/2team
+execute in missilewars:game2 run function missilewars:maps/queue/2team
+execute in missilewars:game3 run function missilewars:maps/queue/2team
+execute in missilewars:koth/game1 run function missilewars:maps/queue/2team
+execute in missilewars:koth/game2 run function missilewars:maps/queue/2team
+execute in missilewars:koth/game3 run function missilewars:maps/queue/2team
+
+execute in missilewars:game41 run function missilewars:maps/queue/4team
+execute in missilewars:game42 run function missilewars:maps/queue/4team
+execute in missilewars:game43 run function missilewars:maps/queue/4team
+execute in missilewars:koth/game41 run function missilewars:maps/queue/4team
+execute in missilewars:koth/game42 run function missilewars:maps/queue/4team
+execute in missilewars:koth/game43 run function missilewars:maps/queue/4team
+
 scoreboard objectives add snowballTime dummy
 
 scoreboard objectives add Tomohawk dummy

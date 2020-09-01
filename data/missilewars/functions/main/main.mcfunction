@@ -17,6 +17,12 @@ execute in missilewars:koth/game41 run function missilewars:game_modes/koth/4tea
 execute in missilewars:koth/game42 run function missilewars:game_modes/koth/4teams/game_main
 execute in missilewars:koth/game43 run function missilewars:game_modes/koth/4teams/game_main
 
+execute as @a[scores={Game=1..},team=!Green] at @s if block ~ ~-1 ~ green_concrete run function missilewars:start/join/green
+execute as @a[scores={Game=1..},team=!Blue] at @s if block ~ ~-1 ~ blue_concrete run function missilewars:start/join/blue
+execute as @a[scores={Game=1..},team=!Black] at @s if block ~ ~-1 ~ black_concrete run function missilewars:start/join/black
+execute as @a[scores={Game=1..},team=!Red] at @s if block ~ ~-1 ~ red_concrete run function missilewars:start/join/red
+execute as @a[scores={Game=1..},team=!Spectator] at @s if block ~ ~-1 ~ light_gray_concrete run function missilewars:start/join_spectators
+
 execute in missilewars:lobby positioned 6 104 21 if block ~ ~ ~ minecraft:polished_blackstone_button[powered=true] as @a[x=0,sort=nearest,limit=1] run function missilewars:set_lobby/overworld_tp
 
 advancement revoke @a[tag=!worldly] everything

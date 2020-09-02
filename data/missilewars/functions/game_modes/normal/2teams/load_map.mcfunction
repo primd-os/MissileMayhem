@@ -28,3 +28,5 @@ execute at @e[tag=Base,x=0] if score Map Constants matches 5 positioned ^-5 ^ ^1
 
 execute at @e[tag=BlueBase,x=0] if score Map Constants matches 6 run fill -2 ~ ~-9 2 ~ 0 white_stained_glass
 execute at @e[tag=GreenBase,x=0] if score Map Constants matches 6 run fill -2 ~ ~9 2 ~ 0 white_stained_glass
+
+execute as @a[x=0] run function missilewars:game_modes/teamtp

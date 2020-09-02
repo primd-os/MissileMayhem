@@ -16,10 +16,7 @@ scoreboard players reset @s ChooseMissileSet
 scoreboard players operation @s ChooseMissileSet = @s ChooseMissileSe2
 scoreboard players reset @s MissileSetSelect
 
-execute if entity @e[tag=BlueBase,sort=nearest,x=0,scores={GameState=0}] run gamemode adventure @s[team=!Spectator,gamemode=!creative]
-execute if entity @e[tag=BlueBase,sort=nearest,x=0,scores={GameState=1}] run gamemode survival @s[team=!Spectator,gamemode=!creative]
-execute if entity @e[tag=BlueBase,sort=nearest,x=0,scores={GameState=2}] run gamemode spectator @s[team=!Spectator,gamemode=!creative]
-gamemode spectator @s[team=Spectator,gamemode=!creative]
+function missilewars:game_modes/force_gamemode
 
 function missilewars:main/manage_items
 

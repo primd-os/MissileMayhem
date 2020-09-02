@@ -9,6 +9,7 @@ function missilewars:game_modes/force_gamemode
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:game_modes/koth/4teams/running_main
 
+execute positioned -2.5 30 -2.5 run effect give @a[x=0,dx=5,dz=5,dy=20] glowing 1 0 true
 execute positioned -2.5 30 -2.5 if entity @a[x=0,dx=5,dz=5,dy=20,team=Blue] run scoreboard players add @e[tag=BlueBase,x=0] BlueScore 1
 execute positioned -2.5 30 -2.5 if entity @a[x=0,dx=5,dz=5,dy=20,team=Green] run scoreboard players add @e[tag=BlueBase,x=0] GreenScore 1
 execute positioned -2.5 30 -2.5 if entity @a[x=0,dx=5,dz=5,dy=20,team=Red] run scoreboard players add @e[tag=BlueBase,x=0] RedScore 1

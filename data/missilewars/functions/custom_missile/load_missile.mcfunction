@@ -27,8 +27,8 @@ execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run fill ^-10 ^6 ^8 ^8
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score @s tntCount run fill ^-10 ^6 ^8 ^8 ^10 ^12 target replace tnt
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-10 ^6 ^8 ^8 ^10 ^12 tnt replace target
 clear @s tnt
-scoreboard players set tnt Constants 16
-scoreboard players operation tnt Constants -= @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount
-execute if score tnt Constants matches 1.. run function missilewars:custom_missile/give_tnt
+scoreboard players set tnt Variables 16
+scoreboard players operation tnt Variables -= @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount
+execute if score tnt Variables matches 1.. run function missilewars:custom_missile/give_tnt
 
 function missilewars:custom_missile/clean_up

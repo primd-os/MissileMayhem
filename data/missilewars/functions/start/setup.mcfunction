@@ -59,6 +59,7 @@ scoreboard objectives add points dummy
 scoreboard objectives modify points displayname "Points"
 
 scoreboard objectives add Constants dummy
+scoreboard objectives add Variables dummy
 scoreboard objectives add StopAdverts trigger
 scoreboard objectives add Adverts dummy
 scoreboard objectives add JoinSpectators trigger
@@ -133,11 +134,8 @@ scoreboard objectives add GameClock dummy
 
 scoreboard players set WinningScore Constants 1200
 
-scoreboard players set Two Constants 2
 scoreboard players set Ten Constants 10
 scoreboard players set Twenty Constants 20
-
-scoreboard players set NumMissiles Constants 8
 
 scoreboard players set Timer Constants 400
 
@@ -182,7 +180,7 @@ team modify Sumo friendlyFire true
 team modify Sumo prefix {"text": "[SUMO] "}
 scoreboard objectives setdisplay sidebar.team.gray points
 
-scoreboard players set missile_time Constants 0
+scoreboard players set missile_time Variables 0
 bossbar add missile_time {"text": "Time to Next Missile"}
 bossbar set missile_time max 240
 bossbar set missile_time style progress

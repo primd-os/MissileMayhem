@@ -1,4 +1,4 @@
-execute as @e[type=!tnt,x=0] at @s run kill @s[dy=-10,y=0,gamemode=!spectator]
+execute as @e[type=!tnt,x=0] at @s run kill @s[dy=-10,y=-64,gamemode=!spectator]
 function missilewars:main/timer
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] run function missilewars:game_modes/koth/4teams/load_map
 execute as @e[tag=BlueBase,x=0,scores={Timer=0}] run scoreboard players reset @s Timer

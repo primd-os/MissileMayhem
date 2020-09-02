@@ -20,4 +20,6 @@ scoreboard players set @e[tag=BlueBase,x=0] Custom -1
 scoreboard players set @e[tag=BlueBase,x=0] Shield -1
 scoreboard players set @e[tag=BlueBase,x=0] Fireball -1
 scoreboard players set @e[tag=BlueBase,x=0] Arrows -1
+scoreboard players set @e[tag=BlueBase,x=0] GreenScore 0
+scoreboard players set @e[tag=BlueBase,x=0] BlueScore 0
 tag @e remove NewBase

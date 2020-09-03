@@ -137,7 +137,7 @@ scoreboard objectives add GameClock dummy
 
 scoreboard players set WinningScore Constants 1200
 
-scoreboard players set Ten Constants 10
+scoreboard players set Hundred Constants 100
 scoreboard players set Twenty Constants 20
 
 scoreboard players set Timer Constants 400

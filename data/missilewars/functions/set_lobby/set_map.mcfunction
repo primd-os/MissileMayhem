@@ -113,6 +113,7 @@ setblock -4 101 5 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams K
 setblock -4 101 4 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams KOTH"}',Text2:'{"text":"Game 3","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 143"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:koth/game43 run function missilewars:game_modes/koth/4teams/join_auto"}}'}
 
 setblock 4 103 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Commands","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
+setblock 4 102 1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ToggleRanked"}}',Text3:'{"text":"Toggle Ranked Games"}'}
 setblock 4 102 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger StopAdverts"}}',Text3:'{"text":"Stop Discord"}',Text4:'{"text":"Adverts"}'}
 setblock 4 102 -1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Get Instructions","clickEvent":{"action":"run_command","value":"trigger GiveBook"}}'}
 setblock 4 101 1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":"Choose Map"}',Text4:'{"text":""}'}

@@ -60,8 +60,11 @@ scoreboard objectives modify points displayname "Points"
 
 scoreboard objectives add Constants dummy
 scoreboard objectives add Variables dummy
+
 scoreboard objectives add StopAdverts trigger
 scoreboard objectives add Adverts dummy
+scoreboard objectives add ToggleRanked trigger
+scoreboard objectives add DoRanked dummy
 scoreboard objectives add JoinSpectators trigger
 scoreboard objectives add JoinGreen trigger
 scoreboard objectives add JoinBlue trigger

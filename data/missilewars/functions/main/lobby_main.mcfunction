@@ -8,6 +8,7 @@ scoreboard players enable @s MapVote
 scoreboard players enable @s GiveBook
 scoreboard players enable @s ChooseMissileSet
 scoreboard players enable @s MissileSetSelect
+scoreboard players enable @s ToggleRanked
 
 gamemode adventure @s[gamemode=!creative]
 execute in missilewars:lobby run spawnpoint @s 0 101 0 270
@@ -27,6 +28,9 @@ execute as @s run scoreboard players operation @s MissileSet = @s ChooseMissileS
 
 execute as @s[scores={StopAdverts=1}] run function missilewars:start/toggle_adverts
 execute as @s[scores={StopAdverts=1}] run scoreboard players set @s StopAdverts 0
+
+execute as @s[scores={ToggleRanked=1}] run function missilewars:start/toggle_ranked
+execute as @s[scores={ToggleRanked=1}] run scoreboard players set @s ToggleRanked 0
 
 execute at @s if block ~ ~-2 ~ sea_lantern if block ~ ~-1 ~ #minecraft:impermeable run effect give @s speed 2 1 true
 

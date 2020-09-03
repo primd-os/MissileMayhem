@@ -8,15 +8,15 @@ function missilewars:main/clear_inv
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^5 ^6 air
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^5 ^6 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:0b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:3,mode:"LOAD",posY:1,posZ:-8,integrity:1.0f,showair:0b}
 
-execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score @s Temp positioned ^ ^5 ^6 run data get block ~ ~ ~ posX 1
+execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score Temp Variables positioned ^ ^5 ^6 run data get block ~ ~ ~ posX 1
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=90] positioned ^ ^5 ^6 store result block ~ ~ ~ posX int -1 run data get block ~ ~ ~ posX
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=90] positioned ^ ^5 ^6 store result block ~ ~ ~ posZ int -1 run data get block ~ ~ ~ posZ
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=90] positioned ^ ^5 ^6 run data modify block ~ ~ ~ rotation set value CLOCKWISE_180
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=-180] positioned ^ ^5 ^6 store result block ~ ~ ~ posX int 1 run data get block ~ ~ ~ posZ
-execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=-180] positioned ^ ^5 ^6 store result block ~ ~ ~ posZ int -1 run scoreboard players get @s Temp
+execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=-180] positioned ^ ^5 ^6 store result block ~ ~ ~ posZ int -1 run scoreboard players get Temp Variables
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=-180] positioned ^ ^5 ^6 run data modify block ~ ~ ~ rotation set value COUNTERCLOCKWISE_90
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=0] positioned ^ ^5 ^6 store result block ~ ~ ~ posX int -1 run data get block ~ ~ ~ posZ
-execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=0] positioned ^ ^5 ^6 store result block ~ ~ ~ posZ int 1 run scoreboard players get @s Temp
+execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=0] positioned ^ ^5 ^6 store result block ~ ~ ~ posZ int 1 run scoreboard players get Temp Variables
 execute as @e[tag=CustomMissileArea,sort=nearest,limit=1] at @s if entity @s[y_rotation=0] positioned ^ ^5 ^6 run data modify block ~ ~ ~ rotation set value CLOCKWISE_90
 
 execute at @e[tag=CustomMissileArea,sort=nearest,limit=1] run data modify block ^ ^5 ^6 name set from entity @s Inventory[{id:"minecraft:writable_book"}].tag.pages[0]

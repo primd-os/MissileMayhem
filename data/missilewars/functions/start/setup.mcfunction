@@ -103,7 +103,6 @@ scoreboard objectives add UUID1 dummy
 scoreboard objectives add DamageDealt minecraft.custom:damage_dealt
 scoreboard objectives add DirectionPlace dummy
 scoreboard objectives add DirecToPlace dummy
-scoreboard objectives add Temp dummy
 
 scoreboard objectives add PreGreenLoss dummy
 scoreboard objectives add PreBlueLoss dummy

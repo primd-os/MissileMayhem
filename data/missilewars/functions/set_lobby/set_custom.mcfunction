@@ -24,7 +24,7 @@ execute if entity @s[y_rotation=-180] run setblock ^2 ^8 ^3 minecraft:oak_wall_s
 execute if entity @s[y_rotation=-90] run setblock ^2 ^8 ^3 minecraft:oak_wall_sign[facing=south]
 execute if entity @s[y_rotation=0] run setblock ^2 ^8 ^3 minecraft:oak_wall_sign[facing=west]
 execute if entity @s[y_rotation=90] run setblock ^2 ^8 ^3 minecraft:oak_wall_sign[facing=north]
-data merge block ^2 ^8 ^3 {Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/load_missile"}}',Text2:'{"text":"Load/Build"}'}
+data merge block ^2 ^8 ^3 {Text1:'{"text":"Click to","clickEvent":{"action":"run_command","value":"function missilewars:custom_missile/attempt_load_missile"}}',Text2:'{"text":"Load/Build"}'}
 
 # custom missile area
 fill ^10 ^5 ^7 ^-10 ^4 ^8 minecraft:blue_terracotta

@@ -4,7 +4,7 @@ The datapack used for the missilemars map.
 Server ip: missilemars.my.pebble.host
 
 # Download
-1. Go to https://github.com/importnetminecraft/MissileMars/releases and download the latest release
+1. Go to https://github.com/Devon7925/MissileMars/releases and download the latest release
 2. Move the map in the zip folder to your .minecraft/saves folder
 
 # Build Latest version

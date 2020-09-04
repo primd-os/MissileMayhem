@@ -1,0 +1,21 @@
+{
+    "display": {
+      "icon": {
+        "item": "magenta_wool"
+      },
+      "title": "Anti-Boredom",
+      "description": "Place blocks in queue"
+    },
+    "parent": "missilewars:win_game",
+    "criteria": {
+      "place_block": {
+        "trigger": "minecraft:placed_block",
+        "conditions": {
+          "player": {
+            "nbt": "{Tags:[\"InGame\"]}"
+          },
+          "block": "magenta_wool"
+        }
+      }
+    }
+  }

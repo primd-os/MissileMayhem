@@ -1,0 +1,19 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:end_stone"
+        },
+        "title": {
+            "translate": "advancements.end.root.title"
+        },
+        "description": {
+            "translate": "advancements.end.root.description"
+        },
+        "background": "minecraft:textures/gui/advancements/backgrounds/end.png"
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

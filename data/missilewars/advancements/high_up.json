@@ -1,0 +1,29 @@
+{
+    "display": {
+      "icon": {
+        "item": "feather"
+      },
+      "title": "Watcha do'in up there",
+      "description": "Go above y=100 in a game"
+    },
+    "parent": "missilewars:custom_save",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:location",
+        "conditions": {
+          "player": {
+            "nbt": "{Tags:[\"InGame\"]}",
+            "player": {}
+          },
+          "location": {
+            "position": {
+              "y": {
+                "min": 100,
+                "max": 128
+              }
+            }
+          }
+        }
+      }
+    }
+  }

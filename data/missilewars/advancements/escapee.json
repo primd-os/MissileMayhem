@@ -1,0 +1,21 @@
+{
+    "display": {
+      "icon": {
+        "item": "grass_block"
+      },
+      "title": "Escapee",
+      "description": "Go to the overworld",
+      "hidden": true
+    },
+    "parent": "missilewars:not_hmw",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:location",
+        "conditions": {
+          "location": {
+            "dimension": "minecraft:overworld"
+          }
+        }
+      }
+    }
+  }

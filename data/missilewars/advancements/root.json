@@ -1,0 +1,18 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:piston"
+      },
+      "title": "Getting Started...",
+      "description": "Join a Game",
+      "background": "minecraft:textures/block/piston_side.png"
+    },
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:changed_dimension",
+        "conditions": {
+          "from": "missilewars:lobby"
+        }
+      }
+    }
+  }

@@ -17,3 +17,4 @@ execute if entity @s[nbt={Inventory:[{id:"minecraft:writable_book",tag:{pages:["
 execute as @s[tag=!fail] run function missilewars:custom_missile/load_missile
 execute as @s[tag=fail] run tellraw @s {"color": "red","text": "You can't load from noncustom missiles!"}
 execute as @s[tag=fail] run playsound minecraft:block.note_block.guitar block @s ~ ~ ~ 1 0
+tag @s remove fail

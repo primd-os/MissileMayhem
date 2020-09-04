@@ -25,8 +25,6 @@ execute as @a[scores={Game=1..},team=!Spectator] at @s if block ~ ~-1 ~ light_gr
 
 execute in missilewars:lobby positioned 6 104 21 if block ~ ~ ~ minecraft:polished_blackstone_button[powered=true] as @a[x=0,sort=nearest,limit=1] run function missilewars:set_lobby/overworld_tp
 
-advancement revoke @a[tag=!worldly] everything
-
 execute as @e[tag=CustomMissileArea] at @s positioned ^ ^6 ^10 positioned ~-10 ~ ~-10 unless entity @a[dx=20,dy=10,dz=20] at @s positioned ^-10 ^6 ^ run fill ^ ^ ^8 ^20 ^4 ^13 air
 
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
@@ -39,6 +37,9 @@ execute in missilewars:lobby run kill @e[type=item,nbt=!{Item:{id:"minecraft:tnt
 execute in missilewars:lobby as @e[type=item,nbt={Item:{id:"minecraft:tnt"}},x=0] run data modify entity @s PickupDelay set value 0
 execute in missilewars:lobby run clear @a[x=0,team=Spectator]
 execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
+
+tag @a[scores={Game=1..}] add InGame
+tag @a[scores={Game=..0}] remove InGame
 
 function missilewars:item_managers/run_items
 function missilewars:new_missile/missile_loop

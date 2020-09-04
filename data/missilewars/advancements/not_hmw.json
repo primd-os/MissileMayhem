@@ -1,0 +1,16 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:honey_block"
+      },
+      "title": "This isn't honey missile wars...",
+      "description": "Try to exit the game"
+    },
+    "parent": "missilewars:root",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible",
+        "conditions": {}
+      }
+    }
+  }

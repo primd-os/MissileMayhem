@@ -1,0 +1,16 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:lime_concrete"
+      },
+      "title": "WE WIN THESE!",
+      "description": "Win a game"
+    },
+    "parent": "missilewars:root",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible",
+        "conditions": {}
+      }
+    }
+  }

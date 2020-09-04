@@ -1,0 +1,28 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:cave_spider_spawn_egg"
+      },
+      "title": "Customized",
+      "description": "Try to save to a Custom Missile"
+    },
+    "parent": "missilewars:root",
+    "criteria": {
+      "use_sign": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "location": {
+            "block": {
+              "block": "minecraft:oak_wall_sign",
+              "nbt": "{Text2:'{\"text\":\"Save\"}'}"
+            }
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "use_sign"
+      ]
+    ]
+  }

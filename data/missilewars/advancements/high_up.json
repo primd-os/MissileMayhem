@@ -13,7 +13,9 @@
         "conditions": {
           "player": {
             "nbt": "{Tags:[\"InGame\"]}",
-            "player": {}
+            "player": {
+              "gamemode": "survival"
+            }
           },
           "location": {
             "position": {

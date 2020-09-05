@@ -5,6 +5,9 @@ execute in missilewars:practice run tag @e[x=0,tag=PracticeArea,tag=!InUse,sort=
 execute in missilewars:practice at @e[x=0,tag=ToTP] run tp @s ~ ~1 ~
 execute in missilewars:practice at @e[x=0,tag=ToTP] run spawnpoint @s ~ ~1 ~
 execute in missilewars:practice run tag @e[x=0,tag=ToTP] add InUse
+execute in missilewars:practice run tag @e[x=0] remove ToTP
+
+function missilewars:main/clear_inv
 
 function missilewars:item_managers/bow
 function missilewars:new_missile/give/tomohawk

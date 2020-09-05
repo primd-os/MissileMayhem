@@ -70,6 +70,7 @@ scoreboard objectives add JoinGreen trigger
 scoreboard objectives add JoinBlue trigger
 scoreboard objectives add JoinRed trigger
 scoreboard objectives add JoinBlack trigger
+scoreboard objectives add Practice trigger
 scoreboard objectives add Leave trigger
 scoreboard objectives add ChooseMap trigger
 scoreboard objectives add PrevMapVote trigger
@@ -193,6 +194,8 @@ execute as @a at @s run function missilewars:end/finish_game
 
 execute in missilewars:lobby run function missilewars:set_lobby/set_map
 execute in missilewars:lobby as @a run tp 0 100 0
+
+execute in missilewars:practice run function missilewars:practice/create
 
 execute in missilewars:store run forceload add 0 0 0 -1
 kill @e[type=item]

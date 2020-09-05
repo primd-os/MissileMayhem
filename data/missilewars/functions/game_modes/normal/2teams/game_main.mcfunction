@@ -9,3 +9,4 @@ execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=BlueBa
 execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 at @e[tag=GreenBase,x=0] run function missilewars:maps/green/map
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:game_modes/normal/2teams/running_main
+function missilewars:item_managers/run_items

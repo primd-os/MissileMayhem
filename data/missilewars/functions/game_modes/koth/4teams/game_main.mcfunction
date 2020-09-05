@@ -8,6 +8,7 @@ execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 run function mis
 function missilewars:game_modes/force_gamemode
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:game_modes/koth/4teams/running_main
+function missilewars:item_managers/run_items
 
 execute positioned -2.5 30 -2.5 run effect give @a[x=0,dx=5,dz=5,dy=20] glowing 1 0 true
 execute positioned -2.5 30 -2.5 if entity @a[x=0,dx=5,dz=5,dy=20,team=Blue] run scoreboard players add @e[tag=BlueBase,x=0] BlueScore 1

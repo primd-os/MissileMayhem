@@ -206,7 +206,7 @@ fill 7 98 5 18 91 5 minecraft:gray_stained_glass replace minecraft:black_concret
 fill 7 98 -5 18 91 -5 minecraft:gray_stained_glass replace minecraft:black_concrete
 fill 19 91 -27 19 91 27 minecraft:gray_stained_glass replace minecraft:black_concrete
 
-kill @e[tag=CustomMissileArea]
+kill @e[tag=CustomMissileArea,x=0]
 summon minecraft:area_effect_cloud 25 85 -27 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"],Rotation:[-90f,0f]}
 summon minecraft:area_effect_cloud 25 85 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"],Rotation:[-90f,0f]}
 summon minecraft:area_effect_cloud 25 85 27 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"],Rotation:[-90f,0f]}

@@ -3,6 +3,8 @@ execute in missilewars:lobby run scoreboard players set @a[x=0] Game 0
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
 execute as @a store result score @s UUID1 run data get entity @s UUID[0] 1
 
+execute as @a at @s run function missilewars:main/global_main
+
 execute in missilewars:game1 run function missilewars:game_modes/normal/2teams/game_main
 execute in missilewars:game2 run function missilewars:game_modes/normal/2teams/game_main
 execute in missilewars:game3 run function missilewars:game_modes/normal/2teams/game_main
@@ -16,6 +18,8 @@ execute in missilewars:koth/game3 run function missilewars:game_modes/koth/2team
 execute in missilewars:koth/game41 run function missilewars:game_modes/koth/4teams/game_main
 execute in missilewars:koth/game42 run function missilewars:game_modes/koth/4teams/game_main
 execute in missilewars:koth/game43 run function missilewars:game_modes/koth/4teams/game_main
+
+execute in missilewars:practice run function missilewars:practice/game_main
 
 execute as @a[scores={Game=1..},team=!Green] at @s if block ~ ~-1 ~ green_concrete run function missilewars:start/join/green
 execute as @a[scores={Game=1..},team=!Blue] at @s if block ~ ~-1 ~ blue_concrete run function missilewars:start/join/blue
@@ -35,13 +39,13 @@ execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 
 execute in missilewars:lobby run kill @e[type=item,nbt=!{Item:{id:"minecraft:tnt"}},x=0]
 execute in missilewars:lobby as @e[type=item,nbt={Item:{id:"minecraft:tnt"}},x=0] run data modify entity @s PickupDelay set value 0
-execute in missilewars:lobby run clear @a[x=0,team=Spectator]
+
+execute in missilewars:lobby as @a[x=0,team=Spectator] run function missilewars:main/clear_inv
 execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
 
 tag @a[scores={Game=1..}] add InGame
 tag @a[scores={Game=..0}] remove InGame
 
-function missilewars:item_managers/run_items
 function missilewars:new_missile/missile_loop
 
 execute as @a[tag=!PlayedBefore] run function missilewars:start/give_book
@@ -54,7 +58,7 @@ execute as @a[scores={GiveBook=1}] run function missilewars:start/give_book
 execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
 
 bossbar set missile_time visible true
-bossbar set missile_time players @a[scores={Game=1..}]
+bossbar set missile_time players @a[scores={Game=1..999}]
 
 execute as @a[scores={quits=1..}] at @s run function missilewars:end/leave
 scoreboard players set @a quits 0

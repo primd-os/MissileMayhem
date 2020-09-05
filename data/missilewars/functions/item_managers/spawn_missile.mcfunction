@@ -14,3 +14,5 @@ playsound minecraft:entity.shulker.shoot block @a[x=0] ~ ~ ~
 clone 1000 0 0 1000 1 0 ~ ~ ~
 
 kill @e[tag=UUIDHolder,x=0]
+
+tag @s add Success

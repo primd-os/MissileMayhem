@@ -20,3 +20,4 @@ execute if score @e[tag=BlueBase,x=0,limit=1] RedLoss matches 1 at @e[tag=RedBas
 execute if score @e[tag=BlueBase,x=0,limit=1] BlackLoss matches 1 at @e[tag=BlackBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:game_modes/normal/4teams/running_main
+function missilewars:item_managers/run_items

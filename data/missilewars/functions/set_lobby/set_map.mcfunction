@@ -87,7 +87,7 @@ setblock -4 104 2 minecraft:barrier
 # signs
 setblock 5 103 0 minecraft:quartz_pillar[axis=x]
 fill 4 99 1 4 99 -1 minecraft:gray_stained_glass
-fill 5 101 1 5 102 -1 minecraft:quartz_pillar[axis=x]
+fill 5 101 2 5 102 -2 minecraft:quartz_pillar[axis=x]
 
 setblock -5 103 0 minecraft:quartz_pillar[axis=x]
 fill -5 101 1 -5 102 -1 minecraft:quartz_pillar[axis=x]
@@ -113,6 +113,7 @@ setblock -4 101 5 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams K
 setblock -4 101 4 minecraft:oak_wall_sign[facing=east]{Text1:'{"text":"4 Teams KOTH"}',Text2:'{"text":"Game 3","clickEvent":{"action":"run_command","value":"scoreboard players set @s Game 143"}}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"execute in missilewars:koth/game43 run function missilewars:game_modes/koth/4teams/join_auto"}}'}
 
 setblock 4 103 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Commands","underlined": true,"bold": true}',Text3:'{"text":""}',Text4:'{"text":""}'}
+setblock 4 102 2 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger Practice"}}',Text3:'{"text":"Go To Practice"}'}
 setblock 4 102 1 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ToggleRanked"}}',Text3:'{"text":"Toggle Ranked Games"}'}
 setblock 4 102 0 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":""}',Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger StopAdverts"}}',Text3:'{"text":"Stop Discord"}',Text4:'{"text":"Adverts"}'}
 setblock 4 102 -1 minecraft:oak_wall_sign[facing=west]{Text2:'{"text":"Click To"}',Text3:'{"text":"Get Instructions","clickEvent":{"action":"run_command","value":"trigger GiveBook"}}'}

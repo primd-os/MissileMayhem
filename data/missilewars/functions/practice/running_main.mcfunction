@@ -1,6 +1,7 @@
 effect give @s minecraft:haste 2 2 true
 effect give @s minecraft:saturation 2 0 true
 scoreboard players enable @s Leave
+scoreboard players enable @s ClearPractice
 scoreboard players reset @s JoinSpectators
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
@@ -31,6 +32,9 @@ execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt=!{Item:{
 
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
+
+execute as @s[scores={ClearPractice=1}] at @s at @e[tag=PracticeArea,sort=nearest,limit=1] run summon minecraft:area_effect_cloud ~ ~ ~-63 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["PracticeClear"]} 
+execute as @s[scores={ClearPractice=1}] run scoreboard players set @s ClearPractice 0
 
 execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
 scoreboard players set @s deathCheck 0

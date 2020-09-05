@@ -13,7 +13,7 @@ execute as @a[x=0,scores={PlacedMissile=1,DirectionPlace=1},y_rotation=-135..-45
 execute as @e[x=0,tag=missile] at @s run scoreboard players operation @s DirecToPlace = @a[x=0,scores={PlacedMissile=1},sort=nearest,limit=1] DirecToPlace
 
 execute as @e[x=0,tag=missile] at @s if predicate missilewars:missile_inbounds run function missilewars:item_managers/spawn_missile
-execute as @e[x=0,tag=missile] at @s if entity @e[x=0,tag=PracticeArea] run function missilewars:item_managers/spawn_missile
+execute as @e[x=0,tag=missile] at @s positioned ~-44 ~-100 ~-44 if entity @e[tag=PracticeArea,dx=88,dy=200,dz=88] positioned ~44 ~100 ~44 run function missilewars:item_managers/spawn_missile
 execute as @e[x=0,tag=missile,tag=!Success] at @s unless predicate missilewars:missile_inbounds run function missilewars:item_managers/missile_fail
 
 scoreboard players set @a[x=0] PlacedTomohawk 0

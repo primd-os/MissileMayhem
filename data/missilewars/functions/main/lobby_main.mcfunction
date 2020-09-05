@@ -36,6 +36,8 @@ execute as @s[scores={ToggleRanked=1}] run scoreboard players set @s ToggleRanke
 execute at @s if block ~ ~-2 ~ sea_lantern if block ~ ~-1 ~ #minecraft:impermeable run effect give @s speed 2 1 true
 
 execute as @s[tag=Editor] run function missilewars:main/lobby_editor
+scoreboard players set @s tntCount 0
+scoreboard players set @s tntBroke 0
 
 execute at @s at @e[tag=CustomMissileArea,sort=nearest,limit=1] positioned ^ ^ ^10 positioned ~-10 ~ ~-10 if entity @s[dx=21,dy=15,dz=21] run tag @s add InBox
 execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv

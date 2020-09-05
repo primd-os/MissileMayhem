@@ -2,8 +2,6 @@ scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntC
 scoreboard players operation @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount -= @s tntBroke
 scoreboard players operation tnt Variables = @s tntBroke
 function missilewars:custom_missile/give_tnt
-scoreboard players set @s tntCount 0
-scoreboard players set @s tntBroke 0
 
 execute store result score @s Items run clear @s iron_pickaxe 0
 execute if score @s Items matches 0 run give @s iron_pickaxe{Unbreakable:1b,CanDestroy:["#missilewars:custom_blocks"]} 1

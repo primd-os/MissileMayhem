@@ -1,5 +1,5 @@
 scoreboard players enable @s Leave
-execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinSpectators
+scoreboard players enable @s JoinSpectators
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinGreen
 execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinGreen
 execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlue

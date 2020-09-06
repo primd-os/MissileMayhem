@@ -1,10 +1,12 @@
 execute as @e[type=!tnt,x=0] at @s run kill @s[dy=-10,y=-64,gamemode=!spectator]
+execute as @a[x=0,gamemode=spectator] at @s run tp @s[dy=-10,y=-64] 0 100 0
 function missilewars:main/timer
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] run function missilewars:game_modes/normal/4teams/load_map
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Blue,x=0] run scoreboard players set @e[tag=BlueBase,x=0] BlueLoss 1
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Green,x=0] run scoreboard players set @e[tag=BlueBase,x=0] GreenLoss 1
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Red,x=0] run scoreboard players set @e[tag=BlueBase,x=0] RedLoss 1
 execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Black,x=0] run scoreboard players set @e[tag=BlueBase,x=0] BlackLoss 1
+execute if entity @e[tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[x=0] run function missilewars:end/finish_game
 execute as @e[tag=BlueBase,x=0,scores={Timer=0}] run scoreboard players reset @s Timer
 
 execute as @e[tag=BlueBase,x=0] if score @s GameState matches 1 run function missilewars:game_modes/normal/4teams/check_end_game

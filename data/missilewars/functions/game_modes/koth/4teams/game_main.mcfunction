@@ -11,6 +11,11 @@ function missilewars:game_modes/force_gamemode
 execute as @a[scores={Game=1..},x=0] run function missilewars:game_modes/koth/4teams/running_main
 function missilewars:item_managers/run_items
 
+execute positioned -2.5 30 -2.5 as @a[x=0,tag=Claiming] unless entity @s[x=0,dx=5,dz=5,dy=20] run tellraw @a[x=0] [{"selector": "@s"}, {"text": " is no longer claiming the point."}]
+execute positioned -2.5 30 -2.5 as @a[x=0,tag=!Claiming] if entity @s[x=0,dx=5,dz=5,dy=20] run tellraw @a[x=0] [{"selector": "@s"}, {"text": " is claiming the point."}]
+tag @a[x=0] remove Claiming
+execute positioned -2.5 30 -2.5 run tag @a[x=0,dx=5,dz=5,dy=20] add Claiming
+
 execute positioned -2.5 30 -2.5 run effect give @a[x=0,dx=5,dz=5,dy=20] glowing 1 0 true
 execute positioned -2.5 30 -2.5 if entity @a[x=0,dx=5,dz=5,dy=20,team=Blue] run scoreboard players add @e[tag=BlueBase,x=0] BlueScore 1
 execute positioned -2.5 30 -2.5 if entity @a[x=0,dx=5,dz=5,dy=20,team=Green] run scoreboard players add @e[tag=BlueBase,x=0] GreenScore 1

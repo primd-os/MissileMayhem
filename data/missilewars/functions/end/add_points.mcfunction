@@ -7,7 +7,7 @@ execute as @a[team=Green,x=0] run scoreboard players operation GreenPoints Varia
 
 execute if score @e[tag=BlueBase,x=0,limit=1] BlueWin matches 1 run scoreboard players operation Magnitude Variables = GreenPoints Variables
 execute if score @e[tag=BlueBase,x=0,limit=1] GreenWin matches 1 run scoreboard players operation Magnitude Variables = BluePoints Variables
-scoreboard players operation Magnitude Variables *= Hundred Constants
+scoreboard players operation Magnitude Variables *= PointScale Constants
 execute if score @e[tag=BlueBase,x=0,limit=1] BlueWin matches 1 run scoreboard players operation Magnitude Variables /= BluePoints Variables
 execute if score @e[tag=BlueBase,x=0,limit=1] GreenWin matches 1 run scoreboard players operation Magnitude Variables /= GreenPoints Variables
 

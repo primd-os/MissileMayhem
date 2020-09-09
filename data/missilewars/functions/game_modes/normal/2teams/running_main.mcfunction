@@ -1,3 +1,4 @@
+effect give @s[nbt={SelectedItem:{id:"minecraft:magenta_wool"}}] minecraft:haste 1 10 true
 effect give @s minecraft:haste 2 2 true
 effect give @s minecraft:saturation 2 0 true
 scoreboard players enable @s Leave

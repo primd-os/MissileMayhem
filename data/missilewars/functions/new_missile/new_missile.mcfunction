@@ -21,11 +21,11 @@ execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:arrow"}
 execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:firework_rocket"}]}] run scoreboard players set @s Fireball 3
 kill @e[type=armor_stand,x=0]
 
-scoreboard players operation @e[x=0,tag=Tomohawk] QueuePos = @s Tomohawk
-scoreboard players operation @e[x=0,tag=Juggurnaut] QueuePos = @s Juggurnaut
-scoreboard players operation @e[x=0,tag=Lightning] QueuePos = @s Lightning
-scoreboard players operation @e[x=0,tag=Shieldbuster] QueuePos = @s Shieldbuster
-scoreboard players operation @e[x=0,tag=Custom] QueuePos = @s Custom
-scoreboard players operation @e[x=0,tag=Shield] QueuePos = @s Shield
-scoreboard players operation @e[x=0,tag=Arrows] QueuePos = @s Arrows
-scoreboard players operation @e[x=0,tag=Fireball] QueuePos = @s Fireball
+scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Tomohawk] QueuePos = @s Tomohawk
+scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Juggurnaut] QueuePos = @s Juggurnaut
+scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Lightning] QueuePos = @s Lightning
+scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Shieldbuster] QueuePos = @s Shieldbuster
+scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Custom] QueuePos = @s Custom
+scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Shield] QueuePos = @s Shield
+scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Arrows] QueuePos = @s Arrows
+scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Fireball] QueuePos = @s Fireball

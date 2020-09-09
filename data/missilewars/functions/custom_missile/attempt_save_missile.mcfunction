@@ -8,4 +8,4 @@ execute positioned 0 0 0 unless entity @e[distance=..17] at @s run function miss
 
 execute positioned 0 0 0 if entity @e[distance=..17] at @s run function missilewars:custom_missile/check_id_save_missile
 
-kill @e[tag=UUIDHolder]
+kill @e[type=area_effect_cloud,tag=UUIDHolder]

@@ -8,18 +8,18 @@ summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, Wa
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Shield"],CustomName:'"Shield"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Fireball"],CustomName:'"Fireball"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Arrows"],CustomName:'"Arrows"'}
-scoreboard players set @e[tag=NewBase,tag=BlueBase,x=0] GameState 0
-scoreboard players operation @e[tag=NewBase,tag=BlueBase,x=0] Timer = Timer Constants
-execute as @e[tag=NewBase,tag=BlueBase,x=0] at @s run tp @s ~ ~ ~ ~180 ~
-scoreboard players operation @e[tag=NewBase,x=0] Game = @s Game
-scoreboard players set @e[tag=BlueBase,x=0] Tomohawk -1
-scoreboard players set @e[tag=BlueBase,x=0] Juggurnaut -1
-scoreboard players set @e[tag=BlueBase,x=0] Lightning -1
-scoreboard players set @e[tag=BlueBase,x=0] Shieldbuster -1
-scoreboard players set @e[tag=BlueBase,x=0] Custom -1
-scoreboard players set @e[tag=BlueBase,x=0] Shield -1
-scoreboard players set @e[tag=BlueBase,x=0] Fireball -1
-scoreboard players set @e[tag=BlueBase,x=0] Arrows -1
-scoreboard players set @e[tag=BlueBase,x=0] GreenScore 0
-scoreboard players set @e[tag=BlueBase,x=0] BlueScore 0
+scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] GameState 0
+scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] Timer = Timer Constants
+execute as @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] at @s run tp @s ~ ~ ~ ~180 ~
+scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,x=0] Game = @s Game
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Tomohawk -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Juggurnaut -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Lightning -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Shieldbuster -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Custom -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Shield -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Fireball -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Arrows -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] GreenScore 0
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] BlueScore 0
 tag @e remove NewBase

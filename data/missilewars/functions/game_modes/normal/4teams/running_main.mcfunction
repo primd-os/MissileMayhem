@@ -1,13 +1,13 @@
 scoreboard players enable @s Leave
 scoreboard players enable @s JoinSpectators
-execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinGreen
-execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinGreen
-execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlue
-execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinBlue
-execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinRed
-execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinRed
-execute if score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlack
-execute unless score @e[tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinBlack
+execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinGreen
+execute unless score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinGreen
+execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlue
+execute unless score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinBlue
+execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinRed
+execute unless score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinRed
+execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlack
+execute unless score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinBlack
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
 scoreboard players operation @s ChooseMissileSe2 = @s ChooseMissileSet
@@ -42,8 +42,8 @@ execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s D
 execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run tag @s add dead
 scoreboard players set @s deathCheck 0
 
-execute at @e[tag=Base,x=0] run particle minecraft:angry_villager ^85 ^75 ^-10 20 50 20 1 20 force
-execute at @e[tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 ~ ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage
+execute at @e[type=area_effect_cloud,tag=Base,x=0] run particle minecraft:angry_villager ^85 ^75 ^-10 20 50 20 1 20 force
+execute at @e[type=area_effect_cloud,tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 ~ ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage
 effect give @s[tag=InDamage] wither 1 4
 effect give @s[tag=!InDamage] minecraft:haste 1 2 true
 effect give @s[tag=!InDamage] minecraft:saturation 1 0 true

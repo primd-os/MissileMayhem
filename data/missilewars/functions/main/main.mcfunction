@@ -29,11 +29,11 @@ execute as @a[gamemode=adventure,scores={Game=1..},team=!Spectator] at @s if blo
 
 execute in missilewars:lobby positioned 6 104 21 if block ~ ~ ~ minecraft:polished_blackstone_button[powered=true] as @a[x=0,sort=nearest,limit=1] run function missilewars:set_lobby/overworld_tp
 
-execute as @e[tag=CustomMissileArea] at @s positioned ^ ^6 ^10 positioned ~-10 ~ ~-10 unless entity @a[dx=20,dy=10,dz=20] at @s positioned ^-10 ^6 ^ run fill ^ ^ ^8 ^20 ^4 ^13 air
+execute as @e[type=area_effect_cloud,tag=CustomMissileArea] at @s positioned ^ ^6 ^10 positioned ~-10 ~ ~-10 unless entity @a[dx=20,dy=10,dz=20] at @s positioned ^-10 ^6 ^ run fill ^ ^ ^8 ^20 ^4 ^13 air
 
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run particle explosion ~ ~ ~
-execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run scoreboard players remove @e[tag=CustomMissileArea,sort=nearest,limit=1] tntCount 1
+execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run scoreboard players remove @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] tntCount 1
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run give @a[x=0,tag=Editor,sort=nearest,limit=1] tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
 execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 

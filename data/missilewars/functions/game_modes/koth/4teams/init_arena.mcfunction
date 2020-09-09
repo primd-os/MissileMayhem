@@ -10,13 +10,13 @@ summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, Wa
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Shield"],CustomName:'"Shield"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Fireball"],CustomName:'"Fireball"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Arrows"],CustomName:'"Arrows"'}
-scoreboard players set @e[tag=NewBase,tag=BlueBase,x=0] GameState 0
-scoreboard players operation @e[tag=NewBase,tag=BlueBase,x=0] Timer = Timer Constants
-scoreboard players set @e[tag=BlueBase,x=0] BlueScore 0
-scoreboard players set @e[tag=BlueBase,x=0] BlackScore 0
-scoreboard players set @e[tag=BlueBase,x=0] RedScore 0
-execute as @e[tag=NewBase,tag=BlueBase,x=0] at @s run tp @s ~ ~ ~ ~180 ~
-execute as @e[tag=NewBase,tag=RedBase,x=0] at @s run tp @s ~ ~ ~ ~90 ~
-execute as @e[tag=NewBase,tag=BlackBase,x=0] at @s run tp @s ~ ~ ~ ~270 ~
-scoreboard players operation @e[tag=NewBase,x=0] Game = @s Game
+scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] GameState 0
+scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] Timer = Timer Constants
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] BlueScore 0
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] BlackScore 0
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] RedScore 0
+execute as @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] at @s run tp @s ~ ~ ~ ~180 ~
+execute as @e[type=area_effect_cloud,tag=NewBase,tag=RedBase,x=0] at @s run tp @s ~ ~ ~ ~90 ~
+execute as @e[type=area_effect_cloud,tag=NewBase,tag=BlackBase,x=0] at @s run tp @s ~ ~ ~ ~270 ~
+scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,x=0] Game = @s Game
 tag @e remove NewBase

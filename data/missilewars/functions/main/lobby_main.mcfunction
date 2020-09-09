@@ -37,7 +37,7 @@ execute as @s[scores={ToggleRanked=1}] run scoreboard players set @s ToggleRanke
 
 execute at @s if block ~ ~-2 ~ sea_lantern if block ~ ~-1 ~ #minecraft:impermeable run effect give @s speed 2 1 true
 
-execute as @s[tag=Editor] run function missilewars:main/lobby_editor
+execute as @s[tag=Editor] at @s run function missilewars:main/lobby_editor
 scoreboard players set @s tntCount 0
 scoreboard players set @s tntBroke 0
 

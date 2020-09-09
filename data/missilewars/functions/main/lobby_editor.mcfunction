@@ -23,7 +23,10 @@ execute store result score @s Items run clear @s honey_block 0
 execute if score @s Items matches 0 run give @s honey_block{CanPlaceOn:["#missilewars:custom_blocks"],CanDestroy:["#missilewars:custom_blocks"]} 64
 execute store result score @s Items run clear @s tnt 0
 scoreboard players operation tnt Variables = TntLimit Constants
-execute if score @s Items matches 0 if score @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] tntCount < TntLimit Constants run function missilewars:custom_missile/give_tnt
+scoreboard players operation tnt Variables -= @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] tntCount
+scoreboard players operation tnt Variables -= @s Items
+execute if score tnt Variables matches ..-1 run clear @s tnt 1
+execute if score tnt Variables matches 1.. run function missilewars:custom_missile/give_tnt
 execute store result score @s Items if score @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] tntCount >= TntLimit Constants run clear @s tnt
 execute store result score @s Items run clear @s stone_pressure_plate 0
 execute if score @s Items matches 0 run give @s stone_pressure_plate{CanPlaceOn:["#missilewars:custom_blocks"],CanDestroy:["#missilewars:custom_blocks"]} 64

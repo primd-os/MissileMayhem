@@ -33,8 +33,7 @@ execute as @e[type=area_effect_cloud,tag=CustomMissileArea] at @s positioned ^ ^
 
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run particle explosion ~ ~ ~
-execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run scoreboard players remove @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] tntCount 1
-execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run give @a[x=0,tag=Editor,sort=nearest,limit=1] tnt{CanPlaceOn:["#missilewars:custom_blocks"]} 1
+execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 79s},x=0] at @s run scoreboard players remove @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] tntCount 1
 execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 
 execute in missilewars:lobby run kill @e[type=item,nbt=!{Item:{id:"minecraft:tnt"}},x=0]

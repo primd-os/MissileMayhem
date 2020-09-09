@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "tnt"
+    },
+    "title": "Collector",
+    "description": "Collect a stack of tnt"
+  },
+  "parent": "missilewars:custom_save",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"InGame\"]}",
+              "player": {
+                "gamemode": "survival"
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "item": "minecraft:tnt",
+            "count": {
+              "min": 64
+            }
+          }
+        ]
+      }
+    }
+  }
+}

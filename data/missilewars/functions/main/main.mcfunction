@@ -43,8 +43,9 @@ execute in missilewars:lobby as @e[type=item,nbt={Item:{id:"minecraft:tnt"}},x=0
 execute in missilewars:lobby as @a[x=0,team=Spectator] run function missilewars:main/clear_inv
 execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
 
-tag @a[scores={Game=1..}] add InGame
+tag @a[scores={Game=1..999}] add InGame
 tag @a[scores={Game=..0}] remove InGame
+tag @a[scores={Game=1000}] remove InGame
 
 function missilewars:new_missile/missile_loop
 

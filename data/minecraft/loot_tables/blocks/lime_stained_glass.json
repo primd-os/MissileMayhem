@@ -1,9 +1,23 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-        ]
-      }
-    ]
-  }
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lime_stained_glass",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "Game": -1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

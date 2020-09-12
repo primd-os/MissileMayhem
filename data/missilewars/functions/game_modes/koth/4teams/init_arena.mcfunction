@@ -20,3 +20,4 @@ execute as @e[type=area_effect_cloud,tag=NewBase,tag=RedBase,x=0] at @s run tp @
 execute as @e[type=area_effect_cloud,tag=NewBase,tag=BlackBase,x=0] at @s run tp @s ~ ~ ~ ~270 ~
 scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,x=0] Game = @s Game
 tag @e remove NewBase
+function missilewars:maps/slow_clear_map

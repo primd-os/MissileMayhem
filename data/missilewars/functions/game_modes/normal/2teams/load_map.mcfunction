@@ -1,4 +1,3 @@
-function missilewars:maps/clear_map
 scoreboard players operation Map Variables = @r[scores={Game=1..},x=0] MapVote
 
 execute as @e[type=area_effect_cloud,tag=Base,x=0] at @s if score Map Variables matches 7 run tp ^50 ^ ^

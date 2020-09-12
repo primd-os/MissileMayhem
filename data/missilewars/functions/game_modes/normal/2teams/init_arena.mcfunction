@@ -21,3 +21,4 @@ scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Shield -1
 scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Fireball -1
 scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Arrows -1
 tag @e remove NewBase
+function missilewars:maps/slow_clear_map

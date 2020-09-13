@@ -2,8 +2,8 @@ summon minecraft:area_effect_cloud 0 50 75 {Age: -2147483648, Duration: -1, Wait
 summon minecraft:area_effect_cloud 0 50 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Base","GreenBase","NewBase"]}
 summon minecraft:area_effect_cloud 75 50 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Base","RedBase","NewBase"]}
 summon minecraft:area_effect_cloud -75 50 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Base","BlackBase","NewBase"]}
-summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Tomohawk"],CustomName:'"Tomohawk"'}
-summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Juggurnaut"],CustomName:'"Juggurnaut"'}
+summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Tomahawk"],CustomName:'"Tomahawk"'}
+summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Juggernaut"],CustomName:'"Juggernaut"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Lightning"],CustomName:'"Lightning"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Shieldbuster"],CustomName:'"Shieldbuster"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Custom"],CustomName:'"Custom"'}

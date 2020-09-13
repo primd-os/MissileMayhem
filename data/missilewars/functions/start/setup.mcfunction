@@ -45,8 +45,8 @@ execute in missilewars:koth/game43 run function missilewars:maps/queue/4team
 
 scoreboard objectives add snowballTime dummy
 
-scoreboard objectives add Tomohawk dummy
-scoreboard objectives add Juggurnaut dummy
+scoreboard objectives add Tomahawk dummy
+scoreboard objectives add Juggernaut dummy
 scoreboard objectives add Lightning dummy
 scoreboard objectives add Shieldbuster dummy
 scoreboard objectives add Custom dummy
@@ -90,8 +90,8 @@ scoreboard objectives add Timer dummy
 scoreboard objectives add TimerSecs dummy
 scoreboard objectives add TimerTick dummy
 
-scoreboard objectives add PlacedTomohawk minecraft.used:minecraft.creeper_spawn_egg
-scoreboard objectives add PlacedJuggurnaut minecraft.used:minecraft.wolf_spawn_egg
+scoreboard objectives add PlacedTomahawk minecraft.used:minecraft.creeper_spawn_egg
+scoreboard objectives add PlacedJuggernaut minecraft.used:minecraft.wolf_spawn_egg
 scoreboard objectives add PlacedLightning minecraft.used:minecraft.ocelot_spawn_egg
 scoreboard objectives add PlacedBuster minecraft.used:minecraft.witch_spawn_egg
 scoreboard objectives add PlacedCustom minecraft.used:minecraft.cave_spider_spawn_egg

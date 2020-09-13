@@ -1,7 +1,7 @@
 scoreboard players operation @s MissileSet += @a[x=0,scores={PlacedMissile=1},sort=nearest,limit=1] MissileSet
 clone ~ ~ ~ ~ ~1 ~ 1000 0 0
-execute as @s[name="Tomohawk"] run function missilewars:item_managers/spawn_tomohawk
-execute as @s[name="Juggurnaut"] run function missilewars:item_managers/spawn_juggurnaut
+execute as @s[name="Tomahawk"] run function missilewars:item_managers/spawn_tomohawk
+execute as @s[name="Juggernaut"] run function missilewars:item_managers/spawn_juggurnaut
 execute as @s[name="Lightning"] run function missilewars:item_managers/spawn_lightning
 execute as @s[name="Shieldbuster"] run function missilewars:item_managers/spawn_shieldbuster
 execute as @s[name="Custom"] as @a[x=0,scores={PlacedMissile=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_custom

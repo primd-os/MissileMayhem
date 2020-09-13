@@ -1,7 +1,7 @@
 execute as @a store result score @s Items run clear @s minecraft:creeper_spawn_egg 0
-execute if score @s Tomohawk matches 0 as @a[scores={Game=1..,Items=0},x=0] run function missilewars:new_missile/give/tomohawk
+execute if score @s Tomahawk matches 0 as @a[scores={Game=1..,Items=0},x=0] run function missilewars:new_missile/give/tomohawk
 execute as @a store result score @s Items run clear @s minecraft:wolf_spawn_egg 0
-execute if score @s Juggurnaut matches 0 as @a[scores={Game=1..,Items=0},x=0] run function missilewars:new_missile/give/juggurnaut
+execute if score @s Juggernaut matches 0 as @a[scores={Game=1..,Items=0},x=0] run function missilewars:new_missile/give/juggurnaut
 execute as @a store result score @s Items run clear @s minecraft:ocelot_spawn_egg 0
 execute if score @s Lightning matches 0 as @a[scores={Game=1..,Items=0},x=0] run function missilewars:new_missile/give/lightning
 execute as @a store result score @s Items run clear @s minecraft:witch_spawn_egg 0

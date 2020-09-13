@@ -260,7 +260,7 @@ setblock -2 101 -20 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{
 setblock -3 100 -22 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:-4,mode:"LOAD",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,name:"missilewars:missiles/new/juggurnaut",sizeY:3,sizeZ:9}
 setblock -3 101 -22 minecraft:redstone_block
 fill -3 101 -22 -3 100 -22 minecraft:air
-setblock -3 101 -25 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Juggurnaut"}',Text1:'{"text":""}'}
+setblock -3 101 -25 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Juggernaut"}',Text1:'{"text":""}'}
 
 setblock -3 100 -42 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:-4,mode:"LOAD",posY:1,sizeX:3,posZ:-7,integrity:1.0f,showair:0b,name:"missilewars:missiles/new/shieldbuster",sizeY:3,sizeZ:15}
 setblock -3 101 -42 minecraft:redstone_block
@@ -270,7 +270,7 @@ setblock -3 101 -47 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{
 setblock -3 100 -52 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:-3,mode:"LOAD",posY:1,sizeX:2,posZ:-10,integrity:1.0f,showair:0b,name:"missilewars:missiles/new/tomohawk",sizeY:2,sizeZ:11}
 setblock -3 101 -52 minecraft:redstone_block
 fill -3 101 -52 -3 100 -52 minecraft:air
-setblock -3 101 -57 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Tomohawk"}',Text1:'{"text":""}'}
+setblock -3 101 -57 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Tomahawk"}',Text1:'{"text":""}'}
 
 setblock -3 100 -69 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:-4,mode:"LOAD",posY:1,sizeX:3,posZ:-6,integrity:1.0f,showair:0b,name:"missilewars:missiles/new/lightning",sizeY:3,sizeZ:6}
 setblock -3 101 -69 minecraft:redstone_block
@@ -282,7 +282,7 @@ setblock 2 101 -20 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{C
 setblock 3 100 -24 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,name:"missilewars:missiles/old/juggurnaut",sizeY:3,sizeZ:9}
 setblock 3 101 -24 minecraft:redstone_block
 fill 3 101 -24 3 100 -24 minecraft:air
-setblock 3 101 -27 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Juggurnaut"}',Text1:'{"text":""}'}
+setblock 3 101 -27 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Juggernaut"}',Text1:'{"text":""}'}
 
 setblock 3 100 -38 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:3,posZ:-11,integrity:1.0f,showair:0b,name:"missilewars:missiles/old/shieldbuster",sizeY:3,sizeZ:15}
 setblock 3 101 -38 minecraft:redstone_block
@@ -292,7 +292,7 @@ setblock 3 101 -42 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{C
 setblock 3 100 -52 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:2,posZ:-12,integrity:1.0f,showair:0b,name:"missilewars:missiles/old/tomohawk",sizeY:2,sizeZ:13}
 setblock 3 101 -52 minecraft:redstone_block
 fill 3 101 -52 3 100 -52 minecraft:air
-setblock 3 101 -59 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Tomohawk"}',Text1:'{"text":""}'}
+setblock 3 101 -59 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Tomahawk"}',Text1:'{"text":""}'}
 
 setblock 3 100 -67 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,name:"missilewars:missiles/old/lightning",sizeY:2,sizeZ:9}
 setblock 3 101 -67 minecraft:redstone_block
@@ -304,7 +304,7 @@ setblock 2 108 -20 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{C
 setblock 3 107 -22 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:1,posZ:-14,integrity:1.0f,showair:0b,name:"missilewars:missiles/thin/juggurnaut",sizeY:3,sizeZ:15}
 setblock 3 108 -22 minecraft:redstone_block
 fill 3 108 -22 3 107 -22 minecraft:air
-setblock 3 108 -29 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Juggurnaut"}',Text1:'{"text":""}'}
+setblock 3 108 -29 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Juggernaut"}',Text1:'{"text":""}'}
 
 setblock 3 107 -38 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:1,posZ:-11,integrity:1.0f,showair:0b,name:"missilewars:missiles/thin/shieldbuster",sizeY:4,sizeZ:11}
 setblock 3 108 -38 minecraft:redstone_block
@@ -314,7 +314,7 @@ setblock 3 108 -44 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{C
 setblock 3 107 -52 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"?",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:1,posZ:-10,integrity:1.0f,showair:0b,name:"missilewars:missiles/thin/tomohawk",sizeY:5,sizeZ:11}
 setblock 3 108 -52 minecraft:redstone_block
 fill 3 108 -52 3 107 -52 minecraft:air
-setblock 3 108 -57 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Tomohawk"}',Text1:'{"text":""}'}
+setblock 3 108 -57 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{Color:"white",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Tomahawk"}',Text1:'{"text":""}'}
 
 setblock 3 107 -69 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:2,mode:"LOAD",posY:1,sizeX:1,posZ:-6,integrity:1.0f,showair:0b,name:"missilewars:missiles/thin/lightning",sizeY:5,sizeZ:7}
 setblock 3 108 -69 minecraft:redstone_block

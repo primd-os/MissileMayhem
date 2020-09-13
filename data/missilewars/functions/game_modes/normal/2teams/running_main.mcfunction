@@ -1,6 +1,6 @@
 effect give @s[nbt={SelectedItem:{id:"minecraft:magenta_wool"}}] minecraft:haste 1 10 true
 effect give @s minecraft:haste 2 2 true
-effect give @s minecraft:saturation 2 0 true
+effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 2 0 true
 scoreboard players enable @s Leave
 scoreboard players enable @s JoinSpectators
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinGreen

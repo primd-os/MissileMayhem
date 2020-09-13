@@ -43,9 +43,10 @@ execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run tag @s 
 scoreboard players set @s deathCheck 0
 
 execute at @e[type=area_effect_cloud,tag=Base,x=0] run particle minecraft:angry_villager ^85 ^75 ^-10 20 50 20 1 20 force
-execute at @e[type=area_effect_cloud,tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 ~ ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage
+execute at @e[type=area_effect_cloud,tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 0 ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage
 effect give @s[tag=InDamage] wither 1 4
+effect give @s[tag=InDamage] hunger 1 4
 effect give @s[nbt={SelectedItem:{id:"minecraft:magenta_wool"}}] minecraft:haste 1 10 true
 effect give @s[tag=!InDamage] minecraft:haste 2 2 true
-effect give @s[tag=!InDamage] minecraft:saturation 1 0 true
+effect give @s[tag=!InDamage,nbt=!{foodLevel:20}] minecraft:saturation 1 0 true
 tag @s remove InDamage

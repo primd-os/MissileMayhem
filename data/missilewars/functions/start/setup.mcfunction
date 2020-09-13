@@ -1,7 +1,6 @@
 gamerule fallDamage false
 gamerule doImmediateRespawn true
 gamerule keepInventory true
-gamerule announceAdvancements false
 gamerule sendCommandFeedback false
 
 time set noon
@@ -10,8 +9,6 @@ weather clear
 gamerule doWeatherCycle false
 
 difficulty easy
-gamerule doMobSpawning false
-gamerule doEntityDrops false
 
 setworldspawn 0 100 0
 

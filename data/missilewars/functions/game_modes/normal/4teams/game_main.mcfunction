@@ -6,7 +6,7 @@ execute if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] u
 execute if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Green,x=0] run scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] GreenLoss 1
 execute if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Red,x=0] run scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] RedLoss 1
 execute if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[team=Black,x=0] run scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] BlackLoss 1
-execute if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[x=0] run function missilewars:end/finish_game
+execute if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] unless entity @a[x=0,team=!Spectator] run function missilewars:end/finish_game
 execute as @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] run scoreboard players reset @s Timer
 
 execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 run function missilewars:game_modes/normal/4teams/check_end_game

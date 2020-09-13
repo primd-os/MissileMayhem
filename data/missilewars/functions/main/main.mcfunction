@@ -28,6 +28,13 @@ execute in missilewars:koth/game41 run function missilewars:game_modes/koth/4tea
 execute in missilewars:koth/game42 run function missilewars:game_modes/koth/4teams/game_main
 execute in missilewars:koth/game43 run function missilewars:game_modes/koth/4teams/game_main
 
+execute in missilewars:ctf/game1 run function missilewars:game_modes/ctf/2teams/game_main
+execute in missilewars:ctf/game2 run function missilewars:game_modes/ctf/2teams/game_main
+execute in missilewars:ctf/game3 run function missilewars:game_modes/ctf/2teams/game_main
+execute in missilewars:ctf/game41 run function missilewars:game_modes/ctf/4teams/game_main
+execute in missilewars:ctf/game42 run function missilewars:game_modes/ctf/4teams/game_main
+execute in missilewars:ctf/game43 run function missilewars:game_modes/ctf/4teams/game_main
+
 execute in missilewars:practice run function missilewars:practice/game_main
 
 execute as @a[gamemode=adventure,scores={Game=1..},team=!Green] at @s if block ~ ~-1 ~ green_concrete run function missilewars:start/join/green

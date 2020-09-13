@@ -6,8 +6,7 @@ execute as @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] run scor
 
 execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1..2 run function missilewars:game_modes/normal/2teams/check_end_game
 
-execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 at @e[type=area_effect_cloud,tag=BlueBase,x=0] run function missilewars:maps/blue/map
-execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 at @e[type=area_effect_cloud,tag=GreenBase,x=0] run function missilewars:maps/green/map
+execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 at @e[type=area_effect_cloud,tag=Base,x=0] run function missilewars:maps/spawn_plat
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:game_modes/normal/2teams/running_main
 function missilewars:item_managers/run_items

@@ -11,10 +11,7 @@ execute as @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] run scor
 
 execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 run function missilewars:game_modes/normal/4teams/check_end_game
 
-execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s BlueLoss matches 1 at @e[type=area_effect_cloud,tag=BlueBase,x=0] run function missilewars:maps/blue/map
-execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s GreenLoss matches 1 at @e[type=area_effect_cloud,tag=GreenBase,x=0] run function missilewars:maps/green/map
-execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s RedLoss matches 1 at @e[type=area_effect_cloud,tag=RedBase,x=0] run function missilewars:maps/red/map
-execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 unless score @s BlackLoss matches 1 at @e[type=area_effect_cloud,tag=BlackBase,x=0] run function missilewars:maps/black/map
+execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 at @e[type=area_effect_cloud,tag=Base,x=0] run function missilewars:maps/spawn_plat
 
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] BlueLoss matches 1 at @e[type=area_effect_cloud,tag=BlueBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GreenLoss matches 1 at @e[type=area_effect_cloud,tag=GreenBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]

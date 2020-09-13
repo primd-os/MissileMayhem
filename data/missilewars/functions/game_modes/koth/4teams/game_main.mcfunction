@@ -6,7 +6,7 @@ execute as @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=0}] run scor
 
 execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 run function missilewars:game_modes/koth/4teams/check_end_game
 
-function missilewars:game_modes/force_gamemode
+execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 at @e[type=area_effect_cloud,tag=Base,x=0] run function missilewars:maps/spawn_plat
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:game_modes/koth/4teams/running_main
 function missilewars:item_managers/run_items

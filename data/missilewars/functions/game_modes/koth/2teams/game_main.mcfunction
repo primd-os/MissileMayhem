@@ -24,3 +24,5 @@ execute positioned -2.5 30 -2.5 if entity @a[x=0,dx=5,dz=5,dy=20,team=Green] run
 execute positioned -2.5 30 -2.5 if entity @a[x=0,dx=5,dz=5,dy=20] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] GameClock 1
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameClock matches 100 run tellraw @a[x=0] ["",{"text":"Blue:","color":"dark_blue"},{"score":{"name":"@e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1]","objective":"BlueScore"},"color":"dark_blue"},{"text":" Green:","color":"green"},{"score":{"name":"@e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1]","objective":"GreenScore"},"color":"green"}]
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameClock matches 100 run scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameClock 0
+
+execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 unless entity @a[x=0] run function missilewars:end/finish_game

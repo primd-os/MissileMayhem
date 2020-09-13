@@ -23,3 +23,5 @@ execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] BlackLoss m
 
 execute as @a[scores={Game=1..},x=0] run function missilewars:game_modes/normal/4teams/running_main
 function missilewars:item_managers/run_items
+
+execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s GameState matches 1 unless entity @a[x=0] run function missilewars:end/finish_game

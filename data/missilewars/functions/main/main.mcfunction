@@ -1,4 +1,12 @@
 scoreboard players enable @a StopAdverts
+
+scoreboard players enable @a[scores={Game=-1}] Leave
+execute in missilewars:lobby run clear @a[x=0,scores={Game=-1}]
+
+execute as @a[scores={Leave=1,Game=-1}] run clear @s
+execute as @a[scores={Leave=1,Game=-1}] run function missilewars:end/leave
+execute as @a[scores={Leave=1,Game=-1}] run scoreboard players set @s Leave 0
+
 execute in missilewars:lobby run scoreboard players set @a[x=0] Game 0
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
 execute as @a store result score @s UUID1 run data get entity @s UUID[0] 1
@@ -62,5 +70,6 @@ execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
 bossbar set missile_time visible true
 bossbar set missile_time players @a[scores={Game=1..999}]
 
+execute as @a[scores={quits=1..,Game=-1}] at @s run clear @a
 execute as @a[scores={quits=1..}] at @s run function missilewars:end/leave
 scoreboard players set @a quits 0

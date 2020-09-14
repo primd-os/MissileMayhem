@@ -13,6 +13,8 @@ scoreboard players enable @s ChooseMissileSet
 scoreboard players enable @s MissileSetSelect
 scoreboard players enable @s ToggleRanked
 
+tag @s remove carrier
+
 gamemode adventure @s[gamemode=!creative]
 execute in missilewars:lobby run spawnpoint @s 0 101 0 270
 execute in missilewars:lobby run tp @s[nbt=!{Dimension:"missilewars:lobby"}] 0 101 0

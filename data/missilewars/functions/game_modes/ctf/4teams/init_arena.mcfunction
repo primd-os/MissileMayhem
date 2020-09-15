@@ -12,10 +12,6 @@ summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, Wa
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Arrows"],CustomName:'"Arrows"'}
 scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] GameState 0
 scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] Timer = Timer Constants
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] GreenScore 2
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] BlueScore 2
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] RedScore 2
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] BlackScore 2
 scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] BlueLoss 0
 scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] GreenLoss 0
 scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] RedLoss 0

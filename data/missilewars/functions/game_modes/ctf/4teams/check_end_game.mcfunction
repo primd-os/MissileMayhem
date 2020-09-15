@@ -1,7 +1,7 @@
-execute unless score @s GreenLoss matches 1 if score @s GreenScore matches 0 run scoreboard players set @s PreGreenLoss 1
-execute unless score @s BlueLoss matches 1 if score @s BlueScore matches 0 run scoreboard players set @s PreBlueLoss 1
-execute unless score @s RedLoss matches 1 if score @s RedScore matches 0 run scoreboard players set @s PreRedLoss 1
-execute unless score @s BlackLoss matches 1 if score @s BlackScore matches 0 run scoreboard players set @s PreBlackLoss 1
+execute unless score @s GreenLoss matches 1 if score @s GreenScore matches 0 unless entity @a[tag=carrier,team=Green,x=0] run scoreboard players set @s PreGreenLoss 1
+execute unless score @s BlueLoss matches 1 if score @s BlueScore matches 0 unless entity @a[tag=carrier,team=Blue,x=0] run scoreboard players set @s PreBlueLoss 1
+execute unless score @s RedLoss matches 1 if score @s RedScore matches 0 unless entity @a[tag=carrier,team=Red,x=0] run scoreboard players set @s PreRedLoss 1
+execute unless score @s BlackLoss matches 1 if score @s BlackScore matches 0 unless entity @a[tag=carrier,team=Black,x=0] run scoreboard players set @s PreBlackLoss 1
 execute if score @s PreBlueLoss matches 1 run scoreboard players set @s BlueLoss 1
 execute if score @s PreGreenLoss matches 1 run scoreboard players set @s GreenLoss 1
 execute if score @s PreRedLoss matches 1 run scoreboard players set @s RedLoss 1

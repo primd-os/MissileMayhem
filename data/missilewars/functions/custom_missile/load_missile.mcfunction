@@ -31,4 +31,4 @@ scoreboard players operation tnt Variables = TntLimit Constants
 scoreboard players operation tnt Variables -= @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] tntCount
 execute if score tnt Variables matches 1.. run function missilewars:custom_missile/give_tnt
 
-function missilewars:custom_missile/clean_up
+kill @e[type=area_effect_cloud,x=0,tag=UUIDHolder]

@@ -62,7 +62,7 @@ tag @a[scores={Game=1..999}] add InGame
 tag @a[scores={Game=..0}] remove InGame
 tag @a[scores={Game=1000}] remove InGame
 
-execute as @e[type=tnt,nbt={Fuse: 1s}] at @s if entity @e[type=tnt,distance=0.001..0.1,nbt={Fuse: 1s}] run data modify entity @s Fuse set value 3
+execute as @e[type=tnt,nbt={Fuse: 2s}] at @s run function missilewars:main/tnt_fuse
 
 function missilewars:new_missile/missile_loop
 

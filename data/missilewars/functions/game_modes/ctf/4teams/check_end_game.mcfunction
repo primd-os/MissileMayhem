@@ -1,7 +1,7 @@
-execute unless score @s GreenLoss matches 1 if score @s GreenPoints matches 0 run scoreboard players set @s PreGreenLoss 1
-execute unless score @s BlueLoss matches 1 if score @s BluePoints matches 0 run scoreboard players set @s PreBlueLoss 1
-execute unless score @s RedLoss matches 1 if score @s RedPoints matches 0 run scoreboard players set @s PreRedLoss 1
-execute unless score @s BlackLoss matches 1 if score @s BlackPoints matches 0 run scoreboard players set @s PreBlackLoss 1
+execute unless score @s GreenLoss matches 1 if score @s GreenScore matches 0 run scoreboard players set @s PreGreenLoss 1
+execute unless score @s BlueLoss matches 1 if score @s BlueScore matches 0 run scoreboard players set @s PreBlueLoss 1
+execute unless score @s RedLoss matches 1 if score @s RedScore matches 0 run scoreboard players set @s PreRedLoss 1
+execute unless score @s BlackLoss matches 1 if score @s BlackScore matches 0 run scoreboard players set @s PreBlackLoss 1
 execute if score @s PreBlueLoss matches 1 run scoreboard players set @s BlueLoss 1
 execute if score @s PreGreenLoss matches 1 run scoreboard players set @s GreenLoss 1
 execute if score @s PreRedLoss matches 1 run scoreboard players set @s RedLoss 1

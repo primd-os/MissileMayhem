@@ -1,5 +1,7 @@
 effect give @s minecraft:haste 2 255 true
 scoreboard players reset @s Leave
+scoreboard players reset @s TPA
+scoreboard players reset @s TPAccept
 scoreboard players reset @s JoinSpectators
 scoreboard players reset @s JoinGreen
 scoreboard players reset @s JoinBlue

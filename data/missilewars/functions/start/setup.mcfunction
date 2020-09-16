@@ -10,7 +10,7 @@ gamerule doWeatherCycle false
 
 difficulty easy
 
-setworldspawn 0 100 0
+execute in missilewars:lobby run setworldspawn 0 100 0
 
 execute in missilewars:game1 run function missilewars:start/barriers
 execute in missilewars:game2 run function missilewars:start/barriers
@@ -99,6 +99,12 @@ scoreboard objectives add GameState dummy
 scoreboard objectives add Timer dummy
 scoreboard objectives add TimerSecs dummy
 scoreboard objectives add TimerTick dummy
+scoreboard objectives add TPA trigger
+scoreboard objectives add tpValue dummy
+scoreboard objectives add TPAccept trigger
+scoreboard objectives add tpaccValue dummy
+
+execute unless score maxTpValue Variables matches -2147483648..2147483647 run scoreboard players set maxTpValue Variables 1
 
 scoreboard objectives add PlacedTomahawk minecraft.used:minecraft.creeper_spawn_egg
 scoreboard objectives add PlacedJuggernaut minecraft.used:minecraft.wolf_spawn_egg

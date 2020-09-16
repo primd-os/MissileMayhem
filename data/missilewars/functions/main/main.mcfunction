@@ -1,12 +1,8 @@
 scoreboard players enable @a StopAdverts
 
-scoreboard players enable @a[scores={Game=-1}] Leave
-scoreboard players reset @a[scores={Game=-1}] Practice
+execute as @a[scores={Game=-1}] run function missilewars:secret/main
 execute in missilewars:lobby run clear @a[x=0,scores={Game=-1}]
 
-execute as @a[scores={Leave=1,Game=-1}] run clear @s
-execute as @a[scores={Leave=1,Game=-1}] run function missilewars:end/leave
-execute as @a[scores={Leave=1,Game=-1}] run scoreboard players set @s Leave 0
 
 execute in missilewars:lobby run scoreboard players set @a[x=0] Game 0
 execute as @a[scores={Game=0}] run function missilewars:main/lobby_main

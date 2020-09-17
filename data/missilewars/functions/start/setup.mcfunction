@@ -208,6 +208,9 @@ bossbar add missile_time {"text": "Time to Next Missile"}
 bossbar set missile_time max 240
 bossbar set missile_time style progress
 
+tag @a remove Editor
+tag @a remove InBox
+
 function missilewars:start/advert
 
 execute as @a at @s run function missilewars:end/finish_game

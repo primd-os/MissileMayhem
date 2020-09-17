@@ -1,0 +1,1 @@
+execute unless score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 2.. run function missilewars:game_modes/4teams/join

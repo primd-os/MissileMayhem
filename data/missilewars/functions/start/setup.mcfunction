@@ -153,6 +153,8 @@ scoreboard objectives add BlackScore dummy
 scoreboard objectives add GameClock dummy
 
 scoreboard players set WinningScore Constants 1200
+scoreboard players set Flip Constants -1
+scoreboard players set Flatness Constants 1000
 
 scoreboard players set TntLimit Constants 24
 scoreboard players set PointScale Constants 100

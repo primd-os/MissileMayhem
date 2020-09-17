@@ -1,4 +1,8 @@
 playsound entity.experience_orb.pickup block @s ~ ~ ~ 1 1
+execute if score @s MapVote matches ..-1 run tellraw @s {"text":"Invalid map id.","color": "red"}
+execute if score @s MapVote matches 8.. run tellraw @s {"text":"Invalid map id.","color": "red"}
+execute if score @s MapVote matches ..-1 run scoreboard players operation @s MapVote = @s PrevMapVote
+execute if score @s MapVote matches 8.. run scoreboard players operation @s MapVote = @s PrevMapVote
 execute if score @s MapVote matches 0 run tellraw @s {"text":"Voting for Map: Normal"}
 execute if score @s MapVote matches 1 run tellraw @s {"text":"Voting for Map: No Walls"}
 execute if score @s MapVote matches 2 run tellraw @s {"text":"Voting for Map: Small"}

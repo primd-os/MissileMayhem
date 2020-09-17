@@ -22,7 +22,6 @@ execute in missilewars:lobby run spawnpoint @s 0 101 0 270
 execute in missilewars:lobby run tp @s[nbt=!{Dimension:"missilewars:lobby"}] 0 101 0
 effect give @s saturation 2 0 true
 
-execute at @s run function missilewars:start/missile_set_display
 
 execute as @s[scores={ChooseMap=1}] run function missilewars:start/choose_map
 execute as @s[scores={ChooseMap=1}] run scoreboard players set @s ChooseMap 0
@@ -32,6 +31,7 @@ execute unless score @s MapVote = @s PrevMapVote at @s run function missilewars:
 execute as @s[scores={MissileSetSelect=1}] run function missilewars:start/choose_missile_set
 execute as @s[scores={MissileSetSelect=1}] run scoreboard players set @s MissileSetSelect 0
 execute as @s run scoreboard players operation @s MissileSet = @s ChooseMissileSet
+execute at @s run function missilewars:start/missile_set_display
 
 execute as @s[scores={StopAdverts=1}] run function missilewars:start/toggle_adverts
 execute as @s[scores={StopAdverts=1}] run scoreboard players set @s StopAdverts 0

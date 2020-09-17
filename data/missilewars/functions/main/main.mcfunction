@@ -1,7 +1,7 @@
 scoreboard players enable @a StopAdverts
 
 execute as @a[scores={Game=-1}] run function missilewars:secret/main
-execute in missilewars:lobby run clear @a[x=0,scores={Game=-1}]
+execute in missilewars:lobby as @a[x=0,scores={Game=-1}] run function missilewars:secret/clear
 
 
 execute in missilewars:lobby run scoreboard players set @a[x=0] Game 0

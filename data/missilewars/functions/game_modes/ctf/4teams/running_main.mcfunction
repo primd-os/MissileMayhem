@@ -1,22 +1,3 @@
-execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches ..1 run scoreboard players enable @s Leave
-execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 2.. run scoreboard players reset @s Leave
-scoreboard players enable @s JoinSpectators
-execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinGreen
-execute unless score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinGreen
-execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlue
-execute unless score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinBlue
-execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinRed
-execute unless score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinRed
-execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players enable @s JoinBlack
-execute unless score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 0 run scoreboard players reset @s JoinBlack
-scoreboard players reset @s ChooseMap
-scoreboard players reset @s GiveBook
-scoreboard players operation @s ChooseMissileSe2 = @s ChooseMissileSet
-scoreboard players reset @s ChooseMissileSet
-scoreboard players operation @s ChooseMissileSet = @s ChooseMissileSe2
-scoreboard players reset @s MissileSetSelect
-scoreboard players reset @s ToggleRanked
-
 function missilewars:game_modes/force_gamemode
 
 function missilewars:main/manage_items

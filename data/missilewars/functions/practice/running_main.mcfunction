@@ -5,9 +5,7 @@ scoreboard players enable @s ClearPractice
 scoreboard players reset @s JoinSpectators
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
-scoreboard players operation @s ChooseMissileSe2 = @s ChooseMissileSet
 scoreboard players reset @s ChooseMissileSet
-scoreboard players operation @s ChooseMissileSet = @s ChooseMissileSe2
 scoreboard players reset @s MissileSetSelect
 scoreboard players reset @s ToggleRanked
 

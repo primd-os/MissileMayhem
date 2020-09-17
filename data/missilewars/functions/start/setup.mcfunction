@@ -90,7 +90,6 @@ scoreboard objectives add GiveBook trigger
 scoreboard objectives add PrevMissileSet dummy
 scoreboard objectives add MissileSet dummy
 scoreboard objectives add ChooseMissileSet trigger
-scoreboard objectives add ChooseMissileSe2 trigger
 scoreboard objectives add MissileSetSelect trigger
 scoreboard objectives add Items dummy
 scoreboard objectives add Game dummy

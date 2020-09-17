@@ -39,8 +39,6 @@ execute as @s[scores={StopAdverts=1}] run scoreboard players set @s StopAdverts 
 execute as @s[scores={ToggleRanked=1}] run function missilewars:start/toggle_ranked
 execute as @s[scores={ToggleRanked=1}] run scoreboard players set @s ToggleRanked 0
 
-execute at @s if block ~ ~-2 ~ sea_lantern if block ~ ~-1 ~ #minecraft:impermeable run effect give @s speed 2 1 true
-
 execute as @s[tag=Editor] at @s run function missilewars:main/lobby_editor
 scoreboard players set @s tntCount 0
 scoreboard players set @s tntBroke 0
@@ -48,6 +46,8 @@ scoreboard players set @s tntBroke 0
 execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] positioned ^ ^ ^10 positioned ~-10 ~ ~-10 if entity @s[dx=21,dy=15,dz=21] run tag @s add InBox
 execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
 tag @s[tag=!InBox] remove Editor
+
+execute positioned -6.5 82 6.5 run tp @s[distance=..2] 10 108.5 40
 
 execute store result score NumBook Variables run clear @s writable_book{Enchantments:[{id:"minecraft:binding_curse",lvl:1}]} 0
 execute if score NumBook Variables matches 0 run give @s writable_book{display:{Name:'{"text":"Custom Missile"}'},Enchantments:[{id:"minecraft:binding_curse",lvl:1}],pages:["missilewars:default"]}
@@ -62,7 +62,7 @@ execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMis
 execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-9 ^9 ^8 ^9 ^9 ^12 minecraft:air
 tag @s remove InBox
 
-execute if entity @s[team=Lobby,x=-1,y=107,z=-1,dx=3,dy=3,dz=3] run team join Sumo
-execute unless entity @s[team=Sumo,x=-1,y=107,z=-1,dx=3,dy=3,dz=3] run team join Lobby
+execute if entity @s[team=Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Sumo
+execute unless entity @s[team=Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Lobby
 
 scoreboard players set @s deathCheck 0

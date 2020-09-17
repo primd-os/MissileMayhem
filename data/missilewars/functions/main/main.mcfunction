@@ -5,7 +5,7 @@ execute in missilewars:lobby as @a[x=0,scores={Game=-1}] run function missilewar
 
 
 execute in missilewars:lobby run scoreboard players set @a[x=0] Game 0
-execute as @a[scores={Game=0}] run function missilewars:main/lobby_main
+execute as @a[scores={Game=0}] at @s run function missilewars:main/lobby_main
 execute as @a store result score @s UUID1 run data get entity @s UUID[0] 1
 
 execute as @a at @s run function missilewars:main/global_main

@@ -10,7 +10,7 @@ gamerule doWeatherCycle false
 
 difficulty easy
 
-execute in missilewars:lobby run setworldspawn 0 100 0
+execute in missilewars:lobby run setworldspawn 10 108 40
 
 execute in missilewars:game1 run function missilewars:start/barriers
 execute in missilewars:game2 run function missilewars:start/barriers
@@ -215,7 +215,7 @@ function missilewars:start/advert
 execute as @a at @s run function missilewars:end/finish_game
 
 execute in missilewars:lobby run function missilewars:set_lobby/set_map
-execute in missilewars:lobby as @a run tp 0 100 0
+execute in missilewars:lobby as @a run tp 10 108.5 40
 
 execute in missilewars:practice run function missilewars:practice/create
 

@@ -11,7 +11,6 @@
         "minecraft:honey_block",
         "minecraft:slime_block",
         "minecraft:stone_pressure_plate",
-        "minecraft:gray_glazed_terracotta",
-        "minecraft:barrier"
+        "minecraft:gray_glazed_terracotta"
     ]
 }

@@ -35,3 +35,9 @@ setblock -8 104 28 minecraft:oak_wall_sign[facing=east,waterlogged=false]{Color:
 setblock -7 104 25 minecraft:oak_wall_sign[facing=east,waterlogged=false]{Color:"black",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":""}',Text1:'{"text":"Map Voting","clickEvent":{"action":"run_command","value":"tp 1.5 82 -3.5"}}'} destroy
 setblock -3 104 21 minecraft:oak_wall_sign[facing=south,waterlogged=false]{Color:"black",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":"Missile"}',Text1:'{"text":"Make Custom","clickEvent":{"action":"run_command","value":"tp -17 104 85"}}'}
 setblock 0 104 20 minecraft:oak_wall_sign[facing=south,waterlogged=false]{Color:"black",Text4:'{"text":""}',Text3:'{"text":""}',Text2:'{"text":""}',Text1:'{"text":"Credits","clickEvent":{"action":"run_command","value":"tp 49.5 105 35.5"}}'}
+
+kill @e[type=area_effect_cloud,tag=CustomMissileArea,x=0]
+summon minecraft:area_effect_cloud -19.5 105 65.5 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"],Rotation:[-90f,0f]}
+summon minecraft:area_effect_cloud -31.5 104 58.5 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["CustomMissileArea"],Rotation:[-90f,0f]}
+
+execute as @e[type=area_effect_cloud,tag=CustomMissileArea] at @s run function missilewars:set_lobby/set_custom

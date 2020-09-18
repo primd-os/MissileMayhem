@@ -15,6 +15,8 @@ scoreboard players enable @s ChooseMissileSet
 scoreboard players enable @s MissileSetSelect
 scoreboard players enable @s ToggleRanked
 
+execute unless entity @s[scores={points=-2147483648..2147483647}] run scoreboard players set @s points 1000
+
 tag @s remove carrier
 
 gamemode adventure @s[gamemode=!creative]

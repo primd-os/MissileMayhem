@@ -1,5 +1,3 @@
-execute as @a[x=0] unless entity @s[scores={points=0..}] run scoreboard players set @s points 1000
-
 scoreboard players set BluePoints Variables 0
 scoreboard players set GreenPoints Variables 0
 execute as @a[team=Blue,x=0] run scoreboard players operation BluePoints Variables += @s points

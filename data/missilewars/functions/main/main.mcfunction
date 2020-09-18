@@ -39,7 +39,7 @@ execute as @a[gamemode=adventure,scores={Game=1..},team=!Black] at @s if block ~
 execute as @a[gamemode=adventure,scores={Game=1..},team=!Red] at @s if block ~ ~-1 ~ red_concrete run function missilewars:start/join/red
 execute as @a[gamemode=adventure,scores={Game=1..},team=!Spectator] at @s if block ~ ~-1 ~ light_gray_concrete run function missilewars:start/join_spectators
 
-execute in missilewars:lobby positioned 6 104 21 if block ~ ~ ~ minecraft:polished_blackstone_button[powered=true] as @a[distance=..10,sort=nearest,limit=1] run function missilewars:set_lobby/overworld_tp
+execute in missilewars:lobby positioned 14.5 119 1.5 as @a[distance=..0.75] run function missilewars:set_lobby/overworld_tp
 execute in missilewars:lobby positioned 6.5 100 22.5 as @a[distance=..1,nbt={Inventory:[{Slot:103b,tag:{pages:["pig"]},id:"minecraft:writable_book"}]}] run function missilewars:set_lobby/overworld_tp
 
 execute as @e[type=area_effect_cloud,tag=CustomMissileArea] at @s positioned ^ ^6 ^10 positioned ~-10 ~ ~-10 unless entity @a[dx=20,dy=10,dz=20] at @s positioned ^-10 ^6 ^ run fill ^ ^ ^8 ^20 ^4 ^13 air
@@ -49,8 +49,7 @@ execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run partic
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 79s},x=0] at @s run scoreboard players remove @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] tntCount 1
 execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 
-execute in missilewars:lobby run kill @e[type=item,nbt=!{Item:{id:"minecraft:tnt"}},x=0]
-execute in missilewars:lobby as @e[type=item,nbt={Item:{id:"minecraft:tnt"}},x=0] run data modify entity @s PickupDelay set value 0
+execute in missilewars:lobby run kill @e[type=item,x=0]
 
 execute in missilewars:lobby as @a[x=0,team=Spectator] run function missilewars:main/clear_inv
 execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]

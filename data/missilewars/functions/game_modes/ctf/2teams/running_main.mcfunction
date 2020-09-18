@@ -21,11 +21,6 @@ execute as @s[scores={Leave=1}] at @s run tag @s remove carrier
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
 
-execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
-execute as @s[scores={deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
-execute as @s[scores={deathCheck=1..1000}] at @s run tag @s remove carrier
-scoreboard players set @s deathCheck 0
-
 execute as @s[team=Black,tag=carrier] at @e[type=area_effect_cloud,tag=BlackBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
 execute as @s[team=Red,tag=carrier] at @e[type=area_effect_cloud,tag=RedBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
 execute as @s[team=Blue,tag=carrier] at @e[type=area_effect_cloud,tag=BlueBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] run tag @s add success
@@ -58,3 +53,8 @@ execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=.
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s add carrier
 execute at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s remove claiming
 execute as @s[tag=carrier] run effect give @s glowing 1 0 true
+
+execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
+execute as @s[scores={deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
+execute as @s[scores={deathCheck=1..1000}] at @s run tag @s remove carrier
+scoreboard players set @s deathCheck 0

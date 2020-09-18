@@ -22,11 +22,6 @@ execute as @s[scores={Leave=1}] at @s run tag @s remove carrier
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
 
-execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
-execute as @s[scores={deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
-execute as @s[scores={deathCheck=1..1000}] at @s run tag @s remove carrier
-scoreboard players set @s deathCheck 0
-
 execute as @s[team=Black,tag=carrier] at @e[type=area_effect_cloud,tag=BlackBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
 execute as @s[team=Red,tag=carrier] at @e[type=area_effect_cloud,tag=RedBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
 execute as @s[team=Blue,tag=carrier] at @e[type=area_effect_cloud,tag=BlueBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] run tag @s add success
@@ -68,3 +63,8 @@ effect give @s[nbt={SelectedItem:{id:"minecraft:magenta_wool"}}] minecraft:haste
 effect give @s[tag=!InDamage] minecraft:haste 2 2 true
 effect give @s[tag=!InDamage,nbt=!{foodLevel:20}] minecraft:saturation 1 0 true
 tag @s remove InDamage
+
+execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
+execute as @s[scores={deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
+execute as @s[scores={deathCheck=1..1000}] at @s run tag @s remove carrier
+scoreboard players set @s deathCheck 0

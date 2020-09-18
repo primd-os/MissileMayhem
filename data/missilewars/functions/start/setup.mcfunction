@@ -150,6 +150,9 @@ scoreboard objectives add GreenScore dummy
 scoreboard objectives add RedScore dummy
 scoreboard objectives add BlackScore dummy
 
+scoreboard objectives add RespawnTimer dummy
+scoreboard objectives add RespawnTimerSecs dummy
+
 scoreboard objectives add GameClock dummy
 
 scoreboard players set WinningScore Constants 1200

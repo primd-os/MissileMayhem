@@ -65,6 +65,7 @@ effect give @s[tag=!InDamage,nbt=!{foodLevel:20}] minecraft:saturation 1 0 true
 tag @s remove InDamage
 
 execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
+execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s RespawnTimer 100
 execute as @s[scores={deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
 execute as @s[scores={deathCheck=1..1000}] at @s run tag @s remove carrier
 scoreboard players set @s deathCheck 0

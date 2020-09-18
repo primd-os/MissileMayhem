@@ -7,9 +7,9 @@ tag @s add Active
 execute as @e[x=0,type=minecraft:item,tag=!processed] if score @s UUID1 = @a[x=0,tag=Active,limit=1] UUID1 as @a[x=0,tag=Active] run function missilewars:main/toggle_place
 execute as @e[x=0,type=minecraft:item,tag=!processed] if score @s UUID1 = @a[x=0,tag=Active,limit=1] UUID1 run tag @s add processed
 execute unless entity @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1,scores={GameState=2..}] run title @s times 0 3 0
-execute unless entity @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1,scores={GameState=2..}] run title @s title {"text": ""}
-execute unless entity @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1,scores={GameState=2..}] if score @s DirectionPlace matches 1 run title @s subtitle {"text": "✥"}
-execute unless entity @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1,scores={GameState=2..}] if score @s DirectionPlace matches 0 run title @s subtitle {"text": "↑"}
+execute unless entity @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1,scores={GameState=2..}] run title @s[gamemode=!spectator] title {"text": ""}
+execute unless entity @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1,scores={GameState=2..}] if score @s DirectionPlace matches 1 run title @s[gamemode=!spectator] subtitle {"text": "✥"}
+execute unless entity @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1,scores={GameState=2..}] if score @s DirectionPlace matches 0 run title @s[gamemode=!spectator] subtitle {"text": "↑"}
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GameState matches 1 run title @s actionbar ["",{"text":"1-"},{"selector":"@e[scores={QueuePos=1},x=0]"},{"text":" 2-"},{"selector":"@e[scores={QueuePos=2},x=0]"},{"text":" 3-"},{"selector":"@e[scores={QueuePos=3},x=0]"}]
 tag @s remove Active
 

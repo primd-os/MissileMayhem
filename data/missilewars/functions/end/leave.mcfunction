@@ -8,3 +8,5 @@ scoreboard players set @s Game 0
 
 execute as @s run function missilewars:main/clear_inv
 execute as @s in missilewars:lobby run tp 10 108.5 40
+
+scoreboard players operation @s ChooseMissileSet = @s MissileSet

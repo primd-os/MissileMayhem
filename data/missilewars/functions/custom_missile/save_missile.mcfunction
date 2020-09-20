@@ -10,6 +10,7 @@ execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1]
 execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 minecraft:structure_void replace air
 execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 minecraft:magenta_wool replace white_wool
 execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 minecraft:magenta_stained_glass replace white_stained_glass
+execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run kill @e[type=tnt,distance=..15]
 
 execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^-2 ^ minecraft:redstone_block
 execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^-2 ^ air

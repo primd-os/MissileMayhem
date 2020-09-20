@@ -20,10 +20,13 @@ execute unless entity @s[scores={points=-2147483648..2147483647}] run scoreboard
 tag @s remove carrier
 
 gamemode adventure @s[gamemode=!creative]
-execute in missilewars:lobby run spawnpoint @s 0 101 0 270
-execute in missilewars:lobby run tp @s[nbt=!{Dimension:"missilewars:lobby"}] 0 101 0
+execute in missilewars:lobby run spawnpoint @s 10 108 40
+execute in missilewars:lobby run tp @s[nbt=!{Dimension:"missilewars:lobby"}] 10 108 40
 effect give @s saturation 2 0 true
 
+execute if block ~ ~ ~ wheat run function missilewars:main/wheat_tp
+execute if block ~ ~-1 ~ wheat run function missilewars:main/wheat_tp
+execute if block ~ ~-2 ~ wheat run function missilewars:main/wheat_tp
 
 execute as @s[scores={ChooseMap=1}] run function missilewars:start/choose_map
 execute as @s[scores={ChooseMap=1}] run scoreboard players set @s ChooseMap 0
@@ -45,6 +48,7 @@ execute as @s[tag=Editor] at @s run function missilewars:main/lobby_editor
 scoreboard players set @s tntCount 0
 scoreboard players set @s tntBroke 0
 
+tag @s remove InBox
 execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=15,dz=21] run tag @s add InBox
 execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=15,dz=21] run tag @s add InBox
 execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=0] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=15,dz=7] run tag @s add InBox
@@ -65,9 +69,6 @@ execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMis
 execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-9 ^ ^-1 ^-9 ^3 ^1 minecraft:air
 execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^9 ^ ^-1 ^9 ^3 ^1 minecraft:air
 execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^4 ^-1 ^8 ^4 ^1 minecraft:air
-
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea] at @s as @a[sort=nearest,limit=1] unless entity @s[tag=InBox] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 air
-tag @s remove InBox
 
 execute if entity @s[team=Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Sumo
 execute unless entity @s[team=Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Lobby

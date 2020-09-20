@@ -1,0 +1,16 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:wheat"
+      },
+      "title": "Wait... Come back!",
+      "description": "Try to exit the lobby"
+    },
+    "parent": "missilewars:secret",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible",
+        "conditions": {}
+      }
+    }
+  }

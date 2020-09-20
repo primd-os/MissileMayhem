@@ -27,8 +27,4 @@ execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1]
 execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score @s tntCount run fill ^-8 ^1 ^-1 ^8 ^3 ^1 target replace tnt
 execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^1 ^-1 ^8 ^3 ^1 tnt replace target
 clear @s tnt
-scoreboard players operation tnt Variables = TntLimit Constants
-scoreboard players operation tnt Variables -= @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] tntCount
-execute if score tnt Variables matches 1.. run function missilewars:custom_missile/give_tnt
-
 kill @e[type=area_effect_cloud,x=0,tag=UUIDHolder]

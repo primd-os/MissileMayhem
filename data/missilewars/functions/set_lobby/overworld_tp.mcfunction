@@ -1,4 +1,3 @@
-setblock ~ ~ ~ minecraft:polished_blackstone_button[face=floor,powered=false] destroy
 advancement grant @s only minecraft:adventure/root
 advancement grant @s only minecraft:end/root
 advancement grant @s only minecraft:husbandry/root

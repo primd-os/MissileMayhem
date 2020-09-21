@@ -162,6 +162,8 @@ scoreboard players set Flatness Constants 1000
 scoreboard players set TntLimit Constants 24
 scoreboard players set PointScale Constants 100
 scoreboard players set TPS Constants 20
+scoreboard players set CSPT Constants 5
+scoreboard players set SPM Constants 60
 
 scoreboard players set Timer Constants 400
 

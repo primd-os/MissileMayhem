@@ -1,0 +1,16 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:ender_pearl"
+      },
+      "title": "2gud4U",
+      "description": "Win a game in under 45 seconds"
+    },
+    "parent": "missilewars:win_game",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible",
+        "conditions": {}
+      }
+    }
+  }

@@ -1,0 +1,16 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:observer"
+      },
+      "title": "Psycological manipulation",
+      "description": "Win a game in under 10 seconds"
+    },
+    "parent": "missilewars:high_up",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible",
+        "conditions": {}
+      }
+    }
+  }

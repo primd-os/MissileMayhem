@@ -16,4 +16,8 @@ execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] BlueWin mat
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GreenWin matches 1 at @e[type=area_effect_cloud,tag=BlueBase,x=0] run particle minecraft:explosion 0 25 ~ 20 25 0 2 200 force
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GreenWin matches 1 at @e[type=area_effect_cloud,tag=BlueBase,x=0] run playsound minecraft:entity.generic.explode master @a[x=0] 0 25 ~ 100
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] BlueWin matches 1 at @e[type=area_effect_cloud,tag=GreenBase,x=0] run playsound minecraft:entity.generic.explode master @a[x=0] 0 25 ~ 100
+execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GreenWin matches 1 if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=-900..}] run advancement grant @a[x=0,team=Green] only missilewars:2gud4u
+execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] BlueWin matches 1 if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=-900..}] run advancement grant @a[x=0,team=Blue] only missilewars:2gud4u
+execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GreenWin matches 1 if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=-200..}] run advancement grant @a[x=0,team=Green] only missilewars:manipulation
+execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] BlueWin matches 1 if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=-200..}] run advancement grant @a[x=0,team=Blue] only missilewars:manipulation
 schedule function missilewars:end/dimension_finish_game 10s

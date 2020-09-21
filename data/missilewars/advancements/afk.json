@@ -6,7 +6,7 @@
     "title": "Are you going to help?",
     "description": "Have 64 arrows in a game"
   },
-  "parent": "missilewars:win_game",
+  "parent": "missilewars:anti_boredom",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

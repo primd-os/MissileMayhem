@@ -155,7 +155,7 @@ scoreboard objectives add RespawnTimerSecs dummy
 
 scoreboard objectives add GameClock dummy
 
-scoreboard players set WinningScore Constants 1200
+scoreboard players set WinningScore Constants 3000
 scoreboard players set Flip Constants -1
 scoreboard players set Flatness Constants 1000
 

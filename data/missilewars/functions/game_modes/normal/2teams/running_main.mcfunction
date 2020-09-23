@@ -19,5 +19,6 @@ execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
 
 execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
+execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run tag @s add dead
 scoreboard players set @s deathCheck 0

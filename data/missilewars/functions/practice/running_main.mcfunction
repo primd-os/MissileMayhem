@@ -37,4 +37,5 @@ execute as @s[scores={ClearPractice=1}] at @s at @e[type=area_effect_cloud,tag=P
 execute as @s[scores={ClearPractice=1}] run scoreboard players set @s ClearPractice 0
 
 execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
+execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 scoreboard players set @s deathCheck 0

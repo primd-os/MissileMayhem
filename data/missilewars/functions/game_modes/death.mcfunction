@@ -1,0 +1,1 @@
+tellraw @a[x=0] [{"selector": "@s"},{"text": " died."}]

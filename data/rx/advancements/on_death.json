@@ -1,0 +1,15 @@
+{
+    "criteria": {
+      "death": {
+        "trigger": "minecraft:entity_killed_player",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:player"
+          }
+        }
+      }
+    },
+    "rewards": {
+        "function": "rx:on_death"
+    }
+}

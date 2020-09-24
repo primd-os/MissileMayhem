@@ -1,5 +1,6 @@
 {
     "values": [
-        "missilewars:main/main"
+        "missilewars:main/main",
+		"rx:tick"
     ]
 }

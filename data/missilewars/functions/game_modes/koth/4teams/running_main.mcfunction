@@ -20,10 +20,7 @@ execute as @s[scores={JoinBlack=1}] run scoreboard players set @s JoinBlack 0
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
 
-execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
 execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death
-execute as @s[scores={deathCheck=1..1000},team=Blue,tag=!dead] at @s run tag @s add dead
-scoreboard players set @s deathCheck 0
 
 execute at @e[type=area_effect_cloud,tag=Base,x=0] run particle minecraft:angry_villager ^85 ^75 ^-10 20 50 20 1 20 force
 execute at @e[type=area_effect_cloud,tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 0 ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage

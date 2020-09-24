@@ -54,9 +54,7 @@ execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=.
 execute at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s remove claiming
 execute as @s[tag=carrier] run effect give @s glowing 1 0 true
 
-execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s DirectionPlace 1
-execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death
-execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s RespawnTimer 100
-execute as @s[scores={deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
 execute as @s[scores={deathCheck=1..1000}] at @s run tag @s remove carrier
-scoreboard players set @s deathCheck 0
+execute as @s[scores={deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
+execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s RespawnTimer 100
+execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death

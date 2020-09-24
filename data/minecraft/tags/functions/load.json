@@ -1,5 +1,6 @@
 {
     "values": [
-        "missilewars:start/setup"
+        "missilewars:start/setup",
+		"rx:load"
     ]
 }

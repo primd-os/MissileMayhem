@@ -168,6 +168,9 @@ scoreboard players set SPM Constants 60
 
 scoreboard players set Timer Constants 400
 
+scoreboard players set fallScale Constants 5
+
+scoreboard objectives add fallDistance dummy
 scoreboard objectives add deathCheck deathCount
 scoreboard objectives add quits custom:leave_game
 

@@ -4,8 +4,6 @@ effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 2 0 true
 
 function missilewars:game_modes/force_gamemode
 
-function missilewars:main/manage_items
-
 execute as @s[scores={JoinSpectators=1}] run function missilewars:start/join_spectators
 execute as @s[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpectators 0
 
@@ -58,3 +56,5 @@ execute as @s[scores={deathCheck=1..1000}] at @s run tag @s remove carrier
 execute as @s[scores={deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
 execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s RespawnTimer 100
 execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death
+
+function missilewars:main/manage_items

@@ -18,3 +18,10 @@ function missilewars:item_managers/bow
 scoreboard players operation tnt Variables = @s tntBroke
 function missilewars:custom_missile/give_tnt
 scoreboard players set @s tntBroke 0
+
+execute store result score fallDistance Variables run data get entity @s FallDistance
+execute if score fallDistance Variables matches 0 run scoreboard players operation damage Variables = @s fallDistance
+execute if score fallDistance Variables matches 0 run scoreboard players operation damage Variables /= fallScale Constants
+execute at @s if score fallDistance Variables matches 0 unless score damage Variables matches 0 unless block ~ ~-1 ~ slime_block as @s[gamemode=!creative] run function missilewars:game_modes/deal_damage
+execute store result score @s fallDistance as @s[tag=!Died] run data get entity @s FallDistance
+execute if score fallDistance Variables matches 0 run tag @s remove Died

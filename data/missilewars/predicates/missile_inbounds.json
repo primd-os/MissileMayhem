@@ -10,7 +10,7 @@
 					"predicate": {
 						"position": {
 							"y": {
-								"min": 5,
+								"min": 8,
 								"max": 255
 							}
 						}

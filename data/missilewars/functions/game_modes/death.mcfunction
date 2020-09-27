@@ -13,4 +13,7 @@ tag @a[x=0] remove rx.killed
 
 execute as @s[tag=!dieMarked] run tellraw @a[x=0] [{"selector": "@s"},{"text": " died."}]
 tag @s remove dieMarked
+scoreboard players set @s fallDistance 0
 scoreboard players set @s deathCheck 0
+
+tag @s add Died

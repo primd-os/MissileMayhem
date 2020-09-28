@@ -3,4 +3,3 @@ scoreboard players set @e[type=area_effect_cloud,tag=clearMap] clearX -112
 scoreboard players set @e[type=area_effect_cloud,tag=clearMap] clearY 0
 scoreboard players set @e[type=area_effect_cloud,tag=clearMap] clearZ -112
 execute as @e[type=area_effect_cloud,tag=clearMap] at @s run function missilewars:maps/clear_map_loop
-kill @e[type=area_effect_cloud,tag=clearMap]

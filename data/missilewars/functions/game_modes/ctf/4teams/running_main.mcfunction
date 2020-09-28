@@ -1,25 +1,5 @@
 function missilewars:game_modes/force_gamemode
 
-execute as @s[scores={JoinSpectators=1}] run function missilewars:start/join_spectators
-execute as @s[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpectators 0
-
-execute as @s[scores={JoinBlue=1}] run function missilewars:start/join/blue
-execute as @s[scores={JoinBlue=1}] run scoreboard players set @s JoinBlue 0
-
-execute as @s[scores={JoinGreen=1}] run function missilewars:start/join/green
-execute as @s[scores={JoinGreen=1}] run scoreboard players set @s JoinGreen 0
-
-execute as @s[scores={JoinRed=1}] run function missilewars:start/join/red
-execute as @s[scores={JoinRed=1}] run scoreboard players set @s JoinRed 0
-
-execute as @s[scores={JoinBlack=1}] run function missilewars:start/join/black
-execute as @s[scores={JoinBlack=1}] run scoreboard players set @s JoinBlack 0
-
-execute as @s[scores={Leave=1}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
-execute as @s[scores={Leave=1}] at @s run tag @s remove carrier
-execute as @s[scores={Leave=1}] run function missilewars:end/leave
-execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
-
 execute as @s[team=Black,tag=carrier] at @e[type=area_effect_cloud,tag=BlackBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
 execute as @s[team=Red,tag=carrier] at @e[type=area_effect_cloud,tag=RedBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
 execute as @s[team=Blue,tag=carrier] at @e[type=area_effect_cloud,tag=BlueBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] run tag @s add success
@@ -68,3 +48,23 @@ execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s R
 execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 
 function missilewars:main/manage_items
+
+execute as @s[scores={JoinSpectators=1}] run function missilewars:start/join_spectators
+execute as @s[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpectators 0
+
+execute as @s[scores={JoinBlue=1}] run function missilewars:start/join/blue
+execute as @s[scores={JoinBlue=1}] run scoreboard players set @s JoinBlue 0
+
+execute as @s[scores={JoinGreen=1}] run function missilewars:start/join/green
+execute as @s[scores={JoinGreen=1}] run scoreboard players set @s JoinGreen 0
+
+execute as @s[scores={JoinRed=1}] run function missilewars:start/join/red
+execute as @s[scores={JoinRed=1}] run scoreboard players set @s JoinRed 0
+
+execute as @s[scores={JoinBlack=1}] run function missilewars:start/join/black
+execute as @s[scores={JoinBlack=1}] run scoreboard players set @s JoinBlack 0
+
+execute as @s[scores={Leave=1}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
+execute as @s[scores={Leave=1}] at @s run tag @s remove carrier
+execute as @s[scores={Leave=1}] run function missilewars:end/leave
+execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0

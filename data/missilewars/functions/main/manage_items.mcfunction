@@ -22,6 +22,8 @@ scoreboard players set @s tntBroke 0
 execute store result score fallDistance Variables run data get entity @s FallDistance
 execute if score fallDistance Variables matches 0 run scoreboard players operation damage Variables = @s fallDistance
 execute if score fallDistance Variables matches 0 run scoreboard players operation damage Variables /= fallScale Constants
+execute at @s if score fallDistance Variables matches 0 unless score damage Variables matches 0 if block ~ ~-1 ~ slime_block if score @s shifting matches 1 as @s[gamemode=!creative] run function missilewars:game_modes/deal_damage
 execute at @s if score fallDistance Variables matches 0 unless score damage Variables matches 0 unless block ~ ~-1 ~ slime_block as @s[gamemode=!creative] run function missilewars:game_modes/deal_damage
 execute store result score @s fallDistance as @s[tag=!Died] run data get entity @s FallDistance
 execute if score fallDistance Variables matches 0 run tag @s remove Died
+scoreboard players set @s shifting 0

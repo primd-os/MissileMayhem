@@ -170,6 +170,7 @@ scoreboard players set Timer Constants 400
 
 scoreboard players set fallScale Constants 5
 
+scoreboard objectives add shifting minecraft.custom:minecraft.sneak_time
 scoreboard objectives add fallDistance dummy
 scoreboard objectives add deathCheck deathCount
 scoreboard objectives add quits custom:leave_game

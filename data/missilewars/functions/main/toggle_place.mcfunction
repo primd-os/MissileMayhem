@@ -8,3 +8,5 @@ execute as @s[scores={DirectionPlace=0},y_rotation=45..135] run scoreboard playe
 execute as @s[scores={DirectionPlace=0},y_rotation=135..180] run scoreboard players set @s DirecToPlace 2
 execute as @s[scores={DirectionPlace=0},y_rotation=-180..-135] run scoreboard players set @s DirecToPlace 2
 execute as @s[scores={DirectionPlace=0},y_rotation=-135..-45] run scoreboard players set @s DirecToPlace 3
+
+scoreboard players set @s dropItem 0

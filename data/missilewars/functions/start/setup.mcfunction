@@ -56,6 +56,7 @@ execute in missilewars:ctf/game42 run function missilewars:maps/queue/4team
 execute in missilewars:ctf/game43 run function missilewars:maps/queue/4team
 
 scoreboard objectives add snowballTime dummy
+scoreboard objectives add dropItem minecraft.custom:drop
 
 scoreboard objectives add Tomahawk dummy
 scoreboard objectives add Juggernaut dummy

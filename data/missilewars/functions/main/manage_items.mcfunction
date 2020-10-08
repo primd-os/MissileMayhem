@@ -4,7 +4,7 @@ execute as @e[x=0,type=item,nbt=!{Item:{id:"minecraft:crossbow"}},nbt=!{Item:{id
 execute as @e[x=0,type=minecraft:item,tag=!processed] run data merge entity @s {PickupDelay:0}
 execute as @e[x=0,type=minecraft:item,tag=!processed] at @s run tp @s @p
 tag @s add Active
-execute as @e[x=0,type=minecraft:item,tag=!processed] if score @s UUID1 = @a[x=0,tag=Active,limit=1] UUID1 as @a[x=0,tag=Active] run function missilewars:main/toggle_place
+execute if score @s dropItem matches 1.. run function missilewars:main/toggle_place
 execute as @e[x=0,type=minecraft:item,tag=!processed] if score @s UUID1 = @a[x=0,tag=Active,limit=1] UUID1 run tag @s add processed
 execute unless entity @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1,scores={GameState=2..}] run title @s times 0 3 0
 execute unless entity @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1,scores={GameState=2..}] run title @s[gamemode=!spectator] title {"text": ""}

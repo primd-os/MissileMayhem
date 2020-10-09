@@ -20,4 +20,4 @@ execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GreenWin ma
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] BlueWin matches 1 if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=-900..}] run advancement grant @a[x=0,team=Blue] only missilewars:2gud4u
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] GreenWin matches 1 if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=-200..}] run advancement grant @a[x=0,team=Green] only missilewars:manipulation
 execute if score @e[type=area_effect_cloud,tag=BlueBase,x=0,limit=1] BlueWin matches 1 if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={Timer=-200..}] run advancement grant @a[x=0,team=Blue] only missilewars:manipulation
-schedule function missilewars:end/dimension_finish_game 10s
+execute if entity @s[scores={GameState=2}] run scoreboard players operation @s EndTimer = EndTime Constants

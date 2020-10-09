@@ -13,10 +13,7 @@ execute as @s[team=Black,tag=success] run scoreboard players add @e[type=area_ef
 execute as @s[team=Blue,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] BlueScore 1
 execute as @s[team=Green,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] GreenScore 1
 execute as @s[tag=success] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Flag"]}
-execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=BlueBase] run scoreboard players remove @e[type=area_effect_cloud,tag=BlueBase,x=0] BlueScore 1
-execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=RedBase] run scoreboard players remove @e[type=area_effect_cloud,tag=BlueBase,x=0] RedScore 1
-execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=BlackBase] run scoreboard players remove @e[type=area_effect_cloud,tag=BlueBase,x=0] BlackScore 1
-execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=GreenBase] run scoreboard players remove @e[type=area_effect_cloud,tag=BlueBase,x=0] GreenScore 1
+execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 at @s positioned 0 ~ 0 unless entity @s[distance=..1] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] run function missilewars:game_modes/ctf/remove_flag
 execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run kill @s
 execute as @s[tag=success] at @s run tag @s remove carrier
 execute as @s[tag=success] at @s run tellraw @a[x=0] [{"selector": "@s"},{"text": " has claimed a Flag!"}]

@@ -1,0 +1,2 @@
+tellraw @s ["",{"text":"Click here: "},{"text":"https://discord.gg/SGkR9kj","underlined":true,"color":"green","clickEvent":{"action":"open_url","value":"https://discord.gg/SGkR9kj"}}]
+playsound entity.experience_orb.pickup block @s ~ ~ ~ 1 1

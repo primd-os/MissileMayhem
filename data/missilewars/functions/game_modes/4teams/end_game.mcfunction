@@ -2,7 +2,7 @@ execute if score @s PreGreenWin matches 1 run scoreboard players set @s GameStat
 execute if score @s PreBlueWin matches 1 run scoreboard players set @s GameState 2
 execute if score @s PreRedWin matches 1 run scoreboard players set @s GameState 2
 execute if score @s PreBlackWin matches 1 run scoreboard players set @s GameState 2
-execute if entity @s[scores={GameState=2}] run schedule function missilewars:end/dimension_finish_game 10s
+execute if entity @s[scores={GameState=2}] run scoreboard players operation @s EndTimer = EndTime Constants
 execute if entity @s[scores={GameState=2}] run title @a[x=0] times 10 50 10
 execute if score @s GameState matches 2 run scoreboard players set @s GameState 3
 execute if entity @s[scores={PreGreenWin=1}] run title @a[x=0] title {"text": "Green Wins!","color":"green"}

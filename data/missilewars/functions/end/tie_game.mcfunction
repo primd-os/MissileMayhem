@@ -7,4 +7,4 @@ execute if score @s PreGreenWin matches 1 at @e[type=area_effect_cloud,tag=BlueB
 execute if score @s PreBlueWin matches 1 at @e[type=area_effect_cloud,tag=GreenBase,x=0] run playsound minecraft:entity.generic.explode master @a[x=0] 0 25 ~ 100
 execute if score @s PreGreenWin matches 1 at @e[type=area_effect_cloud,tag=BlueBase,x=0] run playsound minecraft:entity.generic.explode master @a[x=0] 0 25 ~ 100
 
-schedule function missilewars:end/dimension_finish_game 10s replace
+execute if entity @e[type=area_effect_cloud,tag=BlueBase,x=0] run scoreboard players operation @s EndTimer = EndTime Constants

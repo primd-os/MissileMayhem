@@ -13,4 +13,4 @@ execute if score newHealth Variables matches ..19 run attribute @s minecraft:gen
 execute if score newHealth Variables matches ..19 run scoreboard players add newHealth Variables 1
 effect give @s instant_health
 tag @s add reset_health
-schedule function missilewars:game_modes/reset_health 2t append
+scoreboard players set @s HealthTimer 2

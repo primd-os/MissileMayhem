@@ -7,5 +7,4 @@ execute as @e[type=area_effect_cloud,tag=clearMap,scores={clearX=112..2000}] at 
 execute as @e[type=area_effect_cloud,tag=clearMap,scores={clearZ=112..2000}] at @s run tp ~ ~32 -112
 execute as @e[type=area_effect_cloud,tag=clearMap,scores={clearZ=112..2000}] at @s run scoreboard players add @e[type=area_effect_cloud,tag=clearMap] clearY 32
 execute as @e[type=area_effect_cloud,tag=clearMap,scores={clearZ=112..2000}] at @s run scoreboard players set @s clearZ -112
-execute as @e[type=area_effect_cloud,tag=clearMap,scores={clearY=0..127}] at @s run function missilewars:maps/slow_clear_map_loop
 execute as @e[type=area_effect_cloud,tag=clearMap,scores={clearY=128..}] run kill @s

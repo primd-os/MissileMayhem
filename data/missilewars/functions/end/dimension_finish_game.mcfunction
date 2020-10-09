@@ -1,1 +1,0 @@
-execute as @e[type=area_effect_cloud,tag=BlueBase,scores={GameState=2..}] at @s run function missilewars:end/finish_game

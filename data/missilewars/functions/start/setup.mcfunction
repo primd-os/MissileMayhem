@@ -74,7 +74,6 @@ scoreboard objectives modify points displayname "Points"
 scoreboard objectives add Constants dummy
 scoreboard objectives add Variables dummy
 
-scoreboard objectives add StopAdverts trigger
 scoreboard objectives add Adverts dummy
 scoreboard objectives add ToggleRanked trigger
 scoreboard objectives add DoRanked dummy
@@ -99,6 +98,8 @@ scoreboard objectives add Game dummy
 scoreboard objectives setdisplay list Game
 scoreboard objectives add GameState dummy
 scoreboard objectives add Timer dummy
+scoreboard objectives add EndTimer dummy
+scoreboard objectives add HealthTimer dummy
 scoreboard objectives add TimerSecs dummy
 scoreboard objectives add TimerTick dummy
 scoreboard objectives add TPA trigger
@@ -168,6 +169,7 @@ scoreboard players set CSPT Constants 5
 scoreboard players set SPM Constants 60
 
 scoreboard players set Timer Constants 400
+scoreboard players set EndTime Constants 200
 
 scoreboard players set fallScale Constants 5
 

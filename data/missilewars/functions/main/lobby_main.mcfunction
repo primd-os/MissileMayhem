@@ -38,9 +38,6 @@ execute as @s[scores={MissileSetSelect=1}] run scoreboard players set @s Missile
 execute as @s run scoreboard players operation @s MissileSet = @s ChooseMissileSet
 execute at @s run function missilewars:start/missile_set_display
 
-execute as @s[scores={StopAdverts=1}] run function missilewars:start/toggle_adverts
-execute as @s[scores={StopAdverts=1}] run scoreboard players set @s StopAdverts 0
-
 execute as @s[scores={ToggleRanked=1}] run function missilewars:start/toggle_ranked
 execute as @s[scores={ToggleRanked=1}] run scoreboard players set @s ToggleRanked 0
 

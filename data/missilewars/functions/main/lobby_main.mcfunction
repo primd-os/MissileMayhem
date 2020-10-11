@@ -11,7 +11,6 @@ scoreboard players reset @s ClearPractice
 scoreboard players enable @s ChooseMap
 scoreboard players enable @s MapVote
 scoreboard players enable @s GiveBook
-scoreboard players enable @s ChooseMissileSet
 scoreboard players enable @s MissileSetSelect
 scoreboard players enable @s ToggleRanked
 

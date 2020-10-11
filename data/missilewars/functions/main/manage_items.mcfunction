@@ -16,7 +16,7 @@ tag @s remove Active
 function missilewars:item_managers/bow
 
 scoreboard players operation tnt m.Variables = @s m.tntBroke
-function missilewars:custom_missile/give_tnt
+execute unless score @s Game matches 1000 run function missilewars:custom_missile/give_tnt
 scoreboard players set @s m.tntBroke 0
 
 execute store result score fallDistance m.Variables run data get entity @s FallDistance

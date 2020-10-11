@@ -28,7 +28,7 @@ execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{i
 execute as @s store result score @s m.Items run clear @s minecraft:firework_rocket 0
 execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{id:"minecraft:firework_rocket"}}] run give @s[scores={m.Game=1..,m.Items=0},x=0] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
 execute as @s store result score @s m.Items run clear @s minecraft:tnt 0
-execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{id:"minecraft:tnt"}}] run give @s[scores={m.Game=1..,m.Items=0},x=0] minecraft:tnt 64
+execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{id:"minecraft:tnt"}}] run give @s[scores={m.Game=1..,m.Items=..1},x=0] minecraft:tnt 63
 
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0

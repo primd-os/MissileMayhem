@@ -1,6 +1,6 @@
 function missilewars:game_modes/force_gamemode
 
-execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death
+execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 
 execute at @e[type=area_effect_cloud,tag=Base,x=0] run particle minecraft:angry_villager ^85 ^75 ^-10 20 50 20 1 20 force
 execute at @e[type=area_effect_cloud,tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 0 ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage

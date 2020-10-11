@@ -1,4 +1,4 @@
-scoreboard players set @s DirectionPlace 1
+scoreboard players set @s m.DirectionPlace 1
 
 # uid matching. rx.died is the matching player who died
 scoreboard players operation $uid rx.temp = @s rx.death_uid
@@ -13,7 +13,7 @@ tag @a[x=0] remove rx.killed
 
 execute as @s[tag=!dieMarked] run tellraw @a[x=0] [{"selector": "@s"},{"text": " died."}]
 tag @s remove dieMarked
-scoreboard players set @s fallDistance 0
-scoreboard players set @s deathCheck 0
+scoreboard players set @s m.fallDistance 0
+scoreboard players set @s m.deathCheck 0
 
 tag @s add Died

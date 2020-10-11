@@ -1,6 +1,6 @@
 execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run summon minecraft:area_effect_cloud ^ ^2 ^ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["UUIDHolder","toFill"]}
-scoreboard players operation @e[type=area_effect_cloud,tag=toFill] UUID1 = @s UUID1
-execute as @e[type=area_effect_cloud,tag=toFill] store result entity @s ReapplicationDelay int 1 run scoreboard players get @s UUID1
+scoreboard players operation @e[type=area_effect_cloud,tag=toFill] m.UUID1 = @s m.UUID1
+execute as @e[type=area_effect_cloud,tag=toFill] store result entity @s ReapplicationDelay int 1 run scoreboard players get @s m.UUID1
 tag @e[type=area_effect_cloud,tag=toFill] remove toFill
 execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^-1 ^ air
 execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^-1 ^ minecraft:structure_block[mode=save]{rotation:"NONE",posX:-1,mode:"SAVE",posY:2,sizeX:3,posZ:-8,integrity:1.0f,showair:0b,sizeY:3,sizeZ:17}

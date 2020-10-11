@@ -8,19 +8,19 @@ summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, Wa
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Shield"],CustomName:'"Shield"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Fireball"],CustomName:'"Fireball"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Arrows"],CustomName:'"Arrows"'}
-scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] GameState 0
-scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] Timer = Timer Constants
+scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] m.GameState 0
+scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] m.Timer = Timer m.Constants
 execute as @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] at @s run tp @s ~ ~ ~ ~180 ~
-scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,x=0] Game = @s Game
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Tomahawk -1
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Juggernaut -1
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Lightning -1
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Shieldbuster -1
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Custom -1
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Shield -1
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Fireball -1
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] Arrows -1
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] GreenScore 1
-scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] BlueScore 1
+scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,x=0] m.Game = @s Game
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.Tomahawk -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.Juggernaut -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.Lightning -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.Shieldbuster -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.Custom -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.Shield -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.Fireball -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.Arrows -1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.GreenScore 1
+scoreboard players set @e[type=area_effect_cloud,tag=BlueBase,x=0] m.BlueScore 1
 tag @e remove NewBase
 function missilewars:maps/slow_clear_map

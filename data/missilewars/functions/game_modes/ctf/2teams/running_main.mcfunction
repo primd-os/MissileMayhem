@@ -8,14 +8,14 @@ execute as @s[team=Black,tag=carrier] at @e[type=area_effect_cloud,tag=BlackBase
 execute as @s[team=Red,tag=carrier] at @e[type=area_effect_cloud,tag=RedBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
 execute as @s[team=Blue,tag=carrier] at @e[type=area_effect_cloud,tag=BlueBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] run tag @s add success
 execute as @s[team=Green,tag=carrier] at @e[type=area_effect_cloud,tag=GreenBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] run tag @s add success
-execute as @s[team=Red,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] RedScore 1
-execute as @s[team=Black,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] BlackScore 1
-execute as @s[team=Blue,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] BlueScore 1
-execute as @s[team=Green,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] GreenScore 1
+execute as @s[team=Red,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] m.RedScore 1
+execute as @s[team=Black,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] m.BlackScore 1
+execute as @s[team=Blue,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] m.BlueScore 1
+execute as @s[team=Green,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=BlueBase,x=0] m.GreenScore 1
 execute as @s[tag=success] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Flag"]}
-execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 at @s positioned 0 ~ 0 unless entity @s[distance=..1] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] run function missilewars:game_modes/ctf/remove_flag
-execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run kill @s
-execute as @s[tag=success] at @s run tag @s remove carrier
+execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s m.UUID1 = @a[sort=nearest,limit=1] m.UUID1 at @s positioned 0 ~ 0 unless entity @s[distance=..1] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] run function missilewars:game_modes/ctf/remove_flag
+execute as @s[tag=success] at @s as @e[tag=Flag,tag=taken] if score @s m.UUID1 = @a[sort=nearest,limit=1] m.UUID1 run kill @s
+execute as @s[tag=success] at @s run tag @s remove carrierm.UUID1m.UUID1
 execute as @s[tag=success] at @s run tellraw @a[x=0] [{"selector": "@s"},{"text": " has claimed a Flag!"}]
 execute as @s[tag=success] at @s run playsound item.book.page_turn block @a[x=0] ~ ~ ~ 1
 execute as @s[tag=success] at @s run particle reverse_portal ~ ~ ~ 0 0 0 10 50
@@ -34,10 +34,10 @@ execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=.
 execute at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s remove claiming
 execute as @s[tag=carrier] run effect give @s glowing 1 0 true
 
-execute as @s[scores={deathCheck=1..1000}] at @s run tag @s remove carrier
-execute as @s[scores={deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
-execute as @s[scores={deathCheck=1..1000}] at @s run scoreboard players set @s RespawnTimer 100
-execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death
+execute as @s[scores={m.deathCheck=1..1000}] at @s run tag @s remove carrier
+execute as @s[scores={m.deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s UUID1 = @a[sort=nearest,limit=1] UUID1 run tag @s remove taken
+execute as @s[scores={m.deathCheck=1..1000}] at @s run scoreboard players set @s m.RespawnTimer 100
+execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 
 function missilewars:main/manage_items
 

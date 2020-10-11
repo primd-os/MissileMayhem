@@ -15,8 +15,8 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "Tomahawk": {
-                      "min": -100,
+                    "m.Tomahawk": {
+                      "min": -1000000,
                       "max": 0
                     }
                   }
@@ -31,8 +31,8 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "Juggernaut": {
-                      "min": -100,
+                    "m.Juggernaut": {
+                      "min": -1000000,
                       "max": 0
                     }
                   }
@@ -47,8 +47,8 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "Lightning": {
-                      "min": -100,
+                    "m.Lightning": {
+                      "min": -1000000,
                       "max": 0
                     }
                   }
@@ -63,8 +63,8 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "Shieldbuster": {
-                      "min": -100,
+                    "m.Shieldbuster": {
+                      "min": -1000000,
                       "max": 0
                     }
                   }
@@ -79,8 +79,8 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "Custom": {
-                      "min": -100,
+                    "m.Custom": {
+                      "min": -1000000,
                       "max": 0
                     }
                   }
@@ -95,8 +95,8 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "Shield": {
-                      "min": -100,
+                    "m.Shield": {
+                      "min": -1000000,
                       "max": 0
                     }
                   }
@@ -111,8 +111,8 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "Arrows": {
-                      "min": -100,
+                    "m.Arrows": {
+                      "min": -1000000,
                       "max": 0
                     }
                   }
@@ -127,8 +127,8 @@
                   "condition": "minecraft:entity_scores",
                   "entity": "this",
                   "scores": {
-                    "Fireball": {
-                      "min": -100,
+                    "m.Fireball": {
+                      "min": -1000000,
                       "max": 0
                     }
                   }

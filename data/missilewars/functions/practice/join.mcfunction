@@ -1,4 +1,4 @@
-scoreboard players set @s Game 1000
+scoreboard players set @s m.Game 1000
 team join Blue @s
 gamemode survival @s
 execute in missilewars:practice run tag @e[type=area_effect_cloud,x=0,tag=PracticeArea,tag=!InUse,sort=random,limit=1] add ToTP

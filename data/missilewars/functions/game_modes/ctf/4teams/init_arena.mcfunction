@@ -10,15 +10,15 @@ summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, Wa
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Shield"],CustomName:'"Shield"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Fireball"],CustomName:'"Fireball"'}
 summon minecraft:area_effect_cloud 0 0.1 -75 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["QueueItem","Arrows"],CustomName:'"Arrows"'}
-scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] GameState 0
-scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] Timer = Timer Constants
-scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] BlueLoss 0
-scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] GreenLoss 0
-scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] RedLoss 0
-scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] BlackLoss 0
+scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] m.GameState 0
+scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] m.Timer = Timer m.Constants
+scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] m.BlueLoss 0
+scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] m.GreenLoss 0
+scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] m.RedLoss 0
+scoreboard players set @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] m.BlackLoss 0
 execute as @e[type=area_effect_cloud,tag=NewBase,tag=BlueBase,x=0] at @s run tp @s ~ ~ ~ ~180 ~
 execute as @e[type=area_effect_cloud,tag=NewBase,tag=RedBase,x=0] at @s run tp @s ~ ~ ~ ~90 ~
 execute as @e[type=area_effect_cloud,tag=NewBase,tag=BlackBase,x=0] at @s run tp @s ~ ~ ~ ~270 ~
-scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,x=0] Game = @s Game
+scoreboard players operation @e[type=area_effect_cloud,tag=NewBase,x=0] m.Game = @s Game
 tag @e remove NewBase
 function missilewars:maps/slow_clear_map

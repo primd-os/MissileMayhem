@@ -4,7 +4,7 @@ effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 2 0 true
 
 function missilewars:game_modes/force_gamemode
 
-execute as @s[scores={deathCheck=1..1000}] at @s run function missilewars:game_modes/death
+execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 
 function missilewars:main/manage_items
 

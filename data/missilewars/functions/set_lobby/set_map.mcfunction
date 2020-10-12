@@ -73,9 +73,9 @@ setblock -54 60 6 minecraft:structure_block[mode=load]{rotation:"NONE",posX:0,mo
 setblock -6 60 -42 minecraft:structure_block[mode=load]{rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:48,posZ:0,integrity:1.0f,showair:0b,name:"missilewars:lobby/b21",sizeY:40,sizeZ:48,showboundingbox:1b} destroy
 setblock -6 60 6 minecraft:structure_block[mode=load]{rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:48,posZ:0,integrity:1.0f,showair:0b,name:"missilewars:lobby/b22",sizeY:40,sizeZ:48,showboundingbox:1b} destroy
 
-setblock -54 61 -42 minecraft:redstone_block
-setblock -54 61 6 minecraft:redstone_block
-setblock -6 61 -42 minecraft:redstone_block
-setblock -6 61 6 minecraft:redstone_block
+setblock -54 61 -42 minecraft:redstone_block destroy
+setblock -54 61 6 minecraft:redstone_block destroy
+setblock -6 61 -42 minecraft:redstone_block destroy
+setblock -6 61 6 minecraft:redstone_block destroy
 
 function missilewars:set_lobby/add_additions

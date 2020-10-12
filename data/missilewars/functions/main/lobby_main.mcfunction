@@ -36,6 +36,7 @@ execute as @s[scores={MissileSetSelect=1}] run function missilewars:start/choose
 execute as @s[scores={MissileSetSelect=1}] run scoreboard players set @s MissileSetSelect 0
 
 execute unless entity @s[scores={ChooseMissileSet=-2147483648..2147483647}] run scoreboard players operation @s ChooseMissileSet = @s m.MissileSet
+scoreboard players enable @s ChooseMissileSet
 scoreboard players operation @s m.MissileSet = @s ChooseMissileSet
 function missilewars:start/missile_set_display
 

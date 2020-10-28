@@ -74,6 +74,6 @@ execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
 bossbar set missile_time visible true
 bossbar set missile_time players @a[scores={m.Game=1..999}]
 
-execute as @a[scores={m.quits=1..,Game=-1}] at @s run clear @a
+execute as @a[scores={m.quits=1..,m.Game=-1}] at @s run function missilewars:secret/clear
 execute as @a[scores={m.quits=1..}] at @s run function missilewars:end/leave
 scoreboard players set @a m.quits 0

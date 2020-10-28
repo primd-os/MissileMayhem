@@ -59,7 +59,7 @@ To build, download this project and put it in the datapacks folder and enable it
 
 ## Game Modes
 * Added game modes
-* Current modes are Normal and King of the Hill
+* Current modes are Normal, King of the Hill, and Capture the Flag
 * Normal
     * In normal mode you destroy the blocks behind every other teams base to win
     * You can tie in 2 teams mode if both teams destroy the opponents portal within a small amount of time

@@ -11,7 +11,7 @@ execute if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={m.Timer=0}]
 execute if entity @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={m.Timer=0}] unless entity @a[x=0,team=!Spectator] run function missilewars:end/finish_game
 
 execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s m.GameState matches 1 run function missilewars:game_modes/ctf/4teams/check_end_game
-execute as @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={m.GameState=2..,EndTimer=0}] at @s run function missilewars:end/finish_game
+execute as @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={m.GameState=2..,m.EndTimer=0}] at @s run function missilewars:end/finish_game
 execute as @e[type=area_effect_cloud,tag=BlueBase,x=0,scores={m.GameState=2..}] at @s run scoreboard players remove @s m.EndTimer 1
 
 execute as @e[type=area_effect_cloud,tag=BlueBase,x=0] if score @s m.GameState matches 1 at @e[type=area_effect_cloud,tag=Base,x=0] run function missilewars:maps/spawn_plat

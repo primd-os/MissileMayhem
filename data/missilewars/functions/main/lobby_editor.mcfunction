@@ -23,7 +23,7 @@ execute if score @s m.Items matches 0 run give @s honey_block{CanPlaceOn:["#miss
 execute store result score @s m.Items run clear @s tnt 0
 scoreboard players operation tnt m.Variables = TntLimit m.Constants
 scoreboard players operation tnt m.Variables -= @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount
-scoreboard players operation tnt m.Variables -= @s Items
+scoreboard players operation tnt m.Variables -= @s m.Items
 execute if score tnt m.Variables matches ..-1 run clear @s tnt 1
 execute if score tnt m.Variables matches 1.. run function missilewars:custom_missile/give_tnt
 execute store result score @s m.Items run clear @s stone_pressure_plate 0

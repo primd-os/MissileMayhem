@@ -7,26 +7,26 @@ execute as @a store result score @s m.UUID1 run data get entity @s UUID[0] 1
 
 execute as @a at @s run function missilewars:main/global_main
 
-execute in missilewars:game1 run function missilewars:game_modes/normal/2teams/game_main
-execute in missilewars:game2 run function missilewars:game_modes/normal/2teams/game_main
-execute in missilewars:game3 run function missilewars:game_modes/normal/2teams/game_main
-execute in missilewars:game41 run function missilewars:game_modes/normal/4teams/game_main
-execute in missilewars:game42 run function missilewars:game_modes/normal/4teams/game_main
-execute in missilewars:game43 run function missilewars:game_modes/normal/4teams/game_main
+execute in missilewars:game1 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/normal/2teams/game_main
+execute in missilewars:game2 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/normal/2teams/game_main
+execute in missilewars:game3 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/normal/2teams/game_main
+execute in missilewars:game41 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/normal/4teams/game_main
+execute in missilewars:game42 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/normal/4teams/game_main
+execute in missilewars:game43 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/normal/4teams/game_main
 
-execute in missilewars:koth/game1 run function missilewars:game_modes/koth/2teams/game_main
-execute in missilewars:koth/game2 run function missilewars:game_modes/koth/2teams/game_main
-execute in missilewars:koth/game3 run function missilewars:game_modes/koth/2teams/game_main
-execute in missilewars:koth/game41 run function missilewars:game_modes/koth/4teams/game_main
-execute in missilewars:koth/game42 run function missilewars:game_modes/koth/4teams/game_main
-execute in missilewars:koth/game43 run function missilewars:game_modes/koth/4teams/game_main
+execute in missilewars:koth/game1 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/koth/2teams/game_main
+execute in missilewars:koth/game2 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/koth/2teams/game_main
+execute in missilewars:koth/game3 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/koth/2teams/game_main
+execute in missilewars:koth/game41 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/koth/4teams/game_main
+execute in missilewars:koth/game42 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/koth/4teams/game_main
+execute in missilewars:koth/game43 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/koth/4teams/game_main
 
-execute in missilewars:ctf/game1 run function missilewars:game_modes/ctf/2teams/game_main
-execute in missilewars:ctf/game2 run function missilewars:game_modes/ctf/2teams/game_main
-execute in missilewars:ctf/game3 run function missilewars:game_modes/ctf/2teams/game_main
-execute in missilewars:ctf/game41 run function missilewars:game_modes/ctf/4teams/game_main
-execute in missilewars:ctf/game42 run function missilewars:game_modes/ctf/4teams/game_main
-execute in missilewars:ctf/game43 run function missilewars:game_modes/ctf/4teams/game_main
+execute in missilewars:ctf/game1 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/2teams/game_main
+execute in missilewars:ctf/game2 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/2teams/game_main
+execute in missilewars:ctf/game3 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/2teams/game_main
+execute in missilewars:ctf/game41 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/4teams/game_main
+execute in missilewars:ctf/game42 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/4teams/game_main
+execute in missilewars:ctf/game43 as @e[type=area_effect_cloud,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/4teams/game_main
 
 execute in missilewars:practice run function missilewars:practice/game_main
 

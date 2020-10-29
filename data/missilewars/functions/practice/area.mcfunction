@@ -12,3 +12,6 @@ fill ~65 0 ~65 ~65 0 ~-65 gray_stained_glass
 fill ~65 0 ~-65 ~-65 0 ~-65 gray_stained_glass
 
 function missilewars:practice/basic_area
+
+forceload remove ~-64 ~-64 ~64 ~64
+forceload add ~ ~

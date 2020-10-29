@@ -15,3 +15,8 @@ fill -114 0 -114 113 0 -114 gray_stained_glass
 fill 113 0 -114 113 0 113 gray_stained_glass
 fill 113 0 113 -114 0 113 gray_stained_glass
 fill -114 0 113 -114 0 -114 gray_stained_glass
+
+forceload remove -200 -200 -100 200
+forceload remove -100 -200 0 200
+forceload remove 0 -200 100 200
+forceload remove 100 -200 200 200

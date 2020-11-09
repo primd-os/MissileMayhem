@@ -1,6 +1,4 @@
-function missilewars:main/shared_game_main
-
-execute as @a[scores={m.Game=1..},x=0] run function missilewars:practice/running_main
+execute as @a[scores={m.Game=1..},x=0] at @s at @s run function missilewars:practice/running_main
 function missilewars:item_managers/run_items
 
 kill @e[type=item,x=0]

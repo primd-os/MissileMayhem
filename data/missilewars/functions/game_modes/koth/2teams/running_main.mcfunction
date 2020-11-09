@@ -6,7 +6,7 @@ function missilewars:game_modes/force_gamemode
 
 execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 
-function missilewars:main/manage_items
+function missilewars:main/shared_run_main
 
 execute as @s[scores={JoinSpectators=1}] run function missilewars:start/join_spectators
 execute as @s[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpectators 0

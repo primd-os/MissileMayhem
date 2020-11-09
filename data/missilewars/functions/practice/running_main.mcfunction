@@ -9,7 +9,7 @@ scoreboard players reset @s ChooseMissileSet
 scoreboard players reset @s MissileSetSelect
 scoreboard players reset @s ToggleRanked
 
-function missilewars:main/manage_items
+function missilewars:main/shared_run_main
 
 execute store result score @s m.Items run clear @s minecraft:creeper_spawn_egg 0
 execute as @s[scores={m.Game=1..,m.Items=0},x=0] at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{id:"minecraft:creeper_spawn_egg"}}] run function missilewars:new_missile/give/tomohawk

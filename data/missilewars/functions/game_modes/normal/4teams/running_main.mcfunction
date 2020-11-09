@@ -11,7 +11,7 @@ effect give @s[tag=!InDamage] minecraft:haste 2 2 true
 effect give @s[tag=!InDamage,nbt=!{foodLevel:20}] minecraft:saturation 1 0 true
 tag @s remove InDamage
 
-function missilewars:main/manage_items
+function missilewars:main/shared_run_main
 
 execute as @s[scores={JoinSpectators=1}] run function missilewars:start/join_spectators
 execute as @s[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpectators 0

@@ -27,3 +27,6 @@ execute at @s if score fallDistance m.Variables matches 0 unless score damage m.
 execute store result score @s m.fallDistance as @s[tag=!Died] run data get entity @s FallDistance
 execute if score fallDistance m.Variables matches 0 run tag @s remove Died
 scoreboard players set @s m.shifting 0
+
+kill @s[dy=-10,y=-64,gamemode=!spectator]
+tp @s[dy=-10,y=-64,gamemode=spectator] 0 100 0

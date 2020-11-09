@@ -1,7 +1,6 @@
 function missilewars:game_modes/4teams/triggers
 
-execute as @e[type=!tnt,type=!area_effect_cloud,x=0] at @s run kill @s[dy=-10,y=-64,gamemode=!spectator]
-execute as @a[x=0,gamemode=spectator] at @s run tp @s[dy=-10,y=-64] 0 100 0
+function missilewars:main/shared_game_main
 function missilewars:main/timer
 execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/normal/4teams/load_map
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Blue,x=0] run scoreboard players set @s m.BlueLoss 1

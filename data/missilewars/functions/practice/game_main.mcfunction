@@ -1,5 +1,4 @@
-execute as @e[type=!tnt,type=!area_effect_cloud,x=0] at @s run kill @s[dy=-10,y=-64,gamemode=!spectator]
-execute as @a[x=0,gamemode=spectator] at @s run tp @s[dy=-10,y=-64] 0 100 0
+function missilewars:main/shared_game_main
 
 execute as @a[scores={m.Game=1..},x=0] run function missilewars:practice/running_main
 function missilewars:item_managers/run_items

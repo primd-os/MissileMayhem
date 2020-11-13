@@ -33,7 +33,7 @@ execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{i
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
 
-execute as @s[scores={ClearPractice=1}] at @s at @e[type=area_effect_cloud,tag=PracticeArea,sort=nearest,limit=1] run summon minecraft:area_effect_cloud ~ ~ ~-63 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["PracticeClear"]} 
+execute as @s[scores={ClearPractice=1}] at @s at @e[type=area_effect_cloud,tag=PracticeArea,sort=nearest,limit=1] run summon minecraft:area_effect_cloud ~ ~ ~-112 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["PracticeClear"]} 
 execute as @s[scores={ClearPractice=1}] run scoreboard players set @s ClearPractice 0
 
 execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death

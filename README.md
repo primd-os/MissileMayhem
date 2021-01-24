@@ -1,7 +1,8 @@
 # MissileMars
 The datapack used for the missilemars minecraft map and server.
 
-Server ip: missilemars.my.pebble.host
+~~Server ip: missilemars.my.pebble.host~~ Server shut down due to costs
+Testing sessions will be announced on discord
 
 Discord Server: https://discord.gg/S6TUQWt
 

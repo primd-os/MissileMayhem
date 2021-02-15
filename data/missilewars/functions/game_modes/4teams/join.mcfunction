@@ -23,3 +23,4 @@ execute if score minTeam m.Variables matches 2 run function missilewars:start/jo
 execute if score minTeam m.Variables matches 3 run function missilewars:start/join/black
 
 function missilewars:game_modes/queue
+advancement grant @s only missilewars:root

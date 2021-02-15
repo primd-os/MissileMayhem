@@ -222,7 +222,7 @@ tag @a remove InBox
 
 function missilewars:start/advert
 
-scoreboard players set @a m.Game -1
+scoreboard players set @a m.Game -2
 
 execute in missilewars:lobby run function missilewars:set_lobby/set_map
 

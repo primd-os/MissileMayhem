@@ -6,3 +6,4 @@ execute if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.BlueMem
 execute if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.BlueMembers >= @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.GreenMembers run function missilewars:start/join/green
 
 function missilewars:game_modes/queue
+advancement grant @s only missilewars:root

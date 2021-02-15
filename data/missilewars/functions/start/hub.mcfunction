@@ -1,4 +1,4 @@
-scoreboard players set @s m.Game -1
+scoreboard players set @s m.Game -2
 scoreboard players reset @s ToggleRanked
 scoreboard players reset @s JoinSpectators
 scoreboard players reset @s JoinGreen

@@ -10,12 +10,8 @@
     "parent": "missilewars:not_hmw",
     "criteria": {
       "requirement": {
-        "trigger": "minecraft:location",
-        "conditions": {
-          "location": {
-            "dimension": "minecraft:overworld"
-          }
-        }
+        "trigger": "minecraft:impossible",
+        "conditions": {}
       }
     }
   }

@@ -9,10 +9,8 @@
     },
     "criteria": {
       "requirement": {
-        "trigger": "minecraft:changed_dimension",
-        "conditions": {
-          "from": "missilewars:lobby"
-        }
+        "trigger": "minecraft:impossible",
+        "conditions": {}
       }
     }
   }

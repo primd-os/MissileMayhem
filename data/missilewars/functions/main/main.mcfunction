@@ -63,17 +63,13 @@ execute as @e[type=tnt,nbt={Fuse: 2s}] at @s run function missilewars:main/tnt_f
 
 function missilewars:new_missile/missile_loop
 
-execute as @a[tag=!PlayedBefore] run function missilewars:start/give_book
+execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] run function missilewars:start/give_book
 execute as @a[tag=!PlayedBefore] run scoreboard players set @s m.DirectionPlace 0
-execute as @a[tag=!PlayedBefore] run team join Lobby @s
-execute as @a[tag=!PlayedBefore] at @s run scoreboard players set @s m.Game 0
-tag @a[tag=!PlayedBefore] add PlayedBefore
+execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] run team join Lobby @s
+execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] at @s run scoreboard players set @s m.Game 0
+execute in missilewars:lobby run tag @a[x=0,tag=!PlayedBefore] add PlayedBefore
 execute as @a[scores={GiveBook=1}] run function missilewars:start/give_book
 execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
 
 bossbar set missile_time visible true
 bossbar set missile_time players @a[scores={m.Game=1..999}]
-
-execute as @a[scores={m.quits=1..,m.Game=-1}] at @s run function missilewars:secret/clear
-execute as @a[scores={m.quits=1..}] at @s run function missilewars:end/leave
-scoreboard players set @a m.quits 0

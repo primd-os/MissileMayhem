@@ -1,3 +1,5 @@
+forceload add -100 -100 100 100
+
 setblock -100 100 -100 minecraft:structure_block[mode=load]{rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:48,posZ:0,integrity:1.0f,showair:0b,name:"missilewars:lobby/11",sizeY:48,sizeZ:48,showboundingbox:1b} destroy
 setblock -100 100 -52 minecraft:structure_block[mode=load]{rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:48,posZ:0,integrity:1.0f,showair:0b,name:"missilewars:lobby/12",sizeY:48,sizeZ:48,showboundingbox:1b} destroy
 setblock -100 100 -4 minecraft:structure_block[mode=load]{rotation:"NONE",posX:0,mode:"LOAD",posY:0,sizeX:48,posZ:0,integrity:1.0f,showair:0b,name:"missilewars:lobby/13",sizeY:48,sizeZ:48,showboundingbox:1b} destroy
@@ -79,3 +81,4 @@ setblock -6 61 -42 minecraft:redstone_block destroy
 setblock -6 61 6 minecraft:redstone_block destroy
 
 function missilewars:set_lobby/add_additions
+forceload remove -100 -100 100 100

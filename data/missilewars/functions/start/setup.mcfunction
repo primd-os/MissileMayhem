@@ -12,8 +12,6 @@ gamerule doWeatherCycle false
 
 difficulty easy
 
-execute in missilewars:lobby run setworldspawn 10 108 40
-
 execute in missilewars:game1 run function missilewars:start/barriers
 execute in missilewars:game2 run function missilewars:start/barriers
 execute in missilewars:game3 run function missilewars:start/barriers
@@ -175,7 +173,6 @@ scoreboard players set fallScale m.Constants 5
 scoreboard objectives add m.shifting minecraft.custom:minecraft.sneak_time
 scoreboard objectives add m.fallDistance dummy
 scoreboard objectives add m.deathCheck deathCount
-scoreboard objectives add m.quits custom:leave_game
 
 scoreboard objectives add m.bowCount dummy
 
@@ -225,10 +222,9 @@ tag @a remove InBox
 
 function missilewars:start/advert
 
-execute as @a at @s run function missilewars:end/finish_game
+scoreboard players set @a m.Game -1
 
 execute in missilewars:lobby run function missilewars:set_lobby/set_map
-execute in missilewars:lobby as @a run tp 10 108.5 40
 
 execute in missilewars:practice run function missilewars:practice/create
 

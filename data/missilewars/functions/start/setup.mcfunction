@@ -12,47 +12,6 @@ gamerule doWeatherCycle false
 
 difficulty easy
 
-execute in missilewars:game1 run function missilewars:start/barriers
-execute in missilewars:game2 run function missilewars:start/barriers
-execute in missilewars:game3 run function missilewars:start/barriers
-execute in missilewars:game41 run function missilewars:start/barriers
-execute in missilewars:game42 run function missilewars:start/barriers
-execute in missilewars:game43 run function missilewars:start/barriers
-
-execute in missilewars:koth/game1 run function missilewars:start/barriers
-execute in missilewars:koth/game2 run function missilewars:start/barriers
-execute in missilewars:koth/game3 run function missilewars:start/barriers
-execute in missilewars:koth/game41 run function missilewars:start/barriers
-execute in missilewars:koth/game42 run function missilewars:start/barriers
-execute in missilewars:koth/game43 run function missilewars:start/barriers
-
-execute in missilewars:ctf/game1 run function missilewars:start/barriers
-execute in missilewars:ctf/game2 run function missilewars:start/barriers
-execute in missilewars:ctf/game3 run function missilewars:start/barriers
-execute in missilewars:ctf/game41 run function missilewars:start/barriers
-execute in missilewars:ctf/game42 run function missilewars:start/barriers
-execute in missilewars:ctf/game43 run function missilewars:start/barriers
-
-execute in missilewars:game1 run function missilewars:maps/queue/2team
-execute in missilewars:game2 run function missilewars:maps/queue/2team
-execute in missilewars:game3 run function missilewars:maps/queue/2team
-execute in missilewars:koth/game1 run function missilewars:maps/queue/2team
-execute in missilewars:koth/game2 run function missilewars:maps/queue/2team
-execute in missilewars:koth/game3 run function missilewars:maps/queue/2team
-execute in missilewars:ctf/game1 run function missilewars:maps/queue/2team
-execute in missilewars:ctf/game2 run function missilewars:maps/queue/2team
-execute in missilewars:ctf/game3 run function missilewars:maps/queue/2team
-
-execute in missilewars:game41 run function missilewars:maps/queue/4team
-execute in missilewars:game42 run function missilewars:maps/queue/4team
-execute in missilewars:game43 run function missilewars:maps/queue/4team
-execute in missilewars:koth/game41 run function missilewars:maps/queue/4team
-execute in missilewars:koth/game42 run function missilewars:maps/queue/4team
-execute in missilewars:koth/game43 run function missilewars:maps/queue/4team
-execute in missilewars:ctf/game41 run function missilewars:maps/queue/4team
-execute in missilewars:ctf/game42 run function missilewars:maps/queue/4team
-execute in missilewars:ctf/game43 run function missilewars:maps/queue/4team
-
 scoreboard objectives add m.snowballTime dummy
 scoreboard objectives add m.dropItem minecraft.custom:drop
 
@@ -224,9 +183,50 @@ function missilewars:start/advert
 
 scoreboard players set @a m.Game -2
 
-execute in missilewars:lobby run function missilewars:set_lobby/set_map
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game1 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game2 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game3 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game41 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game42 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game43 run function missilewars:start/barriers
 
-execute in missilewars:practice run function missilewars:practice/create
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game1 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game2 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game3 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game41 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game42 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game43 run function missilewars:start/barriers
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game1 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game2 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game3 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game41 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game42 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game43 run function missilewars:start/barriers
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game1 run function missilewars:maps/queue/2team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game2 run function missilewars:maps/queue/2team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game3 run function missilewars:maps/queue/2team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game1 run function missilewars:maps/queue/2team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game2 run function missilewars:maps/queue/2team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game3 run function missilewars:maps/queue/2team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game1 run function missilewars:maps/queue/2team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game2 run function missilewars:maps/queue/2team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game3 run function missilewars:maps/queue/2team
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game41 run function missilewars:maps/queue/4team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game42 run function missilewars:maps/queue/4team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:game43 run function missilewars:maps/queue/4team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game41 run function missilewars:maps/queue/4team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game42 run function missilewars:maps/queue/4team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game43 run function missilewars:maps/queue/4team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game41 run function missilewars:maps/queue/4team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game42 run function missilewars:maps/queue/4team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game43 run function missilewars:maps/queue/4team
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:lobby run function missilewars:set_lobby/set_map
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:practice run function missilewars:practice/create
 
 execute in missilewars:store run forceload add 0 0 0 -1
 kill @e[type=item]

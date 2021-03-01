@@ -10,4 +10,4 @@ execute as @e[type=area_effect_cloud,tag=PracticeClear,x=0] at @s run scoreboard
 execute as @e[type=area_effect_cloud,tag=PracticeClear,x=0,scores={m.points=224..}] at @s at @e[type=area_effect_cloud,tag=PracticeArea,sort=nearest,limit=1] run function missilewars:practice/basic_area
 execute as @e[type=area_effect_cloud,tag=PracticeClear,x=0,scores={m.points=224..}] at @s run kill @s
 
-execute at @e[type=area_effect_cloud,tag=PracticeArea,x=0] run fill ~-3 ~ ~-3 ~3 ~ ~3 obsidian
+execute at @e[type=area_effect_cloud,tag=PracticeArea,tag=InUse,x=0] run fill ~-3 ~ ~-3 ~3 ~ ~3 obsidian

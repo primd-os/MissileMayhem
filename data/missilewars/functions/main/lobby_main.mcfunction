@@ -55,13 +55,13 @@ execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,li
 execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
 tag @s[tag=!InBox] remove Editor
 
+execute positioned -6.5 82 6.5 run playsound minecraft:entity.player.attack.sweep master @s[distance=..2] ~ ~ ~ 100 2 1
 execute positioned -6.5 82 6.5 run tp @s[distance=..2] 10 108.5 40
+execute positioned -6.5 82 6.5 run particle portal ~ ~ ~ 0 0 0 2 1 normal @s
 
-execute store result score NumBook m.Variables run clear @s writable_book{Enchantments:[{id:"minecraft:binding_curse",lvl:1}]} 0
-execute if score NumBook m.Variables matches 0 run give @s writable_book{display:{Name:'{"text":"Custom Missile"}'},Enchantments:[{id:"minecraft:binding_curse",lvl:1}],pages:["missilewars:default"]}
-execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_off_head
-execute as @s[tag=!InBox,nbt=!{Inventory:[{id:"minecraft:writable_book",Slot:103b}]}] run function missilewars:custom_missile/move_to_head
-clear @s written_book{Enchantments:[{id:"minecraft:binding_curse"}]}
+execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:written_book",Count:1b}]}] run clear @s written_book
+execute as @s[tag=InBox,nbt=!{Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_off_head
+execute as @s[tag=!InBox,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_to_head
 
 execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air
 execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:air

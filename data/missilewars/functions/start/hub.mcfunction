@@ -9,10 +9,12 @@ scoreboard players reset @s Practice
 scoreboard players reset @s ClearPractice
 scoreboard players reset @s Leave
 scoreboard players reset @s ChooseMap
-scoreboard players reset @s PrevMapVote
 scoreboard players reset @s MapVote
+scoreboard players operation @s MapVote = @s PrevMapVote
 scoreboard players reset @s GiveBook
 scoreboard players reset @s ChooseMissileSet
 scoreboard players reset @s MissileSetSelect
 scoreboard players reset @s TPA
 scoreboard players reset @s TPAccept
+
+tag @e[type=area_effect_cloud,x=0,tag=PracticeArea,sort=nearest,limit=1] remove InUse

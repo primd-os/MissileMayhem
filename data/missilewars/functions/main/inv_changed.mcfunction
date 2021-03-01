@@ -1,0 +1,1 @@
+scoreboard players set @s m.inv_change 1

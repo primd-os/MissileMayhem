@@ -14,6 +14,7 @@ difficulty easy
 
 scoreboard objectives add m.snowballTime dummy
 scoreboard objectives add m.dropItem minecraft.custom:drop
+scoreboard objectives add m.inv_change dummy
 
 scoreboard objectives add m.Tomahawk dummy
 scoreboard objectives add m.Juggernaut dummy
@@ -42,7 +43,7 @@ scoreboard objectives add Practice trigger
 scoreboard objectives add ClearPractice trigger
 scoreboard objectives add Leave trigger
 scoreboard objectives add ChooseMap trigger
-scoreboard objectives add PrevMapVote trigger
+scoreboard objectives add PrevMapVote dummy
 scoreboard objectives add MapVote trigger
 scoreboard objectives add GiveBook trigger
 scoreboard objectives add m.PrevMissileSet dummy

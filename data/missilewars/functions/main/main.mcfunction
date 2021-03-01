@@ -3,7 +3,7 @@ execute in missilewars:lobby as @a[x=0,scores={m.Game=-1}] run function missilew
 
 execute in missilewars:lobby run scoreboard players set @a[x=0] m.Game 0
 execute as @a[scores={m.Game=0}] at @s run function missilewars:main/lobby_main
-execute as @a store result score @s m.UUID1 run data get entity @s UUID[0] 1
+execute as @a unless score @s m.UUID1 matches -2147483648..2147483647 store result score @s m.UUID1 run data get entity @s UUID[0] 1
 
 execute as @a at @s run function missilewars:main/global_main
 
@@ -53,7 +53,7 @@ execute in missilewars:lobby run kill @e[type=item,x=0]
 
 execute in missilewars:lobby as @a[x=0,team=Spectator] run function missilewars:main/clear_inv
 execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
-execute in missilewars:lobby as @e[type=area_effect_cloud,tag=CustomMissileArea,x=0] at @s unless entity @a[tag=InBox,distance=..10] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 air
+execute in missilewars:lobby as @e[type=area_effect_cloud,tag=CustomMissileArea,x=0] at @s if entity @a[tag=InBox,distance=..15] unless entity @a[tag=InBox,distance=..10] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 air
 
 tag @a[scores={m.Game=1..999}] add InGame
 tag @a[scores={m.Game=..0}] remove InGame

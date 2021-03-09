@@ -1,4 +1,4 @@
-scoreboard players operation Map m.Variables = @r[scores={m.Game=1..},x=0] MapVote
+scoreboard players operation Map m.Variables = @r[scores={m.Game=1..},team=!Spectator,x=0] MapVote
 
 execute as @e[type=area_effect_cloud,tag=Base,x=0] at @s if score Map m.Variables matches 7 run tp ^50 ^ ^
 

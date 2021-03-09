@@ -17,10 +17,10 @@ execute as @s[tag=success] at @s run playsound item.book.page_turn block @a[x=0]
 execute as @s[tag=success] at @s run particle reverse_portal ~ ~ ~ 0 0 0 10 50
 tag @s remove success
 
-execute as @s[tag=!carrier,team=Black] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!BlackBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
-execute as @s[tag=!carrier,team=Blue] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!BlueBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
-execute as @s[tag=!carrier,team=Red] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!RedBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
-execute as @s[tag=!carrier,team=Green] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!GreenBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
+execute as @s[tag=!carrier,team=Black,gamemode=!spectator] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!BlackBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
+execute as @s[tag=!carrier,team=Blue,gamemode=!spectator] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!BlueBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
+execute as @s[tag=!carrier,team=Red,gamemode=!spectator] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!RedBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
+execute as @s[tag=!carrier,team=Green,gamemode=!spectator] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!GreenBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tellraw @a[x=0] [{"selector": "@s"},{"text": " has taken a Flag!"}]
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run playsound item.book.page_turn block @a[x=0] ~ ~ ~ 1 1
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run particle portal ~ ~ ~ 0 0 0 10 50
@@ -29,6 +29,7 @@ execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=.
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s add carrier
 execute at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s remove claiming
 execute as @s[tag=carrier] run effect give @s glowing 1 0 true
+execute as @s[tag=carrier] run effect give @s resistance 1 0 true
 
 execute at @e[type=area_effect_cloud,tag=Base,x=0] run particle minecraft:angry_villager ^85 ^75 ^-10 20 50 20 1 20 force
 execute at @e[type=area_effect_cloud,tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 0 ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage

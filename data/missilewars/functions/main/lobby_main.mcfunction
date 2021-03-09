@@ -61,6 +61,9 @@ execute positioned -6.5 82 6.5 run particle portal ~ ~ ~ 0 0 0 2 1 normal @s
 
 execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:written_book",Count:1b}]}] run clear @s written_book
 execute as @s[tag=InBox,nbt=!{Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_off_head
+execute as @s[tag=m.InHeadProgress2] run function missilewars:custom_missile/move_to_head2
+execute as @s[tag=m.InHeadProgress] run tag @s add m.InHeadProgress2
+execute as @s[tag=m.InHeadProgress] run tag @s remove m.InHeadProgress
 execute as @s[tag=!InBox,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_to_head
 
 execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air

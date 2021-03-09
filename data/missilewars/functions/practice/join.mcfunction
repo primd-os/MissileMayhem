@@ -7,7 +7,7 @@ execute in missilewars:practice at @e[type=area_effect_cloud,x=0,tag=ToTP] run s
 execute in missilewars:practice run tag @e[type=area_effect_cloud,x=0,tag=ToTP] add InUse
 execute in missilewars:practice run tag @e[x=0] remove ToTP
 
-function missilewars:main/clear_inv
+clear @s
 
 function missilewars:item_managers/bow
 function missilewars:new_missile/give/tomohawk

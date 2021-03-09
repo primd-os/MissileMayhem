@@ -17,4 +17,4 @@ scoreboard players reset @s MissileSetSelect
 scoreboard players reset @s TPA
 scoreboard players reset @s TPAccept
 
-tag @e[type=area_effect_cloud,x=0,tag=PracticeArea,sort=nearest,limit=1] remove InUse
+tag @e[type=area_effect_cloud,x=0,tag=PracticeArea,tag=InUse,sort=nearest,limit=1] remove InUse

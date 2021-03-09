@@ -4,10 +4,10 @@ effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 2 0 true
 
 function missilewars:game_modes/force_gamemode
 
-execute as @s[team=Black,tag=carrier] at @e[type=area_effect_cloud,tag=BlackBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
-execute as @s[team=Red,tag=carrier] at @e[type=area_effect_cloud,tag=RedBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
-execute as @s[team=Blue,tag=carrier] at @e[type=area_effect_cloud,tag=BlueBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] run tag @s add success
-execute as @s[team=Green,tag=carrier] at @e[type=area_effect_cloud,tag=GreenBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] run tag @s add success
+execute as @s[team=Black,tag=carrier] at @e[type=area_effect_cloud,tag=BlackBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] at @s unless entity @e[type=area_effect_cloud,distance=..3,tag=Flag] run tag @s add success
+execute as @s[team=Red,tag=carrier] at @e[type=area_effect_cloud,tag=RedBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] at @s unless entity @e[type=area_effect_cloud,distance=..3,tag=Flag] run tag @s add success
+execute as @s[team=Blue,tag=carrier] at @e[type=area_effect_cloud,tag=BlueBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] at @s unless entity @e[type=area_effect_cloud,distance=..3,tag=Flag] run tag @s add success
+execute as @s[team=Green,tag=carrier] at @e[type=area_effect_cloud,tag=GreenBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] at @s unless entity @e[type=area_effect_cloud,distance=..3,tag=Flag] run tag @s add success
 execute as @s[team=Red,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=GameMarker,x=0] m.RedScore 1
 execute as @s[team=Black,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=GameMarker,x=0] m.BlackScore 1
 execute as @s[team=Blue,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=GameMarker,x=0] m.BlueScore 1
@@ -33,6 +33,7 @@ execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=.
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s add carrier
 execute at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s remove claiming
 execute as @s[tag=carrier] run effect give @s glowing 1 0 true
+execute as @s[tag=carrier] run effect give @s resistance 1 0 true
 
 execute as @s[scores={m.deathCheck=1..1000}] at @s run tag @s remove carrier
 execute as @s[scores={m.deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s m.UUID1 = @a[sort=nearest,limit=1] m.UUID1 run tag @s remove taken

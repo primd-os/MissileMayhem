@@ -1,4 +1,5 @@
 execute store success score stringTest m.Constants run data modify storage string:io out set value ["m","w",":"]
+data modify storage string:io out set value []
 
 execute if score stringTest m.Constants matches 0 run function missilewars:custom_missile/move_to_cloud
 execute unless score stringTest m.Constants matches 0 run function missilewars:custom_missile/set_default

@@ -27,7 +27,7 @@ scoreboard objectives add m.Arrows dummy
 scoreboard objectives add m.QueuePos dummy
 
 scoreboard objectives add m.points dummy
-scoreboard objectives modify m.points displayname "Points"
+scoreboard objectives modify m.points displayname "Rating"
 
 scoreboard objectives add m.Constants dummy
 scoreboard objectives add m.Variables dummy

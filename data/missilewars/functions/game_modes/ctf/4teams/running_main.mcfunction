@@ -31,14 +31,8 @@ execute at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming]
 execute as @s[tag=carrier] run effect give @s glowing 1 0 true
 execute as @s[tag=carrier] run effect give @s resistance 1 0 true
 
-execute at @e[type=area_effect_cloud,tag=Base,x=0] run particle minecraft:angry_villager ^85 ^75 ^-10 20 50 20 1 20 force
-execute at @e[type=area_effect_cloud,tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 0 ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage
-effect give @s[tag=InDamage] wither 1 4
-effect give @s[tag=InDamage] hunger 1 4
-effect give @s[nbt={SelectedItem:{id:"minecraft:magenta_wool"}}] minecraft:haste 1 10 true
-effect give @s[tag=!InDamage] minecraft:haste 2 2 true
-effect give @s[tag=!InDamage,nbt=!{foodLevel:20}] minecraft:saturation 1 0 true
-tag @s remove InDamage
+effect give @s minecraft:haste 2 2 true
+effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 1 0 true
 
 execute as @s[scores={m.deathCheck=1..1000}] at @s run tag @s remove carrier
 execute as @s[scores={m.deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s m.UUID1 = @a[sort=nearest,limit=1] m.UUID1 run tag @s remove taken

@@ -48,10 +48,10 @@ scoreboard players set @s m.tntCount 0
 scoreboard players set @s m.tntBroke 0
 
 tag @s remove InBox
-execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=15,dz=21] run tag @s add InBox
-execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=15,dz=21] run tag @s add InBox
-execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=0] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=15,dz=7] run tag @s add InBox
-execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-180] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=15,dz=7] run tag @s add InBox
+execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=25,dz=21] run tag @s add InBox
+execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=25,dz=21] run tag @s add InBox
+execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=0] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
+execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-180] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
 execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
 tag @s[tag=!InBox] remove Editor
 
@@ -60,11 +60,8 @@ execute positioned -6.5 82 6.5 run tp @s[distance=..2] 10 108.5 40
 execute positioned -6.5 82 6.5 run particle portal ~ ~ ~ 0 0 0 2 1 normal @s
 
 execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:written_book",Count:1b}]}] run clear @s written_book
-execute as @s[tag=InBox,nbt=!{Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_off_head
-execute as @s[tag=m.InHeadProgress2] run function missilewars:custom_missile/move_to_head2
-execute as @s[tag=m.InHeadProgress] run tag @s add m.InHeadProgress2
-execute as @s[tag=m.InHeadProgress] run tag @s remove m.InHeadProgress
-execute as @s[tag=!InBox,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_to_head
+execute as @s[tag=InBox,tag=!m.strInProgress,nbt=!{Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_off_head
+execute as @s[tag=!InBox,tag=!m.strInProgress,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/attempt_move_to_head
 
 execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air
 execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:air

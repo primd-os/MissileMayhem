@@ -1,0 +1,1 @@
+execute as @a if score @s m.UUID1 = $callback string at @s run function missilewars:custom_missile/move_to_head

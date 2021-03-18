@@ -42,8 +42,6 @@ To build, download this project and put it in the datapacks folder and enable it
 * These maps work in all modes and are voted on by the players in the queue
 ### Normal
 ![Missiles](images/maps/normal.png)
-### No Walls
-![Missiles](images/maps/no_walls.png)
 ### Small Walls
 ![Missiles](images/maps/small.png)
 ### Center Wall
@@ -52,8 +50,6 @@ To build, download this project and put it in the datapacks folder and enable it
 ![Missiles](images/maps/platforms.png)
 ### Weak Center
 ![Missiles](images/maps/weak_center.png)
-### Bridge
-![Missiles](images/maps/bridge.png)
 ### Diagonal
 ![Missiles](images/maps/diagonal.png)
 

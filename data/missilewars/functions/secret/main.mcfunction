@@ -2,7 +2,6 @@ scoreboard players enable @s Leave
 scoreboard players enable @s TPA
 scoreboard players enable @s[tag=Requested] TPAccept
 scoreboard players reset @s[tag=!Requested] TPAccept
-scoreboard players reset @s Practice
 execute as @s[scores={Leave=1}] run function missilewars:secret/clear
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0

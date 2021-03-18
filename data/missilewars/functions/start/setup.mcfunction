@@ -157,10 +157,10 @@ team modify Black color black
 team modify Spectator color dark_gray
 team modify Lobby color gray
 team modify Sumo color gray
-team modify Blue collisionRule pushOtherTeams
-team modify Green collisionRule pushOtherTeams
-team modify Red collisionRule pushOtherTeams
-team modify Black collisionRule pushOtherTeams
+team modify Blue collisionRule pushOwnTeam
+team modify Green collisionRule pushOwnTeam
+team modify Red collisionRule pushOwnTeam
+team modify Black collisionRule pushOwnTeam
 team modify Lobby collisionRule never
 team modify Sumo collisionRule always
 team modify Blue friendlyFire false

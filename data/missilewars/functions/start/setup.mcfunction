@@ -1,8 +1,5 @@
 gamerule fallDamage false
 gamerule drowningDamage false
-gamerule doImmediateRespawn true
-gamerule keepInventory true
-gamerule sendCommandFeedback false
 gamerule showDeathMessages false
 
 time set noon

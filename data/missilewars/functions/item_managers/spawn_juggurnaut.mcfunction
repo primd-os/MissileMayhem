@@ -2,4 +2,4 @@ execute if entity @s[scores={m.MissileSet=0}] run setblock ~ ~ ~ minecraft:struc
 execute if entity @s[scores={m.MissileSet=1}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/old/juggurnaut",posX:-1,posY:-5,posZ:-14}
 execute if entity @s[scores={m.MissileSet=2}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/thin/juggurnaut",posX:0,posY:-7,posZ:-18}
 execute if entity @s[scores={m.MissileSet=3}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/flat/juggurnaut",posX:-2,posY:-4,posZ:-16}
-execute if entity @s[scores={m.MissileSet=4}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/utility/juggurnaut",posX:-2,posY:-4,posZ:-16}
+execute if entity @s[scores={m.MissileSet=4}] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{mode:"LOAD",name:"missilewars:missiles/utility/juggurnaut",posX:-1,posY:-4,posZ:-14}

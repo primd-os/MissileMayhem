@@ -6,4 +6,3 @@ execute as @s[tag=!m.loadFail] run function missilewars:custom_missile/load_miss
 execute as @s[tag=m.loadFail] run tellraw @s {"color": "red","text": "You can't load from structures not starting with 'mw:'!"}
 execute as @s[tag=m.loadFail] run playsound minecraft:block.note_block.guitar block @s ~ ~ ~ 1 0
 tag @s remove m.loadFail
-tag @s remove m.strInProgress

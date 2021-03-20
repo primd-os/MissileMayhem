@@ -53,7 +53,7 @@ execute in missilewars:lobby run kill @e[type=item,x=0]
 
 execute in missilewars:lobby as @a[x=0,team=Spectator] run function missilewars:main/clear_inv
 execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
-execute in missilewars:lobby as @e[type=area_effect_cloud,tag=CustomMissileArea,x=0] at @s if entity @a[tag=InBox,distance=..15] unless entity @a[tag=InBox,distance=..10] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 air
+execute in missilewars:lobby as @e[type=area_effect_cloud,tag=CustomMissileArea,x=0] at @s if entity @a[distance=..15] unless entity @a[tag=InBox,distance=..10] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 air
 
 tag @a[scores={m.Game=1..999}] add InGame
 tag @a[scores={m.Game=..0}] remove InGame

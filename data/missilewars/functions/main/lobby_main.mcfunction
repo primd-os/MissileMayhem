@@ -19,7 +19,7 @@ execute unless entity @s[scores={m.points=-2147483648..2147483647}] run scoreboa
 tag @s remove carrier
 
 gamemode adventure @s[gamemode=!creative]
-execute in missilewars:lobby run spawnpoint @s 10 108 40
+execute in missilewars:lobby positioned 10 108 40 run function hub:main/death/spawnpoint
 execute in missilewars:lobby run tp @s[nbt=!{Dimension:"missilewars:lobby"}] 10 108 40
 effect give @s saturation 2 0 true
 

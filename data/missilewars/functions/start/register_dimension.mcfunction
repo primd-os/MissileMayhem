@@ -1,21 +1,21 @@
-execute as @s[nbt={SpawnDimension:"missilewars:game1"}] in missilewars:game1 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:game2"}] in missilewars:game2 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:game3"}] in missilewars:game3 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:game41"}] in missilewars:game41 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:game42"}] in missilewars:game42 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:game43"}] in missilewars:game43 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:koth/game1"}] in missilewars:koth/game1 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:koth/game2"}] in missilewars:koth/game2 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:koth/game3"}] in missilewars:koth/game3 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:koth/game41"}] in missilewars:koth/game41 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:koth/game42"}] in missilewars:koth/game42 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:ctf/game43"}] in missilewars:ctf/game43 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:ctf/game1"}] in missilewars:ctf/game1 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:ctf/game2"}] in missilewars:ctf/game2 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:ctf/game3"}] in missilewars:ctf/game3 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:ctf/game41"}] in missilewars:ctf/game41 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:ctf/game42"}] in missilewars:ctf/game42 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:ctf/game43"}] in missilewars:ctf/game43 run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:lobby"}] in missilewars:lobby run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:practice"}] in missilewars:practice run function hub:main/death_warp
-execute as @s[nbt={SpawnDimension:"missilewars:store"}] in missilewars:store run function hub:main/death_warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:game1"} in missilewars:game1 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:game2"} in missilewars:game2 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:game3"} in missilewars:game3 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:game41"} in missilewars:game41 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:game42"} in missilewars:game42 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:game43"} in missilewars:game43 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:koth/game1"} in missilewars:koth/game1 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:koth/game2"} in missilewars:koth/game2 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:koth/game3"} in missilewars:koth/game3 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:koth/game41"} in missilewars:koth/game41 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:koth/game42"} in missilewars:koth/game42 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:ctf/game43"} in missilewars:ctf/game43 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:ctf/game1"} in missilewars:ctf/game1 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:ctf/game2"} in missilewars:ctf/game2 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:ctf/game3"} in missilewars:ctf/game3 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:ctf/game41"} in missilewars:ctf/game41 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:ctf/game42"} in missilewars:ctf/game42 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:ctf/game43"} in missilewars:ctf/game43 run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:lobby"} in missilewars:lobby run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:practice"} in missilewars:practice run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:store"} in missilewars:store run function hub:main/death/warp

@@ -1,5 +1,5 @@
 # MissileMars
-The datapack used for the missilemars minecraft minigame.
+The datapack used for the missilemars minecraft minigame. Note this is a [PRIMD Minigame module](https://github.com/primd-os/Hub) and does not work on it's own.
 
 Public server coming soon.
 
@@ -8,11 +8,6 @@ Discord Server: https://discord.gg/S6TUQWt
 # Download
 1. Go to https://github.com/Devon7925/MissileMars/releases and download the latest release
 2. Move the map in the zip folder to your .minecraft/saves folder
-
-# Build Latest version
-Note the latest version will likely have more bugs than release versions.
-
-To build, download this project and put it in the datapacks folder and enable it when creating a world.
 
 # Improvements
 ## Missiles

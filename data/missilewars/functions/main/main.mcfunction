@@ -42,7 +42,7 @@ execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Black] at @s if block
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Red] at @s if block ~ ~-1 ~ red_concrete run function missilewars:start/join/red
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Spectator] at @s if block ~ ~-1 ~ light_gray_concrete run function missilewars:start/join_spectators
 
-execute in missilewars:lobby positioned 15.5 119 1.5 as @a[distance=..0.75] run function missilewars:set_lobby/overworld_tp
+execute in missilewars:lobby positioned 15.5 119 1.5 as @a[distance=..0.75,tag=Parkour] run function missilewars:set_lobby/end_parkour
 
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run playsound entity.generic.explode block @a ~ ~ ~ 1
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run particle explosion ~ ~ ~

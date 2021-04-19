@@ -2,11 +2,6 @@ gamerule fallDamage false
 gamerule drowningDamage false
 gamerule showDeathMessages false
 
-time set noon
-gamerule doDaylightCycle false
-weather clear
-gamerule doWeatherCycle false
-
 difficulty easy
 
 scoreboard objectives add m.snowballTime dummy
@@ -56,10 +51,6 @@ scoreboard objectives add m.EndTimer dummy
 scoreboard objectives add m.HealthTimer dummy
 scoreboard objectives add m.TimerSecs dummy
 scoreboard objectives add m.TimerTick dummy
-scoreboard objectives add TPA trigger
-scoreboard objectives add m.tpValue dummy
-scoreboard objectives add TPAccept trigger
-scoreboard objectives add m.tpaccValue dummy
 
 execute unless score maxTpValue m.Variables matches -2147483648..2147483647 run scoreboard players set maxTpValue m.Variables 1
 

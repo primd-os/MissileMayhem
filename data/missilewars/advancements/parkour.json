@@ -3,8 +3,8 @@
       "icon": {
         "item": "grass_block"
       },
-      "title": "Escapee",
-      "description": "Go to the overworld",
+      "title": "Complete Parkour",
+      "description": "Complete the parkour",
       "hidden": true
     },
     "parent": "missilewars:not_hmw",

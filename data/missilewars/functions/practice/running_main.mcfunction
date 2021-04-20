@@ -2,6 +2,7 @@ effect give @s minecraft:haste 2 2 true
 effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 2 0 true
 scoreboard players enable @s Leave
 scoreboard players enable @s ClearPractice
+scoreboard players enable @s Heal
 scoreboard players reset @s JoinSpectators
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
@@ -35,5 +36,7 @@ execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
 
 execute as @s[scores={ClearPractice=1}] at @s at @e[type=area_effect_cloud,tag=PracticeArea,sort=nearest,limit=1] run summon minecraft:area_effect_cloud ~ ~ ~-112 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["PracticeClear"]} 
 execute as @s[scores={ClearPractice=1}] run scoreboard players set @s ClearPractice 0
+execute as @s[scores={Heal=1}] run effect give @s instant_health 1 10 true
+execute as @s[scores={Heal=1}] run scoreboard players set @s Heal 0
 
 execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death

@@ -33,6 +33,7 @@ scoreboard objectives add JoinRed trigger
 scoreboard objectives add JoinBlack trigger
 scoreboard objectives add Practice trigger
 scoreboard objectives add ClearPractice trigger
+scoreboard objectives add Heal trigger
 scoreboard objectives add Leave trigger
 scoreboard objectives add ChooseMap trigger
 scoreboard objectives add PrevMapVote dummy

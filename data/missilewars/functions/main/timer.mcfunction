@@ -9,7 +9,9 @@ execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0},limit
 execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0},limit=1] at @s run scoreboard players set @s m.GameState 1
 execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0},limit=1] at @s run playsound minecraft:block.note_block.bit block @a[x=0] ~ ~ ~ 1 2 1
 execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0}] at @s run clear @a[x=0] magenta_wool
-execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0}] run function missilewars:new_missile/new_missile
+execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0}] run scoreboard players set @s m.Shield 3
+execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0}] run scoreboard players set @s m.Arrows 2
+execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0}] run scoreboard players set @s m.Fireball 1
 execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0}] run function missilewars:new_missile/new_missile
 execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0}] run function missilewars:new_missile/new_missile
 execute as @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=0}] run function missilewars:new_missile/new_missile

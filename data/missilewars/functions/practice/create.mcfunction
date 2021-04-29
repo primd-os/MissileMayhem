@@ -1,5 +1,5 @@
 kill @e[type=area_effect_cloud,tag=PracticeArea,x=0]
-forceload add 1000 0
+forceload add 0 0
 
 execute positioned -400 50 -400 run function missilewars:practice/spawn_area
 execute positioned -400 50 0 run function missilewars:practice/spawn_area

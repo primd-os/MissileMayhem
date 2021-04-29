@@ -72,6 +72,5 @@ execute if entity @s[team=Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team joi
 execute unless entity @s[team=Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Lobby
 
 tag @s[y=103,dy=3,x=-1000,dx=2000,z=-1000,dz=2000] remove Parkour
-scoreboard players add @s[tag=Parkour] m.Timer 1
 
 scoreboard players set @s m.deathCheck 0

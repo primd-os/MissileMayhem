@@ -1,5 +1,3 @@
-forceload add 1000 0
-
 forceload add -200 -200 -100 200
 forceload add -100 -200 0 200
 forceload add 0 -200 100 200

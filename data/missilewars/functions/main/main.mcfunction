@@ -75,3 +75,4 @@ execute as @a[scores={GiveBook=1}] run scoreboard players set @s GiveBook 0
 
 bossbar set missile_time visible true
 bossbar set missile_time players @a[scores={m.Game=1..999}]
+scoreboard players set @a m.inv_change 0

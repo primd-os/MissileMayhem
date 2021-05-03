@@ -5,4 +5,4 @@ data modify storage rx:io playerdb.player.data.primd.mm.customName set from enti
 function rx.playerdb:api/save_self
 clear @s writable_book
 data modify storage string:io queue[-1].callback.id set from entity @s UUID[0]
-execute in minecraft:overworld run function string:call
+execute in hub:hub run function string:call

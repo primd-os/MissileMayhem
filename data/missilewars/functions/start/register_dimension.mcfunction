@@ -18,4 +18,3 @@ execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewa
 execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:ctf/game43"} in missilewars:ctf/game43 run function hub:main/death/warp
 execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:lobby"} in missilewars:lobby run function hub:main/death/warp
 execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:practice"} in missilewars:practice run function hub:main/death/warp
-execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"missilewars:store"} in missilewars:store run function hub:main/death/warp

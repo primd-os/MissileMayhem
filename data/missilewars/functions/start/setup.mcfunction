@@ -125,8 +125,6 @@ scoreboard objectives add m.deathCheck deathCount
 
 scoreboard objectives add m.bowCount dummy
 
-scoreboard objectives add m.clearX dummy
-scoreboard objectives add m.clearY dummy
 scoreboard objectives add m.clearZ dummy
 
 scoreboard objectives add m.player_health health {"text":"♥","color":"red"}
@@ -218,5 +216,4 @@ execute unless score lowLagReload m.Constants matches 1 in missilewars:lobby run
 
 execute unless score lowLagReload m.Constants matches 1 in missilewars:practice run function missilewars:practice/create
 
-execute in missilewars:store run forceload add 0 0 0 -1
 kill @e[type=item]

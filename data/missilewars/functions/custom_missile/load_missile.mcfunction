@@ -3,6 +3,7 @@ playsound minecraft:entity.experience_orb.pickup block @a[x=0] ~ ~ ~ 1 0
 execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^1 ^-1 ^8 ^3 ^1 minecraft:air
 
 tag @s add Editor
+scoreboard players set @s m.inv_change 1
 function missilewars:main/clear_inv
 
 execute at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^-1 ^ air

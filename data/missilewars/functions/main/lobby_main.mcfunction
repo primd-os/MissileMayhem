@@ -58,7 +58,7 @@ execute positioned -6.5 82 6.5 run playsound minecraft:entity.player.attack.swee
 execute positioned -6.5 82 6.5 run tp @s[distance=..2] 10 108.5 40
 execute positioned -6.5 82 6.5 run particle portal ~ ~ ~ 0 0 0 2 1 normal @s
 
-execute as @s[tag=InBox,nbt={Inventory:[{id:"minecraft:written_book",Count:1b}]}] run clear @s written_book
+execute as @s[tag=InBox] run clear @s written_book{display:{Name:'{"text":"Custom Missile"}'}}
 execute as @s[tag=InBox,nbt=!{Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_off_head
 execute as @s[tag=!InBox,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/attempt_move_to_head
 

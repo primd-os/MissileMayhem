@@ -26,7 +26,7 @@ execute as @s[tag=!carrier,team=Blue,gamemode=!spectator] at @s as @e[type=area_
 execute as @s[tag=!carrier,team=Red,gamemode=!spectator] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!RedBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier,team=Green,gamemode=!spectator] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!GreenBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tellraw @a[x=0] [{"selector": "@s"},{"text": " has taken a Flag!"}]
-execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run effect give @s instant_health 1 10 true
+execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run effect give @s instant_health 1 1 true
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run playsound item.book.page_turn block @a[x=0] ~ ~ ~ 1 1
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run particle portal ~ ~ ~ 0 0 0 10 50
 execute as @s[tag=!carrier] at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s add taken
@@ -34,7 +34,6 @@ execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=.
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s add carrier
 execute at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s remove claiming
 execute as @s[tag=carrier] run effect give @s glowing 1 0 true
-execute as @s[tag=carrier] run effect give @s resistance 1 0 true
 
 execute as @s[scores={m.deathCheck=1..1000}] at @s run tag @s remove carrier
 execute as @s[scores={m.deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s m.UUID1 = @a[sort=nearest,limit=1] m.UUID1 run tag @s remove taken

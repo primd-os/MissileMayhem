@@ -1,9 +1,9 @@
 function missilewars:game_modes/force_gamemode
 
-execute as @s[team=Black,tag=carrier] at @e[type=area_effect_cloud,tag=BlackBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
-execute as @s[team=Red,tag=carrier] at @e[type=area_effect_cloud,tag=RedBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-6 positioned ~-2 ~ ~ as @s[dx=5,dy=1,dz=50] run tag @s add success
-execute as @s[team=Blue,tag=carrier] at @e[type=area_effect_cloud,tag=BlueBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] run tag @s add success
-execute as @s[team=Green,tag=carrier] at @e[type=area_effect_cloud,tag=GreenBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-6 positioned ~ ~ ~-2 as @s[dx=50,dy=1,dz=5] run tag @s add success
+execute as @s[team=Black,tag=carrier] at @e[type=area_effect_cloud,tag=BlackBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-7 positioned ~-1 ~ ~ as @s[dx=3,dy=1,dz=50] run tag @s add success
+execute as @s[team=Red,tag=carrier] at @e[type=area_effect_cloud,tag=RedBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-7 positioned ~-1 ~ ~ as @s[dx=3,dy=1,dz=50] run tag @s add succes1
+execute as @s[team=Blue,tag=carrier] at @e[type=area_effect_cloud,tag=BlueBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-7 positioned ~ ~ ~-1 as @s[dx=50,dy=1,dz=3] run tag @s add success
+execute as @s[team=Green,tag=carrier] at @e[type=area_effect_cloud,tag=GreenBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-7 positioned ~ ~ ~-1 as @s[dx=50,dy=1,dz=3] run tag @s add success
 execute as @s[team=Red,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=GameMarker,x=0] m.RedScore 1
 execute as @s[team=Black,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=GameMarker,x=0] m.BlackScore 1
 execute as @s[team=Blue,tag=success] run scoreboard players add @e[type=area_effect_cloud,tag=GameMarker,x=0] m.BlueScore 1
@@ -22,7 +22,7 @@ execute as @s[tag=!carrier,team=Blue,gamemode=!spectator] at @s as @e[type=area_
 execute as @s[tag=!carrier,team=Red,gamemode=!spectator] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!RedBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier,team=Green,gamemode=!spectator] at @s as @e[type=area_effect_cloud,tag=Base,sort=nearest,limit=1] as @s[tag=!GreenBase] as @a[distance=..0.01] as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tellraw @a[x=0] [{"selector": "@s"},{"text": " has taken a Flag!"}]
-execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run effect give @s instant_health 1 10 true
+execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run effect give @s instant_health 1 1 true
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run playsound item.book.page_turn block @a[x=0] ~ ~ ~ 1 1
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run particle portal ~ ~ ~ 0 0 0 10 50
 execute as @s[tag=!carrier] at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s add taken
@@ -30,7 +30,6 @@ execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=.
 execute as @s[tag=!carrier] at @s if entity @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s add carrier
 execute at @s as @e[type=area_effect_cloud,distance=..1.5,tag=Flag,tag=claiming] run tag @s remove claiming
 execute as @s[tag=carrier] run effect give @s glowing 1 0 true
-execute as @s[tag=carrier] run effect give @s resistance 1 0 true
 
 effect give @s minecraft:haste 2 2 true
 effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 1 0 true

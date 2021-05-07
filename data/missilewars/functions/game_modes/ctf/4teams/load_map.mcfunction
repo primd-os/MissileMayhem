@@ -13,5 +13,3 @@ execute if entity @a[x=0,team=Green] run scoreboard players set @e[type=area_eff
 execute if entity @a[x=0,team=Blue] run scoreboard players set @e[type=area_effect_cloud,tag=GameMarker,x=0] m.BlueScore 1
 execute if entity @a[x=0,team=Red] run scoreboard players set @e[type=area_effect_cloud,tag=GameMarker,x=0] m.RedScore 1
 execute if entity @a[x=0,team=Black] run scoreboard players set @e[type=area_effect_cloud,tag=GameMarker,x=0] m.BlackScore 1
-
-execute at @e[type=area_effect_cloud,tag=Base,x=0,limit=1] run summon minecraft:area_effect_cloud 0 ~ 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["Flag"]}

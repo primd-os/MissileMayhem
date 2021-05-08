@@ -6,7 +6,7 @@ Public server coming soon.
 Discord Server: https://discord.gg/S6TUQWt
 
 # Download
-1. Go to https://github.com/Devon7925/MissileMars/releases and download the latest release
+1. Go to https://github.com/Devon7925/MissileMayhem/releases and download the latest release
 2. Move the map in the zip folder to your .minecraft/saves folder
 
 # Improvements

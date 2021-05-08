@@ -71,6 +71,6 @@ execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMis
 execute if entity @s[team=Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Sumo
 execute unless entity @s[team=Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Lobby
 
-tag @s[y=103,dy=3,x=-1000,dx=2000,z=-1000,dz=2000] remove Parkour
+tag @s[y=103,dy=3,x=-36,dx=72,z=-1000,dz=2000] remove Parkour
 
 scoreboard players set @s m.deathCheck 0

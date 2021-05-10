@@ -9,6 +9,11 @@ execute as @s[scores={m.GameState=2..}] at @s run scoreboard players remove @s m
 
 execute if score @s m.GameState matches 1 at @e[type=area_effect_cloud,tag=Base,x=0] run function missilewars:maps/spawn_plat
 
+
+execute as @e[tag=Flag,tag=taken] run tag @s add remtaken
+execute as @a[x=0] at @s as @e[tag=Flag,tag=taken] if score @s m.UUID1 = @a[sort=nearest,limit=1] m.UUID1 run tag @s remove remtaken
+execute as @e[tag=Flag,tag=remtaken] run tag @s remove taken
+
 execute as @a[scores={m.Game=1..},x=0] at @s run function missilewars:game_modes/ctf/2teams/running_main
 function missilewars:item_managers/run_items
 

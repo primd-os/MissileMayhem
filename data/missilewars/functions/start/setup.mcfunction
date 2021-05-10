@@ -118,6 +118,7 @@ scoreboard players set Timer m.Constants 400
 scoreboard players set EndTime m.Constants 200
 
 scoreboard players set fallScale m.Constants 5
+scoreboard players set respawnTime m.Constants 100
 
 scoreboard objectives add m.shifting minecraft.custom:minecraft.sneak_time
 scoreboard objectives add m.fallDistance dummy

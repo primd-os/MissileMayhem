@@ -37,7 +37,7 @@ execute as @s[tag=carrier] run effect give @s glowing 1 0 true
 
 execute as @s[scores={m.deathCheck=1..1000}] at @s run tag @s remove carrier
 execute as @s[scores={m.deathCheck=1..1000}] at @s as @e[tag=Flag,tag=taken] if score @s m.UUID1 = @a[sort=nearest,limit=1] m.UUID1 run tag @s remove taken
-execute as @s[scores={m.deathCheck=1..1000}] at @s run scoreboard players set @s m.RespawnTimer 100
+execute as @s[scores={m.deathCheck=1..1000}] at @s run scoreboard players operation @s m.RespawnTimer = respawnTime m.Constants
 execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 
 function missilewars:main/shared_run_main

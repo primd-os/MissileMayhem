@@ -108,7 +108,7 @@ scoreboard players set WinningScore m.Constants 3000
 scoreboard players set Flip m.Constants -1
 scoreboard players set Flatness m.Constants 1000
 
-scoreboard players set TntLimit m.Constants 24
+scoreboard players set TntLimit m.Constants 12
 scoreboard players set PointScale m.Constants 100
 scoreboard players set TPS m.Constants 20
 scoreboard players set CSPT m.Constants 5

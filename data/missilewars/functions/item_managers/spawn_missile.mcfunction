@@ -62,5 +62,6 @@ execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[dist
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=Red] run tag @s add Red
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=Black] run tag @s add Black
 
-scoreboard players set @s m.HealthTimer 3
 tag @s add Success
+function missilewars:item_managers/color_missile
+kill @s

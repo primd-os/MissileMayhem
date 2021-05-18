@@ -33,9 +33,6 @@ execute in missilewars:practice run function missilewars:practice/game_main
 execute if entity @e[type=area_effect_cloud,tag=clearMap] run function missilewars:maps/slow_clear_map_loop
 execute as @a[tag=reset_health] run function missilewars:game_modes/reset_health
 
-execute as @e[type=area_effect_cloud,tag=missile,scores={m.HealthTimer=0}] at @s run function missilewars:item_managers/color_missile
-scoreboard players remove @e[type=area_effect_cloud,tag=missile] m.HealthTimer 1
-
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Green] at @s if block ~ ~-1 ~ green_concrete run function missilewars:start/join/green
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Blue] at @s if block ~ ~-1 ~ blue_concrete run function missilewars:start/join/blue
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Black] at @s if block ~ ~-1 ~ black_concrete run function missilewars:start/join/black

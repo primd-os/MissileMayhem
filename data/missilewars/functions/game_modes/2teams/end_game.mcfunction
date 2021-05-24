@@ -1,4 +1,5 @@
 scoreboard players set @e[type=area_effect_cloud,tag=GameMarker,x=0] m.GameState 2
+clear @a[x=0]
 title @a[x=0] times 10 50 10
 execute if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run title @a[x=0] title {"text":"Blue Wins!","color":"blue"}
 execute if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run title @a[x=0] title {"text":"Green Wins!","color":"green"}

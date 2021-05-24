@@ -3,6 +3,7 @@ execute if score @s m.PreBlueWin matches 1 run scoreboard players set @s m.GameS
 execute if score @s m.PreRedWin matches 1 run scoreboard players set @s m.GameState 2
 execute if score @s m.PreBlackWin matches 1 run scoreboard players set @s m.GameState 2
 execute if entity @s[scores={m.GameState=2}] run scoreboard players operation @s m.EndTimer = EndTime m.Constants
+clear @s
 execute if entity @s[scores={m.GameState=2}] run title @a[x=0] times 10 50 10
 execute if score @s m.GameState matches 2 run scoreboard players set @s m.GameState 3
 execute if entity @s[scores={m.PreGreenWin=1}] run title @a[x=0] title {"text": "Green Wins!","color":"green"}

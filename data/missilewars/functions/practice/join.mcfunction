@@ -7,6 +7,7 @@ execute in missilewars:practice at @e[type=area_effect_cloud,x=0,tag=ToTP] posit
 execute in missilewars:practice run tag @e[type=area_effect_cloud,x=0,tag=ToTP] add InUse
 execute in missilewars:practice run tag @e[x=0] remove ToTP
 
+execute as @s[nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/attempt_move_to_head
 clear @s
 
 function missilewars:item_managers/bow

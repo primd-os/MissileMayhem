@@ -1,5 +1,5 @@
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount += @s m.tntCount
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= @s m.tntBroke
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount += @s m.tntCount
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= @s m.tntBroke
 scoreboard players operation tnt m.Variables = @s m.tntBroke
 
 scoreboard players set @s m.Items 1
@@ -28,28 +28,28 @@ execute if score @s m.Items matches 0 run give @s gray_glazed_terracotta{CanPlac
 
 execute store result score @s m.Items run clear @s tnt 0
 scoreboard players operation tnt m.Variables = TntLimit m.Constants
-scoreboard players operation tnt m.Variables -= @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount
+scoreboard players operation tnt m.Variables -= @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount
 scoreboard players operation tnt m.Variables -= @s m.Items
 execute if score tnt m.Variables matches ..-1 run clear @s tnt 1
 execute if score tnt m.Variables matches 1.. run function missilewars:custom_missile/give_tnt
 
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air replace tnt
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:air replace tnt
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-9 ^ ^-1 ^-9 ^3 ^1 minecraft:air replace tnt
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^9 ^ ^-1 ^9 ^3 ^1 minecraft:air replace tnt
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^4 ^-1 ^8 ^4 ^1 minecraft:air replace tnt
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-9 ^ ^-1 ^-9 ^3 ^1 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^9 ^ ^-1 ^9 ^3 ^1 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
-execute as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^4 ^-1 ^8 ^4 ^1 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
-scoreboard players operation @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air replace tnt
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:air replace tnt
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-9 ^ ^-1 ^-9 ^3 ^1 minecraft:air replace tnt
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^9 ^ ^-1 ^9 ^3 ^1 minecraft:air replace tnt
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^4 ^-1 ^8 ^4 ^1 minecraft:air replace tnt
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-9 ^ ^-1 ^-9 ^3 ^1 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^9 ^ ^-1 ^9 ^3 ^1 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables
+execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score tnt m.Variables run fill ^-8 ^4 ^-1 ^8 ^4 ^1 minecraft:air replace moving_piston{blockState:{Name:"minecraft:tnt"}}
+scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= tnt m.Variables

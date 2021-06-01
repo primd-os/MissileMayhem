@@ -8,16 +8,6 @@ scoreboard objectives add m.snowballTime dummy
 scoreboard objectives add m.dropItem minecraft.custom:drop
 scoreboard objectives add m.inv_change dummy
 
-scoreboard objectives add m.Tomahawk dummy
-scoreboard objectives add m.Juggernaut dummy
-scoreboard objectives add m.Lightning dummy
-scoreboard objectives add m.Shieldbuster dummy
-scoreboard objectives add m.Custom dummy
-scoreboard objectives add m.Shield dummy
-scoreboard objectives add m.Fireball dummy
-scoreboard objectives add m.Arrows dummy
-scoreboard objectives add m.QueuePos dummy
-
 scoreboard objectives add m.points dummy
 scoreboard objectives modify m.points displayname "Rating"
 
@@ -120,6 +110,15 @@ scoreboard players set EndTime m.Constants 200
 scoreboard players set fallScale m.Constants 5
 scoreboard players set respawnTime m.Constants 100
 
+scoreboard players set TomahawkQueue m.Variables -1
+scoreboard players set JuggernautQueue m.Variables -1
+scoreboard players set LightningQueue m.Variables -1
+scoreboard players set ShieldbusterQueue m.Variables -1
+scoreboard players set CustomQueue m.Variables -1
+scoreboard players set ShieldQueue m.Variables -1
+scoreboard players set ArrowsQueue m.Variables -1
+scoreboard players set FireballQueue m.Variables -1
+
 scoreboard objectives add m.shifting minecraft.custom:minecraft.sneak_time
 scoreboard objectives add m.fallDistance dummy
 scoreboard objectives add m.deathCheck deathCount
@@ -161,7 +160,7 @@ team modify Sumo prefix {"text": "[SUMO] "}
 scoreboard objectives setdisplay sidebar.team.gray m.points
 
 scoreboard players set missile_time m.Variables 0
-bossbar add missile_time {"text": "Time to Next Missile"}
+bossbar add missile_time {"text": ""}
 bossbar set missile_time max 240
 bossbar set missile_time style progress
 
@@ -216,5 +215,12 @@ execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game4
 execute unless score lowLagReload m.Constants matches 1 in missilewars:lobby run function missilewars:set_lobby/set_map
 
 execute unless score lowLagReload m.Constants matches 1 in missilewars:practice run function missilewars:practice/create
+
+forceload add -200 -200 -100 200
+forceload add -100 -200 0 200
+forceload add 0 -200 100 200
+forceload add 100 -200 200 200
+
+data modify storage missilewars:queue queue set value ["","",""]
 
 kill @e[type=item]

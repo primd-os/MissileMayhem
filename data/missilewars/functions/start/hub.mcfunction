@@ -16,4 +16,4 @@ scoreboard players reset @s GiveBook
 scoreboard players reset @s ChooseMissileSet
 scoreboard players reset @s MissileSetSelect
 
-tag @e[type=area_effect_cloud,x=0,tag=PracticeArea,tag=InUse,sort=nearest,limit=1] remove InUse
+tag @e[type=marker,distance=0..,tag=PracticeArea,tag=InUse,sort=nearest,limit=1] remove InUse

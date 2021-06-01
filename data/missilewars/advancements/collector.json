@@ -25,7 +25,7 @@
         ],
         "items": [
           {
-            "item": "minecraft:tnt",
+            "items": ["minecraft:tnt"],
             "count": {
               "min": 64
             }

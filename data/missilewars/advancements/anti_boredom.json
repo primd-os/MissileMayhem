@@ -14,7 +14,7 @@
           "player": {
             "nbt": "{Tags:[\"InGame\"]}"
           },
-          "block": "magenta_wool"
+          "blocks": ["magenta_wool"]
         }
       }
     }

@@ -11,5 +11,7 @@
     "piglin_safe": false,
     "respawn_anchor_works": false,
     "logical_height": 128,
-    "infiniburn": "infiniburn_overworld"
+    "infiniburn": "infiniburn_overworld",
+    "min_y": 0,
+    "height": 256
 }

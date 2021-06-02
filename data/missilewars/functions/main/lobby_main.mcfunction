@@ -47,10 +47,10 @@ scoreboard players set @s m.tntCount 0
 scoreboard players set @s m.tntBroke 0
 
 tag @s remove InBox
-execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=25,dz=21] run tag @s add InBox
-execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=25,dz=21] run tag @s add InBox
-execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=0] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
-execute at @s at @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-180] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
+execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=25,dz=21] run tag @s add InBox
+execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=25,dz=21] run tag @s add InBox
+execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=0] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
+execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-180] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
 execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
 tag @s[tag=!InBox] remove Editor
 
@@ -62,11 +62,11 @@ execute as @s[tag=InBox] run clear @s written_book{display:{Name:'{"text":"Custo
 execute as @s[tag=InBox,nbt=!{Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_off_head
 execute as @s[tag=!InBox,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/attempt_move_to_head
 
-execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-9 ^ ^-1 ^-9 ^3 ^1 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^9 ^ ^-1 ^9 ^3 ^1 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[type=area_effect_cloud,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^4 ^-1 ^8 ^4 ^1 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-9 ^ ^-1 ^-9 ^3 ^1 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^9 ^ ^-1 ^9 ^3 ^1 minecraft:air
+execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^4 ^-1 ^8 ^4 ^1 minecraft:air
 
 execute if entity @s[team=Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Sumo
 execute unless entity @s[team=Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Lobby

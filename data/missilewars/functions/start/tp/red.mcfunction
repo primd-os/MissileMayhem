@@ -1,2 +1,2 @@
-execute at @e[type=area_effect_cloud,tag=RedBase,x=0] facing 0 52 0 run tp @s ~-1 51 ~ ~ ~
-execute at @e[type=area_effect_cloud,tag=RedBase,x=0] positioned ~-1 51 ~ facing 0 52 0 run function hub:main/death/spawnpoint
+execute at @e[type=marker,tag=RedBase,x=0] facing 0 52 0 run tp @s ~-1 51 ~ ~ ~
+execute at @e[type=marker,tag=RedBase,x=0] positioned ~-1 51 ~ facing 0 52 0 run function hub:main/death/spawnpoint

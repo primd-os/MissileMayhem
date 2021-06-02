@@ -18,14 +18,14 @@ execute if entity @s[scores={m.PreGreenWin=1}] if entity @a[x=0,team=!Spectator,
 execute if entity @s[scores={m.PreBlueWin=1}] if entity @a[x=0,team=!Spectator,team=!Blue] run advancement grant @a[x=0,team=Blue] only missilewars:win_game
 execute if entity @s[scores={m.PreRedWin=1}] if entity @a[x=0,team=!Spectator,team=!Red] run advancement grant @a[x=0,team=Red] only missilewars:win_game
 execute if entity @s[scores={m.PreBlackWin=1}] if entity @a[x=0,team=!Spectator,team=!Black] run advancement grant @a[x=0,team=Black] only missilewars:win_game
-execute if entity @s[scores={m.PreGreenWin=1}] if entity @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=-900..}] if entity @a[x=0,team=!Spectator,team=!Green] run advancement grant @a[x=0,team=Green] only missilewars:2gud4u
-execute if entity @s[scores={m.PreBlueWin=1}] if entity @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=-900..}] if entity @a[x=0,team=!Spectator,team=!Blue] run advancement grant @a[x=0,team=Blue] only missilewars:2gud4u
-execute if entity @s[scores={m.PreRedWin=1}] if entity @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=-900..}] if entity @a[x=0,team=!Spectator,team=!Red] run advancement grant @a[x=0,team=Red] only missilewars:2gud4u
-execute if entity @s[scores={m.PreBlackWin=1}] if entity @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=-900..}] if entity @a[x=0,team=!Spectator,team=!Black] run advancement grant @a[x=0,team=Black] only missilewars:2gud4u
-execute if entity @s[scores={m.PreGreenWin=1}] if entity @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=-200..}] if entity @a[x=0,team=!Spectator,team=!Green] run advancement grant @a[x=0,team=Green] only missilewars:manipulation
-execute if entity @s[scores={m.PreBlueWin=1}] if entity @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=-200..}] if entity @a[x=0,team=!Spectator,team=!Blue] run advancement grant @a[x=0,team=Blue] only missilewars:manipulation
-execute if entity @s[scores={m.PreRedWin=1}] if entity @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=-200..}] if entity @a[x=0,team=!Spectator,team=!Red] run advancement grant @a[x=0,team=Red] only missilewars:manipulation
-execute if entity @s[scores={m.PreBlackWin=1}] if entity @e[type=area_effect_cloud,tag=GameMarker,x=0,scores={m.Timer=-200..}] if entity @a[x=0,team=!Spectator,team=!Black] run advancement grant @a[x=0,team=Black] only missilewars:manipulation
+execute if entity @s[scores={m.PreGreenWin=1}] if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-900..}] if entity @a[x=0,team=!Spectator,team=!Green] run advancement grant @a[x=0,team=Green] only missilewars:2gud4u
+execute if entity @s[scores={m.PreBlueWin=1}] if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-900..}] if entity @a[x=0,team=!Spectator,team=!Blue] run advancement grant @a[x=0,team=Blue] only missilewars:2gud4u
+execute if entity @s[scores={m.PreRedWin=1}] if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-900..}] if entity @a[x=0,team=!Spectator,team=!Red] run advancement grant @a[x=0,team=Red] only missilewars:2gud4u
+execute if entity @s[scores={m.PreBlackWin=1}] if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-900..}] if entity @a[x=0,team=!Spectator,team=!Black] run advancement grant @a[x=0,team=Black] only missilewars:2gud4u
+execute if entity @s[scores={m.PreGreenWin=1}] if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-200..}] if entity @a[x=0,team=!Spectator,team=!Green] run advancement grant @a[x=0,team=Green] only missilewars:manipulation
+execute if entity @s[scores={m.PreBlueWin=1}] if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-200..}] if entity @a[x=0,team=!Spectator,team=!Blue] run advancement grant @a[x=0,team=Blue] only missilewars:manipulation
+execute if entity @s[scores={m.PreRedWin=1}] if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-200..}] if entity @a[x=0,team=!Spectator,team=!Red] run advancement grant @a[x=0,team=Red] only missilewars:manipulation
+execute if entity @s[scores={m.PreBlackWin=1}] if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-200..}] if entity @a[x=0,team=!Spectator,team=!Black] run advancement grant @a[x=0,team=Black] only missilewars:manipulation
 
 scoreboard players set @s m.PreBlueWin 0
 scoreboard players set @s m.PreGreenWin 0

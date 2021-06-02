@@ -4,9 +4,9 @@ execute as @s[name="Tomahawk"] run function missilewars:item_managers/spawn_tomo
 execute as @s[name="Juggernaut"] run function missilewars:item_managers/spawn_juggurnaut
 execute as @s[name="Lightning"] run function missilewars:item_managers/spawn_lightning
 execute as @s[name="Shieldbuster"] run function missilewars:item_managers/spawn_shieldbuster
-execute as @s[name="Custom"] as @a[x=0,scores={m.PlacedMissile=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_custom
+execute as @s[name="Custom"] as @a[distance=0..,scores={m.PlacedMissile=1},sort=nearest,limit=1] run function missilewars:item_managers/spawn_custom
 
-execute as @a[x=0,scores={m.PlacedMissile=1},sort=nearest,limit=1] run function missilewars:item_managers/rot_missile
+execute as @a[distance=0..,scores={m.PlacedMissile=1},sort=nearest,limit=1] run function missilewars:item_managers/rot_missile
 
 execute store result score PosX m.Variables run data get entity @s Pos[0]
 execute store result score PosY m.Variables run data get entity @s Pos[1]
@@ -34,7 +34,7 @@ setblock ~ 254 ~ minecraft:redstone_block
 execute store result score PosX2 m.Variables run data get block ~ 255 ~ sizeX
 execute store result score PosY2 m.Variables run data get block ~ 255 ~ sizeY
 execute store result score PosZ2 m.Variables run data get block ~ 255 ~ sizeZ
-execute as @a[x=0,scores={m.PlacedMissile=1},sort=nearest,limit=1] run function missilewars:item_managers/rot_size
+execute as @a[distance=0..,scores={m.PlacedMissile=1},sort=nearest,limit=1] run function missilewars:item_managers/rot_size
 execute if score PosX2 m.Variables matches 1.. run scoreboard players remove PosX2 m.Variables 1
 execute if score PosX2 m.Variables matches ..-1 run scoreboard players add PosX2 m.Variables 1
 scoreboard players remove PosY2 m.Variables 1
@@ -55,7 +55,7 @@ execute as @s[tag=m.missileSuccess] run playsound minecraft:entity.shulker.shoot
 execute as @s[tag=!m.missileSuccess] run function missilewars:item_managers/missile_fail
 clone ~ 250 ~ ~ 251 ~ ~ ~ ~ replace move
 
-kill @e[type=area_effect_cloud,tag=UUIDHolder,x=0]
+kill @e[type=marker,tag=UUIDHolder,x=0]
 
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=Blue] run tag @s add Blue
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=Green] run tag @s add Green

@@ -1,31 +1,31 @@
-scoreboard players remove @s m.Tomahawk 1
-scoreboard players remove @s m.Juggernaut 1
-scoreboard players remove @s m.Lightning 1
-scoreboard players remove @s m.Shieldbuster 1
-scoreboard players remove @s m.Custom 1
-scoreboard players remove @s m.Shield 1
-scoreboard players remove @s m.Arrows 1
-scoreboard players remove @s m.Fireball 1
+scoreboard players remove TomahawkQueue m.Variables 1
+scoreboard players remove JuggernautQueue m.Variables 1
+scoreboard players remove LightningQueue m.Variables 1
+scoreboard players remove ShieldbusterQueue m.Variables 1
+scoreboard players remove CustomQueue m.Variables 1
+scoreboard players remove ShieldQueue m.Variables 1
+scoreboard players remove ArrowsQueue m.Variables 1
+scoreboard players remove FireballQueue m.Variables 1
 
 function missilewars:new_missile/activate_missile
 
-summon armor_stand 0 255 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,NoAI:1b}
+summon armor_stand 0 255 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["m.QueueLooter"]}
 loot replace entity @e[type=armor_stand,x=0] weapon loot missilewars:new_missile
-execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:creeper_spawn_egg"}]}] run scoreboard players set @s m.Tomahawk 3
-execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:wolf_spawn_egg"}]}] run scoreboard players set @s m.Juggernaut 3
-execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:ocelot_spawn_egg"}]}] run scoreboard players set @s m.Lightning 3
-execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:witch_spawn_egg"}]}] run scoreboard players set @s m.Shieldbuster 3
-execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:cave_spider_spawn_egg"}]}] run scoreboard players set @s m.Custom 3
-execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:snowball"}]}] run scoreboard players set @s m.Shield 3
-execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:arrow"}]}] run scoreboard players set @s m.Arrows 3
-execute if entity @e[type=armor_stand,x=0,nbt={HandItems:[{id:"minecraft:firework_rocket"}]}] run scoreboard players set @s m.Fireball 3
-kill @e[type=armor_stand,x=0]
-
-scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Tomahawk] m.QueuePos = @s m.Tomahawk
-scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Juggernaut] m.QueuePos = @s m.Juggernaut
-scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Lightning] m.QueuePos = @s m.Lightning
-scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Shieldbuster] m.QueuePos = @s m.Shieldbuster
-scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Custom] m.QueuePos = @s m.Custom
-scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Shield] m.QueuePos = @s m.Shield
-scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Arrows] m.QueuePos = @s m.Arrows
-scoreboard players operation @e[type=area_effect_cloud,x=0,tag=Fireball] m.QueuePos = @s m.Fireball
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:creeper_spawn_egg"}]}] run scoreboard players set TomahawkQueue m.Variables 3
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:creeper_spawn_egg"}]}] run data modify storage missilewars:queue queue append value "Tomahawk"
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:wolf_spawn_egg"}]}] run scoreboard players set JuggernautQueue m.Variables 3
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:wolf_spawn_egg"}]}] run data modify storage missilewars:queue queue append value "Juggernaut"
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:ocelot_spawn_egg"}]}] run scoreboard players set LightningQueue m.Variables 3
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:ocelot_spawn_egg"}]}] run data modify storage missilewars:queue queue append value "Lightning"
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:witch_spawn_egg"}]}] run scoreboard players set ShieldbusterQueue m.Variables 3
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:witch_spawn_egg"}]}] run data modify storage missilewars:queue queue append value "Shieldbuster"
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:cave_spider_spawn_egg"}]}] run scoreboard players set CustomQueue m.Variables 3
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:cave_spider_spawn_egg"}]}] run data modify storage missilewars:queue queue append value "Custom"
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:snowball"}]}] run scoreboard players set ShieldQueue m.Variables 3
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:snowball"}]}] run data modify storage missilewars:queue queue append value "Shield"
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:arrow"}]}] run scoreboard players set ArrowsQueue m.Variables 3
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:arrow"}]}] run data modify storage missilewars:queue queue append value "Arrows"
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:firework_rocket"}]}] run scoreboard players set FireballQueue m.Variables 3
+execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:firework_rocket"}]}] run data modify storage missilewars:queue queue append value "Fireball"
+kill @e[type=armor_stand,x=0,tag=m.QueueLooter]
+data remove storage missilewars:queue queue[0]

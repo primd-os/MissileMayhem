@@ -4,7 +4,7 @@ execute if entity @s[scores={m.Timer=..-72000}] run advancement grant @a[x=0] on
 kill @e[type=item,x=0]
 kill @e[type=arrow,x=0]
 kill @e[type=fireball,x=0]
-kill @e[type=area_effect_cloud,x=0]
+kill @e[type=marker,x=0]
 
 execute as @a[x=0] run function missilewars:end/leave
 

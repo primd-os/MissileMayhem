@@ -12,13 +12,17 @@
               "name": "minecraft:creeper_spawn_egg",
               "conditions": [
                 {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "m.Tomahawk": {
-                      "min": -1000000,
-                      "max": 0
-                    }
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "TomahawkQueue"
+                    },
+                    "score": "m.Variables"
+                  },
+                  "range": {
+                    "max": 0
                   }
                 }
               ]
@@ -28,13 +32,17 @@
               "name": "minecraft:wolf_spawn_egg",
               "conditions": [
                 {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "m.Juggernaut": {
-                      "min": -1000000,
-                      "max": 0
-                    }
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "JuggernautQueue"
+                    },
+                    "score": "m.Variables"
+                  },
+                  "range": {
+                    "max": 0
                   }
                 }
               ]
@@ -44,13 +52,17 @@
               "name": "minecraft:ocelot_spawn_egg",
               "conditions": [
                 {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "m.Lightning": {
-                      "min": -1000000,
-                      "max": 0
-                    }
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "LightningQueue"
+                    },
+                    "score": "m.Variables"
+                  },
+                  "range": {
+                    "max": 0
                   }
                 }
               ]
@@ -60,13 +72,17 @@
               "name": "minecraft:witch_spawn_egg",
               "conditions": [
                 {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "m.Shieldbuster": {
-                      "min": -1000000,
-                      "max": 0
-                    }
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "ShieldbusterQueue"
+                    },
+                    "score": "m.Variables"
+                  },
+                  "range": {
+                    "max": 0
                   }
                 }
               ]
@@ -76,13 +92,17 @@
               "name": "minecraft:cave_spider_spawn_egg",
               "conditions": [
                 {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "m.Custom": {
-                      "min": -1000000,
-                      "max": 0
-                    }
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "CustomQueue"
+                    },
+                    "score": "m.Variables"
+                  },
+                  "range": {
+                    "max": 0
                   }
                 }
               ]
@@ -92,13 +112,17 @@
               "name": "minecraft:snowball",
               "conditions": [
                 {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "m.Shield": {
-                      "min": -1000000,
-                      "max": 0
-                    }
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "ShieldQueue"
+                    },
+                    "score": "m.Variables"
+                  },
+                  "range": {
+                    "max": 0
                   }
                 }
               ]
@@ -108,13 +132,17 @@
               "name": "minecraft:arrow",
               "conditions": [
                 {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "m.Arrows": {
-                      "min": -1000000,
-                      "max": 0
-                    }
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "ArrowsQueue"
+                    },
+                    "score": "m.Variables"
+                  },
+                  "range": {
+                    "max": 0
                   }
                 }
               ]
@@ -124,13 +152,17 @@
               "name": "minecraft:firework_rocket",
               "conditions": [
                 {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "m.Fireball": {
-                      "min": -1000000,
-                      "max": 0
-                    }
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "FireballQueue"
+                    },
+                    "score": "m.Variables"
+                  },
+                  "range": {
+                    "max": 0
                   }
                 }
               ]

@@ -7,7 +7,7 @@ execute as @s[scores={m.GameState=2..}] at @s run scoreboard players remove @s m
 
 execute if score @s m.GameState matches 1..2 run function missilewars:game_modes/normal/2teams/check_end_game
 
-execute if score @s m.GameState matches 1 at @e[type=area_effect_cloud,tag=Base,x=0] run function missilewars:maps/spawn_plat
+execute if score @s m.GameState matches 1 at @e[type=marker,tag=Base,x=0] run function missilewars:maps/spawn_plat
 
 execute as @a[scores={m.Game=1..},x=0] at @s run function missilewars:game_modes/normal/2teams/running_main
 function missilewars:item_managers/run_items

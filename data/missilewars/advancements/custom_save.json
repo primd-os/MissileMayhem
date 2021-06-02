@@ -13,7 +13,7 @@
         "conditions": {
           "location": {
             "block": {
-              "block": "minecraft:oak_wall_sign",
+              "blocks": ["minecraft:oak_wall_sign"],
               "nbt": "{Text2:'{\"text\":\"Save\"}'}"
             }
           }

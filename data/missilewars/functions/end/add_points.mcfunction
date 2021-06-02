@@ -3,10 +3,10 @@ scoreboard players set GreenPoints m.Variables 0
 execute as @a[team=Blue,x=0] run scoreboard players operation BluePoints m.Variables += @s m.points
 execute as @a[team=Green,x=0] run scoreboard players operation GreenPoints m.Variables += @s m.points
 
-execute if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation X m.Variables = GreenPoints m.Variables
-execute if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run scoreboard players operation X m.Variables = BluePoints m.Variables
-execute if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation X m.Variables -= BluePoints m.Variables
-execute if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run scoreboard players operation X m.Variables -= GreenPoints m.Variables
+execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation X m.Variables = GreenPoints m.Variables
+execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run scoreboard players operation X m.Variables = BluePoints m.Variables
+execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation X m.Variables -= BluePoints m.Variables
+execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run scoreboard players operation X m.Variables -= GreenPoints m.Variables
 
 scoreboard players operation Magnitude m.Variables = X m.Variables
 scoreboard players operation Magnitude m.Variables *= PointScale m.Constants
@@ -26,7 +26,7 @@ scoreboard players operation GreenMagnitude m.Variables = Magnitude m.Variables
 scoreboard players operation BlueMagnitude m.Variables /= BluePlayers m.Variables
 scoreboard players operation GreenMagnitude m.Variables /= GreenPlayers m.Variables
 
-execute as @a[team=Blue,x=0] if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation @s m.points += BlueMagnitude m.Variables
-execute as @a[team=Green,x=0] if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation @s m.points -= GreenMagnitude m.Variables
-execute as @a[team=Blue,x=0] if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run scoreboard players operation @s m.points -= BlueMagnitude m.Variables
-execute as @a[team=Green,x=0] if score @e[type=area_effect_cloud,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run scoreboard players operation @s m.points += GreenMagnitude m.Variables
+execute as @a[team=Blue,x=0] if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation @s m.points += BlueMagnitude m.Variables
+execute as @a[team=Green,x=0] if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation @s m.points -= GreenMagnitude m.Variables
+execute as @a[team=Blue,x=0] if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run scoreboard players operation @s m.points -= BlueMagnitude m.Variables
+execute as @a[team=Green,x=0] if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run scoreboard players operation @s m.points += GreenMagnitude m.Variables

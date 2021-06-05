@@ -4,8 +4,8 @@ data modify block 0 1 0 name set from entity @s Inventory[{id:"minecraft:writabl
 setblock 0 0 0 minecraft:redstone_block
 setblock 0 0 0 air
 
-execute positioned 0 0 0 unless entity @e[distance=..5] at @s run function missilewars:custom_missile/check_name_save_missile
+execute positioned 0 0 0 unless entity @e[type=marker,tag=UUIDHolder,distance=..5] at @s run function missilewars:custom_missile/check_name_save_missile
 
-execute positioned 0 0 0 if entity @e[distance=..5] at @s run function missilewars:custom_missile/check_id_save_missile
+execute positioned 0 0 0 if entity @e[type=marker,tag=UUIDHolder,distance=..5] at @s run function missilewars:custom_missile/check_id_save_missile
 
 kill @e[type=marker,tag=UUIDHolder]

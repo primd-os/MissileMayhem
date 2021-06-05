@@ -1,5 +1,5 @@
-execute as @e[x=0,type=firework_rocket,nbt={ShotAtAngle:1b}] at @s run summon fireball ~ ~ ~ {ExplosionPower:1,direction:[0.0,0.0,0.0]}
-execute as @e[x=0,type=firework_rocket,nbt={ShotAtAngle:0b}] at @s run summon fireball ~ ~1 ~ {ExplosionPower:1,direction:[0.0,0.0,0.0]}
+execute as @e[x=0,type=firework_rocket,nbt={ShotAtAngle:1b}] at @s run summon fireball ~ ~ ~ {ExplosionPower:1}
+execute as @e[x=0,type=firework_rocket,nbt={ShotAtAngle:0b}] at @s run summon fireball ~ ~1 ~ {ExplosionPower:1}
 
 execute as @e[x=0,type=firework_rocket,nbt={ShotAtAngle:1b}] at @s store result entity @e[distance=0..,type=fireball,limit=1,sort=nearest] power[0] double 0.000000000075 run data get entity @s Motion[0] 1000000000
 execute as @e[x=0,type=firework_rocket,nbt={ShotAtAngle:1b}] at @s store result entity @e[distance=0..,type=fireball,limit=1,sort=nearest] power[1] double 0.000000000075 run data get entity @s Motion[1] 1000000000

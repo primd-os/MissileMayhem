@@ -2,7 +2,7 @@ scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,l
 scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= @s m.tntBroke
 scoreboard players operation tnt m.Variables = @s m.tntBroke
 
-scoreboard players set @s m.Items 1
+scoreboard players set @s m.Items 2
 execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s iron_pickaxe 0
 execute if score @s m.Items matches 0 run give @s iron_pickaxe{Unbreakable:1b,CanDestroy:["#missilewars:custom_blocks"],HideFlags:24} 1
 execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s white_wool 0

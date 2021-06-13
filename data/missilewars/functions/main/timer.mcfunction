@@ -12,3 +12,4 @@ execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] at @s run clear
 execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run give @a[x=0,team=!Spectator] minecraft:arrow 2
 execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run give @a[x=0,team=!Spectator] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
 execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run give @a[x=0,team=!Spectator] minecraft:snowball{display:{Name:'{"text":"Shield"}'}}
+execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] as @a[x=0,team=!Spectator] run function missilewars:new_missile/give/tomohawk

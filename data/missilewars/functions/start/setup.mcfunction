@@ -221,6 +221,6 @@ forceload add -100 -200 0 200
 forceload add 0 -200 100 200
 forceload add 100 -200 200 200
 
-data modify storage missilewars:queue queue set value ["","","",""]
+data modify storage missilewars:queue queue set value ["","",""]
 
 kill @e[type=item]

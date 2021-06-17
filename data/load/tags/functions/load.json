@@ -1,6 +1,6 @@
 {
     "values": [
-    	"#load:rx/playerdb",
+    	"#rx.playerdb:load",
         "missilewars:start/setup",
 		"rx:load"
     ]

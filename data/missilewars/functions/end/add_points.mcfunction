@@ -2,7 +2,6 @@ scoreboard players set BluePoints m.Variables 0
 scoreboard players set GreenPoints m.Variables 0
 execute as @a[team=Blue,x=0] run scoreboard players operation BluePoints m.Variables += @s m.points
 execute as @a[team=Green,x=0] run scoreboard players operation GreenPoints m.Variables += @s m.points
-#just doing some work on primd this comment is very important
 execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation X m.Variables = GreenPoints m.Variables
 execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GreenWin matches 1 run scoreboard players operation X m.Variables = BluePoints m.Variables
 execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlueWin matches 1 run scoreboard players operation X m.Variables -= BluePoints m.Variables

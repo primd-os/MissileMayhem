@@ -5,7 +5,7 @@ execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/ctf
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Blue,x=0] run scoreboard players set @s BluePoints 0
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Green,x=0] run scoreboard players set @s GreenPoints 0
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Red,x=0] run scoreboard players set @s RedPoints 0
-execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Black,x=0] run scoreboard players set @s BlackPoints 0
+execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Purple,x=0] run scoreboard players set @s BlackPoints 0
 execute if entity @s[scores={m.Timer=0}] unless entity @a[x=0,team=!Spectator] run function missilewars:end/finish_game
 
 execute if score @s m.GameState matches 1 run function missilewars:game_modes/ctf/4teams/check_end_game

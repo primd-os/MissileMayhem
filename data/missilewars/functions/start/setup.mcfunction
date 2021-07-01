@@ -133,27 +133,27 @@ scoreboard objectives setdisplay belowName m.player_health
 team add Blue
 team add Green
 team add Red
-team add Black
+team add Purple
 team add Spectator
 team add Lobby
 team add Sumo
 team modify Blue color blue
 team modify Green color green
 team modify Red color red
-team modify Black color black
+team modify Purple color dark_purple
 team modify Spectator color dark_gray
 team modify Lobby color gray
 team modify Sumo color gray
 team modify Blue collisionRule pushOwnTeam
 team modify Green collisionRule pushOwnTeam
 team modify Red collisionRule pushOwnTeam
-team modify Black collisionRule pushOwnTeam
+team modify Purple collisionRule pushOwnTeam
 team modify Lobby collisionRule never
 team modify Sumo collisionRule always
 team modify Blue friendlyFire false
 team modify Green friendlyFire false
 team modify Red friendlyFire false
-team modify Black friendlyFire false
+team modify Purple friendlyFire false
 team modify Lobby friendlyFire false
 team modify Sumo friendlyFire true
 team modify Sumo prefix {"text": "[SUMO] "}

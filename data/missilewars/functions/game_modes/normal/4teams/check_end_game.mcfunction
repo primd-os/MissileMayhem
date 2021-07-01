@@ -26,7 +26,7 @@ execute if score @s m.PreRedLoss matches 1 at @e[type=marker,x=0,tag=RedBase] ru
 execute if score @s m.PreRedLoss matches 1 at @e[type=marker,x=0,tag=RedBase] run particle minecraft:explosion ~ 20 ~ 0 20 25 2 200 force
 
 execute if score @s m.PreBlackLoss matches 1 run tellraw @a[x=0] {"text": "Black Eliminated!","color":"black"}
-execute if score @s m.PreBlackLoss matches 1 as @a[x=0,team=Black] run function missilewars:start/join_spectators
+execute if score @s m.PreBlackLoss matches 1 as @a[x=0,team=Purple] run function missilewars:start/join_spectators
 execute if score @s m.PreBlackLoss matches 1 at @e[type=marker,x=0,tag=BlackBase] positioned ^-20 ^ ^ run fill ~ 0 ~ ^40 ^-4 ^ minecraft:air replace black_terracotta
 execute if score @s m.PreBlackLoss matches 1 at @e[type=marker,x=0,tag=BlackBase] run playsound minecraft:entity.generic.explode master @a[x=0] ~ 25 ~ 100
 execute if score @s m.PreBlackLoss matches 1 at @e[type=marker,x=0,tag=BlackBase] run particle minecraft:explosion ~ 20 ~ 0 20 25 2 200 force

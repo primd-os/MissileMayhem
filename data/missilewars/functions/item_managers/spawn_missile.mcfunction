@@ -60,7 +60,7 @@ kill @e[type=marker,tag=UUIDHolder,x=0]
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=Blue] run tag @s add Blue
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=Green] run tag @s add Green
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=Red] run tag @s add Red
-execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=Black] run tag @s add Black
+execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=Purple] run tag @s add Black
 
 tag @s add Success
 function missilewars:item_managers/color_missile

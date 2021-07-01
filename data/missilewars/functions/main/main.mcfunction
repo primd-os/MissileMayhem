@@ -38,7 +38,7 @@ execute as @a[tag=reset_health] run function missilewars:game_modes/reset_health
 
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Green] at @s if block ~ ~-1 ~ green_concrete run function missilewars:start/join/green
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Blue] at @s if block ~ ~-1 ~ blue_concrete run function missilewars:start/join/blue
-execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Black] at @s if block ~ ~-1 ~ black_concrete run function missilewars:start/join/black
+execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Purple] at @s if block ~ ~-1 ~ black_concrete run function missilewars:start/join/black
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Red] at @s if block ~ ~-1 ~ red_concrete run function missilewars:start/join/red
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Spectator] at @s if block ~ ~-1 ~ light_gray_concrete run function missilewars:start/join_spectators
 

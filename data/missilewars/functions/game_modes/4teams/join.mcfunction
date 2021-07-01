@@ -5,7 +5,7 @@ scoreboard players set @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlackMembers
 execute as @a[team=Blue,x=0] run scoreboard players operation @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlueMembers += @s m.points
 execute as @a[team=Green,x=0] run scoreboard players operation @e[type=marker,tag=GameMarker,x=0,limit=1] m.GreenMembers += @s m.points
 execute as @a[team=Red,x=0] run scoreboard players operation @e[type=marker,tag=GameMarker,x=0,limit=1] m.RedMembers += @s m.points
-execute as @a[team=Black,x=0] run scoreboard players operation @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlackMembers += @s m.points
+execute as @a[team=Purple,x=0] run scoreboard players operation @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlackMembers += @s m.points
 scoreboard players set minTeam m.Variables -1
 scoreboard players set minPlayers m.Variables 1000000000
 execute as @e[type=marker,tag=GameMarker,x=0,limit=1] unless score @s m.BlueLoss matches 1 if score @s m.BlueMembers < minPlayers m.Variables run scoreboard players set minTeam m.Variables 0

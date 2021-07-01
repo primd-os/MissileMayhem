@@ -27,5 +27,6 @@ execute at @e[type=marker,tag=Base,x=0] if score Map m.Variables matches 3 run f
 
 execute at @e[type=marker,tag=Base,x=0] if score Map m.Variables matches 4 run fill ^-15 ^ ^22 ^15 ^50 ^17 minecraft:air
 execute at @e[type=marker,tag=Base,x=0] if score Map m.Variables matches 4 run fill ^-5 ^ ^17 ^5 ^50 ^11 minecraft:air
+scoreboard players operation @e[type=marker,tag=GameMarker,x=0] MapVote = Map m.Variables
 
 execute as @a[x=0] run function missilewars:game_modes/teamtp

@@ -12,6 +12,8 @@ execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameSt
 execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 0 run title @s[gamemode=!spectator] actionbar {"text": "↑"}
 tag @s remove Active
 
+execute if score @s m.DeathsInGame matches 100.. run advancement grant @s only missilewars:many_deaths
+
 function missilewars:item_managers/bow
 
 scoreboard players operation tnt m.Variables = @s m.tntBroke

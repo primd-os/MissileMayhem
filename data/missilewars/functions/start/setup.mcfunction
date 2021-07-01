@@ -43,6 +43,8 @@ scoreboard objectives add m.HealthTimer dummy
 scoreboard objectives add m.TimerSecs dummy
 scoreboard objectives add m.TimerTick dummy
 
+scoreboard objectives add m.DeathsInGame deathCount
+
 execute unless score maxTpValue m.Variables matches -2147483648..2147483647 run scoreboard players set maxTpValue m.Variables 1
 
 scoreboard objectives add m.PlacedTomahawk minecraft.used:minecraft.creeper_spawn_egg

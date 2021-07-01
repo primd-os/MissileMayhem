@@ -94,7 +94,7 @@ scoreboard objectives add m.RespawnTimeSec dummy
 
 scoreboard objectives add m.GameClock dummy
 
-scoreboard players set WinningScore m.Constants 3000
+scoreboard players set WinningScore m.Constants 2000
 scoreboard players set Flip m.Constants -1
 scoreboard players set Flatness m.Constants 1000
 

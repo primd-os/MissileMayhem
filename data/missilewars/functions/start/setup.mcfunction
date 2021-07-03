@@ -20,7 +20,7 @@ scoreboard objectives add JoinSpectators trigger
 scoreboard objectives add JoinGreen trigger
 scoreboard objectives add JoinBlue trigger
 scoreboard objectives add JoinRed trigger
-scoreboard objectives add JoinBlack trigger
+scoreboard objectives add JoinPurple trigger
 scoreboard objectives add Practice trigger
 scoreboard objectives add ClearPractice trigger
 scoreboard objectives add Heal trigger
@@ -66,30 +66,30 @@ scoreboard objectives add m.DirecToPlace dummy
 scoreboard objectives add m.PreGreenLoss dummy
 scoreboard objectives add m.PreBlueLoss dummy
 scoreboard objectives add m.PreRedLoss dummy
-scoreboard objectives add m.PreBlackLoss dummy
+scoreboard objectives add m.PrePurpleLoss dummy
 scoreboard objectives add m.GreenLoss dummy
 scoreboard objectives add m.BlueLoss dummy
 scoreboard objectives add m.RedLoss dummy
-scoreboard objectives add m.BlackLoss dummy
+scoreboard objectives add m.PurpleLoss dummy
 scoreboard objectives add m.DeadTeams dummy
 
 scoreboard objectives add m.PreGreenWin dummy
 scoreboard objectives add m.PreBlueWin dummy
-scoreboard objectives add m.PreBlackWin dummy
+scoreboard objectives add m.PrePurpleWin dummy
 scoreboard objectives add m.PreRedWin dummy
 scoreboard objectives add m.GreenWin dummy
 scoreboard objectives add m.BlueWin dummy
-scoreboard objectives add m.BlackWin dummy
+scoreboard objectives add m.PurpleWin dummy
 scoreboard objectives add m.RedWin dummy
 scoreboard objectives add m.BlueMembers dummy
 scoreboard objectives add m.GreenMembers dummy
 scoreboard objectives add m.RedMembers dummy
-scoreboard objectives add m.BlackMembers dummy
+scoreboard objectives add m.PurpleMembers dummy
 
 scoreboard objectives add m.BlueScore dummy
 scoreboard objectives add m.GreenScore dummy
 scoreboard objectives add m.RedScore dummy
-scoreboard objectives add m.BlackScore dummy
+scoreboard objectives add m.PurpleScore dummy
 
 scoreboard objectives add m.RespawnTimer dummy
 scoreboard objectives add m.RespawnTimeSec dummy

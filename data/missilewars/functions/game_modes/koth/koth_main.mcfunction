@@ -10,6 +10,4 @@ execute positioned -2.5 15 -2.5 run effect give @a[distance=0..,tag=Claiming] gl
 execute positioned -2.5 15 -2.5 as @a[x=0,tag=Claiming,team=Blue] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.BlueScore 1
 execute positioned -2.5 15 -2.5 as @a[x=0,tag=Claiming,team=Green] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.GreenScore 1
 execute positioned -2.5 15 -2.5 as @a[x=0,tag=Claiming,team=Red] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.RedScore 1
-execute positioned -2.5 15 -2.5 as @a[x=0,tag=Claiming,team=Purple] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.BlackScore 1
-
-execute positioned -2.5 15 -2.5 if entity @a[x=0,tag=Claiming] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.GameClock 1
+execute positioned -2.5 15 -2.5 as @a[x=0,tag=Claiming,team=Purple] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.PurpleScore 1

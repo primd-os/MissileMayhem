@@ -7,6 +7,8 @@ function missilewars:game_modes/force_gamemode
 execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 
 function missilewars:main/shared_run_main
+execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 1 run title @s[gamemode=!spectator] actionbar {"text": "✥"}
+execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 0 run title @s[gamemode=!spectator] actionbar {"text": "↑"}
 
 execute as @s[scores={JoinSpectators=1}] run function missilewars:start/join_spectators
 execute as @s[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpectators 0

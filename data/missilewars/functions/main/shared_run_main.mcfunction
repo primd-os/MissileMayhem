@@ -8,8 +8,6 @@ execute if score @s m.dropItem matches 1.. run function missilewars:main/toggle_
 execute as @e[x=0,type=minecraft:item,tag=!processed] if score @s m.UUID1 = @a[x=0,tag=Active,limit=1] m.UUID1 run tag @s add processed
 execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] run title @s times 0 3 0
 execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] run title @s[gamemode=!spectator] title {"text": ""}
-execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 1 run title @s[gamemode=!spectator] actionbar {"text": "✥"}
-execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 0 run title @s[gamemode=!spectator] actionbar {"text": "↑"}
 tag @s remove Active
 
 execute if score @s m.DeathsInGame matches 100.. run advancement grant @s only missilewars:many_deaths

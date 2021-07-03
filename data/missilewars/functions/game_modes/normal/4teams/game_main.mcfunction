@@ -5,7 +5,7 @@ execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/nor
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Blue,x=0] run scoreboard players set @s m.BlueLoss 1
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Green,x=0] run scoreboard players set @s m.GreenLoss 1
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Red,x=0] run scoreboard players set @s m.RedLoss 1
-execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Purple,x=0] run scoreboard players set @s m.BlackLoss 1
+execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Purple,x=0] run scoreboard players set @s m.PurpleLoss 1
 execute if entity @s[scores={m.Timer=0}] unless entity @a[x=0,team=!Spectator] run function missilewars:end/finish_game
 
 execute if score @s m.GameState matches 1 run function missilewars:game_modes/normal/4teams/check_end_game
@@ -17,7 +17,7 @@ execute if score @s m.GameState matches 1 at @e[type=marker,tag=Base,x=0] run fu
 execute if score @s m.BlueLoss matches 1 at @e[type=marker,tag=BlueBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
 execute if score @s m.GreenLoss matches 1 at @e[type=marker,tag=GreenBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
 execute if score @s m.RedLoss matches 1 at @e[type=marker,tag=RedBase] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
-execute if score @s m.BlackLoss matches 1 at @e[type=marker,tag=BlackBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
+execute if score @s m.PurpleLoss matches 1 at @e[type=marker,tag=PurpleBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
 
 execute as @a[scores={m.Game=1..},x=0] at @s run function missilewars:game_modes/normal/4teams/running_main
 function missilewars:item_managers/run_items

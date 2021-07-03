@@ -4,12 +4,12 @@ effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 2 0 true
 
 function missilewars:game_modes/force_gamemode
 
-execute as @s[team=Purple,tag=carrier] at @e[type=marker,tag=BlackBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-7 positioned ~-1 ~ ~ as @s[dx=3,dy=1,dz=50] unless entity @e[type=marker,distance=..3,tag=Flag] run tag @s add success
+execute as @s[team=Purple,tag=carrier] at @e[type=marker,tag=PurpleBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-7 positioned ~-1 ~ ~ as @s[dx=3,dy=1,dz=50] unless entity @e[type=marker,distance=..3,tag=Flag] run tag @s add success
 execute as @s[team=Red,tag=carrier] at @e[type=marker,tag=RedBase,x=0] positioned ~ ~-20 ~-25 positioned ^ ^ ^-7 positioned ~-1 ~ ~ as @s[dx=3,dy=1,dz=50] unless entity @e[type=marker,distance=..3,tag=Flag] run tag @s add success
 execute as @s[team=Blue,tag=carrier] at @e[type=marker,tag=BlueBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-7 positioned ~ ~ ~-1 as @s[dx=50,dy=1,dz=3] unless entity @e[type=marker,distance=..3,tag=Flag] run tag @s add success
 execute as @s[team=Green,tag=carrier] at @e[type=marker,tag=GreenBase,x=0] positioned ~-25 ~-20 ~ positioned ^ ^ ^-7 positioned ~ ~ ~-1 as @s[dx=50,dy=1,dz=3] unless entity @e[type=marker,distance=..3,tag=Flag] run tag @s add success
 execute as @s[team=Red,tag=success] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.RedScore 1
-execute as @s[team=Purple,tag=success] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.BlackScore 1
+execute as @s[team=Purple,tag=success] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.PurpleScore 1
 execute as @s[team=Blue,tag=success] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.BlueScore 1
 execute as @s[team=Green,tag=success] run scoreboard players add @e[type=marker,tag=GameMarker,x=0] m.GreenScore 1
 execute as @s[tag=success] at @s run summon minecraft:marker ~ ~ ~ {Tags: ["Flag"]}
@@ -21,7 +21,7 @@ execute as @s[tag=success] at @s run playsound item.book.page_turn block @a[x=0]
 execute as @s[tag=success] at @s run particle reverse_portal ~ ~ ~ 0 0 0 10 50
 tag @s remove success
 
-execute as @s[tag=!carrier,team=Purple,gamemode=!spectator] at @s as @e[type=marker,tag=Base,sort=nearest,limit=1] as @s[tag=!BlackBase] as @a[distance=..0.01] as @e[type=marker,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
+execute as @s[tag=!carrier,team=Purple,gamemode=!spectator] at @s as @e[type=marker,tag=Base,sort=nearest,limit=1] as @s[tag=!PurpleBase] as @a[distance=..0.01] as @e[type=marker,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier,team=Blue,gamemode=!spectator] at @s as @e[type=marker,tag=Base,sort=nearest,limit=1] as @s[tag=!BlueBase] as @a[distance=..0.01] as @e[type=marker,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier,team=Red,gamemode=!spectator] at @s as @e[type=marker,tag=Base,sort=nearest,limit=1] as @s[tag=!RedBase] as @a[distance=..0.01] as @e[type=marker,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier,team=Green,gamemode=!spectator] at @s as @e[type=marker,tag=Base,sort=nearest,limit=1] as @s[tag=!GreenBase] as @a[distance=..0.01] as @e[type=marker,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
@@ -41,6 +41,8 @@ execute as @s[scores={m.deathCheck=1..1000}] at @s run scoreboard players operat
 execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 
 function missilewars:main/shared_run_main
+execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 1 run title @s[gamemode=!spectator] actionbar {"text": "✥"}
+execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 0 run title @s[gamemode=!spectator] actionbar {"text": "↑"}
 
 execute as @s[scores={JoinSpectators=1}] run function missilewars:start/join_spectators
 execute as @s[scores={JoinSpectators=1}] run scoreboard players set @s JoinSpectators 0

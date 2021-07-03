@@ -8,7 +8,7 @@ execute at @e[type=marker,tag=Base,x=0] run function missilewars:maps/platform
 execute at @e[type=marker,tag=BlueBase,x=0] if score Map m.Variables matches 0 run function missilewars:maps/blue/basic_map
 execute at @e[type=marker,tag=GreenBase,x=0] if score Map m.Variables matches 0 run function missilewars:maps/green/basic_map
 execute at @e[type=marker,tag=RedBase,x=0] if score Map m.Variables matches 0 run function missilewars:maps/red/basic_map
-execute at @e[type=marker,tag=BlackBase,x=0] if score Map m.Variables matches 0 run function missilewars:maps/black/basic_map
+execute at @e[type=marker,tag=PurpleBase,x=0] if score Map m.Variables matches 0 run function missilewars:maps/purple/basic_map
 
 execute at @e[type=marker,tag=Base,x=0] if score Map m.Variables matches 1 run fill ^-25 ^ ^12 ^25 ^ ^1 minecraft:obsidian
 
@@ -17,7 +17,7 @@ execute at @e[type=marker,tag=Base,x=0] if score Map m.Variables matches 1 posit
 execute at @e[type=marker,tag=BlueBase,x=0] if score Map m.Variables matches 2..5 run function missilewars:maps/blue/basic_map
 execute at @e[type=marker,tag=GreenBase,x=0] if score Map m.Variables matches 2..5 run function missilewars:maps/green/basic_map
 execute at @e[type=marker,tag=RedBase,x=0] if score Map m.Variables matches 2..5 run function missilewars:maps/red/basic_map
-execute at @e[type=marker,tag=BlackBase,x=0] if score Map m.Variables matches 2..5 run function missilewars:maps/black/basic_map
+execute at @e[type=marker,tag=PurpleBase,x=0] if score Map m.Variables matches 2..5 run function missilewars:maps/purple/basic_map
 execute if score Map m.Variables matches 2 run fill -25 0 -2 25 100 2 white_stained_glass
 execute if score Map m.Variables matches 2 run fill -2 0 -25 2 100 25 white_stained_glass
 

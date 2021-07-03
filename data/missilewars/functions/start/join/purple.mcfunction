@@ -1,5 +1,5 @@
 team leave @s
-tellraw @s {"text":"Joined Black Team!","color":"black"}
+tellraw @s {"text":"Joined Purple Team!","color": "dark_purple"}
 team join Purple @s
 item replace entity @s armor.chest with leather_chestplate{display:{color:0}, Unbreakable:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1
 item replace entity @s armor.legs with leather_leggings{display:{color:0}, Unbreakable:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1

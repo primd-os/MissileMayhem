@@ -4,7 +4,7 @@ scoreboard players reset @s JoinSpectators
 scoreboard players reset @s JoinGreen
 scoreboard players reset @s JoinBlue
 scoreboard players reset @s JoinRed
-scoreboard players reset @s JoinBlack
+scoreboard players reset @s JoinPurple
 scoreboard players reset @s ClearPractice
 scoreboard players reset @s Heal
 scoreboard players enable @s ChooseMap

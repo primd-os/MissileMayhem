@@ -11,6 +11,8 @@ scoreboard players reset @s MissileSetSelect
 scoreboard players reset @s ToggleRanked
 
 function missilewars:main/shared_run_main
+execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 1 run title @s[gamemode=!spectator] actionbar {"text": "✥"}
+execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 0 run title @s[gamemode=!spectator] actionbar {"text": "↑"}
 
 scoreboard players set @s m.Items 2
 execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s minecraft:creeper_spawn_egg 0

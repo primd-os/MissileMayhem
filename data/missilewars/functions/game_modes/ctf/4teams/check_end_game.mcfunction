@@ -29,6 +29,11 @@ execute if entity @s[scores={m.GameState=1,m.DeadTeams=3,m.BlueLoss=0}] run scor
 execute if entity @s[scores={m.GameState=1,m.DeadTeams=3,m.RedLoss=0}] run scoreboard players set @s m.PreRedWin 1
 execute if entity @s[scores={m.GameState=1,m.DeadTeams=3,m.PurpleLoss=0}] run scoreboard players set @s m.PrePurpleWin 1
 
+execute if score @s m.PreGreenWin matches 1 if entity @e[type=marker,tag=GreenBase,tag=m.PerfectCTFPossible,x=0] run advancement grant @a[x=0,team=Green] only missilewars:perfect_ctf
+execute if score @s m.PreBlueWin matches 1 if entity @e[type=marker,tag=BlueBase,tag=m.PerfectCTFPossible,x=0] run advancement grant @a[x=0,team=Blue] only missilewars:perfect_ctf
+execute if score @s m.PreRedWin matches 1 if entity @e[type=marker,tag=RedBase,tag=m.PerfectCTFPossible,x=0] run advancement grant @a[x=0,team=Red] only missilewars:perfect_ctf
+execute if score @s m.PrePurpleWin matches 1 if entity @e[type=marker,tag=PurpleBase,tag=m.PerfectCTFPossible,x=0] run advancement grant @a[x=0,team=Purple] only missilewars:perfect_ctf
+
 function missilewars:game_modes/4teams/end_game
 
 scoreboard players set @s m.PreBlueLoss 0

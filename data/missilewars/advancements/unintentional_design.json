@@ -6,7 +6,7 @@
       "title": "Unintentional Game Design",
       "description": "Play a game for over an hour"
     },
-    "parent": "missilewars:afk",
+    "parent": "missilewars:anti_boredom",
     "criteria": {
       "requirement": {
         "trigger": "minecraft:impossible",

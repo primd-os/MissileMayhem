@@ -1,12 +1,12 @@
 {
     "display": {
       "icon": {
-        "item": "minecraft:piston"
+        "item": "minecraft:golden_helmet"
       },
-      "title": "Getting Started...",
-      "description": "Missile Mayhem",
-      "background": "minecraft:textures/block/piston_side.png"
+      "title": "The True King",
+      "description": "Play a perfect game of KOTH"
     },
+    "parent": "missilewars:2gud4u",
     "criteria": {
       "requirement": {
         "trigger": "minecraft:impossible",

@@ -22,6 +22,7 @@ execute as @s[tag=!carrier,team=Blue,gamemode=!spectator] at @s as @e[type=marke
 execute as @s[tag=!carrier,team=Red,gamemode=!spectator] at @s as @e[type=marker,tag=Base,sort=nearest,limit=1] as @s[tag=!RedBase] as @a[distance=..0.01] as @e[type=marker,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier,team=Green,gamemode=!spectator] at @s as @e[type=marker,tag=Base,sort=nearest,limit=1] as @s[tag=!GreenBase] as @a[distance=..0.01] as @e[type=marker,distance=..1.5,tag=Flag,tag=!taken] run tag @s add claiming
 execute as @s[tag=!carrier] at @s if entity @e[type=marker,distance=..1.5,tag=Flag,tag=claiming] run tellraw @a[x=0] [{"selector": "@s"},{"text": " has taken a Flag!"}]
+execute as @s[tag=!carrier] at @s if entity @e[type=marker,distance=..1.5,tag=Flag,tag=claiming] run tag @e[type=marker,tag=Base,sort=nearest,limit=1] remove m.PerfectCTFPossible
 execute as @s[tag=!carrier] at @s if entity @e[type=marker,distance=..1.5,tag=Flag,tag=claiming] run effect give @s instant_health 1 1 true
 execute as @s[tag=!carrier] at @s if entity @e[type=marker,distance=..1.5,tag=Flag,tag=claiming] run playsound item.book.page_turn block @a[x=0] ~ ~ ~ 1 1
 execute as @s[tag=!carrier] at @s if entity @e[type=marker,distance=..1.5,tag=Flag,tag=claiming] run particle portal ~ ~ ~ 0 0 0 10 50

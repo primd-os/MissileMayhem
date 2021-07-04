@@ -4,7 +4,7 @@ setblock 9 219 0 dark_oak_wall_sign[facing=west]{Text1:'{"text":"Clear","clickEv
 
 fill -4 200 -4 -2 201 -2 green_concrete
 fill -4 200 4 -2 201 2 blue_concrete
-fill 4 200 -4 2 201 -2 black_concrete
+fill 4 200 -4 2 201 -2 purple_concrete
 fill 4 200 4 2 201 2 red_concrete
 fill -4 200 -1 -2 201 1 light_gray_concrete
 

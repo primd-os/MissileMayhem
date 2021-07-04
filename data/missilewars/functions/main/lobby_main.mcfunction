@@ -10,7 +10,8 @@ scoreboard players reset @s Heal
 scoreboard players enable @s ChooseMap
 scoreboard players enable @s MapVote
 scoreboard players enable @s GiveBook
-scoreboard players enable @s MissileSetSelect
+scoreboard players enable @s ChooseMissileSet
+scoreboard players set @s ChooseMissileSet -2
 scoreboard players enable @s ToggleRanked
 
 execute unless entity @s[scores={m.points=-2147483648..2147483647}] run scoreboard players set @s m.points 1000
@@ -31,12 +32,9 @@ execute as @s[scores={ChooseMap=1}] run scoreboard players set @s ChooseMap 0
 
 execute unless score @s MapVote = @s PrevMapVote at @s run function missilewars:main/switch_vote
 
-execute as @s[scores={MissileSetSelect=1}] run function missilewars:start/choose_missile_set
-execute as @s[scores={MissileSetSelect=1}] run scoreboard players set @s MissileSetSelect 0
-
-execute unless entity @s[scores={ChooseMissileSet=-2147483648..2147483647}] run scoreboard players operation @s ChooseMissileSet = @s m.MissileSet
-scoreboard players enable @s ChooseMissileSet
-scoreboard players operation @s m.MissileSet = @s ChooseMissileSet
+execute as @s[scores={ChooseMissileSet=-1}] run function missilewars:start/choose_missile_set
+execute unless entity @s[scores={ChooseMissileSet=0..3}] run scoreboard players operation @s m.MissileSet = @s ChooseMissileSet
+scoreboard players set @s ChooseMissileSet -2
 function missilewars:start/missile_set_display
 
 execute as @s[scores={ToggleRanked=1}] run function missilewars:start/toggle_ranked

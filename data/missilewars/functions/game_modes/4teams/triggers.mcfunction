@@ -13,5 +13,4 @@ execute unless score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GameState matc
 scoreboard players reset @a[x=0] ChooseMap
 scoreboard players reset @a[x=0] GiveBook
 scoreboard players reset @a[x=0] ChooseMissileSet
-scoreboard players reset @a[x=0] MissileSetSelect
 scoreboard players reset @a[x=0] ToggleRanked

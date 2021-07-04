@@ -14,6 +14,5 @@ scoreboard players reset @s MapVote
 scoreboard players operation @s MapVote = @s PrevMapVote
 scoreboard players reset @s GiveBook
 scoreboard players reset @s ChooseMissileSet
-scoreboard players reset @s MissileSetSelect
 
 tag @e[type=marker,distance=0..,tag=PracticeArea,tag=InUse,sort=nearest,limit=1] remove InUse

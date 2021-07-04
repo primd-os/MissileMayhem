@@ -32,7 +32,6 @@ scoreboard objectives add GiveBook trigger
 scoreboard objectives add m.PrevMissileSet dummy
 scoreboard objectives add m.MissileSet dummy
 scoreboard objectives add ChooseMissileSet trigger
-scoreboard objectives add MissileSetSelect trigger
 scoreboard objectives add m.Items dummy
 scoreboard objectives add m.Game dummy
 scoreboard objectives setdisplay list m.Game

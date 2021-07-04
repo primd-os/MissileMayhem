@@ -9,6 +9,6 @@ execute as @e[x=0,type=minecraft:snowball,scores={m.snowballTime=20}, tag=Shield
 execute as @e[x=0,type=minecraft:snowball,scores={m.snowballTime=20}, tag=GreenShield] at @s run data merge block ~ ~ ~ {name:"missilewars:shields/green"}
 execute as @e[x=0,type=minecraft:snowball,scores={m.snowballTime=20}, tag=BlueShield] at @s run data merge block ~ ~ ~ {name:"missilewars:shields/blue"}
 execute as @e[x=0,type=minecraft:snowball,scores={m.snowballTime=20}, tag=RedShield] at @s run data merge block ~ ~ ~ {name:"missilewars:shields/red"}
-execute as @e[x=0,type=minecraft:snowball,scores={m.snowballTime=20}, tag=BlackShield] at @s run data merge block ~ ~ ~ {name:"missilewars:shields/purple"}
+execute as @e[x=0,type=minecraft:snowball,scores={m.snowballTime=20}, tag=PurpleShield] at @s run data merge block ~ ~ ~ {name:"missilewars:shields/purple"}
 execute as @e[x=0,type=minecraft:snowball,scores={m.snowballTime=20}] at @s if block ~ ~ ~ structure_block run setblock ~ ~1 ~ redstone_block
 kill @e[x=0,type=minecraft:snowball,scores={m.snowballTime=20}]

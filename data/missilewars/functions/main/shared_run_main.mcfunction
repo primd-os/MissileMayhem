@@ -6,6 +6,7 @@ execute as @e[x=0,type=minecraft:item,tag=!processed] at @s run tp @s @p
 tag @s add Active
 execute if score @s m.dropItem matches 1.. run function missilewars:main/toggle_place
 execute as @e[x=0,type=minecraft:item,tag=!processed] if score @s m.UUID1 = @a[x=0,tag=Active,limit=1] m.UUID1 run tag @s add processed
+execute as @e[x=0,type=minecraft:item] if score @s m.UUID1 = @a[x=0,tag=Active,limit=1] m.UUID1 run tp @s @a[x=0,tag=Active,limit=1]
 execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] run title @s times 0 3 0
 execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] run title @s[gamemode=!spectator] title {"text": ""}
 tag @s remove Active

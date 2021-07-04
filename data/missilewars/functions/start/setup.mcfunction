@@ -25,13 +25,17 @@ scoreboard objectives add Practice trigger
 scoreboard objectives add ClearPractice trigger
 scoreboard objectives add Heal trigger
 scoreboard objectives add Leave trigger
+
 scoreboard objectives add ChooseMap trigger
-scoreboard objectives add PrevMapVote dummy
-scoreboard objectives add MapVote trigger
+scoreboard objectives add m.PrevMapVote dummy
+scoreboard objectives add m.MapVote dummy
+
 scoreboard objectives add GiveBook trigger
+
 scoreboard objectives add m.PrevMissileSet dummy
 scoreboard objectives add m.MissileSet dummy
 scoreboard objectives add ChooseMissileSet trigger
+
 scoreboard objectives add m.Items dummy
 scoreboard objectives add m.Game dummy
 scoreboard objectives setdisplay list m.Game

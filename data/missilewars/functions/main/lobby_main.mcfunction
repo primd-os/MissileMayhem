@@ -8,7 +8,7 @@ scoreboard players reset @s JoinPurple
 scoreboard players reset @s ClearPractice
 scoreboard players reset @s Heal
 scoreboard players enable @s ChooseMap
-scoreboard players enable @s MapVote
+scoreboard players set @s ChooseMap -2
 scoreboard players enable @s GiveBook
 scoreboard players enable @s ChooseMissileSet
 scoreboard players set @s ChooseMissileSet -2
@@ -27,10 +27,10 @@ execute if block ~ ~ ~ wheat run function missilewars:main/wheat_tp
 execute if block ~ ~-1 ~ wheat run function missilewars:main/wheat_tp
 execute if block ~ ~-2 ~ wheat run function missilewars:main/wheat_tp
 
-execute as @s[scores={ChooseMap=1}] run function missilewars:start/choose_map
-execute as @s[scores={ChooseMap=1}] run scoreboard players set @s ChooseMap 0
-
-execute unless score @s MapVote = @s PrevMapVote at @s run function missilewars:main/switch_vote
+execute as @s[scores={ChooseMap=-1}] run function missilewars:start/choose_map
+execute as @s[scores={ChooseMap=0..5}] run scoreboard players operation @s m.MapVote = @s ChooseMap
+scoreboard players set @s ChooseMap -2
+execute unless score @s m.MapVote = @s m.PrevMapVote at @s run function missilewars:main/switch_vote
 
 execute as @s[scores={ChooseMissileSet=-1}] run function missilewars:start/choose_missile_set
 execute unless entity @s[scores={ChooseMissileSet=0..3}] run scoreboard players operation @s m.MissileSet = @s ChooseMissileSet

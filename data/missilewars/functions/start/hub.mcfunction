@@ -10,8 +10,6 @@ scoreboard players reset @s ClearPractice
 scoreboard players reset @s Heal
 scoreboard players reset @s Leave
 scoreboard players reset @s ChooseMap
-scoreboard players reset @s MapVote
-scoreboard players operation @s MapVote = @s PrevMapVote
 scoreboard players reset @s GiveBook
 scoreboard players reset @s ChooseMissileSet
 

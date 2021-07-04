@@ -1,4 +1,4 @@
-scoreboard players operation @s m.MissileSet += @a[distance=0..,scores={m.PlacedMissile=1},sort=nearest,limit=1] m.MissileSet
+scoreboard players operation @s m.MissileSet = @a[distance=0..,scores={m.PlacedMissile=1},sort=nearest,limit=1] m.MissileSet
 clone ~ ~ ~ ~ ~1 ~ ~ 250 ~ replace
 execute as @s[name="Tomahawk"] run function missilewars:item_managers/spawn_tomohawk
 execute as @s[name="Juggernaut"] run function missilewars:item_managers/spawn_juggurnaut

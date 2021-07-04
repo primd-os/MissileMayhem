@@ -7,13 +7,17 @@ execute as @a[scores={rx.kill_uid=1..},x=0] if score @s rx.kill_uid = $uid rx.te
 # basic death message
 execute if entity @a[tag=rx.killed,x=0,limit=1] run tag @s add dieMarked
 execute as @s[advancements={missilewars:death/arrow=true},tag=dieMarked] run tellraw @a[x=0] ["", {"selector":"@s"}, " was impaled by ", {"selector":"@a[tag=rx.killed,x=0,limit=1]"}, "'s arrow"]
+execute as @s[advancements={missilewars:death/arrow=true},tag=dieMarked] run tag @s add m.ArrowDeath
 execute as @s[advancements={missilewars:death/explosion=true},tag=dieMarked] run tellraw @a[x=0] ["", {"selector":"@s"}, " was blown up by ", {"selector":"@a[tag=rx.killed,x=0,limit=1]"}]
+execute as @s[advancements={missilewars:death/explosion=true},tag=dieMarked] run tag @s add m.ExplosionDeath
 execute as @s[advancements={missilewars:death/fire=true},tag=dieMarked] run tellraw @a[x=0] ["", {"selector":"@s"}, " was burned to death by ", {"selector":"@a[tag=rx.killed,x=0,limit=1]"}]
-execute as @s[advancements={missilewars:death/void=true},tag=dieMarked] run tellraw @a[x=0] ["", {"selector":"@s"}, " fell due to ", {"selector":"@a[tag=rx.killed,x=0,limit=1]"}]
-execute as @s[advancements={missilewars:death/melee=true},tag=dieMarked] run tellraw @a[x=0] ["", {"selector":"@s"}, " was stabbed by ", {"selector":"@a[tag=rx.killed,x=0,limit=1]"}]
+execute as @s[tag=m.VoidDeath,tag=dieMarked] run tellraw @a[x=0] ["", {"selector":"@s"}, " fell due to ", {"selector":"@a[tag=rx.killed,x=0,limit=1]"}]
+execute as @s[advancements={missilewars:death/melee=true},tag=dieMarked,tag=!m.ArrowDeath,tag=!m.ExplosionDeath] run tellraw @a[x=0] ["", {"selector":"@s"}, " was stabbed by ", {"selector":"@a[tag=rx.killed,x=0,limit=1]"}]
 
 # remove tag :)
 tag @a[x=0] remove rx.killed
+tag @s remove m.ArrowDeath
+tag @s remove m.VoidDeath
 
 execute as @s[tag=!dieMarked] run tellraw @a[x=0] [{"selector": "@s"},{"text": " died"}]
 tag @s remove dieMarked

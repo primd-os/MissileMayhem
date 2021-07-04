@@ -7,11 +7,9 @@ scoreboard players reset @s JoinRed
 scoreboard players reset @s JoinPurple
 scoreboard players reset @s ClearPractice
 scoreboard players reset @s Heal
-scoreboard players enable @s ChooseMap
 execute unless score @s ChooseMap matches -2147483648..2147483647 run scoreboard players set @s ChooseMap -2
 scoreboard players enable @s GiveBook
 execute unless score @s ChooseMissileSet matches -2147483648..2147483647 run scoreboard players set @s ChooseMissileSet -2
-scoreboard players enable @s ChooseMissileSet
 scoreboard players enable @s ToggleRanked
 
 execute unless entity @s[scores={m.points=-2147483648..2147483647}] run scoreboard players set @s m.points 1000

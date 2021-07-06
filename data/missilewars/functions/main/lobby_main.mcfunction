@@ -40,7 +40,8 @@ function missilewars:start/missile_set_display
 execute as @s[scores={ToggleRanked=1}] run function missilewars:start/toggle_ranked
 execute as @s[scores={ToggleRanked=1}] run scoreboard players set @s ToggleRanked 0
 
-execute as @s[tag=Editor] at @s run function missilewars:main/lobby_editor
+
+execute as @s[tag=Editor] run function missilewars:main/lobby_editor
 scoreboard players set @s m.tntCount 0
 scoreboard players set @s m.tntBroke 0
 

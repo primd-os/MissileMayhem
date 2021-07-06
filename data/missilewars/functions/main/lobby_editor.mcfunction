@@ -1,8 +1,13 @@
+
 scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount += @s m.tntCount
 scoreboard players operation @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount -= @s m.tntBroke
 scoreboard players operation tnt m.Variables = @s m.tntBroke
 
 scoreboard players set @s m.Items 2
+
+# Updates inventory changed variable to ground truth(neccessary due to bug)
+execute if score @s m.inv_change matches 0 run clear @s tnt 0
+
 execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s iron_pickaxe 0
 execute if score @s m.Items matches 0 run give @s iron_pickaxe{Unbreakable:1b,CanDestroy:["#missilewars:custom_blocks"],HideFlags:24} 1
 execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s white_wool 0

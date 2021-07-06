@@ -1,9 +1,4 @@
-execute as @a[scores={m.Game=-1}] run function missilewars:secret/main
-execute in missilewars:lobby as @a[x=0,scores={m.Game=-1}] run function missilewars:secret/clear
-
 execute in missilewars:lobby run scoreboard players set @a[x=0] m.Game 0
-execute as @a[scores={m.Game=0}] at @s run function missilewars:main/lobby_main
-execute as @a unless score @s m.UUID1 matches -2147483648..2147483647 store result score @s m.UUID1 run data get entity @s UUID[0] 1
 
 execute as @a at @s run function missilewars:main/global_main
 
@@ -50,8 +45,10 @@ execute in missilewars:lobby positioned 66.5 112 26.5 as @a[distance=..0.75,tag=
 
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run playsound entity.generic.explode block @a[x=0] ~ ~ ~ 1
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 1s},x=0] at @s run particle explosion ~ ~ ~
-execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] at @s run scoreboard players remove @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount 1
+execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 79s},x=0] at @s run scoreboard players remove @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] m.tntCount 1
 execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run data modify entity @s Motion set value [0D,0.20000000298023224D,0D]
+execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 80s},x=0] run tag @s add m.TNTFuseReset
+execute in missilewars:lobby as @e[type=tnt,nbt={Fuse: 79s},x=0,tag=!m.TNTFuseReset] run data modify entity @s Motion set value [0D,0.20000000298023224D,0D]
 execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 
 execute in missilewars:lobby run kill @e[type=item,x=0]

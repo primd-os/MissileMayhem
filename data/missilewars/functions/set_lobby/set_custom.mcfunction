@@ -22,3 +22,9 @@ execute if entity @s[y_rotation=-90] run fill ^-8 ^ ^-1 ^8 ^ ^1 minecraft:magent
 execute if entity @s[y_rotation=0] run fill ^-8 ^ ^-1 ^8 ^ ^1 minecraft:magenta_glazed_terracotta[facing=west]
 execute if entity @s[y_rotation=90] run fill ^-8 ^ ^-1 ^8 ^ ^1 minecraft:magenta_glazed_terracotta[facing=north]
 fill ^-8 ^-1 ^-1 ^8 ^-1 ^1 minecraft:obsidian
+
+fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:moving_piston
+fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:moving_piston
+fill ^-9 ^ ^-1 ^-9 ^3 ^1 minecraft:moving_piston
+fill ^9 ^ ^-1 ^9 ^3 ^1 minecraft:moving_piston
+fill ^-8 ^4 ^-1 ^8 ^4 ^1 minecraft:moving_piston

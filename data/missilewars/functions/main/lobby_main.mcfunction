@@ -61,12 +61,6 @@ execute as @s[tag=InBox] run clear @s written_book{display:{Name:'{"text":"Custo
 execute as @s[tag=InBox,nbt=!{Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_off_head
 execute as @s[tag=!InBox,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/attempt_move_to_head
 
-execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^2 ^8 ^3 ^2 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^ ^-2 ^8 ^3 ^-2 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-9 ^ ^-1 ^-9 ^3 ^1 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^9 ^ ^-1 ^9 ^3 ^1 minecraft:air
-execute if entity @s[tag=InBox] at @s as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^4 ^-1 ^8 ^4 ^1 minecraft:air
-
 execute if entity @s[team=Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Sumo
 execute unless entity @s[team=Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Lobby
 

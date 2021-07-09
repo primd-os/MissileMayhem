@@ -13,4 +13,6 @@ scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
 scoreboard players reset @s ChooseMissileSet
 
+tag @s remove m.GotRace
+
 tag @e[type=marker,distance=0..,tag=PracticeArea,tag=InUse,sort=nearest,limit=1] remove InUse

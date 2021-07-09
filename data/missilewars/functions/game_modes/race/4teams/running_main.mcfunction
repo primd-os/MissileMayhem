@@ -1,6 +1,11 @@
 function missilewars:game_modes/force_gamemode
 
+execute as @s[z=-100,dz=50,x=-200,dx=400,y=0,dy=200,tag=!m.GotRace,gamemode=!spectator] run tellraw @a [{"selector":"@s"},{"text": " has got the goal."}]
+execute as @s[z=-100,dz=50,x=-200,dx=400,y=0,dy=200,tag=!m.GotRace,gamemode=!spectator] run tag @s add m.GotRace
+execute as @s[x=0,tag=m.GotRace] run effect give @s glowing 1 0 true
+
 execute as @s[scores={m.deathCheck=1..1000}] at @s run tag @s remove m.GotRace
+execute as @s[scores={m.deathCheck=1..1000}] at @s run tp @s 0 0 0
 execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death
 
 effect give @s minecraft:haste 2 2 true

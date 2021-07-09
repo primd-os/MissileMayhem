@@ -2,26 +2,25 @@ execute in missilewars:lobby run scoreboard players set @a[x=0] m.Game 0
 
 execute as @a at @s run function missilewars:main/global_main
 
-execute in missilewars:game1 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/normal/2teams/game_main
-execute in missilewars:game2 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/normal/2teams/game_main
-execute in missilewars:game3 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/normal/2teams/game_main
-execute in missilewars:game41 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/normal/4teams/game_main
-execute in missilewars:game42 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/normal/4teams/game_main
-execute in missilewars:game43 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/normal/4teams/game_main
+execute in missilewars:normal/2teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/normal/2teams/game_main
+execute in missilewars:normal/4teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/normal/4teams/game_main
+# execute in missilewars:normal/ffa as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/normal/ffa/game_main
 
-execute in missilewars:koth/game1 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/koth/2teams/game_main
-execute in missilewars:koth/game2 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/koth/2teams/game_main
-execute in missilewars:koth/game3 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/koth/2teams/game_main
-execute in missilewars:koth/game41 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/koth/4teams/game_main
-execute in missilewars:koth/game42 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/koth/4teams/game_main
-execute in missilewars:koth/game43 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/koth/4teams/game_main
+execute in missilewars:koth/2teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/koth/2teams/game_main
+execute in missilewars:koth/4teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/koth/4teams/game_main
+# execute in missilewars:koth/ffa as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/koth/ffa/game_main
 
-execute in missilewars:ctf/game1 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/2teams/game_main
-execute in missilewars:ctf/game2 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/2teams/game_main
-execute in missilewars:ctf/game3 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/2teams/game_main
-execute in missilewars:ctf/game41 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/4teams/game_main
-execute in missilewars:ctf/game42 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/4teams/game_main
-execute in missilewars:ctf/game43 as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/4teams/game_main
+execute in missilewars:ctf/2teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/2teams/game_main
+execute in missilewars:ctf/4teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/4teams/game_main
+# execute in missilewars:ctf/ffa as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/ffa/game_main
+
+# execute in missilewars:race/2teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/race/2teams/game_main
+# execute in missilewars:race/4teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/race/4teams/game_main
+# execute in missilewars:race/ffa as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/race/ffa/game_main
+
+# execute in missilewars:royale/2teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/royale/2teams/game_main
+# execute in missilewars:royale/4teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/royale/4teams/game_main
+# execute in missilewars:royale/ffa as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/royale/ffa/game_main
 
 execute in missilewars:practice run function missilewars:practice/game_main
 
@@ -55,7 +54,6 @@ execute in missilewars:lobby run kill @e[type=item,x=0]
 
 execute in missilewars:lobby as @a[x=0,team=Spectator] run function missilewars:main/clear_inv
 execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
-execute in missilewars:lobby as @e[type=marker,tag=CustomMissileArea,x=0] at @s if entity @a[distance=..15] unless entity @a[tag=InBox,distance=..10] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 air
 
 tag @a[scores={m.Game=1..999}] add InGame
 tag @a[scores={m.Game=..0}] remove InGame

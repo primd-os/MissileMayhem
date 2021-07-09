@@ -176,46 +176,45 @@ function missilewars:start/advert
 
 scoreboard players set @a m.Game -2
 
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game1 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game2 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game3 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game41 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game42 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game43 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:normal/2teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:normal/4teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:normal/ffa run function missilewars:start/barriers
 
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game1 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game2 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game3 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game41 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game42 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game43 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/2teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/4teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/ffa run function missilewars:start/barriers
 
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game1 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game2 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game3 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game41 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game42 run function missilewars:start/barriers
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game43 run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/2teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/4teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/ffa run function missilewars:start/barriers
 
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game1 run function missilewars:maps/queue/2team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game2 run function missilewars:maps/queue/2team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game3 run function missilewars:maps/queue/2team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game1 run function missilewars:maps/queue/2team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game2 run function missilewars:maps/queue/2team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game3 run function missilewars:maps/queue/2team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game1 run function missilewars:maps/queue/2team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game2 run function missilewars:maps/queue/2team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game3 run function missilewars:maps/queue/2team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:race/2teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:race/4teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:race/ffa run function missilewars:start/barriers
 
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game41 run function missilewars:maps/queue/4team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game42 run function missilewars:maps/queue/4team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:game43 run function missilewars:maps/queue/4team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game41 run function missilewars:maps/queue/4team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game42 run function missilewars:maps/queue/4team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/game43 run function missilewars:maps/queue/4team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game41 run function missilewars:maps/queue/4team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game42 run function missilewars:maps/queue/4team
-execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/game43 run function missilewars:maps/queue/4team
+execute unless score lowLagReload m.Constants matches 1 in missilewars:royale/2teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:royale/4teams run function missilewars:start/barriers
+execute unless score lowLagReload m.Constants matches 1 in missilewars:royale/ffa run function missilewars:start/barriers
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:normal/2teams run function missilewars:maps/queue/2teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:normal/4teams run function missilewars:maps/queue/4teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:normal/ffa run function missilewars:maps/queue/ffa
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/2teams run function missilewars:maps/queue/2teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/4teams run function missilewars:maps/queue/4teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:koth/ffa run function missilewars:maps/queue/ffa
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/2teams run function missilewars:maps/queue/2teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/4teams run function missilewars:maps/queue/4teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:ctf/ffa run function missilewars:maps/queue/ffa
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:race/2teams run function missilewars:maps/queue/2teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:race/4teams run function missilewars:maps/queue/4teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:race/ffa run function missilewars:maps/queue/ffa
+
+execute unless score lowLagReload m.Constants matches 1 in missilewars:royale/2teams run function missilewars:maps/queue/2teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:royale/4teams run function missilewars:maps/queue/4teams
+execute unless score lowLagReload m.Constants matches 1 in missilewars:royale/ffa run function missilewars:maps/queue/ffa
 
 execute unless score lowLagReload m.Constants matches 1 in missilewars:lobby run function missilewars:set_lobby/set_map
 

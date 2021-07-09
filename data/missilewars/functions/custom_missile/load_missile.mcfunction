@@ -2,10 +2,6 @@ playsound minecraft:entity.experience_orb.pickup block @a[x=0] ~ ~ ~ 1 0
 
 execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^1 ^-1 ^8 ^3 ^1 minecraft:air
 
-tag @s add Editor
-scoreboard players set @s m.inv_change 1
-function missilewars:main/clear_inv
-
 execute at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^-1 ^ air
 execute at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] run setblock ^ ^-1 ^ minecraft:structure_block[mode=load]{rotation:"NONE",posX:-1,mode:"LOAD",posY:2,posZ:-8}
 
@@ -27,5 +23,4 @@ execute at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] run fill ^
 execute at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] run fill ^-8 ^1 ^-1 ^8 ^3 ^1 white_stained_glass replace minecraft:magenta_stained_glass
 execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s store result score @s m.tntCount run fill ^-8 ^1 ^-1 ^8 ^3 ^1 target replace tnt
 execute as @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1] at @s run fill ^-8 ^1 ^-1 ^8 ^3 ^1 tnt replace target
-clear @s tnt
 kill @e[type=marker,x=0,tag=UUIDHolder]

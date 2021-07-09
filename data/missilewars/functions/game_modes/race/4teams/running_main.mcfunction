@@ -25,5 +25,6 @@ execute as @s[scores={JoinRed=1}] run scoreboard players set @s JoinRed 0
 execute as @s[scores={JoinPurple=1}] run function missilewars:start/join/purple
 execute as @s[scores={JoinPurple=1}] run scoreboard players set @s JoinPurple 0
 
+execute as @s[scores={Leave=1}] run tag @s remove m.GotRace
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0

@@ -5,10 +5,3 @@ kill @e[type=item,x=0]
 kill @e[type=arrow,x=0]
 kill @e[type=fireball,x=0]
 kill @e[type=marker,x=0]
-
-execute as @a[x=0] run function missilewars:end/leave
-
-forceload remove -200 -200 -100 200
-forceload remove -100 -200 0 200
-forceload remove 0 -200 100 200
-forceload remove 100 -200 200 200

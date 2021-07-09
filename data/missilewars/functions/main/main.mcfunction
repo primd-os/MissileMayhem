@@ -14,8 +14,8 @@ execute in missilewars:ctf/2teams as @e[type=marker,tag=GameMarker,x=0] run func
 execute in missilewars:ctf/4teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/4teams/game_main
 # execute in missilewars:ctf/ffa as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/ctf/ffa/game_main
 
-# execute in missilewars:race/2teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/race/2teams/game_main
-# execute in missilewars:race/4teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/race/4teams/game_main
+execute in missilewars:race/2teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/race/2teams/game_main
+execute in missilewars:race/4teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/race/4teams/game_main
 # execute in missilewars:race/ffa as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/race/ffa/game_main
 
 # execute in missilewars:royale/2teams as @e[type=marker,tag=GameMarker,x=0] run function missilewars:game_modes/royale/2teams/game_main

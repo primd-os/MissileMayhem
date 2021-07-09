@@ -6,10 +6,10 @@ execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Blue,x=0] run sco
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Green,x=0] run scoreboard players set @s m.GreenLoss 1
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Red,x=0] run scoreboard players set @s m.RedLoss 1
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=Purple,x=0] run scoreboard players set @s m.PurpleLoss 1
-execute if entity @s[scores={m.Timer=0}] unless entity @a[x=0,team=!Spectator] run function missilewars:end/finish_game
+execute if entity @s[scores={m.Timer=0}] unless entity @a[x=0,team=!Spectator] run function missilewars:game_modes/normal/4teams/reset_game
 
 execute if score @s m.GameState matches 1 run function missilewars:game_modes/normal/4teams/check_end_game
-execute as @s[scores={m.GameState=2..,m.EndTimer=0}] at @s run function missilewars:end/finish_game
+execute as @s[scores={m.GameState=2..,m.EndTimer=0}] at @s run function missilewars:game_modes/normal/4teams/reset_game
 execute as @s[scores={m.GameState=2..}] at @s run scoreboard players remove @s m.EndTimer 1
 
 execute if score @s m.GameState matches 1 at @e[type=marker,tag=Base,x=0] run function missilewars:maps/spawn_plat
@@ -23,3 +23,4 @@ execute as @a[scores={m.Game=1..},x=0] at @s run function missilewars:game_modes
 function missilewars:item_managers/run_items
 
 execute if score @s m.GameState matches 1 unless entity @a[x=0] run function missilewars:end/finish_game
+execute if score @s m.GameState matches 1 unless entity @a[x=0] run function missilewars:end/unload_game

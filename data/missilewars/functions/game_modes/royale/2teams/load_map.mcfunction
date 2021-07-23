@@ -1,0 +1,1 @@
+function missilewars:game_modes/2teams/load_map

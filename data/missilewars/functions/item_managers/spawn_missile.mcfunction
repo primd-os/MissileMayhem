@@ -20,8 +20,8 @@ scoreboard players operation PosZ m.Variables += PosZ2 m.Variables
 
 scoreboard players set PosX2 m.Variables 0
 scoreboard players set PosZ2 m.Variables 0
-execute store result score PosX2 m.Variables run data get entity @e[distance=0..,tag=PracticeArea,sort=nearest,limit=1] Pos[0]
-execute store result score PosZ2 m.Variables run data get entity @e[distance=0..,tag=PracticeArea,sort=nearest,limit=1] Pos[2]
+execute store result score PosX2 m.Variables run data get entity @e[distance=0..,tag=m.PracticeArea,sort=nearest,limit=1] Pos[0]
+execute store result score PosZ2 m.Variables run data get entity @e[distance=0..,tag=m.PracticeArea,sort=nearest,limit=1] Pos[2]
 scoreboard players operation PosX m.Variables -= PosX2 m.Variables
 scoreboard players operation PosZ m.Variables -= PosZ2 m.Variables
 

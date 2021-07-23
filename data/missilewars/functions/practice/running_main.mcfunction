@@ -1,7 +1,7 @@
 effect give @s minecraft:haste 2 2 true
 effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 2 0 true
 scoreboard players enable @s Leave
-scoreboard players enable @s ClearPractice
+scoreboard players enable @s m.ClearPractice
 scoreboard players enable @s Heal
 scoreboard players reset @s JoinSpectators
 scoreboard players reset @s ChooseMap
@@ -36,8 +36,8 @@ execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{i
 execute as @s[scores={Leave=1}] run function missilewars:end/leave
 execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
 
-execute as @s[scores={ClearPractice=1}] at @s at @e[type=marker,tag=PracticeArea,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~-112 {Tags: ["PracticeClear"]} 
-execute as @s[scores={ClearPractice=1}] run scoreboard players set @s ClearPractice 0
+execute as @s[scores={m.ClearPractice=1}] at @s at @e[type=marker,tag=m.PracticeArea,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~-112 {Tags: ["PracticeClear"]} 
+execute as @s[scores={m.ClearPractice=1}] run scoreboard players set @s m.ClearPractice 0
 execute as @s[scores={Heal=1}] run effect give @s instant_health 1 10 true
 execute as @s[scores={Heal=1}] run scoreboard players set @s Heal 0
 

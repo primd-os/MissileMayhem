@@ -1,5 +1,4 @@
 gamerule fallDamage false
-gamerule drowningDamage false
 gamerule showDeathMessages false
 
 difficulty easy
@@ -22,7 +21,7 @@ scoreboard objectives add JoinBlue trigger
 scoreboard objectives add JoinRed trigger
 scoreboard objectives add JoinPurple trigger
 scoreboard objectives add Practice trigger
-scoreboard objectives add ClearPractice trigger
+scoreboard objectives add m.ClearPractice trigger
 scoreboard objectives add Heal trigger
 scoreboard objectives add Leave trigger
 
@@ -217,13 +216,6 @@ execute unless score lowLagReload m.Constants matches 1 in missilewars:royale/4t
 execute unless score lowLagReload m.Constants matches 1 in missilewars:royale/ffa run function missilewars:maps/queue/ffa
 
 execute unless score lowLagReload m.Constants matches 1 in missilewars:lobby run function missilewars:set_lobby/set_map
-
-execute unless score lowLagReload m.Constants matches 1 in missilewars:practice run function missilewars:practice/create
-
-forceload add -200 -200 -100 200
-forceload add -100 -200 0 200
-forceload add 0 -200 100 200
-forceload add 100 -200 200 200
 
 data modify storage missilewars:queue queue set value ["","",""]
 

@@ -5,7 +5,7 @@ scoreboard players reset @s JoinGreen
 scoreboard players reset @s JoinBlue
 scoreboard players reset @s JoinRed
 scoreboard players reset @s JoinPurple
-scoreboard players reset @s ClearPractice
+scoreboard players reset @s m.ClearPractice
 scoreboard players reset @s Heal
 execute unless score @s ChooseMap matches -2147483648..2147483647 run scoreboard players set @s ChooseMap -2
 scoreboard players enable @s GiveBook

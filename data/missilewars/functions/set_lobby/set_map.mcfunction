@@ -82,3 +82,4 @@ setblock -6 61 6 minecraft:redstone_block destroy
 
 function missilewars:set_lobby/add_additions
 forceload remove -100 -100 100 100
+forceload add 0 0

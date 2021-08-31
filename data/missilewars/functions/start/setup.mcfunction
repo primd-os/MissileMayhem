@@ -1,6 +1,3 @@
-gamerule fallDamage false
-gamerule showDeathMessages false
-
 difficulty easy
 
 scoreboard objectives add m.snowballTime dummy
@@ -46,8 +43,6 @@ scoreboard objectives add m.TimerSecs dummy
 scoreboard objectives add m.TimerTick dummy
 
 scoreboard objectives add m.DeathsInGame deathCount
-
-execute unless score maxTpValue m.Variables matches -2147483648..2147483647 run scoreboard players set maxTpValue m.Variables 1
 
 scoreboard objectives add m.PlacedTomahawk minecraft.used:minecraft.creeper_spawn_egg
 scoreboard objectives add m.PlacedJugg minecraft.used:minecraft.wolf_spawn_egg
@@ -217,6 +212,8 @@ execute unless score lowLagReload m.Constants matches 1 in missilewars:royale/ff
 
 execute unless score lowLagReload m.Constants matches 1 in missilewars:lobby run function missilewars:set_lobby/set_map
 
+scoreboard players set lowLagReload m.Constants 1
+
 data modify storage missilewars:queue queue set value ["","",""]
 
-kill @e[type=item]
+execute in missilewars:lobby run kill @e[type=item,x=0]

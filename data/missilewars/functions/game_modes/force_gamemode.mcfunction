@@ -12,6 +12,6 @@ scoreboard players operation @s m.RespawnTimeSec /= TPS m.Constants
 scoreboard players add @s m.RespawnTimeSec 1
 scoreboard players operation RespawnTimeInSec m.Variables = @s m.RespawnTimer
 scoreboard players operation RespawnTimeInSec m.Variables %= TPS m.Constants
-execute if score RespawnTimeInSec m.Variables matches 0 run playsound minecraft:block.note_block.chime block @s ~ ~ ~ 0.5 2 1
-execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1}] if score @s m.RespawnTimer matches 0.. run title @s title {"score": {"name": "@s","objective": "m.RespawnTimeSec"}}
-execute if score @s m.RespawnTimer matches -1.. run scoreboard players remove @s m.RespawnTimer 1
+execute if score RespawnTimeInSec m.Variables matches 0 unless score @s m.RespawnTimer matches 1000000 run playsound minecraft:block.note_block.chime block @s ~ ~ ~ 0.5 2 1
+execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1}] if score @s m.RespawnTimer matches 0..999999 run title @s title {"score": {"name": "@s","objective": "m.RespawnTimeSec"}}
+execute if score @s m.RespawnTimer matches -1..999999 run scoreboard players remove @s m.RespawnTimer 1

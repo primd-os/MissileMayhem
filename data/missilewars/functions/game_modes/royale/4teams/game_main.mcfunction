@@ -14,5 +14,3 @@ execute if score @s m.GameState matches 1 at @e[type=marker,tag=Base,x=0] run fu
 
 execute if score @s m.GameState matches 1 unless entity @a[x=0] run function missilewars:end/finish_game
 execute if score @s m.GameState matches 1 unless entity @a[x=0] run function missilewars:end/unload_game
-
-particle minecraft:happy_villager 0 50 -50 100 50 0 0.1 100 force

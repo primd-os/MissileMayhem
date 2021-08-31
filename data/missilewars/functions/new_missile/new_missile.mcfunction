@@ -8,7 +8,6 @@ scoreboard players remove ArrowsQueue m.Variables 1
 scoreboard players remove FireballQueue m.Variables 1
 
 function missilewars:new_missile/activate_missile
-
 summon armor_stand 0 255 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["m.QueueLooter"]}
 loot replace entity @e[type=armor_stand,x=0] weapon loot missilewars:new_missile
 execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:"minecraft:creeper_spawn_egg"}]}] store result score TomahawkQueue m.Variables run data get storage missilewars:queue queue

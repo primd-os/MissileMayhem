@@ -45,7 +45,7 @@ Discord Server: <https://discord.gg/S6TUQWt>
 ### Maps
 
 * Added options to choose different maps
-* These are Normal, No Walls, Small Walls, Center Wall, Platforms, Weak Center, Bridge, and Diagonal
+* These are Normal, No Walls, Small Walls, Center Wall, Platforms, Weak Center, Bridge, Diagonal, and Towers
 * These maps work in all modes and are voted on by the players in the queue
 
 #### Normal
@@ -71,6 +71,10 @@ Discord Server: <https://discord.gg/S6TUQWt>
 #### Diagonal
 
 ![Missiles](images/maps/diagonal.png)
+
+### Towers
+
+![Missiles](images/maps/towers.png)
 
 ### Game Modes
 

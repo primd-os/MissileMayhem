@@ -2,13 +2,13 @@
 
 The datapack used for the missilemayhem minecraft minigame. Note this is a [PRIMD Minigame module](https://github.com/primd-os/Hub) and does not work on it's own.
 
-Public server: `play.primd.net`
+Public server: `play.primd.net` Cerrently OFFLINE
 
 Discord Server: <https://discord.gg/S6TUQWt>
 
 ## Download
 
-1. Go to <https://github.com/Devon7925/MissileMayhem/releases> and download the latest release
+1. Go to <https://github.com/Devon7925/MissileMayhem/releases> and download the latest release (the one you are viewing is a beta working on fixing bugs in the last master bulid as of 10/1/2021.)
 2. Move the map in the zip folder to your .minecraft/saves folder
 
 ## Features

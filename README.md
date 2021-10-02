@@ -1,4 +1,4 @@
-# MissileMars
+# Missile Mayhem
 
 The datapack used for the missilemayhem minecraft minigame. Note this is a [PRIMD Minigame module](https://github.com/primd-os/Hub) and does not work on it's own.
 
@@ -8,14 +8,14 @@ Discord Server: <https://discord.gg/S6TUQWt>
 
 ## Download
 
-1. Go to <https://github.com/Devon7925/MissileMayhem/releases> and download the latest release (the one you are viewing is a beta working on fixing bugs in the last master bulid as of 10/1/2021.)
+1. Go to <https://github.com/Devon7925/MissileMayhem/releases> and download the latest release (the one you are viewing is a beta working on fixing bugs in the last (Mainline) master bulid as of 10/1/2021.)
 2. Move the map in the zip folder to your .minecraft/saves folder
 
 ## Features
 
 ### Missiles
 
-* Added the ability to have per player custom missiles up to 3x3x17 in size
+* Added the ability to have per player custom (this master build is broken when it comes to costums) missiles up to 3x3x17 in size
 * Added indicator of the next three upcoming missiles
 * Added system to prevent getting the same item in a row
 * Added progress bar to show when players will get the next missile
@@ -45,7 +45,7 @@ Discord Server: <https://discord.gg/S6TUQWt>
 ### Maps
 
 * Added options to choose different maps
-* These are Normal, No Walls, Small Walls, Center Wall, Platforms, Weak Center, Bridge, and Diagonal
+* These are Normal, No Walls, Small Walls, Center Wall, Platforms, Weak Center, Bridge, Diagonal, and Towers
 * These maps work in all modes and are voted on by the players in the queue
 
 #### Normal
@@ -71,6 +71,10 @@ Discord Server: <https://discord.gg/S6TUQWt>
 #### Diagonal
 
 ![Missiles](images/maps/diagonal.png)
+
+### Towers
+
+![Missiles](images/maps/towers.png)
 
 ### Game Modes
 
@@ -110,7 +114,7 @@ Discord Server: <https://discord.gg/S6TUQWt>
 
 ### Technical Changes
 
-* Remade the original code using datapacks and 1.13 command syntax
+* Remade the original code using datapacks and 1.16 command syntax
 * Used triggers to allow easy player control via commands
 * Used custom dimensions to allow multiple games to occur at the same time
 

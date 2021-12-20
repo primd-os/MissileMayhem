@@ -2,7 +2,7 @@
 
 The datapack used for the missilemayhem minecraft minigame. Note this is a [PRIMD Minigame module](https://github.com/primd-os/Hub) and does not work on it's own.
 
-Public server: `play.primd.net` Cerrently OFFLINE
+Public server: `play.primd.net` Online but not working
 
 Discord Server: <https://discord.gg/S6TUQWt>
 

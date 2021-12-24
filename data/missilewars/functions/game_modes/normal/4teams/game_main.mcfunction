@@ -14,10 +14,10 @@ execute as @s[scores={m.GameState=2..}] at @s run scoreboard players remove @s m
 
 execute if score @s m.GameState matches 1 at @e[type=marker,tag=Base,x=0] run function missilewars:maps/spawn_plat
 
-execute if score @s m.BlueLoss matches 1 at @e[type=marker,tag=BlueBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
-execute if score @s m.GreenLoss matches 1 at @e[type=marker,tag=GreenBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
-execute if score @s m.RedLoss matches 1 at @e[type=marker,tag=RedBase] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
-execute if score @s m.PurpleLoss matches 1 at @e[type=marker,tag=PurpleBase,x=0] run particle minecraft:barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
+execute if score @s m.BlueLoss matches 1 at @e[type=marker,tag=BlueBase,x=0] run particle minecraft:block_marker barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
+execute if score @s m.GreenLoss matches 1 at @e[type=marker,tag=GreenBase,x=0] run particle minecraft:block_marker barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
+execute if score @s m.RedLoss matches 1 at @e[type=marker,tag=RedBase] run particle minecraft:block_marker barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
+execute if score @s m.PurpleLoss matches 1 at @e[type=marker,tag=PurpleBase,x=0] run particle minecraft:block_marker barrier ~ ~80 ~ 5 5 5 1 5 force @a[x=0]
 
 execute as @a[scores={m.Game=1..},x=0] at @s run function missilewars:game_modes/normal/4teams/running_main
 function missilewars:item_managers/run_items

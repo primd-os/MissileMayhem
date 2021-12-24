@@ -19,15 +19,6 @@ scoreboard players operation tnt m.Variables = @s m.tntBroke
 execute unless score @s m.Game matches 1000 run function missilewars:custom_missile/give_tnt
 scoreboard players set @s m.tntBroke 0
 
-execute store result score fallDistance m.Variables run data get entity @s FallDistance
-execute if score fallDistance m.Variables matches 0 run scoreboard players operation damage m.Variables = @s m.fallDistance
-execute if score fallDistance m.Variables matches 0 run scoreboard players operation damage m.Variables /= fallScale m.Constants
-execute at @s if score fallDistance m.Variables matches 0 unless score damage m.Variables matches 0 if block ~ ~-1 ~ slime_block if score @s m.shifting matches 1 as @s[gamemode=!creative] run function missilewars:game_modes/deal_damage
-execute at @s if score fallDistance m.Variables matches 0 unless score damage m.Variables matches 0 unless block ~ ~-1 ~ slime_block as @s[gamemode=!creative] run function missilewars:game_modes/deal_damage
-execute store result score @s m.fallDistance as @s[tag=!Died] run data get entity @s FallDistance
-execute if score fallDistance m.Variables matches 0 run tag @s remove Died
-scoreboard players set @s m.shifting 0
-
 kill @s[dy=-10,y=-64,gamemode=!spectator]
 tag @s[dy=-10,y=-64,gamemode=!spectator] add m.VoidDeath
 tp @s[dy=-10,y=-64,gamemode=spectator] 0 100 0

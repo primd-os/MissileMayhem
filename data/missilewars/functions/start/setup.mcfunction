@@ -38,7 +38,6 @@ scoreboard objectives setdisplay list m.Game
 scoreboard objectives add m.GameState dummy
 scoreboard objectives add m.Timer dummy
 scoreboard objectives add m.EndTimer dummy
-scoreboard objectives add m.HealthTimer dummy
 scoreboard objectives add m.TimerSecs dummy
 scoreboard objectives add m.TimerTick dummy
 
@@ -106,7 +105,6 @@ scoreboard players set SPM m.Constants 60
 scoreboard players set Timer m.Constants 400
 scoreboard players set EndTime m.Constants 200
 
-scoreboard players set fallScale m.Constants 5
 scoreboard players set respawnTime m.Constants 100
 
 scoreboard players set TomahawkQueue m.Variables -1
@@ -118,8 +116,6 @@ scoreboard players set ShieldQueue m.Variables -1
 scoreboard players set ArrowsQueue m.Variables -1
 scoreboard players set FireballQueue m.Variables -1
 
-scoreboard objectives add m.shifting minecraft.custom:minecraft.sneak_time
-scoreboard objectives add m.fallDistance dummy
 scoreboard objectives add m.deathCheck deathCount
 
 scoreboard objectives add m.bowCount dummy

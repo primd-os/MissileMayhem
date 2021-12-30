@@ -112,10 +112,9 @@ Discord Server: <https://discord.gg/S6TUQWt>
 * Added Advancements
 ![Advancements](images/advancements.png)
 
-### Technical Changes
+### Triggers
 
-* Used triggers to allow easy player control via commands
-* Used custom dimensions to allow multiple games to occur at the same time
+**TODO** explain triggers
 
 ## Credits
 

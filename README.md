@@ -114,7 +114,6 @@ Discord Server: <https://discord.gg/S6TUQWt>
 
 ### Technical Changes
 
-* Remade the original code using datapacks and 1.18 command syntax
 * Used triggers to allow easy player control via commands
 * Used custom dimensions to allow multiple games to occur at the same time
 

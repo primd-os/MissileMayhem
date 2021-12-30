@@ -14,5 +14,3 @@ execute if score @s m.GameState matches 1 at @e[type=marker,tag=Base,x=0] run fu
 
 execute if score @s m.GameState matches 1 unless entity @a[x=0] run function missilewars:end/finish_game
 execute if score @s m.GameState matches 1 unless entity @a[x=0] run function missilewars:end/unload_game
-
-function hub:border/display

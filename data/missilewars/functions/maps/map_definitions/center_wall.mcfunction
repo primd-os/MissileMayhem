@@ -1,0 +1,1 @@
+execute if score Map m.Variables matches 2 run fill -25 0 -2 25 100 2 white_stained_glass

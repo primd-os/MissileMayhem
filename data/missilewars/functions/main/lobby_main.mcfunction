@@ -26,7 +26,7 @@ execute if block ~ ~-1 ~ wheat run function missilewars:main/wheat_tp
 execute if block ~ ~-2 ~ wheat run function missilewars:main/wheat_tp
 
 execute as @s[scores={ChooseMap=-1}] run function missilewars:start/choose_map
-execute as @s[scores={ChooseMap=0..5}] run scoreboard players operation @s m.MapVote = @s ChooseMap
+execute as @s[scores={ChooseMap=0..6}] run scoreboard players operation @s m.MapVote = @s ChooseMap
 scoreboard players enable @s ChooseMap
 scoreboard players set @s ChooseMap -2
 execute unless score @s m.MapVote = @s m.PrevMapVote at @s run function missilewars:main/switch_vote

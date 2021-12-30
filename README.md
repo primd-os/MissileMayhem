@@ -1,4 +1,4 @@
-# MissileMars
+# Missile Mayhem
 
 The datapack used for the missilemayhem minecraft minigame. Note this is a [PRIMD Minigame module](https://github.com/primd-os/Hub) and does not work on it's own.
 
@@ -45,7 +45,7 @@ Discord Server: <https://discord.gg/S6TUQWt>
 ### Maps
 
 * Added options to choose different maps
-* These are Normal, No Walls, Small Walls, Center Wall, Platforms, Weak Center, Bridge, and Diagonal
+* These are Normal, No Walls, Small Walls, Center Wall, Platforms, Weak Center, Bridge, Diagonal, and Towers
 * These maps work in all modes and are voted on by the players in the queue
 
 #### Normal
@@ -71,6 +71,10 @@ Discord Server: <https://discord.gg/S6TUQWt>
 #### Diagonal
 
 ![Missiles](images/maps/diagonal.png)
+
+### Towers
+
+![Missiles](images/maps/towers.png)
 
 ### Game Modes
 
@@ -110,7 +114,6 @@ Discord Server: <https://discord.gg/S6TUQWt>
 
 ### Technical Changes
 
-* Remade the original code using datapacks and 1.13 command syntax
 * Used triggers to allow easy player control via commands
 * Used custom dimensions to allow multiple games to occur at the same time
 

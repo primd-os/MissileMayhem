@@ -21,10 +21,7 @@ tag @s remove m.VoidDeath
 
 execute as @s[tag=!dieMarked] run tellraw @a[x=0] [{"selector": "@s"},{"text": " died"}]
 tag @s remove dieMarked
-scoreboard players set @s m.fallDistance 0
 scoreboard players set @s m.deathCheck 0
-
-tag @s add Died
 advancement revoke @s only missilewars:death/arrow
 advancement revoke @s only missilewars:death/explosion
 advancement revoke @s only missilewars:death/fire

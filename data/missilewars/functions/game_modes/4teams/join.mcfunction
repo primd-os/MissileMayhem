@@ -24,3 +24,5 @@ execute if score minTeam m.Variables matches 3 run function missilewars:start/jo
 
 function missilewars:game_modes/queue
 advancement grant @s only missilewars:root
+
+scoreboard players set @s hub.fallDmgPercent 20

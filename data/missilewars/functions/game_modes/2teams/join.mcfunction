@@ -8,4 +8,5 @@ execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.BlueMembers >= @e[
 function missilewars:game_modes/queue
 advancement grant @s only missilewars:root
 
+scoreboard players set @s hub.fallDmgPercent 20
 scoreboard players set @s m.DeathsInGame 0

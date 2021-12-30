@@ -28,7 +28,6 @@ execute in missilewars:practice run function missilewars:practice/game_main
 bossbar set minecraft:missile_time name  ["",{"text":"1-"},{"nbt":"queue[0]","storage":"missilewars:queue"},{"text":" 2-"},{"nbt":"queue[1]","storage":"missilewars:queue"},{"text":" 3-"},{"nbt":"queue[2]","storage":"missilewars:queue"}]
 
 execute if entity @e[type=marker,tag=clearMap] run function missilewars:maps/slow_clear_map_loop
-execute as @a[tag=reset_health] run function missilewars:game_modes/reset_health
 
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Green] at @s if block ~ ~-1 ~ green_concrete run function missilewars:start/join/green
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Blue] at @s if block ~ ~-1 ~ blue_concrete run function missilewars:start/join/blue

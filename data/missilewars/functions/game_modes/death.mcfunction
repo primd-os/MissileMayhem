@@ -17,6 +17,7 @@ execute as @s[advancements={missilewars:death/melee=true},tag=dieMarked,tag=!m.A
 # remove tag :)
 tag @a[x=0] remove rx.killed
 tag @s remove m.ArrowDeath
+tag @s remove m.ExplosionDeath
 tag @s remove m.VoidDeath
 
 execute as @s[tag=!dieMarked] run tellraw @a[x=0] [{"selector": "@s"},{"text": " died"}]

@@ -1,5 +1,3 @@
-difficulty easy
-
 scoreboard objectives add m.snowballTime dummy
 scoreboard objectives add m.dropItem minecraft.custom:drop
 scoreboard objectives add m.inv_change dummy
@@ -152,7 +150,6 @@ team modify Purple friendlyFire false
 team modify Lobby friendlyFire false
 team modify Sumo friendlyFire true
 team modify Sumo prefix {"text": "[SUMO] "}
-scoreboard objectives setdisplay sidebar.team.gray m.points
 
 scoreboard players set missile_time m.Variables 0
 bossbar add missile_time {"text": ""}

@@ -13,4 +13,3 @@ execute as @e[type=marker,tag=PracticeClear,x=0,scores={m.clearZ=224..}] at @s r
 execute at @e[type=marker,tag=m.PracticeArea,tag=m.New,x=0] if entity @e[type=marker,tag=m.PracticeArea,tag=!m.New,distance=..1] run kill @s
 execute at @e[type=marker,tag=m.PracticeArea,tag=m.New,x=0] run function missilewars:practice/area
 execute as @e[type=marker,tag=m.PracticeArea,tag=m.New,x=0] run tag @s remove m.New
-execute at @e[type=marker,tag=m.PracticeArea,x=0] run fill ~-3 ~ ~-3 ~3 ~ ~3 obsidian

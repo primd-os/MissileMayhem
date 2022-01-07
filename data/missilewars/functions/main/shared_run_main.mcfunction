@@ -19,6 +19,6 @@ scoreboard players operation tnt m.Variables = @s m.tntBroke
 execute unless score @s m.Game matches 1000 run function missilewars:custom_missile/give_tnt
 scoreboard players set @s m.tntBroke 0
 
-kill @s[dy=-10,y=-64,gamemode=!spectator]
 tag @s[dy=-10,y=-64,gamemode=!spectator] add m.VoidDeath
+kill @s[dy=-10,y=-64,gamemode=!spectator]
 tp @s[dy=-10,y=-64,gamemode=spectator] 0 100 0

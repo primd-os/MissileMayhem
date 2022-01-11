@@ -30,6 +30,8 @@ execute if score @s m.inv_change matches 1 store result score @s m.Items run cle
 execute if score @s m.Items matches 0..1 run give @s stone_pressure_plate{CanPlaceOn:["#missilewars:custom_blocks","magenta_glazed_terracotta"],CanDestroy:["#missilewars:custom_blocks"],HideFlags:24} 63
 execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s gray_glazed_terracotta 0
 execute if score @s m.Items matches 0..1 run give @s gray_glazed_terracotta{CanPlaceOn:["#missilewars:custom_blocks","magenta_glazed_terracotta"],CanDestroy:["#missilewars:custom_blocks"],HideFlags:24} 63
+execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s oak_sign 0
+execute if score @s m.Items matches 0..1 run give @s oak_sign{CanPlaceOn:["#missilewars:custom_blocks","magenta_glazed_terracotta"],CanDestroy:["#missilewars:custom_blocks"],HideFlags:24} 15
 
 execute store result score @s m.Items run clear @s tnt 0
 scoreboard players operation tnt m.Variables = TntLimit m.Constants

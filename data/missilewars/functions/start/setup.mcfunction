@@ -32,7 +32,6 @@ scoreboard objectives add ChooseMissileSet trigger
 
 scoreboard objectives add m.Items dummy
 scoreboard objectives add m.Game dummy
-scoreboard objectives setdisplay list m.Game
 scoreboard objectives add m.GameState dummy
 scoreboard objectives add m.Timer dummy
 scoreboard objectives add m.EndTimer dummy

@@ -26,3 +26,5 @@ function missilewars:game_modes/queue
 advancement grant @s only missilewars:root
 
 scoreboard players set @s hub.fallDmgPercent 20
+
+scoreboard players operation @s m.Game = @e[type=marker,tag=GameMarker,x=0] m.Game

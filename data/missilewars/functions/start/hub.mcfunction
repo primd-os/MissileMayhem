@@ -14,6 +14,7 @@ scoreboard players reset @s Leave
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
 scoreboard players reset @s ChooseMissileSet
+scoreboard players reset @s CreateGame
 
 tag @s remove m.GotRace
 tag @s remove m.RoyaleDead

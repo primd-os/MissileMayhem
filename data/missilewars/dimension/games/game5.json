@@ -1,0 +1,20 @@
+{
+    "generator": {
+        "settings": {
+            "structures": {
+                "structures": {}
+            },
+            "layers": [
+                {
+                    "height": 1,
+                    "blocks": [
+                        "minecraft:air"
+                    ]
+                }
+            ],
+            "biome": "minecraft:the_void"
+        },
+        "type": "minecraft:flat"
+    },
+    "type": "missilewars:game"
+}

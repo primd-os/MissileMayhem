@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:changed_dimension",
+            "conditions": {
+                "from": "missilewars:lobby"
+            }
+        }
+    },
+    "rewards": {
+        "function": "missilewars:main/leave_lobby"
+    }
+}

@@ -7,5 +7,12 @@ effect give @a[x=0] instant_health 1 10 true
 kill @e[type=item,x=0]
 kill @e[type=arrow,x=0]
 kill @e[type=fireball,x=0]
-kill @e[type=marker,x=0]
+kill @e[type=marker,tag=!GameMarker,x=0]
+scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.GameState 0
+scoreboard players operation @e[type=marker,tag=GameMarker,x=0] m.Timer = Timer m.Constants
+scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.BlueWin 0
+scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.GreenWin 0
+scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PreBlueWin 0
+scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PreGreenWin 0
+
 team leave @a[x=0]

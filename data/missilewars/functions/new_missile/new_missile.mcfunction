@@ -30,3 +30,5 @@ execute if entity @e[type=armor_stand,x=0,tag=m.QueueLooter,nbt={HandItems:[{id:
 execute if score QueueSize m.Variables matches ..3 run data modify storage missilewars:queue queue append value "???"
 kill @e[type=armor_stand,x=0,tag=m.QueueLooter]
 data remove storage missilewars:queue queue[0]
+
+bossbar set minecraft:missile_time name  ["",{"text":"1-"},{"nbt":"queue[0]","storage":"missilewars:queue"},{"text":" 2-"},{"nbt":"queue[1]","storage":"missilewars:queue"},{"text":" 3-"},{"nbt":"queue[2]","storage":"missilewars:queue"}]

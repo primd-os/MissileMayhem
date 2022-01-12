@@ -7,6 +7,7 @@ scoreboard players reset @s JoinSpectators
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s GiveBook
 scoreboard players reset @s ChooseMissileSet
+scoreboard players reset @s CreateGame
 scoreboard players reset @s ToggleRanked
 
 function missilewars:main/shared_run_main

@@ -7,12 +7,13 @@ scoreboard players reset @s JoinRed
 scoreboard players reset @s JoinPurple
 scoreboard players reset @s m.ClearPractice
 scoreboard players reset @s Heal
-execute unless score @s ChooseMap matches -2147483648..2147483647 run scoreboard players set @s ChooseMap -2
+scoreboard players enable @s ChooseMap
 scoreboard players enable @s GiveBook
 execute unless score @s ChooseMissileSet matches -2147483648..2147483647 run scoreboard players set @s ChooseMissileSet -2
 scoreboard players enable @s ToggleRanked
 
 execute unless entity @s[scores={m.points=-2147483648..2147483647}] run scoreboard players set @s m.points 1000
+execute unless entity @s[scores={m.GameCreationStage=-2147483648..2147483647}] run scoreboard players set @s m.GameCreationStage 0
 
 tag @s remove carrier
 
@@ -24,12 +25,6 @@ effect give @s saturation 2 0 true
 execute if block ~ ~ ~ wheat run function missilewars:main/wheat_tp
 execute if block ~ ~-1 ~ wheat run function missilewars:main/wheat_tp
 execute if block ~ ~-2 ~ wheat run function missilewars:main/wheat_tp
-
-execute as @s[scores={ChooseMap=-1}] run function missilewars:start/choose_map
-execute as @s[scores={ChooseMap=0..6}] run scoreboard players operation @s m.MapVote = @s ChooseMap
-scoreboard players enable @s ChooseMap
-scoreboard players set @s ChooseMap -2
-execute unless score @s m.MapVote = @s m.PrevMapVote at @s run function missilewars:main/switch_vote
 
 execute as @s[scores={ChooseMissileSet=-1}] run function missilewars:start/choose_missile_set
 execute if entity @s[scores={ChooseMissileSet=0..3}] run scoreboard players operation @s m.MissileSet = @s ChooseMissileSet
@@ -63,6 +58,12 @@ execute as @s[tag=!InBox,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run f
 
 execute if entity @s[team=Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Sumo
 execute unless entity @s[team=Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Lobby
+
+scoreboard players enable @s CreateGame
+execute as @s[scores={CreateGame=1..,m.GameCreationStage=0}] run function missilewars:game_modes/create_game/start
+execute as @s[scores={CreateGame=1..5,m.GameCreationStage=1}] run function missilewars:game_modes/create_game/choose_mode
+execute as @s[scores={CreateGame=1..3,m.GameCreationStage=2}] run function missilewars:game_modes/create_game/choose_teams
+scoreboard players set @s CreateGame 0
 
 tag @s[y=103,dy=3,x=-36,dx=72,z=-1000,dz=2000] remove Parkour
 

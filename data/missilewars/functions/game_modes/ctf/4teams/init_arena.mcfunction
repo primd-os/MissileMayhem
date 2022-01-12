@@ -1,4 +1,3 @@
-function missilewars:game_modes/setup_game
 summon minecraft:marker 0 50 75 {Tags: ["Base","BlueBase"]}
 summon minecraft:marker 0 50 -75 {Tags: ["Base","GreenBase"]}
 summon minecraft:marker 75 50 0 {Tags: ["Base","RedBase"]}

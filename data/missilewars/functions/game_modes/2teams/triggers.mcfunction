@@ -6,7 +6,5 @@ execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GameState matches 
 execute unless score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GameState matches 0 run scoreboard players reset @a[x=0] JoinGreen
 execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GameState matches 0 run scoreboard players enable @a[x=0] JoinBlue
 execute unless score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GameState matches 0 run scoreboard players reset @a[x=0] JoinBlue
-scoreboard players reset @a[x=0] ChooseMap
-scoreboard players reset @a[x=0] GiveBook
 scoreboard players reset @a[x=0] ChooseMissileSet
 scoreboard players reset @a[x=0] ToggleRanked

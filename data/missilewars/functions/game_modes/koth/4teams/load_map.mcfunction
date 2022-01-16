@@ -1,2 +1,0 @@
-function missilewars:game_modes/4teams/load_map
-function missilewars:maps/koth_plat

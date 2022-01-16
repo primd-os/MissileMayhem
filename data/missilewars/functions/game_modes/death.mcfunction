@@ -26,5 +26,4 @@ scoreboard players set @s m.deathCheck 0
 advancement revoke @s only missilewars:death/arrow
 advancement revoke @s only missilewars:death/explosion
 advancement revoke @s only missilewars:death/fire
-advancement revoke @s only missilewars:death/void
 advancement revoke @s only missilewars:death/melee

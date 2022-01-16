@@ -16,7 +16,7 @@ scoreboard objectives add JoinBlue trigger
 scoreboard objectives add JoinRed trigger
 scoreboard objectives add JoinPurple trigger
 scoreboard objectives add Practice trigger
-scoreboard objectives add m.ClearPractice trigger
+scoreboard objectives add ClearPractice trigger
 scoreboard objectives add Heal trigger
 scoreboard objectives add Leave trigger
 
@@ -152,7 +152,13 @@ team modify Red friendlyFire false
 team modify Purple friendlyFire false
 team modify Lobby friendlyFire false
 team modify Sumo friendlyFire true
-team modify Sumo prefix {"text": "[SUMO] "}
+team modify Blue prefix {"text": "MissileMayhem | "}
+team modify Green prefix {"text": "MissileMayhem | "}
+team modify Red prefix {"text": "MissileMayhem | "}
+team modify Purple prefix {"text": "MissileMayhem | "}
+team modify Spectator prefix {"text": "MissileMayhem | "}
+team modify Lobby prefix {"text": "MissileMayhem | "}
+team modify Sumo prefix {"text": "MissileMayhem | "}
 
 scoreboard players set missile_time m.Variables 0
 bossbar add missile_time {"text": ""}

@@ -1,13 +1,14 @@
 summon marker ~ ~ ~ {Tags:["m.GameFinder"]}
 execute as @e[type=marker,x=0,tag=m.GameFinder] store result score YCoordFinal m.Variables run data get entity @e[type=marker,x=0,tag=m.GameFinder,limit=1] Pos[1]
 execute as @e[type=marker,x=0,tag=m.GameFinder] store result score ZCoordFinal m.Variables run data get entity @e[type=marker,x=0,tag=m.GameFinder,limit=1] Pos[2]
-scoreboard players remove ZCoordFinal m.Variables 40
+scoreboard players remove ZCoordFinal m.Variables 39
 scoreboard players remove YCoordFinal m.Variables 106
 scoreboard players operation ZCoordFinal m.Variables *= Flip m.Constants
 scoreboard players operation YCoordFinal m.Variables *= Flip m.Constants
 scoreboard players operation YCoordFinal m.Variables *= signLength m.Constants
 scoreboard players operation @s m.Game = YCoordFinal m.Variables
 scoreboard players operation @s m.Game += ZCoordFinal m.Variables
+scoreboard players add @s m.Game 1
 kill @e[type=marker,x=0,tag=m.GameFinder]
 
 tag @s add m.ActivePlayer

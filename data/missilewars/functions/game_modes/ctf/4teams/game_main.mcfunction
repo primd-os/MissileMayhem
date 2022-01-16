@@ -22,7 +22,6 @@ execute if score @s m.PurpleScore matches 0 at @e[type=marker,tag=PurpleBase,x=0
 execute as @a[scores={m.Game=1..},x=0] at @s run function missilewars:game_modes/ctf/4teams/running_main
 function missilewars:item_managers/run_items
 
-execute if score @s m.GameState matches 1 unless entity @a[x=0] run function missilewars:end/finish_game
-execute if score @s m.GameState matches 1 unless entity @a[x=0] run function missilewars:end/unload_game
+execute unless entity @a[x=0] run function missilewars:end/unload_game
 
 function missilewars:game_modes/ctf/ctf_main

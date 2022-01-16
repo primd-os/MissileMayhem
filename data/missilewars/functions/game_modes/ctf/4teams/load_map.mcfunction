@@ -1,5 +1,5 @@
 execute as @e[type=marker,tag=Base,x=0] at @s run tp @s ^ ^ ^20
-function missilewars:game_modes/4teams/load_map
+function missilewars:game_modes/load_map
 execute at @e[type=marker,tag=Base,x=0] run function missilewars:maps/ctf_plat
 execute if entity @a[x=0,team=Blue] at @e[type=marker,tag=BlueBase,x=0] run summon minecraft:marker ^ ^-19 ^-6 {Tags: ["Flag"]}
 execute if entity @a[x=0,team=Green] at @e[type=marker,tag=GreenBase,x=0] run summon minecraft:marker ^ ^-19 ^-6 {Tags: ["Flag"]}

@@ -12,7 +12,11 @@ scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.GameState 0
 scoreboard players operation @e[type=marker,tag=GameMarker,x=0] m.Timer = Timer m.Constants
 scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.BlueWin 0
 scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.GreenWin 0
+scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.RedWin 0
+scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PurpleWin 0
 scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PreBlueWin 0
 scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PreGreenWin 0
+scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PreRedWin 0
+scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PrePurpleWin 0
 
 team leave @a[x=0]

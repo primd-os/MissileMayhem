@@ -16,9 +16,18 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"InGame\"]}",
               "player": {
                 "gamemode": "survival"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "m.Game": {
+                "min": 1,
+                "max": 999
               }
             }
           }

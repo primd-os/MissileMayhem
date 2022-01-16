@@ -1,21 +1,35 @@
 {
-    "display": {
-      "icon": {
-        "item": "magenta_wool"
-      },
-      "title": "Anti-Boredom",
-      "description": "Place blocks in queue"
+  "display": {
+    "icon": {
+      "item": "minecraft:magenta_wool"
     },
-    "parent": "missilewars:win_game",
-    "criteria": {
-      "place_block": {
-        "trigger": "minecraft:placed_block",
-        "conditions": {
-          "player": {
-            "nbt": "{Tags:[\"InGame\"]}"
+    "title": "Anti-Boredom",
+    "description": "Place blocks in queue"
+  },
+  "parent": "missilewars:win_game",
+  "criteria": {
+    "place_block": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {}
           },
-          "blocks": ["magenta_wool"]
-        }
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "m.Game": {
+                "min": 1,
+                "max": 999
+              }
+            }
+          }
+        ],
+        "block": "minecraft:magenta_wool"
       }
     }
   }
+}

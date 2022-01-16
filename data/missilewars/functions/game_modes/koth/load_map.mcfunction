@@ -1,0 +1,2 @@
+function missilewars:game_modes/load_map
+function missilewars:maps/koth_plat

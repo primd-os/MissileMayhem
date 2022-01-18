@@ -28,7 +28,7 @@ execute as @s[scores={m.FutureGameMode=4, CreateGame=1}] at @e[type=marker,tag=m
 execute as @s[scores={m.FutureGameMode=4, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/race/4teams/init_arena
 execute as @s[scores={m.FutureGameMode=5, CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/royale/2teams/init_arena
 execute as @s[scores={m.FutureGameMode=5, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/royale/4teams/init_arena
-
+execute at @e[type=marker,tag=m.NewGame] run function missilewars:maps/slow_clear_map
 execute as @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/create_game/get_sign_location
 execute in missilewars:lobby at @e[type=marker,x=0,tag=m.SignPlacer] run setblock -14 ~ ~ minecraft:oak_wall_sign[facing=east]{Text1:'{"nbt":"data.team_type","entity":"@e[type=marker,tag=m.NewGame]"}',Text2:'{"nbt":"data.game_mode","entity":"@e[type=marker,tag=m.NewGame]"}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"function missilewars:game_modes/join"}}'} destroy
 

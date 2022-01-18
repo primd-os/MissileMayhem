@@ -10,7 +10,8 @@ execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0},limit=1] at @s r
 execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0},limit=1] at @s run playsound minecraft:block.note_block.bit block @a[x=0] ~ ~ ~ 1 2 1
 execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0},limit=1] at @s run kill @e[type=tnt,x=0]
 execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] at @s run clear @a[x=0] magenta_wool
-execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run give @a[x=0,team=!Spectator] minecraft:arrow 2
-execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run give @a[x=0,team=!Spectator] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
-execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run give @a[x=0,team=!Spectator] minecraft:snowball{display:{Name:'{"text":"Shield"}'}}
+execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run scoreboard playersm.Spectator=0] hub.fallDmgPercent 20
+execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run give @a[x=0,team=!m.Spectator] minecraft:arrow 2
+execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run give @a[x=0,team=!m.Spectator] minecraft:firework_rocket{display:{Name:'{"text":"Fireball"}'}}
+execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] run give @a[x=0,m.Spectatorctator] minecraft:snowball{display:{Name:'{"text":"Shield"}'}}
 execute as @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=0}] as @a[x=0,team=!Spectator] run function missilewars:new_missile/give/tomohawk

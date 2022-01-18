@@ -1,6 +1,6 @@
 team leave @s
 effect give @s instant_health 1 100
-team join Lobby @s
+team join m.Lobby @s
 
 scoreboard players set @s m.Game 0
 scoreboard players set @s hub.fallDmgPercent 0

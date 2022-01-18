@@ -1,10 +1,10 @@
 execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=0}] run effect give @s resistance 1 255 true
-execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=0}] run gamemode adventure @s[team=!Spectator,gamemode=!creative]
-execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1}] unless score @s m.RespawnTimer matches 0.. run gamemode survival @s[team=!Spectator,gamemode=!creative]
-execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1}] if score @s m.RespawnTimer matches 0.. run gamemode spectator @s[team=!Spectator,gamemode=!creative]
+execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=0}] run gamemode adventure @s[team=!m.Spectator,gamemode=!creative]
+execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1}] unless score @s m.RespawnTimer matches 0.. run gamemode survival @s[team=!m.Spectator,gamemode=!creative]
+execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1}] if score @s m.RespawnTimer matches 0.. run gamemode spectator @s[team=!m.Spectator,gamemode=!creative]
 execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1}] if score @s m.RespawnTimer matches -1 run function missilewars:game_modes/teamtp
-execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=2..}] run gamemode spectator @s[team=!Spectator,gamemode=!creative]
-execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1..}] run gamemode spectator @s[team=Spectator,gamemode=!creative]
+execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=2..}] run gamemode spectator @s[team=!m.Spectator,gamemode=!creative]
+execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1..}] run gamemode spectator @s[team=m.Spectator,gamemode=!creative]
 execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=0}] run attribute @s minecraft:generic.knockback_resistance base set 1.0
 execute if entity @e[type=marker,tag=GameMarker,sort=nearest,x=0,scores={m.GameState=1..}] run attribute @s minecraft:generic.knockback_resistance base set 0.0
 scoreboard players operation @s m.RespawnTimeSec = @s m.RespawnTimer

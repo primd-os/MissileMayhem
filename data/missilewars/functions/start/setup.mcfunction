@@ -126,39 +126,39 @@ scoreboard objectives add m.clearZ dummy
 scoreboard objectives add m.player_health health {"text":"♥","color":"red"}
 scoreboard objectives setdisplay belowName m.player_health
 
-team add Blue
-team add Green
-team add Red
-team add Purple
-team add Spectator
-team add Lobby
-team add Sumo
-team modify Blue color blue
-team modify Green color green
-team modify Red color red
-team modify Purple color dark_purple
-team modify Spectator color dark_gray
-team modify Lobby color gray
-team modify Sumo color gray
-team modify Blue collisionRule pushOwnTeam
-team modify Green collisionRule pushOwnTeam
-team modify Red collisionRule pushOwnTeam
-team modify Purple collisionRule pushOwnTeam
-team modify Lobby collisionRule never
-team modify Sumo collisionRule always
-team modify Blue friendlyFire false
-team modify Green friendlyFire false
-team modify Red friendlyFire false
-team modify Purple friendlyFire false
-team modify Lobby friendlyFire false
-team modify Sumo friendlyFire true
-team modify Blue prefix {"text": "MissileMayhem | "}
-team modify Green prefix {"text": "MissileMayhem | "}
-team modify Red prefix {"text": "MissileMayhem | "}
-team modify Purple prefix {"text": "MissileMayhem | "}
-team modify Spectator prefix {"text": "MissileMayhem | "}
-team modify Lobby prefix {"text": "MissileMayhem | "}
-team modify Sumo prefix {"text": "MissileMayhem | "}
+team add m.Blue
+team add m.Green
+team add m.Red
+team add m.Purple
+team add m.Spectator
+team add m.Lobby
+team add m.Sumo
+team modify m.Blue color blue
+team modify m.Green color green
+team modify m.Red color red
+team modify m.Purple color dark_purple
+team modify m.Spectator color dark_gray
+team modify m.Lobby color gray
+team modify m.Sumo color gray
+team modify m.Blue collisionRule pushOwnTeam
+team modify m.Green collisionRule pushOwnTeam
+team modify m.Red collisionRule pushOwnTeam
+team modify m.Purple collisionRule pushOwnTeam
+team modify m.Lobby collisionRule never
+team modify m.Sumo collisionRule always
+team modify m.Blue friendlyFire false
+team modify m.Green friendlyFire false
+team modify m.Red friendlyFire false
+team modify m.Purple friendlyFire false
+team modify m.Lobby friendlyFire false
+team modify m.Sumo friendlyFire true
+team modify m.Blue prefix {"text": "MissileMayhem | "}
+team modify m.Green prefix {"text": "MissileMayhem | "}
+team modify m.Red prefix {"text": "MissileMayhem | "}
+team modify m.Purple prefix {"text": "MissileMayhem | "}
+team modify m.Spectator prefix {"text": "MissileMayhem | "}
+team modify m.Lobby prefix {"text": "MissileMayhem | "}
+team modify m.Sumo prefix {"text": "MissileMayhem | "}
 
 scoreboard players set missile_time m.Variables 0
 bossbar add missile_time {"text": ""}

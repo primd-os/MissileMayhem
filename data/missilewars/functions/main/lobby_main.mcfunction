@@ -54,8 +54,8 @@ execute as @s[tag=InBox] run clear @s written_book{display:{Name:'{"text":"Custo
 execute as @s[tag=InBox,nbt=!{Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_off_head
 execute as @s[tag=!InBox,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/attempt_move_to_head
 
-execute if entity @s[team=Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Sumo
-execute unless entity @s[team=Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join Lobby
+execute if entity @s[team=m.Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join m.Sumo
+execute unless entity @s[team=m.Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join m.Lobby
 
 scoreboard players enable @s CreateGame
 execute as @s[scores={CreateGame=1..,m.GameCreationStage=0}] run function missilewars:game_modes/create_game/start

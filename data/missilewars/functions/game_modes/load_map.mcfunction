@@ -1,4 +1,4 @@
-scoreboard players operation Map m.Variables = @r[scores={m.Game=1..},team=!Spectator,x=0] m.MapVote
+scoreboard players operation Map m.Variables = @r[scores={m.Game=1..},team=!m.Spectator,x=0] m.MapVote
 
 execute if score Map m.Variables matches 0 run function missilewars:maps/map_definitions/normal
 execute if score Map m.Variables matches 1 run function missilewars:maps/map_definitions/small

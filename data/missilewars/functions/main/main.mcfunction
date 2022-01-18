@@ -22,11 +22,11 @@ execute in missilewars:practice run function missilewars:practice/game_main
 
 execute if entity @e[type=marker,tag=clearMap] run function missilewars:maps/slow_clear_map_loop
 
-execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Green] at @s if block ~ ~-1 ~ green_concrete run function missilewars:start/join/green
-execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Blue] at @s if block ~ ~-1 ~ blue_concrete run function missilewars:start/join/blue
-execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Purple] at @s if block ~ ~-1 ~ purple_concrete run function missilewars:start/join/purple
-execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Red] at @s if block ~ ~-1 ~ red_concrete run function missilewars:start/join/red
-execute as @a[gamemode=adventure,scores={m.Game=1..},team=!Spectator] at @s if block ~ ~-1 ~ light_gray_concrete run function missilewars:start/join_spectators
+execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Green] at @s if block ~ ~-1 ~ green_concrete run function missilewars:start/join/green
+execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Blue] at @s if block ~ ~-1 ~ blue_concrete run function missilewars:start/join/blue
+execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Purple] at @s if block ~ ~-1 ~ purple_concrete run function missilewars:start/join/purple
+execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Red] at @s if block ~ ~-1 ~ red_concrete run function missilewars:start/join/red
+execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Spectator] at @s if block ~ ~-1 ~ light_gray_concrete run function missilewars:start/join_spectators
 
 execute in missilewars:lobby positioned 15.5 119 1.5 as @a[distance=..0.75,tag=Parkour] run advancement grant @s only missilewars:parkour
 execute in missilewars:lobby positioned 15.5 119 1.5 as @a[distance=..0.75,tag=Parkour] run function hub:parkour/end_parkour
@@ -44,8 +44,8 @@ execute in missilewars:lobby run kill @e[type=tnt,nbt={Fuse: 1s},x=0]
 
 execute in missilewars:lobby run kill @e[type=item,x=0]
 
-execute in missilewars:lobby as @a[x=0,team=Spectator] run function missilewars:main/clear_inv
-execute in missilewars:lobby run team join Lobby @a[x=0,team=Spectator]
+execute in missilewars:lobby as @a[x=0,team=m.Spectator] run function missilewars:main/clear_inv
+execute in missilewars:lobby run team join m.Lobby @a[x=0,team=m.Spectator]
 
 execute as @e[type=tnt,nbt={Fuse: 2s}] at @s run function missilewars:main/tnt_fuse
 
@@ -53,7 +53,7 @@ function missilewars:new_missile/missile_loop
 
 execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] run function missilewars:start/give_book
 execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] run scoreboard players set @s m.DirectionPlace 0
-execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] run team join Lobby @s
+execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] run team join m.Lobby @s
 execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] at @s run scoreboard players set @s m.Game 0
 execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] at @s run function missilewars:custom_missile/set_default
 execute in missilewars:lobby run tag @a[x=0,tag=!PlayedBefore] add PlayedBefore

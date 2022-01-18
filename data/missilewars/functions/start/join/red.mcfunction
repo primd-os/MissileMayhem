@@ -1,6 +1,6 @@
 team leave @s
 tellraw @s {"text":"Joined Red Team!","color":"red"}
-team join Red @s
+team join m.Red @s
 item replace entity @s armor.chest with leather_chestplate{display:{color:10701900}, Unbreakable:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1
 item replace entity @s armor.legs with leather_leggings{display:{color:10701900}, Unbreakable:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1
 item replace entity @s armor.feet with leather_boots{display:{color:10701900}, Unbreakable:1b,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]} 1

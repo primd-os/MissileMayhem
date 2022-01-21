@@ -5,6 +5,7 @@ scoreboard players reset @s JoinGreen
 scoreboard players reset @s JoinBlue
 scoreboard players reset @s JoinRed
 scoreboard players reset @s JoinPurple
+scoreboard players reset @s JoinPlayers
 scoreboard players reset @s ClearPractice
 scoreboard players reset @s Heal
 execute unless score @s ChooseMissileSet matches -2147483648..2147483647 run scoreboard players set @s ChooseMissileSet -2

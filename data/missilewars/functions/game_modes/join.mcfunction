@@ -14,4 +14,5 @@ kill @e[type=marker,x=0,tag=m.GameFinder]
 tag @s add m.ActivePlayer
 execute as @e[type=marker,tag=GameMarker] if score @s m.Game = @a[x=0,tag=m.ActivePlayer,limit=1] m.Game as @s[nbt={data:{team_type:"2 Teams"}}] at @s as @a[tag=m.ActivePlayer] run function missilewars:game_modes/2teams/join
 execute as @e[type=marker,tag=GameMarker] if score @s m.Game = @a[x=0,tag=m.ActivePlayer,limit=1] m.Game as @s[nbt={data:{team_type:"4 Teams"}}] at @s as @a[tag=m.ActivePlayer] run function missilewars:game_modes/4teams/join
+execute as @e[type=marker,tag=GameMarker] if score @s m.Game = @a[x=0,tag=m.ActivePlayer,limit=1] m.Game as @s[nbt={data:{team_type:"FFA"}}] at @s as @a[tag=m.ActivePlayer] run function missilewars:game_modes/ffa/join
 tag @s remove m.ActivePlayer

@@ -5,3 +5,4 @@ execute at @e[type=marker,tag=PurpleBase,x=0] run function missilewars:maps/purp
 
 fill -25 0 -2 25 100 2 white_stained_glass
 execute if data entity @s data{team_type:"4 Teams"} run fill -2 0 -25 2 100 25 white_stained_glass
+execute if data entity @s data{team_type:"FFA"} run fill -2 0 -25 2 100 25 white_stained_glass

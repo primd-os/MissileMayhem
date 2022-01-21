@@ -8,6 +8,7 @@ execute as @s[tag=!m.FoundGame] in missilewars:games/game7 unless entity @e[type
 
 execute as @s[scores={CreateGame=1}] at @e[type=marker,tag=m.NewGame] run data modify entity @e[type=marker,x=0,tag=m.NewGame,limit=1] data.team_type set value "2 Teams"
 execute as @s[scores={CreateGame=2}] at @e[type=marker,tag=m.NewGame] run data modify entity @e[type=marker,x=0,tag=m.NewGame,limit=1] data.team_type set value "4 Teams"
+execute as @s[scores={CreateGame=3}] at @e[type=marker,tag=m.NewGame] run data modify entity @e[type=marker,x=0,tag=m.NewGame,limit=1] data.team_type set value "FFA"
 
 execute as @s[scores={m.FutureGameMode=1}] at @e[type=marker,tag=m.NewGame] run data modify entity @e[type=marker,x=0,tag=m.NewGame,limit=1] data.game_mode set value "Normal"
 execute as @s[scores={m.FutureGameMode=2}] at @e[type=marker,tag=m.NewGame] run data modify entity @e[type=marker,x=0,tag=m.NewGame,limit=1] data.game_mode set value "KOTH"
@@ -17,6 +18,7 @@ execute as @s[scores={m.FutureGameMode=5}] at @e[type=marker,tag=m.NewGame] run 
 
 execute as @s[scores={CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:maps/queue/2teams
 execute as @s[scores={CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:maps/queue/4teams
+execute as @s[scores={CreateGame=3}] at @e[type=marker,tag=m.NewGame] run function missilewars:maps/queue/ffa
 
 execute as @s[scores={m.FutureGameMode=1, CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/normal/2teams/init_arena
 execute as @s[scores={m.FutureGameMode=1, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/normal/4teams/init_arena
@@ -26,6 +28,7 @@ execute as @s[scores={m.FutureGameMode=3, CreateGame=1}] at @e[type=marker,tag=m
 execute as @s[scores={m.FutureGameMode=3, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/ctf/4teams/init_arena
 execute as @s[scores={m.FutureGameMode=4, CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/race/2teams/init_arena
 execute as @s[scores={m.FutureGameMode=4, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/race/4teams/init_arena
+execute as @s[scores={m.FutureGameMode=4, CreateGame=3}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/race/ffa/init_arena
 execute as @s[scores={m.FutureGameMode=5, CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/royale/2teams/init_arena
 execute as @s[scores={m.FutureGameMode=5, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/royale/4teams/init_arena
 execute at @e[type=marker,tag=m.NewGame] run function missilewars:maps/slow_clear_map
@@ -35,6 +38,7 @@ execute in missilewars:lobby at @e[type=marker,x=0,tag=m.SignPlacer] run setbloc
 execute in missilewars:lobby run kill @e[type=marker,x=0,tag=m.SignPlacer]
 execute as @s[scores={CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/2teams/join_auto
 execute as @s[scores={CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/4teams/join_auto
+execute as @s[scores={CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/ffa/join_auto
 tag @e[type=marker,tag=m.NewGame] remove m.NewGame
 
 tag @s remove m.FoundGame

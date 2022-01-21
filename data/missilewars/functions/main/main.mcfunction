@@ -4,19 +4,19 @@ execute as @a at @s run function missilewars:main/global_main
 
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/normal/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/normal/4teams/game_main
-# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type:"ffa"}}] at @s run function missilewars:game_modes/normal/ffa/game_main
+# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type:"FFA"}}] at @s run function missilewars:game_modes/normal/ffa/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/koth/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/koth/4teams/game_main
-# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"ffa"}}] at @s run function missilewars:game_modes/koth/ffa/game_main
+# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"FFA"}}] at @s run function missilewars:game_modes/koth/ffa/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"CTF",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/ctf/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"CTF",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/ctf/4teams/game_main
-# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"CTF",team_type:"ffa"}}] at @s run function missilewars:game_modes/ctf/ffa/game_main
+# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"CTF",team_type:"FFA"}}] at @s run function missilewars:game_modes/ctf/ffa/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Race",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/race/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Race",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/race/4teams/game_main
-# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Race",team_type:"ffa"}}] at @s run function missilewars:game_modes/race/ffa/game_main
+execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Race",team_type:"FFA"}}] at @s run function missilewars:game_modes/race/ffa/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Royale",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/royale/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Royale",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/royale/4teams/game_main
-# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Royale",team_type:"ffa"}}] at @s run function missilewars:game_modes/royale/ffa/game_main
+# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Royale",team_type:"FFA"}}] at @s run function missilewars:game_modes/royale/ffa/game_main
 
 execute in missilewars:practice run function missilewars:practice/game_main
 
@@ -26,6 +26,7 @@ execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Green] at @s if blo
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Blue] at @s if block ~ ~-1 ~ blue_concrete run function missilewars:start/join/blue
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Purple] at @s if block ~ ~-1 ~ purple_concrete run function missilewars:start/join/purple
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Red] at @s if block ~ ~-1 ~ red_concrete run function missilewars:start/join/red
+execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.FFA] at @s if block ~ ~-1 ~ yellow_concrete run function missilewars:start/join/ffa
 execute as @a[gamemode=adventure,scores={m.Game=1..},team=!m.Spectator] at @s if block ~ ~-1 ~ light_gray_concrete run function missilewars:start/join_spectators
 
 execute in missilewars:lobby positioned 15.5 119 1.5 as @a[distance=..0.75,tag=Parkour] run advancement grant @s only missilewars:parkour

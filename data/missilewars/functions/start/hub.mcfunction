@@ -7,6 +7,7 @@ scoreboard players reset @s JoinGreen
 scoreboard players reset @s JoinBlue
 scoreboard players reset @s JoinRed
 scoreboard players reset @s JoinPurple
+scoreboard players reset @s JoinPlayers
 scoreboard players reset @s Practice
 scoreboard players reset @s ClearPractice
 scoreboard players reset @s Heal

@@ -15,6 +15,7 @@ scoreboard objectives add JoinGreen trigger
 scoreboard objectives add JoinBlue trigger
 scoreboard objectives add JoinRed trigger
 scoreboard objectives add JoinPurple trigger
+scoreboard objectives add JoinPlayers trigger
 scoreboard objectives add Practice trigger
 scoreboard objectives add ClearPractice trigger
 scoreboard objectives add Heal trigger
@@ -128,6 +129,7 @@ scoreboard objectives add m.clearZ dummy
 scoreboard objectives add m.player_health health {"text":"♥","color":"red"}
 scoreboard objectives setdisplay belowName m.player_health
 
+team add m.FFA
 team add m.Blue
 team add m.Green
 team add m.Red
@@ -135,6 +137,7 @@ team add m.Purple
 team add m.Spectator
 team add m.Lobby
 team add m.Sumo
+team modify m.FFA color yellow
 team modify m.Blue color blue
 team modify m.Green color green
 team modify m.Red color red
@@ -142,18 +145,21 @@ team modify m.Purple color dark_purple
 team modify m.Spectator color dark_gray
 team modify m.Lobby color gray
 team modify m.Sumo color gray
-team modify m.Blue collisionRule pushOwnTeam
-team modify m.Green collisionRule pushOwnTeam
-team modify m.Red collisionRule pushOwnTeam
-team modify m.Purple collisionRule pushOwnTeam
+team modify m.FFA collisionRule always
+team modify m.Blue collisionRule pushOtherTeams
+team modify m.Green collisionRule pushOtherTeams
+team modify m.Red collisionRule pushOtherTeams
+team modify m.Purple collisionRule pushOtherTeams
 team modify m.Lobby collisionRule never
 team modify m.Sumo collisionRule always
+team modify m.FFA friendlyFire true
 team modify m.Blue friendlyFire false
 team modify m.Green friendlyFire false
 team modify m.Red friendlyFire false
 team modify m.Purple friendlyFire false
 team modify m.Lobby friendlyFire false
 team modify m.Sumo friendlyFire true
+team modify m.FFA prefix {"text": "MissileMayhem | "}
 team modify m.Blue prefix {"text": "MissileMayhem | "}
 team modify m.Green prefix {"text": "MissileMayhem | "}
 team modify m.Red prefix {"text": "MissileMayhem | "}

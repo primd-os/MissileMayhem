@@ -1,0 +1,18 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "mainhand": {
+          "items": [
+            "minecraft:bow"
+          ]
+        },
+        "offhand": {
+          "items": [
+            "minecraft:firework_rocket"
+          ]
+        }
+      }
+    }
+  }

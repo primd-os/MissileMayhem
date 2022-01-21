@@ -38,21 +38,24 @@ execute as @s[tag=Editor] run function missilewars:main/lobby_editor
 scoreboard players set @s m.tntCount 0
 scoreboard players set @s m.tntBroke 0
 
+tag @s[tag=InBox] add WasInBox
 tag @s remove InBox
 execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=25,dz=21] run tag @s add InBox
 execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=25,dz=21] run tag @s add InBox
 execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=0] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
 execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-180] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
-execute as @s[tag=!InBox,tag=Editor] run function missilewars:main/clear_inv
-tag @s[tag=!InBox] remove Editor
+execute as @s[tag=WasInBox,tag=!InBox] run function missilewars:main/leave_box
+execute as @s[tag=InBox,tag=!WasInBox] run function missilewars:custom_missile/move_off_head
+tag @s remove WasInBox
 
 execute positioned -6.5 82 6.5 run playsound minecraft:entity.player.attack.sweep master @s[distance=..2] ~ ~ ~ 100 2 1
 execute positioned -6.5 82 6.5 run tp @s[distance=..2] 10 108.5 40
 execute positioned -6.5 82 6.5 run particle portal ~ ~ ~ 0 0 0 2 1 normal @s
 
-execute as @s[tag=InBox] run clear @s written_book{display:{Name:'{"text":"Custom Missile"}'}}
-execute as @s[tag=InBox,nbt=!{Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/move_off_head
-execute as @s[tag=!InBox,nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/attempt_move_to_head
+execute if score @s m.inv_change matches 1 as @s[tag=InBox] run clear @s written_book{display:{Name:'{"text":"Custom Missile"}'}}
+scoreboard players set @s m.Items 1
+execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s minecraft:writable_book 0
+execute as @s[tag=InBox,scores={m.Items=0}] run function missilewars:custom_missile/move_off_head
 
 execute if entity @s[team=m.Lobby,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join m.Sumo
 execute unless entity @s[team=m.Sumo,x=-5,y=109,z=-23,dx=20,dy=20,dz=20] run team join m.Lobby

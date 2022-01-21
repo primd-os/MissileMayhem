@@ -68,3 +68,5 @@ execute as @a unless score @s m.MapVote = @s m.PrevMapVote at @s run function mi
 
 bossbar set missile_time players @a[scores={m.Game=1..999}]
 scoreboard players set @a m.inv_change 0
+
+schedule function missilewars:main/main 1t replace

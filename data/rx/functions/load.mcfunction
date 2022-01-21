@@ -11,3 +11,4 @@ scoreboard players add $curr rx.death_uid 0
 scoreboard players add $curr rx.kill_uid 0
 scoreboard players add $curr rx.atk_uid 0
 scoreboard players add $curr rx.def_uid 0
+schedule function rx:tick 1t replace

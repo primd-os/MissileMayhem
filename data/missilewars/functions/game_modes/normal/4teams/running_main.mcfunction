@@ -6,9 +6,9 @@ execute at @e[type=marker,tag=Base,x=0] run particle minecraft:angry_villager ^8
 execute at @e[type=marker,tag=Base,x=0] positioned ^85 ^ ^-10 positioned ~-50 0 ~-50 as @s[dx=100,dy=255,dz=100] run tag @s add InDamage
 effect give @s[tag=InDamage,gamemode=survival] wither 1 4
 effect give @s[tag=InDamage,gamemode=survival] hunger 1 4
-effect give @s[nbt={SelectedItem:{id:"minecraft:magenta_wool"}}] minecraft:haste 1 10 true
+effect give @s[predicate=missilewars:holding_wool] minecraft:haste 1 10 true
 effect give @s[tag=!InDamage] minecraft:haste 2 2 true
-effect give @s[tag=!InDamage,nbt=!{foodLevel:20}] minecraft:saturation 1 0 true
+effect give @s[tag=!InDamage,scores={m.foodLevel=..19}] minecraft:saturation 1 0 true
 tag @s remove InDamage
 
 function missilewars:main/shared_run_main

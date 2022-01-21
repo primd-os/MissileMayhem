@@ -29,6 +29,7 @@ scoreboard objectives add GiveBook trigger
 scoreboard objectives add m.PrevMissileSet dummy
 scoreboard objectives add m.MissileSet dummy
 scoreboard objectives add ChooseMissileSet trigger
+
 scoreboard objectives add CreateGame trigger
 scoreboard objectives add m.GameCreationStage dummy
 scoreboard objectives add m.FutureGameMode dummy
@@ -91,6 +92,7 @@ scoreboard objectives add m.RespawnTimer dummy
 scoreboard objectives add m.RespawnTimeSec dummy
 
 scoreboard objectives add m.GameClock dummy
+scoreboard objectives add m.foodLevel food
 
 scoreboard players set WinningScore m.Constants 2000
 scoreboard players set Flip m.Constants -1
@@ -186,3 +188,5 @@ scoreboard players set lowLagReload m.Constants 1
 data modify storage missilewars:queue queue set value ["","",""]
 
 execute in missilewars:lobby run kill @e[type=item,x=0]
+
+schedule function missilewars:main/main 1t replace

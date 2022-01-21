@@ -1,5 +1,5 @@
 effect give @s minecraft:haste 2 2 true
-effect give @s[nbt=!{foodLevel:20}] minecraft:saturation 2 0 true
+effect give @s[scores={m.foodLevel=..19}] minecraft:saturation 2 0 true
 scoreboard players enable @s Leave
 scoreboard players enable @s ClearPractice
 scoreboard players enable @s Heal

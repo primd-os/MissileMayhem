@@ -10,9 +10,9 @@
         "minecraft:honey_block",
         "minecraft:slime_block",
         "minecraft:iron_pickaxe",
-        "minecraft:oak_pressure_plate",
+        "minecraft:stone_pressure_plate",
         "minecraft:gray_glazed_terracotta",
-        "minecraft:birch_sign",
+        "minecraft:oak_sign",
         "minecraft:iron_pickaxe"
     ]
 }

@@ -1,0 +1,32 @@
+[
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "mainhand": {
+                    "items": [
+                        "minecraft:crossbow"
+                    ],
+                    "nbt": "{ChargedProjectiles:[]}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:inverted",
+        "term": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "offhand": {
+                        "items": [
+                            "minecraft:firework_rocket"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+]

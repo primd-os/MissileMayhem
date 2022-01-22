@@ -9,7 +9,6 @@ scoreboard players reset @s JoinPlayers
 scoreboard players reset @s ClearPractice
 scoreboard players reset @s Heal
 execute unless score @s ChooseMissileSet matches -2147483648..2147483647 run scoreboard players set @s ChooseMissileSet -2
-scoreboard players enable @s ToggleRanked
 
 execute unless entity @s[scores={m.points=-2147483648..2147483647}] run scoreboard players set @s m.points 1000
 execute unless entity @s[scores={m.GameCreationStage=-2147483648..2147483647}] run scoreboard players set @s m.GameCreationStage 0
@@ -21,9 +20,9 @@ execute in missilewars:lobby positioned 10 108 40 run function hub:main/death/sp
 execute unless predicate missilewars:in_lobby in missilewars:lobby run tp @s 10 108 40
 effect give @s saturation 2 0 true
 
-execute if block ~ ~ ~ wheat run function missilewars:main/wheat_tp
-execute if block ~ ~-1 ~ wheat run function missilewars:main/wheat_tp
-execute if block ~ ~-2 ~ wheat run function missilewars:main/wheat_tp
+execute if block ~ ~ ~ wheat run function missilewars:lobby/wheat_tp
+execute if block ~ ~-1 ~ wheat run function missilewars:lobby/wheat_tp
+execute if block ~ ~-2 ~ wheat run function missilewars:lobby/wheat_tp
 
 execute as @s[scores={ChooseMissileSet=-1}] run function missilewars:start/choose_missile_set
 execute if entity @s[scores={ChooseMissileSet=0..3}] run scoreboard players operation @s m.MissileSet = @s ChooseMissileSet
@@ -31,11 +30,7 @@ scoreboard players enable @s ChooseMissileSet
 scoreboard players set @s ChooseMissileSet -2
 function missilewars:start/missile_set_display
 
-execute as @s[scores={ToggleRanked=1}] run function missilewars:start/toggle_ranked
-execute as @s[scores={ToggleRanked=1}] run scoreboard players set @s ToggleRanked 0
-
-
-execute as @s[tag=Editor] run function missilewars:main/lobby_editor
+execute as @s[tag=Editor] run function missilewars:lobby/lobby_editor
 scoreboard players set @s m.tntCount 0
 scoreboard players set @s m.tntBroke 0
 
@@ -45,7 +40,7 @@ execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rot
 execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=90] positioned ~-3 ~ ~-10 if entity @s[dx=7,dy=25,dz=21] run tag @s add InBox
 execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=0] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
 execute at @s at @e[type=marker,tag=CustomMissileArea,sort=nearest,limit=1,y_rotation=-180] positioned ~-10 ~ ~-3 if entity @s[dx=21,dy=25,dz=7] run tag @s add InBox
-execute as @s[tag=WasInBox,tag=!InBox] run function missilewars:main/leave_box
+execute as @s[tag=WasInBox,tag=!InBox] run function missilewars:lobby/leave_box
 execute as @s[tag=InBox,tag=!WasInBox] run function missilewars:custom_missile/move_off_head
 tag @s remove WasInBox
 

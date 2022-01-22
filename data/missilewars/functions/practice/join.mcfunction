@@ -1,5 +1,5 @@
 scoreboard players set @s m.Game 1000
-team join m.Blue @s
+team join m.FFA @s
 gamemode survival @s
 
 execute in missilewars:practice if entity @e[tag=m.PracticeArea,x=0] positioned 0 50 -400 at @e[tag=m.PracticeArea,sort=furthest] positioned ~ 50 ~400 run function missilewars:practice/go

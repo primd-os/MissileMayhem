@@ -1,4 +1,4 @@
-execute if entity @a[team=m.Green,x=0] if entity @a[team=m.Blue,x=0] if score @s m.GameState matches 2 unless entity @a[team=!m.Spectator,scores={m.DoRanked=0},x=0] run function missilewars:end/add_points
+execute if entity @a[team=m.Green,x=0] if entity @a[team=m.Blue,x=0] if score @s m.GameState matches 2 run function missilewars:end/add_points
 
 execute if entity @s[scores={m.Timer=..-72000}] run advancement grant @a[x=0] only missilewars:unintentional_design
 

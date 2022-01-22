@@ -2,14 +2,13 @@ setblock -7 105 40 minecraft:spruce_wall_sign[facing=east]{Text1:'{"text":"-=-",
 
 setblock -13 106 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Commands","underlined": true,"bold": true}'} destroy
 setblock -14 105 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger Practice"}}',Text3:'{"text":"Go To Practice"}'} destroy
-setblock -13 105 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ToggleRanked"}}',Text3:'{"text":"Toggle Ranked Games"}'} destroy
 setblock -12 105 1 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Click To Join","clickEvent":{"action":"run_command","value":"function missilewars:start/discord"}}',Text2:'{"text":"The Official"}',Text3:'{"text":"Discord Server"}'} destroy
 setblock -11 105 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To"}',Text3:'{"text":"Get Instructions","clickEvent":{"action":"run_command","value":"trigger GiveBook"}}'} destroy
 setblock -14 104 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":"Choose Map"}'} destroy
-setblock -13 104 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To"}',Text3:'{"text":"Make Custom","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_custom"}}'} destroy
+setblock -13 104 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To"}',Text3:'{"text":"Make Custom","clickEvent":{"action":"run_command","value":"function missilewars:lobby/tp_custom"}}'} destroy
 setblock -12 104 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To"}',Text3:'{"text":"Choose Missile","clickEvent":{"action":"run_command","value":"trigger ChooseMissileSet"}}',Text4:'{"text": "Set"}'} destroy
 
-setblock -20 103 38 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"Secret Sign!","clickEvent":{"action":"run_command","value":"function missilewars:main/tp_secret"}}'} destroy
+setblock -20 103 38 minecraft:oak_wall_sign[facing=west]{Text1:'{"text":"Secret Sign!","clickEvent":{"action":"run_command","value":"function missilewars:lobby/tp_secret"}}'} destroy
 
 setblock -8 106 31 minecraft:oak_wall_sign[facing=east]{Color:"black",Text1:'{"text":"Settings","clickEvent":{"action":"run_command","value":"tp -12.5 104 3.5"}}'} destroy
 setblock -8 104 28 minecraft:oak_wall_sign[facing=east]{Color:"black",Text1:'{"text":"Missile Expo","clickEvent":{"action":"run_command","value":"tp 47.5 105.5 -25.5"}}'} destroy

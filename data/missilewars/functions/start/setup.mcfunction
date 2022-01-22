@@ -8,8 +8,6 @@ scoreboard objectives modify m.points displayname "Rating"
 scoreboard objectives add m.Constants dummy
 scoreboard objectives add m.Variables dummy
 
-scoreboard objectives add ToggleRanked trigger
-scoreboard objectives add m.DoRanked dummy
 scoreboard objectives add JoinSpectators trigger
 scoreboard objectives add JoinGreen trigger
 scoreboard objectives add JoinBlue trigger

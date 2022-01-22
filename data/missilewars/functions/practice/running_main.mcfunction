@@ -5,7 +5,6 @@ scoreboard players enable @s ClearPractice
 scoreboard players enable @s Heal
 scoreboard players reset @s JoinSpectators
 scoreboard players reset @s ChooseMissileSet
-scoreboard players reset @s ToggleRanked
 
 function missilewars:main/shared_run_main
 execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 1 run title @s[gamemode=!spectator] actionbar {"text": "✥"}

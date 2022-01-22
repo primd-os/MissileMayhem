@@ -8,6 +8,6 @@
         }
     },
     "rewards": {
-        "function": "missilewars:main/leave_lobby"
+        "function": "missilewars:lobby/leave_lobby"
     }
 }

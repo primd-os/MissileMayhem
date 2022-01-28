@@ -61,6 +61,7 @@ execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[dist
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=m.Green] run tag @s add Green
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=m.Red] run tag @s add Red
 execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=m.Purple] run tag @s add Black
+execute at @a[sort=nearest,scores={m.PlacedMissile=1},limit=1] if entity @a[distance=..0,team=m.FFA] run tag @s add FFA
 
 tag @s add Success
 function missilewars:item_managers/color_missile

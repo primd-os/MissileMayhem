@@ -9,4 +9,5 @@ execute as @e[type=minecraft:snowball,scores={m.snowballTime=1}] if score @s m.U
 execute as @e[type=minecraft:snowball,scores={m.snowballTime=1}] if score @s m.UUID1 = @a[tag=Active,team=m.Blue,limit=1] m.UUID1 run tag @s add BlueShield
 execute as @e[type=minecraft:snowball,scores={m.snowballTime=1}] if score @s m.UUID1 = @a[tag=Active,team=m.Red,limit=1] m.UUID1 run tag @s add RedShield
 execute as @e[type=minecraft:snowball,scores={m.snowballTime=1}] if score @s m.UUID1 = @a[tag=Active,team=m.Green,limit=1] m.UUID1 run tag @s add GreenShield
+execute as @e[type=minecraft:snowball,scores={m.snowballTime=1}] if score @s m.UUID1 = @a[tag=Active,team=m.FFA,limit=1] m.UUID1 run tag @s add FFAShield
 tag @s remove Active

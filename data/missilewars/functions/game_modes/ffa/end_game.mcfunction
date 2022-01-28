@@ -8,4 +8,5 @@ playsound minecraft:ui.toast.challenge_complete block @a[x=0,tag=m.WonFFA] ~ ~ ~
 title @a[x=0,tag=!m.WonFFA] subtitle {"text":"Better Luck Next Time","color":"red"}
 execute if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-900..}] run advancement grant @a[x=0,tag=m.WonFFA] only missilewars:2gud4u
 execute if entity @e[type=marker,tag=GameMarker,x=0,scores={m.Timer=-200..}] run advancement grant @a[x=0,tag=m.WonFFA] only missilewars:manipulation
+tag @a[x=0] remove m.WonFFA
 execute if entity @s[scores={m.GameState=2}] run scoreboard players operation @s m.EndTimer = EndTime m.Constants

@@ -1,0 +1,1 @@
+data modify storage hub:hub navigation_book append value '["- ",{"text":"[","extra":[{"text":"Missile Mayhem","color":"dark_red"},"]"],"color":"dark_green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s m.Game 0"}}]'

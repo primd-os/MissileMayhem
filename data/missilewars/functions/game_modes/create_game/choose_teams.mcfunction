@@ -38,7 +38,7 @@ execute in missilewars:lobby at @e[type=marker,x=0,tag=m.SignPlacer] run setbloc
 execute in missilewars:lobby run kill @e[type=marker,x=0,tag=m.SignPlacer]
 execute as @s[scores={CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/2teams/join_auto
 execute as @s[scores={CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/4teams/join_auto
-execute as @s[scores={CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/ffa/join_auto
+execute as @s[scores={CreateGame=3}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/ffa/join_auto
 tag @e[type=marker,tag=m.NewGame] remove m.NewGame
 
 tag @s remove m.FoundGame

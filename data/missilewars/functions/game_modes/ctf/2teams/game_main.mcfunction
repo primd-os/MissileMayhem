@@ -1,6 +1,7 @@
 function missilewars:game_modes/2teams/triggers
 
 function missilewars:main/timer
+execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/ctf/2teams/init_arena
 execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/ctf/2teams/load_map
 
 execute if score @s m.GameState matches 1 run function missilewars:game_modes/ctf/2teams/check_end_game

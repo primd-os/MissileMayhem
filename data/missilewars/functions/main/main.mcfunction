@@ -4,7 +4,7 @@ execute as @a at @s run function missilewars:main/global_main
 
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/normal/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/normal/4teams/game_main
-# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type:"FFA"}}] at @s run function missilewars:game_modes/normal/ffa/game_main
+execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type:"FFA"}}] at @s run function missilewars:game_modes/normal/ffa/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/koth/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/koth/4teams/game_main
 # execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"FFA"}}] at @s run function missilewars:game_modes/koth/ffa/game_main
@@ -16,7 +16,7 @@ execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Race",team_type:"
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Race",team_type:"FFA"}}] at @s run function missilewars:game_modes/race/ffa/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Royale",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/royale/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Royale",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/royale/4teams/game_main
-# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Royale",team_type:"FFA"}}] at @s run function missilewars:game_modes/royale/ffa/game_main
+execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Royale",team_type:"FFA"}}] at @s run function missilewars:game_modes/royale/ffa/game_main
 
 execute in missilewars:practice run function missilewars:practice/game_main
 

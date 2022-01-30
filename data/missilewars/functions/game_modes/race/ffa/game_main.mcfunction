@@ -1,6 +1,7 @@
 function missilewars:game_modes/ffa/triggers
 
 function missilewars:main/timer
+execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/race/ffa/init_arena
 execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/load_map
 
 execute as @a[scores={m.Game=1..},x=0] at @s run function missilewars:game_modes/race/ffa/running_main

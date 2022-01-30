@@ -1,6 +1,7 @@
 function missilewars:game_modes/4teams/triggers
 
 function missilewars:main/timer
+execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/koth/4teams/init_arena
 execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/koth/load_map
 
 execute if score @s m.GameState matches 1 run function missilewars:game_modes/koth/4teams/check_end_game

@@ -1,6 +1,7 @@
 function missilewars:game_modes/4teams/triggers
 
 function missilewars:main/timer
+execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/normal/4teams/init_arena
 execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/normal/load_map
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=m.Blue,x=0] run scoreboard players set @s m.BlueLoss 1
 execute if entity @s[scores={m.Timer=0}] unless entity @a[team=m.Green,x=0] run scoreboard players set @s m.GreenLoss 1

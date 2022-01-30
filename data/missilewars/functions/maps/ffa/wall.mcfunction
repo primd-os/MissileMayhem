@@ -1,1 +1,1 @@
-execute positioned ^-20 ^ ^ run fill ~ 0 ~ ^40 ^-4 ^ minecraft:yellow_terracotta
+fill ~ 0 ~ ~ ~-1 ~ yellow_terracotta

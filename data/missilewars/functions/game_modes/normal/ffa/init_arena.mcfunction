@@ -1,0 +1,1 @@
+function missilewars:game_modes/ffa/create_bases

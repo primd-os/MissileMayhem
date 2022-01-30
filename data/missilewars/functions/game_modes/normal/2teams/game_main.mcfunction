@@ -1,6 +1,7 @@
 function missilewars:game_modes/2teams/triggers
 
 function missilewars:main/timer
+execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/normal/2teams/init_arena
 execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/normal/load_map
 execute as @s[scores={m.GameState=2..,m.EndTimer=0}] at @s run function missilewars:game_modes/normal/2teams/reset_game
 execute as @s[scores={m.GameState=2..}] at @s run scoreboard players remove @s m.EndTimer 1

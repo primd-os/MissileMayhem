@@ -9,7 +9,6 @@ execute if score Map m.Variables matches 5 run function missilewars:maps/map_def
 execute if score Map m.Variables matches 6 run function missilewars:maps/map_definitions/towers
 
 execute at @e[type=marker,tag=Base,x=0] run function missilewars:maps/platform
-
-scoreboard players operation @e[type=marker,tag=GameMarker,x=0] m.MapVote = Map m.Variables
+execute at @e[type=marker,tag=m.FFABase,x=0] run fill ~-2 ~ ~-2 ~2 ~ ~2 obsidian
 
 execute as @a[x=0] run function missilewars:game_modes/teamtp

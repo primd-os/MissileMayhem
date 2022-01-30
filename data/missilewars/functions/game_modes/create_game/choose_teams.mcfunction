@@ -20,19 +20,9 @@ execute as @s[scores={CreateGame=1}] at @e[type=marker,tag=m.NewGame] run functi
 execute as @s[scores={CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:maps/queue/4teams
 execute as @s[scores={CreateGame=3}] at @e[type=marker,tag=m.NewGame] run function missilewars:maps/queue/ffa
 
-execute as @s[scores={m.FutureGameMode=1, CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/normal/2teams/init_arena
-execute as @s[scores={m.FutureGameMode=1, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/normal/4teams/init_arena
-execute as @s[scores={m.FutureGameMode=2, CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/koth/2teams/init_arena
-execute as @s[scores={m.FutureGameMode=2, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/koth/4teams/init_arena
-execute as @s[scores={m.FutureGameMode=3, CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/ctf/2teams/init_arena
-execute as @s[scores={m.FutureGameMode=3, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/ctf/4teams/init_arena
-execute as @s[scores={m.FutureGameMode=4, CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/race/2teams/init_arena
-execute as @s[scores={m.FutureGameMode=4, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/race/4teams/init_arena
-execute as @s[scores={m.FutureGameMode=4, CreateGame=3}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/race/ffa/init_arena
-execute as @s[scores={m.FutureGameMode=5, CreateGame=1}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/royale/2teams/init_arena
-execute as @s[scores={m.FutureGameMode=5, CreateGame=2}] at @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/royale/4teams/init_arena
 execute at @e[type=marker,tag=m.NewGame] run function missilewars:maps/slow_clear_map
 execute as @e[type=marker,tag=m.NewGame] run function missilewars:game_modes/create_game/get_sign_location
+execute in missilewars:lobby run tellraw @a[x=0] [{"nbt":"data.team_type","entity":"@e[type=marker,tag=m.NewGame]"},{"text":" "},{"nbt":"data.game_mode","entity":"@e[type=marker,tag=m.NewGame]"},{"text":" Game Created by "},{"selector":"@s"}]
 execute in missilewars:lobby at @e[type=marker,x=0,tag=m.SignPlacer] run setblock -14 ~ ~ minecraft:oak_wall_sign[facing=east]{Text1:'{"nbt":"data.team_type","entity":"@e[type=marker,tag=m.NewGame]"}',Text2:'{"nbt":"data.game_mode","entity":"@e[type=marker,tag=m.NewGame]"}',Text3:'{"text":"Click to Join","clickEvent":{"action":"run_command","value":"function missilewars:game_modes/join"}}'} destroy
 
 execute in missilewars:lobby run kill @e[type=marker,x=0,tag=m.SignPlacer]

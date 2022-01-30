@@ -1,0 +1,1 @@
+execute if score @s warp = GameId m.Variables run scoreboard players set @s m.Game 0

@@ -12,5 +12,6 @@ execute as @s[scores={m.GameState=2..,m.EndTimer=0}] at @s run function missilew
 execute as @s[scores={m.GameState=2..}] at @s run scoreboard players remove @s m.EndTimer 1
 
 execute if score @s m.GameState matches 1 at @e[type=marker,tag=m.FFABase,x=0] run fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:obsidian
+execute if score @s m.GameState matches 1 at @e[type=marker,tag=m.FFABase,x=0] run fill ~ ~1 ~ ~ ~2 ~ minecraft:air
 
 execute unless entity @a[x=0] run function missilewars:end/unload_game

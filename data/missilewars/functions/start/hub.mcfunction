@@ -19,3 +19,4 @@ scoreboard players reset @s CreateGame
 tag @s remove m.GotRace
 tag @s remove m.RoyaleDead
 tag @s remove m.NormalDead
+tag @s remove m.FFADead

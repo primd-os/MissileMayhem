@@ -17,6 +17,7 @@ tag @s remove carrier
 
 gamemode adventure @s[gamemode=!creative]
 execute in missilewars:lobby positioned 10 108 40 run function hub:main/death/spawnpoint
+execute unless predicate missilewars:in_lobby run function missilewars:start/give_book
 execute unless predicate missilewars:in_lobby in missilewars:lobby run tp @s 10 108 40
 effect give @s saturation 2 0 true
 

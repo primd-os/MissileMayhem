@@ -82,6 +82,7 @@ scoreboard objectives add m.GreenMembers dummy
 scoreboard objectives add m.RedMembers dummy
 scoreboard objectives add m.PurpleMembers dummy
 
+scoreboard objectives add m.FFAScore dummy
 scoreboard objectives add m.BlueScore dummy
 scoreboard objectives add m.GreenScore dummy
 scoreboard objectives add m.RedScore dummy

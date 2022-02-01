@@ -1,3 +1,4 @@
+clear @s
 summon marker ~ ~ ~ {Tags:["m.GameFinder"]}
 execute as @e[type=marker,x=0,tag=m.GameFinder] store result score YCoordFinal m.Variables run data get entity @e[type=marker,x=0,tag=m.GameFinder,limit=1] Pos[1]
 execute as @e[type=marker,x=0,tag=m.GameFinder] store result score ZCoordFinal m.Variables run data get entity @e[type=marker,x=0,tag=m.GameFinder,limit=1] Pos[2]

@@ -7,10 +7,10 @@ execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Normal",team_type:"FFA"}}] at @s run function missilewars:game_modes/normal/ffa/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/koth/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/koth/4teams/game_main
-# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"FFA"}}] at @s run function missilewars:game_modes/koth/ffa/game_main
+execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"KOTH",team_type:"FFA"}}] at @s run function missilewars:game_modes/koth/ffa/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"CTF",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/ctf/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"CTF",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/ctf/4teams/game_main
-# execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"CTF",team_type:"FFA"}}] at @s run function missilewars:game_modes/ctf/ffa/game_main
+execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"CTF",team_type:"FFA"}}] at @s run function missilewars:game_modes/ctf/ffa/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Race",team_type:"2 Teams"}}] at @s run function missilewars:game_modes/race/2teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Race",team_type:"4 Teams"}}] at @s run function missilewars:game_modes/race/4teams/game_main
 execute as @e[type=marker,tag=GameMarker,nbt={data:{game_mode:"Race",team_type:"FFA"}}] at @s run function missilewars:game_modes/race/ffa/game_main
@@ -52,7 +52,6 @@ execute as @e[type=tnt,nbt={Fuse: 2s}] at @s run function missilewars:main/tnt_f
 
 function missilewars:new_missile/missile_loop
 
-execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] run function missilewars:start/give_book
 execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] run scoreboard players set @s m.DirectionPlace 0
 execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] run team join m.Lobby @s
 execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] at @s run scoreboard players set @s m.Game 0

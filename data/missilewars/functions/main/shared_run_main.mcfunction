@@ -20,6 +20,6 @@ execute unless score @s m.Game matches 1000 run function missilewars:custom_miss
 scoreboard players set @s m.tntBroke 0
 
 tag @s[dy=-10,y=-64,gamemode=!spectator] add m.VoidDeath
-tp @s[tag=m.VoidDeath] 0 50 0
+tp @s[tag=m.VoidDeath] ~ -50 ~
 kill @s[tag=m.VoidDeath]
 tp @s[dy=-10,y=-64,gamemode=spectator] 0 100 0

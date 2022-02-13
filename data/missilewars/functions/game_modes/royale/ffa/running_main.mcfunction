@@ -1,6 +1,6 @@
 effect give @s[predicate=missilewars:holding_wool] minecraft:haste 1 10 true
 effect give @s minecraft:haste 2 2 true
-effect give @s[scores={m.foodLevel=..19}] minecraft:saturation 2 0 true
+effect give @s[scores={hub.foodLevel=..19}] minecraft:saturation 2 0 true
 
 function missilewars:game_modes/force_gamemode
 

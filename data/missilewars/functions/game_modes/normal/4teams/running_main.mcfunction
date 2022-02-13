@@ -8,7 +8,7 @@ effect give @s[tag=InDamage,gamemode=survival] wither 1 4
 effect give @s[tag=InDamage,gamemode=survival] hunger 1 4
 effect give @s[predicate=missilewars:holding_wool] minecraft:haste 1 10 true
 effect give @s[tag=!InDamage] minecraft:haste 2 2 true
-effect give @s[tag=!InDamage,scores={m.foodLevel=..19}] minecraft:saturation 1 0 true
+effect give @s[tag=!InDamage,scores={hub.foodLevel=..19}] minecraft:saturation 1 0 true
 tag @s remove InDamage
 
 function missilewars:main/shared_run_main

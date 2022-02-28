@@ -1,4 +1,4 @@
-function missilewars:game_modes/ffa/triggers
+function missilewars:game_modes/triggers
 
 function missilewars:main/timer
 execute if entity @s[scores={m.Timer=0}] run function missilewars:game_modes/royale/ffa/init_arena

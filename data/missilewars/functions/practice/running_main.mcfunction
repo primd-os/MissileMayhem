@@ -1,9 +1,8 @@
 effect give @s minecraft:haste 2 2 true
 effect give @s[scores={hub.foodLevel=..19}] minecraft:saturation 2 0 true
-scoreboard players enable @s Leave
+scoreboard players enable @s leave
 scoreboard players enable @s ClearPractice
-scoreboard players enable @s Heal
-scoreboard players reset @s JoinSpectators
+scoreboard players enable @s heal
 scoreboard players reset @s ChooseMissileSet
 
 function missilewars:main/shared_run_main
@@ -30,12 +29,12 @@ execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{i
 execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s minecraft:arrow 0
 execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{id:"minecraft:arrow"}}] run give @s[scores={m.Game=1..,m.Items=0},x=0] minecraft:arrow 64
 
-execute as @s[scores={Leave=1}] run function missilewars:end/leave
-execute as @s[scores={Leave=1}] run scoreboard players set @s Leave 0
+execute as @s[scores={leave=1}] run function missilewars:end/leave
+execute as @s[scores={leave=1}] run scoreboard players set @s leave 0
 
 execute as @s[scores={ClearPractice=1}] at @s at @e[type=marker,tag=m.PracticeArea,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~-112 {Tags: ["PracticeClear"]} 
 execute as @s[scores={ClearPractice=1}] run scoreboard players set @s ClearPractice 0
-execute as @s[scores={Heal=1}] run effect give @s instant_health 1 10 true
-execute as @s[scores={Heal=1}] run scoreboard players set @s Heal 0
+execute as @s[scores={heal=1}] run effect give @s instant_health 1 10 true
+execute as @s[scores={heal=1}] run scoreboard players set @s heal 0
 
 execute as @s[scores={m.deathCheck=1..1000}] at @s run function missilewars:game_modes/death

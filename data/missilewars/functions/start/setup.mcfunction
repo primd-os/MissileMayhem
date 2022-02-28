@@ -8,22 +8,14 @@ scoreboard objectives modify m.points displayname "Rating"
 scoreboard objectives add m.Constants dummy
 scoreboard objectives add m.Variables dummy
 
-scoreboard objectives add JoinSpectators trigger
-scoreboard objectives add JoinGreen trigger
-scoreboard objectives add JoinBlue trigger
-scoreboard objectives add JoinRed trigger
-scoreboard objectives add JoinPurple trigger
-scoreboard objectives add JoinPlayers trigger
-scoreboard objectives add Practice trigger
+scoreboard objectives add practice trigger
 scoreboard objectives add ClearPractice trigger
-scoreboard objectives add Heal trigger
-scoreboard objectives add Leave trigger
+scoreboard objectives add heal trigger
+scoreboard objectives add leave trigger
 
 scoreboard objectives add ChooseMap trigger
 scoreboard objectives add m.PrevMapVote dummy
 scoreboard objectives add m.MapVote dummy
-
-scoreboard objectives add GiveBook trigger
 
 scoreboard objectives add m.PrevMissileSet dummy
 scoreboard objectives add m.MissileSet dummy

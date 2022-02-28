@@ -58,13 +58,14 @@ execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] at @s run scoreboard p
 execute in missilewars:lobby as @a[x=0,tag=!PlayedBefore] at @s run function missilewars:custom_missile/set_default
 execute in missilewars:lobby run tag @a[x=0,tag=!PlayedBefore] add PlayedBefore
 
-execute as @a[scores={GiveBook=1..}] run function missilewars:start/give_book
-execute as @a[scores={GiveBook=1..}] run scoreboard players set @s GiveBook 0
-
 execute as @a[scores={ChooseMap=-1}] run function missilewars:start/choose_map
 execute as @a[scores={ChooseMap=0..6}] run scoreboard players operation @s m.MapVote = @s ChooseMap
 scoreboard players set @a ChooseMap -2
 execute as @a unless score @s m.MapVote = @s m.PrevMapVote at @s run function missilewars:main/switch_map_vote
+
+execute as @s[scores={ChooseMissileSet=-1}] run function missilewars:start/choose_missile_set
+execute if entity @s[scores={ChooseMissileSet=0..3}] run scoreboard players operation @s m.MissileSet = @s ChooseMissileSet
+scoreboard players set @s ChooseMissileSet -2
 
 bossbar set missile_time players @a[scores={m.Game=1..999}]
 scoreboard players set @a m.inv_change 0

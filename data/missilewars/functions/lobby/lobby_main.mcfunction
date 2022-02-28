@@ -1,13 +1,7 @@
 effect give @s minecraft:haste 2 255 true
-scoreboard players reset @s Leave
-scoreboard players reset @s JoinSpectators
-scoreboard players reset @s JoinGreen
-scoreboard players reset @s JoinBlue
-scoreboard players reset @s JoinRed
-scoreboard players reset @s JoinPurple
-scoreboard players reset @s JoinPlayers
+scoreboard players reset @s leave
 scoreboard players reset @s ClearPractice
-scoreboard players reset @s Heal
+scoreboard players reset @s heal
 execute unless score @s ChooseMissileSet matches -2147483648..2147483647 run scoreboard players set @s ChooseMissileSet -2
 
 execute unless entity @s[scores={m.points=-2147483648..2147483647}] run scoreboard players set @s m.points 1000
@@ -18,6 +12,7 @@ tag @s remove carrier
 gamemode adventure @s[gamemode=!creative]
 execute in missilewars:lobby positioned 10 108 40 run function hub:main/death/spawnpoint
 execute unless predicate missilewars:in_lobby run function missilewars:start/give_book
+execute unless predicate missilewars:in_lobby run scoreboard players enable @s ChooseMissileSet
 execute unless predicate missilewars:in_lobby in missilewars:lobby run tp @s 10 108 40
 effect give @s saturation 2 0 true
 
@@ -25,10 +20,6 @@ execute if block ~ ~ ~ wheat run function missilewars:lobby/wheat_tp
 execute if block ~ ~-1 ~ wheat run function missilewars:lobby/wheat_tp
 execute if block ~ ~-2 ~ wheat run function missilewars:lobby/wheat_tp
 
-execute as @s[scores={ChooseMissileSet=-1}] run function missilewars:start/choose_missile_set
-execute if entity @s[scores={ChooseMissileSet=0..3}] run scoreboard players operation @s m.MissileSet = @s ChooseMissileSet
-scoreboard players enable @s ChooseMissileSet
-scoreboard players set @s ChooseMissileSet -2
 function missilewars:start/missile_set_display
 
 execute as @s[tag=Editor] run function missilewars:lobby/lobby_editor

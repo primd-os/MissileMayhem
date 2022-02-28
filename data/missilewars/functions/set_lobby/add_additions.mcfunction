@@ -1,9 +1,8 @@
 setblock -7 105 40 minecraft:spruce_wall_sign[facing=east]{Text1:'{"text":"-=-","color":"yellow"}',Text2:'{"text":"Click to","color":"white"}',Text3:'{"text":"Create Game","color":"white","clickEvent":{"action": "run_command","value": "scoreboard players set @s CreateGame 1"}}',Text4:'{"text":"-=-","color":"yellow"}'} destroy
 
 setblock -13 106 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Commands","underlined": true,"bold": true}'} destroy
-setblock -14 105 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger Practice"}}',Text3:'{"text":"Go To Practice"}'} destroy
+setblock -14 105 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger practice"}}',Text3:'{"text":"Go To Practice"}'} destroy
 setblock -12 105 1 minecraft:oak_wall_sign[facing=south]{Text1:'{"text":"Click To Join","clickEvent":{"action":"run_command","value":"function missilewars:start/discord"}}',Text2:'{"text":"The Official"}',Text3:'{"text":"Discord Server"}'} destroy
-setblock -11 105 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To"}',Text3:'{"text":"Get Instructions","clickEvent":{"action":"run_command","value":"trigger GiveBook"}}'} destroy
 setblock -14 104 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To","clickEvent":{"action":"run_command","value":"trigger ChooseMap"}}',Text3:'{"text":"Choose Map"}'} destroy
 setblock -13 104 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To"}',Text3:'{"text":"Make Custom","clickEvent":{"action":"run_command","value":"function missilewars:lobby/tp_custom"}}'} destroy
 setblock -12 104 1 minecraft:oak_wall_sign[facing=south]{Text2:'{"text":"Click To"}',Text3:'{"text":"Choose Missile","clickEvent":{"action":"run_command","value":"trigger ChooseMissileSet"}}',Text4:'{"text": "Set"}'} destroy

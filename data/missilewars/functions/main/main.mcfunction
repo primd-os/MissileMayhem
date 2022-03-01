@@ -63,9 +63,9 @@ execute as @a[scores={ChooseMap=0..6}] run scoreboard players operation @s m.Map
 scoreboard players set @a ChooseMap -2
 execute as @a unless score @s m.MapVote = @s m.PrevMapVote at @s run function missilewars:main/switch_map_vote
 
-execute as @s[scores={ChooseMissileSet=-1}] run function missilewars:start/choose_missile_set
-execute if entity @s[scores={ChooseMissileSet=0..3}] run scoreboard players operation @s m.MissileSet = @s ChooseMissileSet
-scoreboard players set @s ChooseMissileSet -2
+execute as @a[scores={ChooseMissileSet=-1}] run function missilewars:start/choose_missile_set
+execute as @a[scores={ChooseMissileSet=0..3}] run scoreboard players operation @s m.MissileSet = @s ChooseMissileSet
+scoreboard players set @a ChooseMissileSet -2
 
 bossbar set missile_time players @a[scores={m.Game=1..999}]
 scoreboard players set @a m.inv_change 0

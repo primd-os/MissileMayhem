@@ -1,18 +1,16 @@
 {
-    "generator": {
-        "settings": {
-            "structures": {
-                "structures": {}
-            },
-            "layers": [
-                {
-                    "height": 1,
-                    "block": "minecraft:air"
-                }
-            ],
-            "biome": "minecraft:the_void"
-        },
-        "type": "minecraft:flat"
-    },
-    "type": "missilewars:game"
+  "type": "missilewars:game",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:the_void",
+      "layers": [
+        {
+          "block": "minecraft:air",
+          "height": 1
+        }
+      ],
+      "structure_overrides": []
+    }
+  }
 }

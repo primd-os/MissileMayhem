@@ -3,7 +3,6 @@ effect give @s[scores={hub.foodLevel=..19}] minecraft:saturation 2 0 true
 scoreboard players enable @s leave
 scoreboard players enable @s ClearPractice
 scoreboard players enable @s heal
-scoreboard players reset @s ChooseMissileSet
 
 function missilewars:main/shared_run_main
 execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 1 run title @s[gamemode=!spectator] actionbar {"text": "✥"}

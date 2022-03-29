@@ -19,6 +19,4 @@ scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PreGreenWin 0
 scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PreRedWin 0
 scoreboard players set @e[type=marker,tag=GameMarker,x=0] m.PrePurpleWin 0
 
-scoreboard players set @a[x=0] hub.fallDmgPercent 0
-
 team leave @a[x=0]

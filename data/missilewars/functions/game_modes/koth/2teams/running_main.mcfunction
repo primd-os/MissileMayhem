@@ -10,5 +10,5 @@ function missilewars:main/shared_run_main
 execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 1 run title @s[gamemode=!spectator] actionbar [{"score":{"name":"@e[x=0,tag=GameMarker,limit=1]","objective":"m.BlueScore"},"color":"blue"},{"text": " ✥ ","color":"white"},{"score":{"name":"@e[x=0,tag=GameMarker,limit=1]","objective":"m.GreenScore"},"color":"dark_green"}]
 execute unless entity @e[type=marker,tag=GameMarker,x=0,limit=1,scores={m.GameState=2..}] if score @s m.DirectionPlace matches 0 run title @s[gamemode=!spectator] actionbar [{"score":{"name":"@e[x=0,tag=GameMarker,limit=1]","objective":"m.BlueScore"},"color":"blue"},{"text": " ↑ ","color":"white"},{"score":{"name":"@e[x=0,tag=GameMarker,limit=1]","objective":"m.GreenScore"},"color":"dark_green"}]
 
-execute as @s[scores={leave=1}] run function missilewars:end/leave
+execute as @s[scores={leave=1}] run function missilewars:start/join_lobby
 execute as @s[scores={leave=1}] run scoreboard players set @s leave 0

@@ -1,8 +1,6 @@
 function missilewars:game_modes/queue
 advancement grant @s only missilewars:root
 
-execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GameState matches 0 run scoreboard players set @s hub.fallDmgPercent 0
-execute if score @e[type=marker,tag=GameMarker,x=0,limit=1] m.GameState matches 1.. run scoreboard players set @s hub.fallDmgPercent 20
 scoreboard players set @s m.DeathsInGame 0
 
 scoreboard players operation @s m.Game = @e[type=marker,tag=GameMarker,x=0] m.Game

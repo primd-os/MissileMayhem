@@ -28,7 +28,7 @@ execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{i
 execute if score @s m.inv_change matches 1 store result score @s m.Items run clear @s minecraft:arrow 0
 execute at @s anchored eyes unless entity @e[distance=..2,type=item,nbt={Item:{id:"minecraft:arrow"}}] run give @s[scores={m.Game=1..,m.Items=0},x=0] minecraft:arrow 64
 
-execute as @s[scores={leave=1}] run function missilewars:end/leave
+execute as @s[scores={leave=1}] run function missilewars:start/join_lobby
 execute as @s[scores={leave=1}] run scoreboard players set @s leave 0
 
 execute as @s[scores={ClearPractice=1}] at @s at @e[type=marker,tag=m.PracticeArea,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~-112 {Tags: ["PracticeClear"]} 

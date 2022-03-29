@@ -9,5 +9,3 @@ execute as @s[nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function mis
 execute as @s[nbt={Inventory:[{id:"minecraft:writable_book"}]}] run function missilewars:custom_missile/attempt_move_to_head
 clear @s
 scoreboard players set @s m.inv_change 1
-
-scoreboard players set @s hub.fallDmgPercent 20

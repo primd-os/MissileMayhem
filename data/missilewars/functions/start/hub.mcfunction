@@ -7,6 +7,7 @@ scoreboard players reset @s heal
 scoreboard players reset @s leave
 scoreboard players reset @s ChooseMap
 scoreboard players reset @s ChooseMissileSet
+scoreboard players set @s ChooseMissileSet -2
 scoreboard players reset @s CreateGame
 
 tag @s remove m.GotRace

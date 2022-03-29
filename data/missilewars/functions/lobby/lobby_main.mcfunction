@@ -10,11 +10,9 @@ execute unless entity @s[scores={m.GameCreationStage=-2147483648..2147483647}] r
 tag @s remove carrier
 
 gamemode adventure @s[gamemode=!creative]
-execute in missilewars:lobby positioned 10 108 40 run function hub:main/death/spawnpoint
-execute unless predicate missilewars:in_lobby run function missilewars:start/give_book
-execute unless predicate missilewars:in_lobby run scoreboard players enable @s ChooseMissileSet
-execute unless predicate missilewars:in_lobby in missilewars:lobby run tp @s 10 108 40
 effect give @s saturation 2 0 true
+effect give @s[team=m.Lobby] jump_boost 2 255 true
+effect clear @s[team=m.Sumo] jump_boost
 
 execute if block ~ ~ ~ wheat run function missilewars:lobby/wheat_tp
 execute if block ~ ~-1 ~ wheat run function missilewars:lobby/wheat_tp

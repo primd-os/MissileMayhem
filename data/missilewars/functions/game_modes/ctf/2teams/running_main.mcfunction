@@ -48,5 +48,5 @@ execute if block ~ ~-1 ~ crying_obsidian run effect give @s levitation 1 30 true
 
 execute as @s[scores={leave=1}] at @s as @e[tag=Flag,tag=taken] if score @s m.UUID1 = @a[sort=nearest,limit=1] m.UUID1 run tag @s remove taken
 execute as @s[scores={leave=1}] at @s run tag @s remove carrier
-execute as @s[scores={leave=1}] run function missilewars:end/leave
+execute as @s[scores={leave=1}] run function missilewars:start/join_lobby
 execute as @s[scores={leave=1}] run scoreboard players set @s leave 0

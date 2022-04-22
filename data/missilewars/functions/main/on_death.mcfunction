@@ -1,0 +1,1 @@
+execute if predicate missilewars:in_game run function missilewars:main/on_dimension_death

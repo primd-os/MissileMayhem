@@ -1,0 +1,77 @@
+{
+    "condition": "minecraft:alternative",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "dimension": "missilewars:games/game1"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "dimension": "missilewars:games/game2"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "dimension": "missilewars:games/game3"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "dimension": "missilewars:games/game4"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "dimension": "missilewars:games/game5"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "dimension": "missilewars:games/game6"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "dimension": "missilewars:games/game7"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "location": {
+                    "dimension": "missilewars:practice"
+                }
+            }
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:overworld",
+  "type": "missilewars:lobby",
   "generator": {
     "type": "minecraft:flat",
     "settings": {
